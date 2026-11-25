@@ -1,0 +1,1116 @@
+{
+  "courseId": "CSC236H1",
+  "courseName": "Introduction to the Theory of Computation",
+  "nodes": [
+    {
+      "type": "Unit",
+      "id": "unit-1",
+      "label": "Induction & Program Correctness",
+      "labelCn": "归纳与程序正确性",
+      "order": 1
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts1",
+      "label": "Simple induction",
+      "labelCn": "简单归纳",
+      "difficulty": 3,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts2",
+      "label": "Complete induction",
+      "labelCn": "完全归纳",
+      "difficulty": 4,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts3",
+      "label": "Structural induction",
+      "labelCn": "结构归纳",
+      "difficulty": 4,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts4",
+      "label": "Loop invariants",
+      "labelCn": "循环不变式",
+      "difficulty": 4,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts5",
+      "label": "Pre/post conditions",
+      "labelCn": "前置/后置条件",
+      "difficulty": 3,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-1-theorems1",
+      "label": "Principle of induction",
+      "labelCn": "归纳法原理",
+      "difficulty": 3,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Method",
+      "id": "unit-1-methods1",
+      "label": "Program correctness proof",
+      "labelCn": "程序正确性证明",
+      "difficulty": 5,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Technique",
+      "id": "unit-1-techniques1",
+      "label": "Loop invariant discovery",
+      "labelCn": "循环不变式发现",
+      "difficulty": 5,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-1-pitfalls1",
+      "label": "Weak induction vs strong induction",
+      "labelCn": "弱归纳vs强归纳",
+      "difficulty": 3,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-1-skills1",
+      "label": "Formal verification",
+      "labelCn": "形式验证",
+      "difficulty": 4,
+      "unit": "unit-1"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-1-learningmethods1",
+      "label": "Invariant design exercises",
+      "labelCn": "不变式设计练习",
+      "difficulty": 4,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-2",
+      "label": "Finite Automata",
+      "labelCn": "有限自动机",
+      "order": 2
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts1",
+      "label": "DFA",
+      "labelCn": "确定型有限自动机",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts2",
+      "label": "NFA",
+      "labelCn": "非确定型有限自动机",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts3",
+      "label": "ε-NFA",
+      "labelCn": "ε-NFA",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts4",
+      "label": "Regular language",
+      "labelCn": "正则语言",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts5",
+      "label": "Closure properties",
+      "labelCn": "封闭性质",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-2-theorems1",
+      "label": "Pumping lemma for regular languages",
+      "labelCn": "正则语言泵引理",
+      "difficulty": 5,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-2-theorems2",
+      "label": "Equivalence of DFA and NFA",
+      "labelCn": "DFA与NFA等价",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Method",
+      "id": "unit-2-methods1",
+      "label": "DFA construction",
+      "labelCn": "DFA构造",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Method",
+      "id": "unit-2-methods2",
+      "label": "NFA to DFA conversion",
+      "labelCn": "NFA转DFA",
+      "difficulty": 5,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-2-pitfalls1",
+      "label": "Confusing DFA and NFA definition",
+      "labelCn": "混淆DFA与NFA定义",
+      "difficulty": 3,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-2-skills1",
+      "label": "Automata construction",
+      "labelCn": "自动机构造",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-2-learningmethods1",
+      "label": "Automata simulation",
+      "labelCn": "自动机模拟",
+      "difficulty": 3,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-3",
+      "label": "Regular Expressions & Languages",
+      "labelCn": "正则表达式与正则语言",
+      "order": 3
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts1",
+      "label": "Regular expression syntax",
+      "labelCn": "正则表达式语法",
+      "difficulty": 3,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts2",
+      "label": "Kleene star",
+      "labelCn": "Kleene星号",
+      "difficulty": 3,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts3",
+      "label": "Regular expression to NFA",
+      "labelCn": "正则转NFA",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts4",
+      "label": "Non-regular languages",
+      "labelCn": "非正则语言",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-3-theorems1",
+      "label": "Kleene's theorem",
+      "labelCn": "Kleene定理",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-3-theorems2",
+      "label": "Pumping lemma applications",
+      "labelCn": "泵引理的應用",
+      "difficulty": 5,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Method",
+      "id": "unit-3-methods1",
+      "label": "Regex to NFA (Thompson)",
+      "labelCn": "正则转NFA(Thompson)",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-3-pitfalls1",
+      "label": "Regular expressions ≠ all patterns",
+      "labelCn": "正则表达式≠所有模式",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-3-skills1",
+      "label": "Regular language mastery",
+      "labelCn": "正则语言掌握",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-3-learningmethods1",
+      "label": "Regex practice",
+      "labelCn": "正则表达式练习",
+      "difficulty": 2,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-4",
+      "label": "Context-Free Languages",
+      "labelCn": "上下文无关语言",
+      "order": 4
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts1",
+      "label": "CFG",
+      "labelCn": "上下文无关文法",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts2",
+      "label": "Derivation",
+      "labelCn": "派生",
+      "difficulty": 3,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts3",
+      "label": "Parse tree",
+      "labelCn": "解析树",
+      "difficulty": 3,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts4",
+      "label": "PDA",
+      "labelCn": "下推自动机",
+      "difficulty": 5,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts5",
+      "label": "Ambiguity",
+      "labelCn": "歧义性",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-4-theorems1",
+      "label": "Pumping lemma for CFL",
+      "labelCn": "CFL泵引理",
+      "difficulty": 5,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Method",
+      "id": "unit-4-methods1",
+      "label": "CFG construction",
+      "labelCn": "CFG构造",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Method",
+      "id": "unit-4-methods2",
+      "label": "PDA design",
+      "labelCn": "PDA设计",
+      "difficulty": 5,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-4-pitfalls1",
+      "label": "Left recursion",
+      "labelCn": "左递归",
+      "difficulty": 3,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-4-skills1",
+      "label": "Language specification",
+      "labelCn": "语言规格",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-4-learningmethods1",
+      "label": "CFG derivation practice",
+      "labelCn": "CFG派生练习",
+      "difficulty": 3,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-5",
+      "label": "Turing Machines & Decidability",
+      "labelCn": "图灵机与可判定性",
+      "order": 5
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts1",
+      "label": "Turing machine definition",
+      "labelCn": "图灵机定义",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts2",
+      "label": "Recognizable vs decidable",
+      "labelCn": "可识别vs可判定",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts3",
+      "label": "Halting problem",
+      "labelCn": "停机问题",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts4",
+      "label": "Undecidability",
+      "labelCn": "不可判定性",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-5-theorems1",
+      "label": "Undecidability of halting problem",
+      "labelCn": "停机问题不可判定",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-5-theorems2",
+      "label": "Rice's theorem",
+      "labelCn": "Rice定理",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Method",
+      "id": "unit-5-methods1",
+      "label": "TM construction",
+      "labelCn": "图灵机构造",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-5-pitfalls1",
+      "label": "Confusing recognizable with decidable",
+      "labelCn": "可识别与可判定混淆",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-5-skills1",
+      "label": "Computability reasoning",
+      "labelCn": "可计算性推理",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-5-learningmethods1",
+      "label": "Diagonlization proof study",
+      "labelCn": "对角化证明研读",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-6",
+      "label": "Complexity Theory Intro",
+      "labelCn": "复杂性理论导论",
+      "order": 6
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts1",
+      "label": "P class",
+      "labelCn": "P类",
+      "difficulty": 4,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts2",
+      "label": "NP class",
+      "labelCn": "NP类",
+      "difficulty": 4,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts3",
+      "label": "NP-completeness",
+      "labelCn": "NP完全性",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts4",
+      "label": "Reduction",
+      "labelCn": "归约",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts5",
+      "label": "SAT problem",
+      "labelCn": "SAT问题",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-6-theorems1",
+      "label": "Cook-Levin theorem",
+      "labelCn": "Cook-Levin定理",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Method",
+      "id": "unit-6-methods1",
+      "label": "Polynomial reduction",
+      "labelCn": "多项式归约",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Technique",
+      "id": "unit-6-techniques1",
+      "label": "NP-completeness proof",
+      "labelCn": "NP完全性证明",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-6-pitfalls1",
+      "label": "Reduction direction",
+      "labelCn": "归约方向错误",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-6-skills1",
+      "label": "Complexity classification",
+      "labelCn": "复杂性分类",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-6-learningmethods1",
+      "label": "Reduction practice",
+      "labelCn": "归约练习",
+      "difficulty": 5,
+      "unit": "unit-6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-unit-1-unit-2",
+      "source": "unit-2",
+      "target": "unit-1",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-2-unit-3",
+      "source": "unit-3",
+      "target": "unit-2",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-3-unit-4",
+      "source": "unit-4",
+      "target": "unit-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-4-unit-5",
+      "source": "unit-5",
+      "target": "unit-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-5-unit-6",
+      "source": "unit-6",
+      "target": "unit-5",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concepts1-unit-1-concepts2",
+      "source": "unit-1-concepts2",
+      "target": "unit-1-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-concepts2-unit-1-concepts3",
+      "source": "unit-1-concepts3",
+      "target": "unit-1-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-concepts3-unit-1-concepts4",
+      "source": "unit-1-concepts4",
+      "target": "unit-1-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-concepts4-unit-1-concepts5",
+      "source": "unit-1-concepts5",
+      "target": "unit-1-concepts4",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-theorems1-unit-1-concepts1",
+      "source": "unit-1-theorems1",
+      "target": "unit-1-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-1-theorems1-unit-1-concepts2",
+      "source": "unit-1-theorems1",
+      "target": "unit-1-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-1-methods1-unit-1-concepts1",
+      "source": "unit-1-methods1",
+      "target": "unit-1-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-1-methods1-unit-1-concepts2",
+      "source": "unit-1-methods1",
+      "target": "unit-1-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-1-techniques1-unit-1-concepts1",
+      "source": "unit-1-techniques1",
+      "target": "unit-1-concepts1",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-1-techniques1-unit-1-concepts2",
+      "source": "unit-1-techniques1",
+      "target": "unit-1-concepts2",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-1-skills1-unit-1-concepts1",
+      "source": "unit-1-skills1",
+      "target": "unit-1-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-1-pitfalls1-unit-1-concepts1",
+      "source": "unit-1-pitfalls1",
+      "target": "unit-1-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-1-learningmethods1-unit-1-concepts1",
+      "source": "unit-1-learningmethods1",
+      "target": "unit-1-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-1-methods1-unit-5-concepts4",
+      "source": "unit-1-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-2-concepts1-unit-2-concepts2",
+      "source": "unit-2-concepts2",
+      "target": "unit-2-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-concepts2-unit-2-concepts3",
+      "source": "unit-2-concepts3",
+      "target": "unit-2-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-concepts3-unit-2-concepts4",
+      "source": "unit-2-concepts4",
+      "target": "unit-2-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-concepts4-unit-2-concepts5",
+      "source": "unit-2-concepts5",
+      "target": "unit-2-concepts4",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-theorems1-unit-2-concepts1",
+      "source": "unit-2-theorems1",
+      "target": "unit-2-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-2-theorems1-unit-2-concepts2",
+      "source": "unit-2-theorems1",
+      "target": "unit-2-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-2-theorems2-unit-2-concepts1",
+      "source": "unit-2-theorems2",
+      "target": "unit-2-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-2-theorems2-unit-2-concepts2",
+      "source": "unit-2-theorems2",
+      "target": "unit-2-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-2-methods1-unit-2-concepts1",
+      "source": "unit-2-methods1",
+      "target": "unit-2-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-methods1-unit-2-concepts2",
+      "source": "unit-2-methods1",
+      "target": "unit-2-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-methods2-unit-2-concepts1",
+      "source": "unit-2-methods2",
+      "target": "unit-2-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-methods2-unit-2-concepts2",
+      "source": "unit-2-methods2",
+      "target": "unit-2-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-skills1-unit-2-concepts1",
+      "source": "unit-2-skills1",
+      "target": "unit-2-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-2-pitfalls1-unit-2-concepts1",
+      "source": "unit-2-pitfalls1",
+      "target": "unit-2-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-2-learningmethods1-unit-2-concepts1",
+      "source": "unit-2-learningmethods1",
+      "target": "unit-2-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-methods1-unit-5-concepts4",
+      "source": "unit-2-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-2-methods2-unit-5-concepts4",
+      "source": "unit-2-methods2",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-3-concepts1-unit-3-concepts2",
+      "source": "unit-3-concepts2",
+      "target": "unit-3-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-3-concepts2-unit-3-concepts3",
+      "source": "unit-3-concepts3",
+      "target": "unit-3-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-3-concepts3-unit-3-concepts4",
+      "source": "unit-3-concepts4",
+      "target": "unit-3-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-3-theorems1-unit-3-concepts1",
+      "source": "unit-3-theorems1",
+      "target": "unit-3-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-3-theorems1-unit-3-concepts2",
+      "source": "unit-3-theorems1",
+      "target": "unit-3-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-3-theorems2-unit-3-concepts1",
+      "source": "unit-3-theorems2",
+      "target": "unit-3-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-3-theorems2-unit-3-concepts2",
+      "source": "unit-3-theorems2",
+      "target": "unit-3-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-3-methods1-unit-3-concepts1",
+      "source": "unit-3-methods1",
+      "target": "unit-3-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-3-methods1-unit-3-concepts2",
+      "source": "unit-3-methods1",
+      "target": "unit-3-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-3-skills1-unit-3-concepts1",
+      "source": "unit-3-skills1",
+      "target": "unit-3-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-3-pitfalls1-unit-3-concepts1",
+      "source": "unit-3-pitfalls1",
+      "target": "unit-3-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-3-learningmethods1-unit-3-concepts1",
+      "source": "unit-3-learningmethods1",
+      "target": "unit-3-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-3-methods1-unit-5-concepts4",
+      "source": "unit-3-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-4-concepts1-unit-4-concepts2",
+      "source": "unit-4-concepts2",
+      "target": "unit-4-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-concepts2-unit-4-concepts3",
+      "source": "unit-4-concepts3",
+      "target": "unit-4-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-concepts3-unit-4-concepts4",
+      "source": "unit-4-concepts4",
+      "target": "unit-4-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-concepts4-unit-4-concepts5",
+      "source": "unit-4-concepts5",
+      "target": "unit-4-concepts4",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-theorems1-unit-4-concepts1",
+      "source": "unit-4-theorems1",
+      "target": "unit-4-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-4-theorems1-unit-4-concepts2",
+      "source": "unit-4-theorems1",
+      "target": "unit-4-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-4-methods1-unit-4-concepts1",
+      "source": "unit-4-methods1",
+      "target": "unit-4-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-methods1-unit-4-concepts2",
+      "source": "unit-4-methods1",
+      "target": "unit-4-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-methods2-unit-4-concepts1",
+      "source": "unit-4-methods2",
+      "target": "unit-4-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-methods2-unit-4-concepts2",
+      "source": "unit-4-methods2",
+      "target": "unit-4-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-skills1-unit-4-concepts1",
+      "source": "unit-4-skills1",
+      "target": "unit-4-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-4-pitfalls1-unit-4-concepts1",
+      "source": "unit-4-pitfalls1",
+      "target": "unit-4-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-4-learningmethods1-unit-4-concepts1",
+      "source": "unit-4-learningmethods1",
+      "target": "unit-4-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-methods1-unit-5-concepts4",
+      "source": "unit-4-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-4-methods2-unit-5-concepts4",
+      "source": "unit-4-methods2",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-5-concepts1-unit-5-concepts2",
+      "source": "unit-5-concepts2",
+      "target": "unit-5-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-5-concepts2-unit-5-concepts3",
+      "source": "unit-5-concepts3",
+      "target": "unit-5-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-5-concepts3-unit-5-concepts4",
+      "source": "unit-5-concepts4",
+      "target": "unit-5-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-5-theorems1-unit-5-concepts1",
+      "source": "unit-5-theorems1",
+      "target": "unit-5-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-5-theorems1-unit-5-concepts2",
+      "source": "unit-5-theorems1",
+      "target": "unit-5-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-5-theorems2-unit-5-concepts1",
+      "source": "unit-5-theorems2",
+      "target": "unit-5-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-5-theorems2-unit-5-concepts2",
+      "source": "unit-5-theorems2",
+      "target": "unit-5-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-5-methods1-unit-5-concepts1",
+      "source": "unit-5-methods1",
+      "target": "unit-5-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-5-methods1-unit-5-concepts2",
+      "source": "unit-5-methods1",
+      "target": "unit-5-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-5-skills1-unit-5-concepts1",
+      "source": "unit-5-skills1",
+      "target": "unit-5-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-5-pitfalls1-unit-5-concepts1",
+      "source": "unit-5-pitfalls1",
+      "target": "unit-5-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-5-learningmethods1-unit-5-concepts1",
+      "source": "unit-5-learningmethods1",
+      "target": "unit-5-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-5-methods1-unit-5-concepts4",
+      "source": "unit-5-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-6-concepts1-unit-6-concepts2",
+      "source": "unit-6-concepts2",
+      "target": "unit-6-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-6-concepts2-unit-6-concepts3",
+      "source": "unit-6-concepts3",
+      "target": "unit-6-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-6-concepts3-unit-6-concepts4",
+      "source": "unit-6-concepts4",
+      "target": "unit-6-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-6-concepts4-unit-6-concepts5",
+      "source": "unit-6-concepts5",
+      "target": "unit-6-concepts4",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-6-theorems1-unit-6-concepts1",
+      "source": "unit-6-theorems1",
+      "target": "unit-6-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-6-theorems1-unit-6-concepts2",
+      "source": "unit-6-theorems1",
+      "target": "unit-6-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-6-methods1-unit-6-concepts1",
+      "source": "unit-6-methods1",
+      "target": "unit-6-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-6-methods1-unit-6-concepts2",
+      "source": "unit-6-methods1",
+      "target": "unit-6-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-6-techniques1-unit-6-concepts1",
+      "source": "unit-6-techniques1",
+      "target": "unit-6-concepts1",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-6-techniques1-unit-6-concepts2",
+      "source": "unit-6-techniques1",
+      "target": "unit-6-concepts2",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-6-skills1-unit-6-concepts1",
+      "source": "unit-6-skills1",
+      "target": "unit-6-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-6-pitfalls1-unit-6-concepts1",
+      "source": "unit-6-pitfalls1",
+      "target": "unit-6-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-6-learningmethods1-unit-6-concepts1",
+      "source": "unit-6-learningmethods1",
+      "target": "unit-6-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-6-methods1-unit-5-concepts4",
+      "source": "unit-6-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    }
+  ]
+}

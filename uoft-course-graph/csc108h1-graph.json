@@ -1,0 +1,902 @@
+{
+  "courseId": "CSC108H1",
+  "courseName": "Introduction to Computer Programming",
+  "nodes": [
+    {
+      "type": "Unit",
+      "id": "unit-1",
+      "label": "Python Basics",
+      "labelCn": "Python基础",
+      "order": 1
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts1",
+      "label": "Variables & types",
+      "labelCn": "变量与类型",
+      "difficulty": 1,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts2",
+      "label": "Expressions",
+      "labelCn": "表达式",
+      "difficulty": 1,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts3",
+      "label": "Input/output",
+      "labelCn": "输入/输出",
+      "difficulty": 1,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts4",
+      "label": "Boolean logic",
+      "labelCn": "布尔逻辑",
+      "difficulty": 2,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Method",
+      "id": "unit-1-methods1",
+      "label": "Interactive Python",
+      "labelCn": "交互式Python",
+      "difficulty": 1,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Technique",
+      "id": "unit-1-techniques1",
+      "label": "Debugging with print",
+      "labelCn": "打印调试",
+      "difficulty": 1,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-1-pitfalls1",
+      "label": "Type confusion",
+      "labelCn": "类型混淆",
+      "difficulty": 1,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-1-skills1",
+      "label": "Basic syntax",
+      "labelCn": "基本语法",
+      "difficulty": 1,
+      "unit": "unit-1"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-1-learningmethods1",
+      "label": "Codingbat exercises",
+      "labelCn": "Codingbat练习",
+      "difficulty": 1,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-2",
+      "label": "Control Flow",
+      "labelCn": "控制流",
+      "order": 2
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts1",
+      "label": "if/elif/else",
+      "labelCn": "条件语句",
+      "difficulty": 2,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts2",
+      "label": "for loops",
+      "labelCn": "for循环",
+      "difficulty": 2,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts3",
+      "label": "while loops",
+      "labelCn": "while循环",
+      "difficulty": 2,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts4",
+      "label": "Nested loops",
+      "labelCn": "嵌套循环",
+      "difficulty": 3,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Method",
+      "id": "unit-2-methods1",
+      "label": "Loop design pattern",
+      "labelCn": "循环设计模式",
+      "difficulty": 2,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Technique",
+      "id": "unit-2-techniques1",
+      "label": "Loop tracing",
+      "labelCn": "循环追踪",
+      "difficulty": 2,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-2-pitfalls1",
+      "label": "Off-by-one errors",
+      "labelCn": "差一错误",
+      "difficulty": 2,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-2-skills1",
+      "label": "Algorithmic thinking",
+      "labelCn": "算法思维",
+      "difficulty": 2,
+      "unit": "unit-2"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-2-learningmethods1",
+      "label": "Flowchart practice",
+      "labelCn": "流程图练习",
+      "difficulty": 1,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-3",
+      "label": "Functions & Scope",
+      "labelCn": "函数与作用域",
+      "order": 3
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts1",
+      "label": "Function definition",
+      "labelCn": "函数定义",
+      "difficulty": 2,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts2",
+      "label": "Parameters & arguments",
+      "labelCn": "参数与实参",
+      "difficulty": 2,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts3",
+      "label": "Return values",
+      "labelCn": "返回值",
+      "difficulty": 2,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts4",
+      "label": "Scope",
+      "labelCn": "作用域",
+      "difficulty": 3,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Method",
+      "id": "unit-3-methods1",
+      "label": "Top-down design",
+      "labelCn": "自顶向下设计",
+      "difficulty": 3,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Technique",
+      "id": "unit-3-techniques1",
+      "label": "Test-driven development",
+      "labelCn": "测试驱动开发",
+      "difficulty": 3,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-3-pitfalls1",
+      "label": "Modifying global variables",
+      "labelCn": "修改全局变量",
+      "difficulty": 2,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-3-skills1",
+      "label": "Function composition",
+      "labelCn": "函数组合",
+      "difficulty": 2,
+      "unit": "unit-3"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-3-learningmethods1",
+      "label": "Function writing drills",
+      "labelCn": "函数编写练习",
+      "difficulty": 2,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-4",
+      "label": "Data Structures",
+      "labelCn": "数据结构",
+      "order": 4
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts1",
+      "label": "Strings",
+      "labelCn": "字符串",
+      "difficulty": 1,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts2",
+      "label": "Lists",
+      "labelCn": "列表",
+      "difficulty": 2,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts3",
+      "label": "Tuples",
+      "labelCn": "元组",
+      "difficulty": 2,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts4",
+      "label": "Dictionaries",
+      "labelCn": "字典",
+      "difficulty": 3,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts5",
+      "label": "Nested data structures",
+      "labelCn": "嵌套数据结构",
+      "difficulty": 3,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Method",
+      "id": "unit-4-methods1",
+      "label": "List comprehension",
+      "labelCn": "列表推导式",
+      "difficulty": 3,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Technique",
+      "id": "unit-4-techniques1",
+      "label": "Slicing",
+      "labelCn": "切片",
+      "difficulty": 2,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-4-pitfalls1",
+      "label": "Mutable vs immutable",
+      "labelCn": "可变vs不可变",
+      "difficulty": 3,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-4-skills1",
+      "label": "Data structure selection",
+      "labelCn": "数据结构选择",
+      "difficulty": 3,
+      "unit": "unit-4"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-4-learningmethods1",
+      "label": "Data structure cheat sheet",
+      "labelCn": "数据结构速查表",
+      "difficulty": 1,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-5",
+      "label": "File I/O & Exception Handling",
+      "labelCn": "文件读写与异常处理",
+      "order": 5
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts1",
+      "label": "File reading",
+      "labelCn": "文件读取",
+      "difficulty": 2,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts2",
+      "label": "File writing",
+      "labelCn": "文件写入",
+      "difficulty": 2,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts3",
+      "label": "try/except",
+      "labelCn": "异常处理",
+      "difficulty": 3,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts4",
+      "label": "CSV parsing",
+      "labelCn": "CSV解析",
+      "difficulty": 3,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Method",
+      "id": "unit-5-methods1",
+      "label": "with statement",
+      "labelCn": "with语句",
+      "difficulty": 2,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Technique",
+      "id": "unit-5-techniques1",
+      "label": "Exception types",
+      "labelCn": "异常类型",
+      "difficulty": 2,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-5-pitfalls1",
+      "label": "Forgetting to close files",
+      "labelCn": "忘记关闭文件",
+      "difficulty": 2,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-5-skills1",
+      "label": "Robust programming",
+      "labelCn": "健壮编程",
+      "difficulty": 3,
+      "unit": "unit-5"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-5-learningmethods1",
+      "label": "File processing exercises",
+      "labelCn": "文件处理练习",
+      "difficulty": 2,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-6",
+      "label": "Introduction to OOP",
+      "labelCn": "面向对象编程导论",
+      "order": 6
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts1",
+      "label": "Class definition",
+      "labelCn": "类定义",
+      "difficulty": 3,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts2",
+      "label": "Constructor __init__",
+      "labelCn": "构造函数__init__",
+      "difficulty": 3,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts3",
+      "label": "Instance methods",
+      "labelCn": "实例方法",
+      "difficulty": 3,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts4",
+      "label": "str method",
+      "labelCn": "str方法",
+      "difficulty": 3,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Method",
+      "id": "unit-6-methods1",
+      "label": "OOP design",
+      "labelCn": "OOP设计",
+      "difficulty": 4,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-6-pitfalls1",
+      "label": "Self parameter forgotten",
+      "labelCn": "忘记self参数",
+      "difficulty": 3,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-6-skills1",
+      "label": "Object-oriented thinking",
+      "labelCn": "面向对象思维",
+      "difficulty": 3,
+      "unit": "unit-6"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-6-learningmethods1",
+      "label": "Class design exercise",
+      "labelCn": "类设计练习",
+      "difficulty": 3,
+      "unit": "unit-6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-unit-1-unit-2",
+      "source": "unit-2",
+      "target": "unit-1",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-2-unit-3",
+      "source": "unit-3",
+      "target": "unit-2",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-3-unit-4",
+      "source": "unit-4",
+      "target": "unit-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-4-unit-5",
+      "source": "unit-5",
+      "target": "unit-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-5-unit-6",
+      "source": "unit-6",
+      "target": "unit-5",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concepts1-unit-1-concepts2",
+      "source": "unit-1-concepts2",
+      "target": "unit-1-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-concepts2-unit-1-concepts3",
+      "source": "unit-1-concepts3",
+      "target": "unit-1-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-concepts3-unit-1-concepts4",
+      "source": "unit-1-concepts4",
+      "target": "unit-1-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-methods1-unit-1-concepts1",
+      "source": "unit-1-methods1",
+      "target": "unit-1-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-1-methods1-unit-1-concepts2",
+      "source": "unit-1-methods1",
+      "target": "unit-1-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-1-techniques1-unit-1-concepts1",
+      "source": "unit-1-techniques1",
+      "target": "unit-1-concepts1",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-1-techniques1-unit-1-concepts2",
+      "source": "unit-1-techniques1",
+      "target": "unit-1-concepts2",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-1-skills1-unit-1-concepts1",
+      "source": "unit-1-skills1",
+      "target": "unit-1-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-1-pitfalls1-unit-1-concepts1",
+      "source": "unit-1-pitfalls1",
+      "target": "unit-1-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-1-learningmethods1-unit-1-concepts1",
+      "source": "unit-1-learningmethods1",
+      "target": "unit-1-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-1-methods1-unit-5-concepts4",
+      "source": "unit-1-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-2-concepts1-unit-2-concepts2",
+      "source": "unit-2-concepts2",
+      "target": "unit-2-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-concepts2-unit-2-concepts3",
+      "source": "unit-2-concepts3",
+      "target": "unit-2-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-concepts3-unit-2-concepts4",
+      "source": "unit-2-concepts4",
+      "target": "unit-2-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-methods1-unit-2-concepts1",
+      "source": "unit-2-methods1",
+      "target": "unit-2-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-methods1-unit-2-concepts2",
+      "source": "unit-2-methods1",
+      "target": "unit-2-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-techniques1-unit-2-concepts1",
+      "source": "unit-2-techniques1",
+      "target": "unit-2-concepts1",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-2-techniques1-unit-2-concepts2",
+      "source": "unit-2-techniques1",
+      "target": "unit-2-concepts2",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-2-skills1-unit-2-concepts1",
+      "source": "unit-2-skills1",
+      "target": "unit-2-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-2-pitfalls1-unit-2-concepts1",
+      "source": "unit-2-pitfalls1",
+      "target": "unit-2-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-2-learningmethods1-unit-2-concepts1",
+      "source": "unit-2-learningmethods1",
+      "target": "unit-2-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-methods1-unit-5-concepts4",
+      "source": "unit-2-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-3-concepts1-unit-3-concepts2",
+      "source": "unit-3-concepts2",
+      "target": "unit-3-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-3-concepts2-unit-3-concepts3",
+      "source": "unit-3-concepts3",
+      "target": "unit-3-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-3-concepts3-unit-3-concepts4",
+      "source": "unit-3-concepts4",
+      "target": "unit-3-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-3-methods1-unit-3-concepts1",
+      "source": "unit-3-methods1",
+      "target": "unit-3-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-3-methods1-unit-3-concepts2",
+      "source": "unit-3-methods1",
+      "target": "unit-3-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-3-techniques1-unit-3-concepts1",
+      "source": "unit-3-techniques1",
+      "target": "unit-3-concepts1",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-3-techniques1-unit-3-concepts2",
+      "source": "unit-3-techniques1",
+      "target": "unit-3-concepts2",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-3-skills1-unit-3-concepts1",
+      "source": "unit-3-skills1",
+      "target": "unit-3-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-3-pitfalls1-unit-3-concepts1",
+      "source": "unit-3-pitfalls1",
+      "target": "unit-3-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-3-learningmethods1-unit-3-concepts1",
+      "source": "unit-3-learningmethods1",
+      "target": "unit-3-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-3-methods1-unit-5-concepts4",
+      "source": "unit-3-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-4-concepts1-unit-4-concepts2",
+      "source": "unit-4-concepts2",
+      "target": "unit-4-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-concepts2-unit-4-concepts3",
+      "source": "unit-4-concepts3",
+      "target": "unit-4-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-concepts3-unit-4-concepts4",
+      "source": "unit-4-concepts4",
+      "target": "unit-4-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-concepts4-unit-4-concepts5",
+      "source": "unit-4-concepts5",
+      "target": "unit-4-concepts4",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-methods1-unit-4-concepts1",
+      "source": "unit-4-methods1",
+      "target": "unit-4-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-methods1-unit-4-concepts2",
+      "source": "unit-4-methods1",
+      "target": "unit-4-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-techniques1-unit-4-concepts1",
+      "source": "unit-4-techniques1",
+      "target": "unit-4-concepts1",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-4-techniques1-unit-4-concepts2",
+      "source": "unit-4-techniques1",
+      "target": "unit-4-concepts2",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-4-skills1-unit-4-concepts1",
+      "source": "unit-4-skills1",
+      "target": "unit-4-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-4-pitfalls1-unit-4-concepts1",
+      "source": "unit-4-pitfalls1",
+      "target": "unit-4-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-4-learningmethods1-unit-4-concepts1",
+      "source": "unit-4-learningmethods1",
+      "target": "unit-4-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-methods1-unit-5-concepts4",
+      "source": "unit-4-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-5-concepts1-unit-5-concepts2",
+      "source": "unit-5-concepts2",
+      "target": "unit-5-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-5-concepts2-unit-5-concepts3",
+      "source": "unit-5-concepts3",
+      "target": "unit-5-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-5-concepts3-unit-5-concepts4",
+      "source": "unit-5-concepts4",
+      "target": "unit-5-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-5-methods1-unit-5-concepts1",
+      "source": "unit-5-methods1",
+      "target": "unit-5-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-5-methods1-unit-5-concepts2",
+      "source": "unit-5-methods1",
+      "target": "unit-5-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-5-techniques1-unit-5-concepts1",
+      "source": "unit-5-techniques1",
+      "target": "unit-5-concepts1",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-5-techniques1-unit-5-concepts2",
+      "source": "unit-5-techniques1",
+      "target": "unit-5-concepts2",
+      "type": "applies_to"
+    },
+    {
+      "id": "e-unit-5-skills1-unit-5-concepts1",
+      "source": "unit-5-skills1",
+      "target": "unit-5-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-5-pitfalls1-unit-5-concepts1",
+      "source": "unit-5-pitfalls1",
+      "target": "unit-5-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-5-learningmethods1-unit-5-concepts1",
+      "source": "unit-5-learningmethods1",
+      "target": "unit-5-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-5-methods1-unit-5-concepts4",
+      "source": "unit-5-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-6-concepts1-unit-6-concepts2",
+      "source": "unit-6-concepts2",
+      "target": "unit-6-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-6-concepts2-unit-6-concepts3",
+      "source": "unit-6-concepts3",
+      "target": "unit-6-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-6-concepts3-unit-6-concepts4",
+      "source": "unit-6-concepts4",
+      "target": "unit-6-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-6-methods1-unit-6-concepts1",
+      "source": "unit-6-methods1",
+      "target": "unit-6-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-6-methods1-unit-6-concepts2",
+      "source": "unit-6-methods1",
+      "target": "unit-6-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-6-skills1-unit-6-concepts1",
+      "source": "unit-6-skills1",
+      "target": "unit-6-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-6-pitfalls1-unit-6-concepts1",
+      "source": "unit-6-pitfalls1",
+      "target": "unit-6-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-6-learningmethods1-unit-6-concepts1",
+      "source": "unit-6-learningmethods1",
+      "target": "unit-6-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-6-methods1-unit-5-concepts4",
+      "source": "unit-6-methods1",
+      "target": "unit-5-concepts4",
+      "type": "extends"
+    }
+  ]
+}

@@ -1,0 +1,1172 @@
+{
+  "courseId": "STA410H1",
+  "courseName": "Statistical Computation",
+  "nodes": [
+    {
+      "type": "Unit",
+      "id": "unit-1",
+      "label": "Random Variate Generation",
+      "labelCn": "随机变量生成",
+      "order": 1
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts1",
+      "label": "PRNG",
+      "labelCn": "伪随机数生成器",
+      "difficulty": 3,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts2",
+      "label": "LCG",
+      "labelCn": "线性同余生成器",
+      "difficulty": 3,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts3",
+      "label": "Mersenne Twister",
+      "labelCn": "梅森旋转",
+      "difficulty": 3,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts4",
+      "label": "Inverse CDF method",
+      "labelCn": "逆CDF法",
+      "difficulty": 4,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts5",
+      "label": "Acceptance-rejection sampling",
+      "labelCn": "接受-拒绝抽样",
+      "difficulty": 4,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-1-concepts6",
+      "label": "Box-Muller",
+      "labelCn": "Box-Muller变换",
+      "difficulty": 4,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Method",
+      "id": "unit-1-methods1",
+      "label": "Inverse CDF implementation",
+      "labelCn": "逆CDF实现",
+      "difficulty": 3,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Method",
+      "id": "unit-1-methods2",
+      "label": "Rejection sampling",
+      "labelCn": "拒绝抽样",
+      "difficulty": 4,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-1-pitfalls1",
+      "label": "Poor PRNG quality",
+      "labelCn": "PRNG质量差",
+      "difficulty": 2,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-1-skills1",
+      "label": "Random generation",
+      "labelCn": "随机生成",
+      "difficulty": 3,
+      "unit": "unit-1"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-1-learningmethods1",
+      "label": "RNG quality testing",
+      "labelCn": "RNG质量测试",
+      "difficulty": 2,
+      "unit": "unit-1"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-2",
+      "label": "Monte Carlo Methods",
+      "labelCn": "蒙特卡洛方法",
+      "order": 2
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts1",
+      "label": "Monte Carlo integration",
+      "labelCn": "MC积分",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts2",
+      "label": "MC error estimation",
+      "labelCn": "MC误差估计",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts3",
+      "label": "Importance sampling",
+      "labelCn": "重要性抽样",
+      "difficulty": 5,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts4",
+      "label": "Control variates",
+      "labelCn": "控制变量法",
+      "difficulty": 5,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts5",
+      "label": "Antithetic variates",
+      "labelCn": "对偶变量法",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-2-concepts6",
+      "label": "Rao-Blackwellization",
+      "labelCn": "Rao-Blackwell化",
+      "difficulty": 5,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-2-theorems1",
+      "label": "√n convergence of MC",
+      "labelCn": "MC的√n收敛",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Method",
+      "id": "unit-2-methods1",
+      "label": "Importance sampling implementation",
+      "labelCn": "重要性抽样实现",
+      "difficulty": 5,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Method",
+      "id": "unit-2-methods2",
+      "label": "Control variate regression",
+      "labelCn": "控制变量回归",
+      "difficulty": 5,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-2-pitfalls1",
+      "label": "Importance weight degeneracy",
+      "labelCn": "重要性权重退化",
+      "difficulty": 5,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-2-skills1",
+      "label": "Variance reduction",
+      "labelCn": "方差缩减",
+      "difficulty": 5,
+      "unit": "unit-2"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-2-learningmethods1",
+      "label": "MC simulation study",
+      "labelCn": "MC模拟研究",
+      "difficulty": 4,
+      "unit": "unit-2"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-3",
+      "label": "Numerical Linear Algebra",
+      "labelCn": "数值线性代数",
+      "order": 3
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts1",
+      "label": "LU decomposition",
+      "labelCn": "LU分解",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts2",
+      "label": "QR decomposition",
+      "labelCn": "QR分解",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts3",
+      "label": "Cholesky decomposition",
+      "labelCn": "Cholesky分解",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts4",
+      "label": "SVD",
+      "labelCn": "奇异值分解",
+      "difficulty": 5,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts5",
+      "label": "Condition number",
+      "labelCn": "条件数",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-3-concepts6",
+      "label": "Woodbury identity",
+      "labelCn": "Woodbury恒等式",
+      "difficulty": 5,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-3-theorems1",
+      "label": "QR for least squares",
+      "labelCn": "QR最小二乘",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Method",
+      "id": "unit-3-methods1",
+      "label": "solve() vs qr()",
+      "labelCn": "solve() vs qr()",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Method",
+      "id": "unit-3-methods2",
+      "label": "Cholesky for MVN sampling",
+      "labelCn": "Cholesky多元正态抽样",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-3-pitfalls1",
+      "label": "Solving X'X directly is unstable",
+      "labelCn": "直接求解X'X不稳定",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-3-skills1",
+      "label": "Matrix computation",
+      "labelCn": "矩阵计算",
+      "difficulty": 4,
+      "unit": "unit-3"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-3-learningmethods1",
+      "label": "Matrix decomposition comparison",
+      "labelCn": "矩阵分解对比",
+      "difficulty": 3,
+      "unit": "unit-3"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-4",
+      "label": "Optimization for Statistics",
+      "labelCn": "统计优化",
+      "order": 4
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts1",
+      "label": "Newton-Raphson",
+      "labelCn": "牛顿-拉夫森",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts2",
+      "label": "Fisher scoring",
+      "labelCn": "Fisher得分法",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts3",
+      "label": "BFGS",
+      "labelCn": "BFGS",
+      "difficulty": 5,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts4",
+      "label": "Nelder-Mead",
+      "labelCn": "Nelder-Mead",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts5",
+      "label": "Coordinate descent",
+      "labelCn": "坐标下降",
+      "difficulty": 5,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-4-concepts6",
+      "label": "SGD",
+      "labelCn": "随机梯度下降",
+      "difficulty": 5,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-4-theorems1",
+      "label": "Quadratic convergence of Newton",
+      "labelCn": "牛顿二次收敛",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Method",
+      "id": "unit-4-methods1",
+      "label": "optim() in R",
+      "labelCn": "R的optim()",
+      "difficulty": 3,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Method",
+      "id": "unit-4-methods2",
+      "label": "IRLS for GLMs",
+      "labelCn": "GLM的IRLS",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-4-pitfalls1",
+      "label": "Newton diverges far from optimum",
+      "labelCn": "牛顿法远离最优值发散",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-4-skills1",
+      "label": "Numerical optimization",
+      "labelCn": "数值优化",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-4-learningmethods1",
+      "label": "Optimization comparison",
+      "labelCn": "优化方法对比",
+      "difficulty": 4,
+      "unit": "unit-4"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-5",
+      "label": "EM Algorithm & Missing Data",
+      "labelCn": "EM算法与缺失数据",
+      "order": 5
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts1",
+      "label": "EM algorithm",
+      "labelCn": "EM算法",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts2",
+      "label": "E-step",
+      "labelCn": "E步",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts3",
+      "label": "M-step",
+      "labelCn": "M步",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts4",
+      "label": "Missing data mechanisms",
+      "labelCn": "缺失数据机制",
+      "difficulty": 4,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts5",
+      "label": "Mixture models via EM",
+      "labelCn": "EM混合模型",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-5-concepts6",
+      "label": "Censored data",
+      "labelCn": "删失数据",
+      "difficulty": 4,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-5-theorems1",
+      "label": "EM monotonically increases likelihood",
+      "labelCn": "EM单调增似然",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Method",
+      "id": "unit-5-methods1",
+      "label": "EM for Gaussian mixtures",
+      "labelCn": "高斯混合EM",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-5-pitfalls1",
+      "label": "EM may converge to local optimum",
+      "labelCn": "EM可能收敛到局部最优",
+      "difficulty": 4,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-5-skills1",
+      "label": "EM derivation",
+      "labelCn": "EM推导",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-5-learningmethods1",
+      "label": "EM on mixture data",
+      "labelCn": "混合数据上实现EM",
+      "difficulty": 5,
+      "unit": "unit-5"
+    },
+    {
+      "type": "Unit",
+      "id": "unit-6",
+      "label": "MCMC & Bayesian Computation",
+      "labelCn": "MCMC与贝叶斯计算",
+      "order": 6
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts1",
+      "label": "Markov chain theory",
+      "labelCn": "马尔可夫链理论",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts2",
+      "label": "Metropolis-Hastings",
+      "labelCn": "Metropolis-Hastings",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts3",
+      "label": "Gibbs sampling",
+      "labelCn": "Gibbs抽样",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts4",
+      "label": "Hamiltonian Monte Carlo",
+      "labelCn": "哈密顿蒙特卡洛",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Concept",
+      "id": "unit-6-concepts5",
+      "label": "Convergence diagnostics",
+      "labelCn": "收敛诊断",
+      "difficulty": 4,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Theorem",
+      "id": "unit-6-theorems1",
+      "label": "Detailed balance => stationary",
+      "labelCn": "细致平衡=>平稳分布",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Method",
+      "id": "unit-6-methods1",
+      "label": "MH implementation",
+      "labelCn": "MH实现",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Method",
+      "id": "unit-6-methods2",
+      "label": "coda for diagnostics",
+      "labelCn": "coda诊断",
+      "difficulty": 4,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Pitfall",
+      "id": "unit-6-pitfalls1",
+      "label": "Poor mixing (high autocorrelation)",
+      "labelCn": "混合不良",
+      "difficulty": 4,
+      "unit": "unit-6"
+    },
+    {
+      "type": "Skill",
+      "id": "unit-6-skills1",
+      "label": "MCMC methodology",
+      "labelCn": "MCMC方法论",
+      "difficulty": 5,
+      "unit": "unit-6"
+    },
+    {
+      "type": "LearningMethod",
+      "id": "unit-6-learningmethods1",
+      "label": "MCMC visualization",
+      "labelCn": "MCMC可视化",
+      "difficulty": 4,
+      "unit": "unit-6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-unit-1-unit-2",
+      "source": "unit-2",
+      "target": "unit-1",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-2-unit-3",
+      "source": "unit-3",
+      "target": "unit-2",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-3-unit-4",
+      "source": "unit-4",
+      "target": "unit-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-4-unit-5",
+      "source": "unit-5",
+      "target": "unit-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-5-unit-6",
+      "source": "unit-6",
+      "target": "unit-5",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concepts1-unit-1-concepts2",
+      "source": "unit-1-concepts2",
+      "target": "unit-1-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-concepts2-unit-1-concepts3",
+      "source": "unit-1-concepts3",
+      "target": "unit-1-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-concepts3-unit-1-concepts4",
+      "source": "unit-1-concepts4",
+      "target": "unit-1-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-concepts4-unit-1-concepts5",
+      "source": "unit-1-concepts5",
+      "target": "unit-1-concepts4",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-concepts5-unit-1-concepts6",
+      "source": "unit-1-concepts6",
+      "target": "unit-1-concepts5",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-1-methods1-unit-1-concepts1",
+      "source": "unit-1-methods1",
+      "target": "unit-1-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-1-methods1-unit-1-concepts2",
+      "source": "unit-1-methods1",
+      "target": "unit-1-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-1-methods2-unit-1-concepts1",
+      "source": "unit-1-methods2",
+      "target": "unit-1-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-1-methods2-unit-1-concepts2",
+      "source": "unit-1-methods2",
+      "target": "unit-1-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-1-skills1-unit-1-concepts1",
+      "source": "unit-1-skills1",
+      "target": "unit-1-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-1-pitfalls1-unit-1-concepts1",
+      "source": "unit-1-pitfalls1",
+      "target": "unit-1-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-1-learningmethods1-unit-1-concepts1",
+      "source": "unit-1-learningmethods1",
+      "target": "unit-1-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-1-methods1-unit-5-concepts6",
+      "source": "unit-1-methods1",
+      "target": "unit-5-concepts6",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-1-methods2-unit-5-concepts6",
+      "source": "unit-1-methods2",
+      "target": "unit-5-concepts6",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-2-concepts1-unit-2-concepts2",
+      "source": "unit-2-concepts2",
+      "target": "unit-2-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-concepts2-unit-2-concepts3",
+      "source": "unit-2-concepts3",
+      "target": "unit-2-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-concepts3-unit-2-concepts4",
+      "source": "unit-2-concepts4",
+      "target": "unit-2-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-concepts4-unit-2-concepts5",
+      "source": "unit-2-concepts5",
+      "target": "unit-2-concepts4",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-concepts5-unit-2-concepts6",
+      "source": "unit-2-concepts6",
+      "target": "unit-2-concepts5",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-2-theorems1-unit-2-concepts1",
+      "source": "unit-2-theorems1",
+      "target": "unit-2-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-2-theorems1-unit-2-concepts2",
+      "source": "unit-2-theorems1",
+      "target": "unit-2-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-2-methods1-unit-2-concepts1",
+      "source": "unit-2-methods1",
+      "target": "unit-2-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-methods1-unit-2-concepts2",
+      "source": "unit-2-methods1",
+      "target": "unit-2-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-methods2-unit-2-concepts1",
+      "source": "unit-2-methods2",
+      "target": "unit-2-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-methods2-unit-2-concepts2",
+      "source": "unit-2-methods2",
+      "target": "unit-2-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-skills1-unit-2-concepts1",
+      "source": "unit-2-skills1",
+      "target": "unit-2-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-2-pitfalls1-unit-2-concepts1",
+      "source": "unit-2-pitfalls1",
+      "target": "unit-2-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-2-learningmethods1-unit-2-concepts1",
+      "source": "unit-2-learningmethods1",
+      "target": "unit-2-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-2-methods1-unit-5-concepts6",
+      "source": "unit-2-methods1",
+      "target": "unit-5-concepts6",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-2-methods2-unit-5-concepts6",
+      "source": "unit-2-methods2",
+      "target": "unit-5-concepts6",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-3-concepts1-unit-3-concepts2",
+      "source": "unit-3-concepts2",
+      "target": "unit-3-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-3-concepts2-unit-3-concepts3",
+      "source": "unit-3-concepts3",
+      "target": "unit-3-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-3-concepts3-unit-3-concepts4",
+      "source": "unit-3-concepts4",
+      "target": "unit-3-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-3-concepts4-unit-3-concepts5",
+      "source": "unit-3-concepts5",
+      "target": "unit-3-concepts4",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-3-concepts5-unit-3-concepts6",
+      "source": "unit-3-concepts6",
+      "target": "unit-3-concepts5",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-3-theorems1-unit-3-concepts1",
+      "source": "unit-3-theorems1",
+      "target": "unit-3-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-3-theorems1-unit-3-concepts2",
+      "source": "unit-3-theorems1",
+      "target": "unit-3-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-3-methods1-unit-3-concepts1",
+      "source": "unit-3-methods1",
+      "target": "unit-3-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-3-methods1-unit-3-concepts2",
+      "source": "unit-3-methods1",
+      "target": "unit-3-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-3-methods2-unit-3-concepts1",
+      "source": "unit-3-methods2",
+      "target": "unit-3-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-3-methods2-unit-3-concepts2",
+      "source": "unit-3-methods2",
+      "target": "unit-3-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-3-skills1-unit-3-concepts1",
+      "source": "unit-3-skills1",
+      "target": "unit-3-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-3-pitfalls1-unit-3-concepts1",
+      "source": "unit-3-pitfalls1",
+      "target": "unit-3-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-3-learningmethods1-unit-3-concepts1",
+      "source": "unit-3-learningmethods1",
+      "target": "unit-3-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-3-methods1-unit-5-concepts6",
+      "source": "unit-3-methods1",
+      "target": "unit-5-concepts6",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-3-methods2-unit-5-concepts6",
+      "source": "unit-3-methods2",
+      "target": "unit-5-concepts6",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-4-concepts1-unit-4-concepts2",
+      "source": "unit-4-concepts2",
+      "target": "unit-4-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-concepts2-unit-4-concepts3",
+      "source": "unit-4-concepts3",
+      "target": "unit-4-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-concepts3-unit-4-concepts4",
+      "source": "unit-4-concepts4",
+      "target": "unit-4-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-concepts4-unit-4-concepts5",
+      "source": "unit-4-concepts5",
+      "target": "unit-4-concepts4",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-concepts5-unit-4-concepts6",
+      "source": "unit-4-concepts6",
+      "target": "unit-4-concepts5",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-4-theorems1-unit-4-concepts1",
+      "source": "unit-4-theorems1",
+      "target": "unit-4-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-4-theorems1-unit-4-concepts2",
+      "source": "unit-4-theorems1",
+      "target": "unit-4-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-4-methods1-unit-4-concepts1",
+      "source": "unit-4-methods1",
+      "target": "unit-4-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-methods1-unit-4-concepts2",
+      "source": "unit-4-methods1",
+      "target": "unit-4-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-methods2-unit-4-concepts1",
+      "source": "unit-4-methods2",
+      "target": "unit-4-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-methods2-unit-4-concepts2",
+      "source": "unit-4-methods2",
+      "target": "unit-4-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-skills1-unit-4-concepts1",
+      "source": "unit-4-skills1",
+      "target": "unit-4-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-4-pitfalls1-unit-4-concepts1",
+      "source": "unit-4-pitfalls1",
+      "target": "unit-4-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-4-learningmethods1-unit-4-concepts1",
+      "source": "unit-4-learningmethods1",
+      "target": "unit-4-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-4-methods1-unit-5-concepts6",
+      "source": "unit-4-methods1",
+      "target": "unit-5-concepts6",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-4-methods2-unit-5-concepts6",
+      "source": "unit-4-methods2",
+      "target": "unit-5-concepts6",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-5-concepts1-unit-5-concepts2",
+      "source": "unit-5-concepts2",
+      "target": "unit-5-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-5-concepts2-unit-5-concepts3",
+      "source": "unit-5-concepts3",
+      "target": "unit-5-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-5-concepts3-unit-5-concepts4",
+      "source": "unit-5-concepts4",
+      "target": "unit-5-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-5-concepts4-unit-5-concepts5",
+      "source": "unit-5-concepts5",
+      "target": "unit-5-concepts4",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-5-concepts5-unit-5-concepts6",
+      "source": "unit-5-concepts6",
+      "target": "unit-5-concepts5",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-5-theorems1-unit-5-concepts1",
+      "source": "unit-5-theorems1",
+      "target": "unit-5-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-5-theorems1-unit-5-concepts2",
+      "source": "unit-5-theorems1",
+      "target": "unit-5-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-5-methods1-unit-5-concepts1",
+      "source": "unit-5-methods1",
+      "target": "unit-5-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-5-methods1-unit-5-concepts2",
+      "source": "unit-5-methods1",
+      "target": "unit-5-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-5-skills1-unit-5-concepts1",
+      "source": "unit-5-skills1",
+      "target": "unit-5-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-5-pitfalls1-unit-5-concepts1",
+      "source": "unit-5-pitfalls1",
+      "target": "unit-5-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-5-learningmethods1-unit-5-concepts1",
+      "source": "unit-5-learningmethods1",
+      "target": "unit-5-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-5-methods1-unit-5-concepts6",
+      "source": "unit-5-methods1",
+      "target": "unit-5-concepts6",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-6-concepts1-unit-6-concepts2",
+      "source": "unit-6-concepts2",
+      "target": "unit-6-concepts1",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-6-concepts2-unit-6-concepts3",
+      "source": "unit-6-concepts3",
+      "target": "unit-6-concepts2",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-6-concepts3-unit-6-concepts4",
+      "source": "unit-6-concepts4",
+      "target": "unit-6-concepts3",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-6-concepts4-unit-6-concepts5",
+      "source": "unit-6-concepts5",
+      "target": "unit-6-concepts4",
+      "type": "refines"
+    },
+    {
+      "id": "e-unit-6-theorems1-unit-6-concepts1",
+      "source": "unit-6-theorems1",
+      "target": "unit-6-concepts1",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-6-theorems1-unit-6-concepts2",
+      "source": "unit-6-theorems1",
+      "target": "unit-6-concepts2",
+      "type": "proves"
+    },
+    {
+      "id": "e-unit-6-methods1-unit-6-concepts1",
+      "source": "unit-6-methods1",
+      "target": "unit-6-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-6-methods1-unit-6-concepts2",
+      "source": "unit-6-methods1",
+      "target": "unit-6-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-6-methods2-unit-6-concepts1",
+      "source": "unit-6-methods2",
+      "target": "unit-6-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-6-methods2-unit-6-concepts2",
+      "source": "unit-6-methods2",
+      "target": "unit-6-concepts2",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-6-skills1-unit-6-concepts1",
+      "source": "unit-6-skills1",
+      "target": "unit-6-concepts1",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-6-pitfalls1-unit-6-concepts1",
+      "source": "unit-6-pitfalls1",
+      "target": "unit-6-concepts1",
+      "type": "related_to"
+    },
+    {
+      "id": "e-unit-6-learningmethods1-unit-6-concepts1",
+      "source": "unit-6-learningmethods1",
+      "target": "unit-6-concepts1",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-6-methods1-unit-5-concepts6",
+      "source": "unit-6-methods1",
+      "target": "unit-5-concepts6",
+      "type": "extends"
+    },
+    {
+      "id": "e-unit-6-methods2-unit-5-concepts6",
+      "source": "unit-6-methods2",
+      "target": "unit-5-concepts6",
+      "type": "extends"
+    }
+  ]
+}

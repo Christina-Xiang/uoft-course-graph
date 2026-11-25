@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a365d"/>
+      <stop offset="100%" stop-color="#2d5a87"/>
+    </linearGradient>
+    <linearGradient id="building" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c9a96e"/>
+      <stop offset="100%" stop-color="#a8843e"/>
+    </linearGradient>
+    <linearGradient id="dome" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8fc3a7"/>
+      <stop offset="100%" stop-color="#5a9e7a"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a7c3f"/>
+      <stop offset="100%" stop-color="#2d5a27"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- Clouds -->
+  <g opacity="0.15" fill="white">
+    <ellipse cx="150" cy="80" rx="60" ry="20"/>
+    <ellipse cx="190" cy="70" rx="40" ry="15"/>
+    <ellipse cx="600" cy="100" rx="70" ry="22"/>
+    <ellipse cx="650" cy="90" rx="50" ry="16"/>
+    <ellipse cx="400" cy="60" rx="45" ry="14"/>
+  </g>
+
+  <!-- Ground -->
+  <rect x="0" y="400" width="800" height="100" fill="url(#ground)"/>
+  <rect x="0" y="395" width="800" height="10" fill="#5a9e5a" opacity="0.5"/>
+
+  <!-- Main building body -->
+  <rect x="250" y="200" width="300" height="200" fill="url(#building)" rx="2"/>
+
+  <!-- Building center section with columns -->
+  <rect x="310" y="180" width="180" height="220" fill="#b8945a"/>
+
+  <!-- Columns (6 columns) -->
+  <g fill="#d4b87a">
+    <rect x="318" y="180" width="10" height="220" rx="1"/>
+    <rect x="348" y="180" width="10" height="220" rx="1"/>
+    <rect x="378" y="180" width="10" height="220" rx="1"/>
+    <rect x="408" y="180" width="10" height="220" rx="1"/>
+    <rect x="438" y="180" width="10" height="220" rx="1"/>
+    <rect x="468" y="180" width="10" height="220" rx="1"/>
+  </g>
+
+  <!-- Column capitals -->
+  <g fill="#e8cca0">
+    <rect x="316" y="178" width="14" height="6" rx="1"/>
+    <rect x="346" y="178" width="14" height="6" rx="1"/>
+    <rect x="376" y="178" width="14" height="6" rx="1"/>
+    <rect x="406" y="178" width="14" height="6" rx="1"/>
+    <rect x="436" y="178" width="14" height="6" rx="1"/>
+    <rect x="466" y="178" width="14" height="6" rx="1"/>
+  </g>
+
+  <!-- Pediment (triangular top) -->
+  <polygon points="310,180 400,120 490,180" fill="#c9a96e"/>
+  <polygon points="310,180 400,120 490,180" fill="none" stroke="#b8945a" stroke-width="2"/>
+  <polygon points="330,175 400,130 470,175" fill="#b8945a" opacity="0.5"/>
+
+  <!-- Dome (above pediment) -->
+  <ellipse cx="400" cy="120" rx="60" ry="65" fill="url(#dome)" opacity="0.9"/>
+
+  <!-- Dome highlight -->
+  <ellipse cx="380" cy="100" rx="25" ry="30" fill="#a0d0b0" opacity="0.3"/>
+
+  <!-- Dome top ornament -->
+  <rect x="397" y="55" width="6" height="8" fill="#d4b87a"/>
+  <circle cx="400" cy="53" r="4" fill="#e8cca0"/>
+
+  <!-- Side wings -->
+  <rect x="220" y="240" width="35" height="160" fill="#b8945a"/>
+  <rect x="545" y="240" width="35" height="160" fill="#b8945a"/>
+
+  <!-- Windows on main building -->
+  <g fill="#1a365d" opacity="0.7">
+    <rect x="262" y="260" width="20" height="30" rx="10" ry="10"/>
+    <rect x="295" y="260" width="20" height="30" rx="10" ry="10"/>
+    <rect x="502" y="260" width="20" height="30" rx="10" ry="10"/>
+    <rect x="530" y="260" width="20" height="30" rx="10" ry="10"/>
+  </g>
+
+  <!-- Windows glow -->
+  <g fill="#f0d080" opacity="0.4">
+    <rect x="262" y="260" width="20" height="30" rx="10" ry="10"/>
+    <rect x="295" y="260" width="20" height="30" rx="10" ry="10"/>
+    <rect x="502" y="260" width="20" height="30" rx="10" ry="10"/>
+    <rect x="530" y="260" width="20" height="30" rx="10" ry="10"/>
+  </g>
+
+  <!-- Entrance door -->
+  <rect x="380" y="350" width="40" height="50" rx="2" fill="#4a3520"/>
+  <circle cx="412" cy="378" r="3" fill="#d4b87a"/>
+
+  <!-- Steps -->
+  <rect x="360" y="398" width="80" height="4" fill="#b8945a" rx="1"/>
+  <rect x="350" y="395" width="100" height="5" fill="#c9a96e" rx="1"/>
+
+  <!-- Trees left -->
+  <g>
+    <rect x="120" y="340" width="8" height="60" fill="#5a3a1a"/>
+    <ellipse cx="124" cy="320" rx="30" ry="35" fill="#2d7a2d"/>
+    <ellipse cx="124" cy="310" rx="25" ry="28" fill="#3a8a3a"/>
+  </g>
+
+  <!-- Trees right -->
+  <g>
+    <rect x="660" y="340" width="8" height="60" fill="#5a3a1a"/>
+    <ellipse cx="664" cy="315" rx="28" ry="32" fill="#2d7a2d"/>
+    <ellipse cx="664" cy="305" rx="22" ry="25" fill="#3a8a3a"/>
+  </g>
+
+  <g>
+    <rect x="700" y="350" width="7" height="50" fill="#5a3a1a"/>
+    <ellipse cx="703" cy="330" rx="22" ry="28" fill="#2d7a2d"/>
+    <ellipse cx="703" cy="322" rx="18" ry="20" fill="#3a8a3a"/>
+  </g>
+
+  <!-- Stars -->
+  <g fill="white" opacity="0.3">
+    <circle cx="100" cy="50" r="2"/>
+    <circle cx="200" cy="30" r="1.5"/>
+    <circle cx="320" cy="45" r="1"/>
+    <circle cx="500" cy="35" r="1.5"/>
+    <circle cx="620" cy="55" r="2"/>
+    <circle cx="720" cy="40" r="1"/>
+    <circle cx="80" cy="90" r="1"/>
+    <circle cx="680" cy="25" r="1.5"/>
+    <circle cx="550" cy="50" r="1"/>
+  </g>
+
+  <!-- Moon -->
+  <circle cx="680" cy="60" r="18" fill="#e8e0c0" opacity="0.3"/>
+  <circle cx="688" cy="56" r="16" fill="url(#sky)"/>
+</svg>
