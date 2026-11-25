@@ -61,4 +61,4 @@ This is a personal study project and is not affiliated with the University of To
 ## Author
 
 **Christina (Chuqin) Xiang**, University of Toronto
-[LinkedIn](https://www.linkedin.com/in/chuqin-xiang-86b271414)
+[LinkedIn](https://www.linkedin.com/in/christinaxiangcq)
