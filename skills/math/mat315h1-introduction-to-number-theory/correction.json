@@ -1,0 +1,75 @@
+{
+  "name": "MAT315H1 — Correction ($\\mathbb{Z}/n\\mathbb{Z}$ is a field $\\iff$ $n$ is prime — ignoring non-prime modulus structures)",
+  "description": "Fix the common conceptual error: $\\mathbb{Z}/n\\mathbb{Z}$ is a field $\\iff$ $n$ is prime — ignoring non-prime modulus structures.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT315H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT315H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: Thinking 'a ≡ b (mod n)' means a and b are both less than n — confusing residue with congruence This mistake is natural — it comes from over-generalising a pattern that works in simpler cases.",
+      "template_zh": "常见错误：以为 'a ≡ b (mod n)' 意味着 a 和 b 都小于 n——混淆余数与同余。这个错误很自然——它来自于过度泛化一个在简单情况下有效的模式。"
+    },
+    {
+      "type": "question",
+      "template_en": "Let's test your understanding. 你说 27 ≡ 2 (mod 5) 不对，因为 27 大于 5。但 27 和 2 在模 5 下真的'相同'吗？它们的差是多少？同余是对两个数的关系，不是对单个数的约束——你能准确说出同余的定义是什么吗？ Work through the problem carefully. What assumption did you just make? Is it justified?",
+      "template_zh": "让我们测试你的理解。You claim 27 ≡ 2 (mod 5) is wrong because 27 > 5. But are 27 and 2 really 'the same' mod 5? What's their difference? Congruence is a relation between two numbers, not a constraint on a single number — can you state the exact definition? 仔细解题。你刚才做了什么假设？这个假设合理吗？"
+    },
+    {
+      "type": "explore",
+      "template_en": "Let's explore this more deeply. What does the correct understanding look like? Consider the fundamental reason behind the error: it comes from over-generalizing a pattern that works in simple cases but breaks down in general. The key is to identify the hidden assumption that is not always justified.\n\nAsk yourself: what condition must hold for this pattern to work? When does that condition fail? The boundary between where it works and where it doesn't defines the precise scope of the concept.",
+      "template_zh": "让我们更深入地探讨。正确的理解是什么样的？考虑错误背后的根本原因：它来自于过度推广一个在简单情况下有效但在一般情况下会失效的模式。关键是识别出那个并不总是成立的隐藏假设。\n\n问问自己：这个模式成立需要什么条件？该条件何时失效？它有效和无效的边界定义了该概念的精确范围。"
+    },
+    {
+      "type": "insight",
+      "template_en": "The correct reasoning: a ≡ b (mod n) 意味着 a - b 是 n 的倍数，与 a 或 b 的大小无关。27 - 2 = 25 = 5×5，所以 27 ≡ 2 (mod 5)。同余是比较关系，不是绝对值条件。 The subtlety is that intuition from elementary cases doesn't always carry over.",
+      "template_zh": "正确的推理是：a ≡ b (mod n) means a - b is a multiple of n, regardless of the size of a or b. 27 - 2 = 25 = 5×5, so 27 ≡ 2 (mod 5). Congruence is a comparative relation, not an absolute-value condition.。微妙之处在于，从初等情况得到的直觉并不总是能推广。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Find where this error appears in the wild: (1) search your work for this pattern. (2) Correct it. (3) Explain to a peer why the correction matters.",
+      "template_zh": "找出这个错误出现在你之前作业中的位置：(1) 在你的作业中搜索这个模式。(2) 修正它。(3) 向同学解释为什么这个修正很重要。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Reflection: What was the core misconception behind this error? How does the corrected understanding change the way you think about MAT315H1 — Correction ($\\mathbb{Z}/n\\mathbb{Z}$ is a field $\\iff$ $n$ is prime — ignoring non-prime modulus structures)? The best mathematicians don't avoid mistakes — they learn from them faster by analyzing the gap between their intuition and the correct reasoning. What will you watch out for in the future?",
+      "template_zh": "反思：这个错误背后的核心误解是什么？修正后的理解如何改变你对MAT315H1 — Correction ($\\mathbb{Z}/n\\mathbb{Z}$ is a field $\\iff$ $n$ is prime — ignoring non-prime modulus structures)的看法？最好的数学家不会避免错误——他们通过分析直觉与正确推理之间的差距来更快地从中学习。你将来会注意什么？"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/counterexamples.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT315H1",
+    "skillType": "correction",
+    "difficulty": 4,
+    "version": "1.0"
+  }
+}

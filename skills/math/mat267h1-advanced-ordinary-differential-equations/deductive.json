@@ -1,0 +1,86 @@
+{
+  "name": "MAT267H1 — Deductive Derivation (Bifurcations)",
+  "description": "Bifurcation: small parameter change → QUALITATIVE change in behavior. Fixed points appear, disappear, or change stability. Bifurcation diagram: fixed ",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT267H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT267H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Bifurcation: small parameter change → QUALITATIVE change in behavior. Fixed points appear, disappear, or change stability. Bifurcation diagram: fixed points vs parameter.",
+      "template_zh": "分岔：参数小变化→行为质变。不动点出现、消失或改变稳定性。分岔图：不动点vs参数。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Saddle-node: x'=μ-x². μ<0: no fixed points. μ=0: one (x=0, semi-stable). μ>0: two (x=±√μ, one stable, one unstable). Pair of fixed points born from nothing.",
+      "template_zh": "鞍结分岔：x'=μ-x²。μ<0: 无不动点。μ=0: 一个(x=0,半稳定)。μ>0: 两个(x=±√μ,一稳定一不稳定)。一对不动点从无中生有。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Pitchfork: x'=μx-x³. μ<0: one stable at 0. μ>0: 0 unstable, two new stable appear. SUPERCRITICAL. Subcritical: x'=μx+x³ — stable becomes unstable, no nearby stable → jump.",
+      "template_zh": "叉形：x'=μx-x³。μ<0: 一个稳定在0。μ>0: 0变不稳定，两个新稳定出现。超临界。亚临界：x'=μx+x³。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Hopf: periodic orbit born from fixed point when eigenvalues cross imaginary axis. Example: r'=μr-r³, θ'=1. Supercritical: μ>0 → stable limit cycle.",
+      "template_zh": "Hopf分岔：特征值穿越虚轴时周期轨道从不动点产生。例：r'=μr-r³, θ'=1。超临界：μ>0→稳定极限环。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Bifurcations explain: (1) Population dynamics (Allee effect). (2) Laser threshold. (3) Neuron firing. (4) Buckling beam. (5) Heart rhythm → arrhythmia.",
+      "template_zh": "分岔解释：(1)种群动力学(Allee效应)。(2)激光阈值。(3)神经元放电。(4)屈曲梁。(5)心律失常。"
+    },
+    {
+      "type": "meta",
+      "template_en": "Only a few UNIVERSAL bifurcations: saddle-node, pitchfork, Hopf, transcritical. Center Manifold Theorem reduces high-dim systems to these normal forms.",
+      "template_zh": "只有少数普适分岔：鞍结、叉形、Hopf、跨临界。中心流形定理将高维系统约化为这些规范型。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT267H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-2",
+      "unit-3",
+      "unit-4",
+      "c1"
+    ]
+  }
+}

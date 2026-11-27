@@ -1,0 +1,86 @@
+{
+  "name": "MAT247H1 — Deductive Derivation (Jordan Canonical Form)",
+  "description": "Not every matrix is diagonalizable. Over ℂ, if A has eigenvalues but not enough eigenvectors, it has JORDAN FORM. A=PJP⁻¹ where J is block-diagonal, e",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT247H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT247H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Not every matrix is diagonalizable. Over ℂ, if A has eigenvalues but not enough eigenvectors, it has JORDAN FORM. A=PJP⁻¹ where J is block-diagonal, each block J(λ) has λ on diagonal, 1 on super-diagonal.",
+      "template_zh": "不是每个矩阵可对角化。在ℂ上，如果A有特征值但不够特征向量，它有若尔当型。A=PJP⁻¹，J是块对角，每块J(λ)对角λ，次对角1。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Compute: (1) Find eigenvalues. (2) For each λ, rₖ=rank((A-λI)ᵏ). dₖ=rₖ₋₁-rₖ=blocks of size≥k. Number of k×k blocks = dₖ-dₖ₊₁.",
+      "template_zh": "计算：(1)找特征值。(2)对每个λ，rₖ=rank((A-λI)ᵏ)。dₖ=rₖ₋₁-rₖ=大小≥k的块。k×k块数=dₖ-dₖ₊₁。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Example: A=[[3,1,0],[0,3,1],[0,0,3]]. (A-3I) rank 2 → nullity 1. (A-3I)² rank 1 → nullity 2. (A-3I)³ rank 0 → nullity 3. d₁=1, d₂=1, d₃=1. One 3×3 block. J=[[3,1,0],[0,3,1],[0,0,3]].",
+      "template_zh": "例：A=[[3,1,0],[0,3,1],[0,0,3]]。(A-3I)秩2→零化度1。(A-3I)²秩1→零化度2。一个3×3块。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Generalized eigenvectors: (A-λI)ᵏv=0. Chain: (A-λI)v₁=0, (A-λI)v₂=v₁, (A-λI)v₃=v₂, etc. Jordan basis = union of chains. Each chain = one block.",
+      "template_zh": "广义特征向量：(A-λI)ᵏv=0。链：(A-λI)v₁=0, (A-λI)v₂=v₁等。若尔当基=所有链的并。每链=一块。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Jordan form exists where char poly splits (e.g., ℂ). 'Closest to diagonal.' Applications: matrix exponentials e^{tA}, powers Aᵏ, linear system dynamics.",
+      "template_zh": "若尔当型存在在特征多项式能分裂的域(如ℂ)。'最接近对角'。应用：矩阵指数e^{tA}、幂Aᵏ、线性系统动力学。"
+    },
+    {
+      "type": "meta",
+      "template_en": "Jordan form completes the classification via module-over-PID. Invariant factors → rational canonical form (ANY field). Elementary divisors → Jordan form. SAME theorem, different factorization.",
+      "template_zh": "若尔当型通过PID上模完成分类。不变因子→有理标准型(任何域)。初等因子→若尔当型。相同定理，不同分解。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT247H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-2",
+      "unit-3",
+      "unit-4",
+      "c1"
+    ]
+  }
+}

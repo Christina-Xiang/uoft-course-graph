@@ -1,0 +1,76 @@
+{
+  "name": "MAT315H1 — Socratic Discovery (prime numbers)",
+  "description": "Guide the student to discover there are infinitely many primes — but can we find a formula for them through scaffolded Socratic questioning.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT315H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT315H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "How would you explain 17 ≡ 2 (mod 5) to someone who has never heard of modular arithmetic? No using the word 'remainder'. Try 'circle' or 'cycle' analogy.\n\nImagine the number line wrapped into a circle of 5 points. Where is 17 on the circle? Where is 2?\n\nMod n rolls the number line into a circle with n points. 17 and 2 occupy the same point mod 5 — their difference is a multiple of 5. The wrapping operation ≡ partitions the infinite set into finitely many equivalence classes.",
+      "template_zh": "你如何向一个不知道'模运算'的人解释 17 ≡ 2 (mod 5)？不能使用'余数'这个词。试试用'圈'或'循环'的类比。\n\n把数轴想象成一个圆形——每 5 个单位绕一圈。17 在圆上的什么位置？2 呢？\n\n模 n 将数轴卷曲成有 n 个点的圆。17 和 2 在模 5 的圆上占据同一个点——它们之间的差是 5 的倍数。卷曲操作 ≡ 将无限集划分为有限个等价类。"
+    },
+    {
+      "type": "question",
+      "template_en": "You know x ≡ 2 (mod 3) and x ≡ 3 (mod 5). Can you find x? Don't use a formula — list x = 2, 5, 8, 11, 14, 17, ... and check which also satisfy x ≡ 3 (mod 5). What pattern emerges?\n\nStart at x=2 and add 3 each time, checking the remainder mod 5. Stop when you find a match. What's happening?\n\nx = 8 works. Key insight: because 3 and 5 are coprime, the sequence {2 + 3k : k ∈ Z} hits each residue mod 5 exactly once before cycling back. That's CRT's core — congruences modulo coprime moduli independently constrain x.",
+      "template_zh": "如果你知道 x ≡ 2 (mod 3) 且 x ≡ 3 (mod 5)，能找到 x 吗？不要套公式——如果你列出 x = 2, 5, 8, 11, 14, 17, ...，其中哪些也满足 x ≡ 3 (mod 5)？\n\n从 x = 2 开始，每次加 3，检查除以 5 的余数。直到找到匹配的。模式是什么？\n\nx = 8 是解。关键洞察：因为 3 和 5 互质，序列 {2 + 3k : k ∈ Z} 每个模 5 的余数恰好出现一次才循环回到起点。这就是 CRT 的核心——互质模数的同余条件独立地约束 x。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Take prime p = 7. Compute 2^7 mod 7, 3^7 mod 7, 4^7 mod 7. What pattern do you see? Why? If you expand (a+1)^7 mod 7, what's special about the binomial coefficients (7 choose k)?\n\n7 choose k = 7!/(k!(7-k)!). The numerator has a factor 7, but the denominator doesn't (for 1≤k≤6). So (7 choose k) ≡ 0 mod 7.\n\na^7 ≡ a (mod 7) for all a. Since (a+1)^p ≡ a^p + 1^p mod p (all middle terms vanish). By induction: a^p ≡ a mod p. Fermat's little theorem isn't a mystery — it's a direct consequence of the binomial theorem mod p.",
+      "template_zh": "取一个质数 p = 7。计算 2^7 mod 7，3^7 mod 7，4^7 mod 7。你看到什么模式？为什么？如果你展开 (a+1)^7 并 mod 7，二项式系数 (7 choose k) 有什么特殊之处？\n\n7 choose k = 7!/(k!(7-k)!)。分子有因子 7，分母没有（只要 1≤k≤6）。所以 (7 choose k) ≡ 0 mod 7。\n\na^7 ≡ a (mod 7) 对所有 a 成立。因为 (a+1)^p = a^p + 1^p mod p（中间项全消失）。归纳地：a^p ≡ a mod p。Fermat 小定理不是一个神秘公式——它是二项式定理模 p 下的直接推论。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Fermat requires the modulus to be prime. What if it's composite? Try a^φ(6) mod 6 for a coprime to 6. φ(6) = 2, test a=5: 5^2 = 25 ≡ 1 mod 6. Generalizing: a^φ(n) ≡ 1 (mod n) when gcd(a,n)=1. But why φ(n) and not something else?\n\nConsider the reduced residue system mod n (φ(n) numbers coprime to n). What happens when you multiply each by a (coprime to n)?\n\nThe reduced residues {r1,...,r_φ(n)}, when multiplied by a, permute to the same set. The product of all ri ≡ product of all a·ri ≡ a^φ(n)·(product of ri) mod n. Cancel the product to get a^φ(n) ≡ 1 mod n — Euler's theorem.",
+      "template_zh": "Fermat 小定理要求模数是质数。如果模数不是质数呢？比如 a^φ(6) mod 6 对与 6 互质的 a 有什么规律？φ(6) = 2，测试 a=5: 5^2 = 25 ≡ 1 mod 6。推广：a^φ(n) ≡ 1 (mod n) 当 gcd(a, n) = 1。但为什么 φ(n) 而不是别的？\n\n考虑模 n 的缩剩余系（与 n 互质的剩余类），共 φ(n) 个。乘以 a 后这些数如何排列？\n\n缩剩余系 {r1, r2, ..., r_φ(n)} 乘以 a（与 n 互质）后得到同样的集合（只是顺序不同）。所有 ri 的乘积 ≡ 所有 a·ri 的乘积 ≡ a^φ(n)·(所有 ri 的乘积) mod n。消去乘积得 a^φ(n) ≡ 1 mod n——Euler 定理。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Based on what we've explored about Socratic Discovery (prime numbers), try these: (1) Explain the core idea in your own words. (2) Work through an example that illustrates the key concept. (3) How would you teach this to a peer who missed the class?",
+      "template_zh": "基于我们对Socratic Discovery (prime numbers)的探索，尝试以下练习：(1) 用自己的话解释核心思想。(2) 通过一个例子说明关键概念。(3) 你会如何向缺课的同学讲解这个内容？"
+    },
+    {
+      "type": "insight",
+      "template_en": "Key insight: Socratic Discovery (prime numbers) is not just a collection of definitions — it's a way of thinking. The examples and non-examples build a mental model that lets you reason about new situations. The formal definition captures something you already understood intuitively; it just makes it precise enough to work with rigorously.",
+      "template_zh": "关键洞察：Socratic Discovery (prime numbers) 不仅是定义的集合——它是一种思维方式。示例和反例构建了一个思维模型，让你能够推理新情况。形式化定义捕捉了你已经直觉理解的东西；它只是使其足够精确以便严格处理。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/concept-map.md",
+    "references/counterexamples.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT315H1",
+    "skillType": "socratic",
+    "difficulty": 4,
+    "version": "1.0"
+  }
+}

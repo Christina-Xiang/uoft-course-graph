@@ -1,0 +1,86 @@
+{
+  "name": "MAT309H1 — Socratic Discovery (Predicate Calculus and Formal Languages)",
+  "description": "Language: variables, connectives (∧∨¬→), quantifiers (∀∃), =, predicate symbols (P,Q...), function symbols (f,g...). Terms = variables + functions app",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT309H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT309H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Language: variables, connectives (∧∨¬→), quantifiers (∀∃), =, predicate symbols (P,Q...), function symbols (f,g...). Terms = variables + functions applied to terms. Formulas = atomic formulas closed under connectives and quantifiers.",
+      "template_zh": "语言：变量、连接词(∧∨¬→)、量词(∀∃)、=、谓词符号(P,Q...)、函数符号(f,g...)。项=变量+函数应用于项。公式=原子公式在连接词和量词下封闭。"
+    },
+    {
+      "type": "question",
+      "template_en": "What is a STRUCTURE? A set M (domain) with: for each n-ary P, P^M⊆Mⁿ; for each n-ary f, f^M:Mⁿ→M. Truth defined recursively (Tarski's definition).",
+      "template_zh": "什么是结构？集合M(论域)。每个n元P: P^M⊆Mⁿ；每个n元f: f^M:Mⁿ→M。真值递归定义(Tarski真值定义)。"
+    },
+    {
+      "type": "explore",
+      "template_en": "A sentence is valid (⊨φ) if true in EVERY structure. ∀x(x=x) valid. ∀xP(x)→∃xP(x) NOT valid (empty domain counterexample). Completeness Theorem: validity = provability.",
+      "template_zh": "语句有效(⊨φ)若在每个结构真。∀x(x=x)有效。∀xP(x)→∃xP(x)无效(空域反例)。完备定理：有效性=可证性。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Syntactic deduction: ⊢φ provable from axioms using inference rules. Natural deduction: (∧I) from φ,ψ infer φ∧ψ. (∀I) if x not free, from φ infer ∀xφ. (∃E) from ∃xφ, assuming φ(t), infer ψ.",
+      "template_zh": "语法推演：⊢φ从公理用推理规则可证。自然演绎：(∧I)从φ,ψ推出φ∧ψ。(∀I)若x不自由，从φ推出∀xφ。(∃E)从∃xφ并假设φ(t)推出ψ。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Translate: (1) Every positive integer has a unique prime factorization. (2) Between any two distinct reals there's another. (3) No largest prime. (4) Function continuous at a point (ε-δ).",
+      "template_zh": "翻译：(1)每个正整数有唯一素因子分解。(2)任意两不同实数间有另一实数。(3)无最大素数。(4)函数在一点连续(ε-δ)。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Predicate logic: expressive enough for most mathematics, yet COMPLETE proof system. Gödel's Completeness: SEMANTIC (truth in all structures) = SYNTACTIC (provability). Remarkable!",
+      "template_zh": "谓词逻辑：表达足够多数学，却有完备证明系统。Gödel完备：语义(所有结构真)=语法(可证性)。了不起！"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT309H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-2",
+      "unit-3",
+      "unit-4",
+      "unit-5"
+    ]
+  }
+}

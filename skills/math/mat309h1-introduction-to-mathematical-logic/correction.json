@@ -1,0 +1,86 @@
+{
+  "name": "MAT309H1 — Correction Attribution (Gödel's Incompleteness Theorems)",
+  "description": "'Gödel says everything is unprovable.' WRONG. It says: in any CONSISTENT system encoding arithmetic (PA, ZFC), there exists a TRUE but UNPROVABLE sent",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT309H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT309H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'Gödel says everything is unprovable.' WRONG. It says: in any CONSISTENT system encoding arithmetic (PA, ZFC), there exists a TRUE but UNPROVABLE sentence G. System is INCOMPLETE.",
+      "template_zh": "'哥德尔说一切不可证明。'错。它说：任何编码算术的一致系统中，存在真但不可证明的语句G。系统不完备。"
+    },
+    {
+      "type": "question",
+      "template_en": "How is G built? Gödel numbering → Prov(m,n). Diagonal lemma: for any φ(x), there exists ψ such that ψ↔φ(⌜ψ⌝). Take φ(x)=¬Prov(x). Then G↔¬Prov(⌜G⌝). G says 'I am not provable.'",
+      "template_zh": "G如何构造？哥德尔配数→Prov(m,n)。对角引理：对任何φ(x)，存在ψ使ψ↔φ(⌜ψ⌝)。取φ(x)=¬Prov(x)。则G↔¬Prov(⌜G⌝)。G说'我不可证明。'"
+    },
+    {
+      "type": "explore",
+      "template_en": "(1) If G provable: Prov(⌜G⌝) holds, but G says ¬Prov(⌜G⌝) → contradiction. (2) If ¬G provable: ¬Prov(⌜G⌝) false → Prov(⌜G⌝) → G provable → contradiction. Neither G nor ¬G is provable.",
+      "template_zh": "(1)若G可证：Prov(⌜G⌝)成立但G说¬Prov(⌜G⌝)→矛盾。(2)若¬G可证：¬Prov(⌜G⌝)假→Prov(⌜G⌝)→G可证→矛盾。G和¬G都不可证明。"
+    },
+    {
+      "type": "insight",
+      "template_en": "2nd Incompleteness: A consistent system that proves its OWN consistency is inconsistent. Con(PA) not provable in PA. Shattered Hilbert's program.",
+      "template_zh": "第二不完备定理：证明自身一致的系统不一致。Con(PA)在PA中不可证明。粉碎了Hilbert计划。"
+    },
+    {
+      "type": "practice",
+      "template_en": "(1) Why doesn't completeness of FOL contradict incompleteness? (Completeness about LOGICAL truths, incompleteness about ARITHMETICAL truths.) (2) If ZFC proves Con(ZFC), is ZFC consistent? (3) Can a computer decide all math truths?",
+      "template_zh": "(1)一阶逻辑完备性为什么不与不完备性矛盾？(完备性关于逻辑真理，不完备性关于算术真理。)(2)若ZFC证明Con(ZFC)，ZFC一致吗？(3)计算机能判定所有数学真理吗？"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Gödel SHOWS limits of formalization: strong enough system → inconsistent or incomplete. No algorithm decides all math truths (Turing halting problem). Math requires CREATIVITY — not just symbol manipulation. That's beautiful.",
+      "template_zh": "哥德尔展示形式化极限：足够强→不一致或不完备。无算法能判定所有数学真理(Turing停机问题)。数学需要创造力——不仅是符号操作。很美。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT309H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-2",
+      "unit-3",
+      "unit-4",
+      "unit-5"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "MAT247H1 — Socratic Discovery (Modules over a PID)",
+  "description": "A module over a ring R is like a vector space over a field — scalars from a RING. Key: not every module has a basis (free modules do). Over a PID, fin",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT247H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT247H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "A module over a ring R is like a vector space over a field — scalars from a RING. Key: not every module has a basis (free modules do). Over a PID, finitely generated modules ≈ free part ⊕ torsion part.",
+      "template_zh": "环R上的模就像域上的向量空间——标量来自环。关键：不是每个模有基(自由模有)。在PID上，有限生成模≈自由部分⊕挠部分。"
+    },
+    {
+      "type": "question",
+      "template_en": "ℤ-modules = abelian groups. The module ℤ⊕ℤ₂: ℤ is free (rank 1), ℤ₂ torsion (2·1=0). Structure theorem: every f.g. abelian group G ≈ ℤʳ⊕ℤ_{n₁}⊕...⊕ℤ_{nₖ}.",
+      "template_zh": "ℤ-模=阿贝尔群。模ℤ⊕ℤ₂：ℤ自由(秩1)，ℤ₂挠(2·1=0)。结构定理：有限生成阿贝尔群G≈ℤʳ⊕ℤ_{n₁}⊕...⊕ℤ_{nₖ}。"
+    },
+    {
+      "type": "explore",
+      "template_en": "For F[x]-modules: a vector space V with linear operator T is an F[x]-module where x·v=T(v). The structure theorem gives the RATIONAL CANONICAL FORM of T. Torsion = companion matrix blocks of invariant factors.",
+      "template_zh": "对F[x]-模：带线性算子T的向量空间V是F[x]-模，x·v=T(v)。结构定理给出T的有理标准型。挠=不变因子的友矩阵块。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Structure Theorem: M ≅ Rʳ ⊕ R/(p₁^{e₁})⊕...⊕R/(pₖ^{eₖ}) where pᵢ are primes. Primary decomposition UNIQUE. Invariant factors: Rʳ ⊕ R/(d₁)⊕...⊕R/(dₘ) where d₁|d₂|...|dₘ.",
+      "template_zh": "结构定理：M≅Rʳ⊕R/(p₁^{e₁})⊕...⊕R/(pₖ^{eₖ})，pᵢ为素元。准素分解唯一。不变因子：Rʳ⊕R/(d₁)⊕...⊕R/(dₘ)，d₁|d₂|...|dₘ。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Classify: (1) All abelian groups of order 72. (2) ℤ-module ℤ₁₀⊕ℤ₁₅ — find invariant factors. (3) ℝ[x]-module for T with matrix [[2,0,0],[0,2,1],[0,0,2]]. (4) Show ℚ is NOT a finitely generated ℤ-module.",
+      "template_zh": "分类：(1)72阶阿贝尔群。(2)ℤ-模ℤ₁₀⊕ℤ₁₅—找不变因子。(3)T的ℝ[x]-模，矩阵[[2,0,0],[0,2,1],[0,0,2]]。(4)ℚ不是有限生成ℤ-模。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Modules over a PID unify two theories: (1) Finitely generated abelian groups (ℤ-modules). (2) Linear operators (F[x]-modules). The SAME theorem gives both the fundamental theorem of abelian groups AND canonical forms.",
+      "template_zh": "PID上模统一了两个理论：(1)有限生成阿贝尔群(ℤ-模)。(2)线性算子(F[x]-模)。相同定理给出阿贝尔群基本定理和标准型。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT247H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-2",
+      "unit-3",
+      "unit-4",
+      "c1"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "MAT309H1 — Deductive Derivation (Gödel's Completeness Theorem)",
+  "description": "Completeness (1930): Γ ⊢ φ ⟺ Γ ⊨ φ. φ provable from Γ iff φ true in every model of Γ. SOUNDNESS (⊢→⊨) easy. COMPLETENESS (⊨→⊢) is deep.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT309H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT309H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Completeness (1930): Γ ⊢ φ ⟺ Γ ⊨ φ. φ provable from Γ iff φ true in every model of Γ. SOUNDNESS (⊢→⊨) easy. COMPLETENESS (⊨→⊢) is deep.",
+      "template_zh": "完备定理(1930)：Γ⊢φ⟺Γ⊨φ。φ从Γ可证当且仅当φ在Γ的每个模型真。可靠性容易。完备性深刻。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Proof: suppose Γ⊭φ (no proof). Build maximal consistent set extending Γ∪{¬φ} (Zorn's Lemma). Henkin's method: add witness constants.",
+      "template_zh": "证明：假设Γ⊭φ。构造极大一致集扩张Γ∪{¬φ}(Zorn引理)。Henkin方法：添加见证常元。"
+    },
+    {
+      "type": "step2",
+      "template_en": "From maximal consistent Δ, build TERM MODEL: domain = equivalence classes of terms. P([t₁],...,[tₙ]) holds iff P(t₁,...,tₙ)∈Δ. This model satisfies exactly the formulas in Δ. So Γ∪{¬φ} has a model → Γ⊭φ.",
+      "template_zh": "从极大一致Δ构造项模型：论域=项的等价类。P成立当且仅当P在Δ中。该模型恰好满足Δ中公式。所以Γ∪{¬φ}有模型→Γ⊭φ。"
+    },
+    {
+      "type": "step3",
+      "template_en": "COMPACTNESS: if every finite subset of Σ has a model, then Σ has a model. Why: if Σ has no model, Σ⊢⊥, but proofs finite → finite subset also ⊢⊥ → no model.",
+      "template_zh": "紧致性：若Σ的每个有限子集有模型，则Σ有模型。若Σ无模型则Σ⊢⊥，但证明有限→有限子集也⊢⊥→无模型。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Completeness is the FOUNDATION of model theory. Syntactic proof systems CAPTURE semantic consequence. Applications: (1) Compactness → nonstandard models. (2) Löwenheim-Skolem. (3) Herbrand's theorem → automated theorem proving.",
+      "template_zh": "完备定理是模型论的基础。语法证明系统捕获语义推论。应用：(1)紧致性→非标准模型。(2)Löwenheim-Skolem。(3)Herbrand定理→自动定理证明。"
+    },
+    {
+      "type": "meta",
+      "template_en": "First-order logic is 'just right' — not too strong (incompleteness) and not too weak (complete but expressive). The boundary between completeness and incompleteness is the boundary of first-order logic itself.",
+      "template_zh": "一阶逻辑'恰到好处'——不太强(不完备性)不太弱(完备但有表达力)。完备与不完备的边界就是一阶逻辑本身的边界。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT309H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-2",
+      "unit-3",
+      "unit-4",
+      "unit-5"
+    ]
+  }
+}

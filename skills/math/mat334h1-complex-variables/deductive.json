@@ -1,0 +1,75 @@
+{
+  "name": "MAT334H1 — Deductive Derivation (Cauchy's Integral Formula: $f(a) = \\frac{1}{2\\pi i}\\oint_\\gamma \\frac{f(z)}{z-a}\\,dz$)",
+  "description": "Derive Cauchy's Integral Formula: $f(a) = \\frac{1}{2\\pi i}\\oint_\\gamma \\frac{f(z)}{z-a}\\,dz$ step by logical step.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT334H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT334H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "We start from: Real differentiability only checks two directions (left/right). Complex differentiability implicitly checks infinitely many.. Demanding direction-independence of the derivative in a 2D plane forces a rigid relationship between the real and imaginary parts. What is the first logical step?",
+      "template_zh": "我们从 实可微只检查两个方向（左/右）。复可微隐含检查无穷多个方向。 出发。在二维平面中要求导数与方向无关，强制实部与虚部之间满足刚性关系。 第一步逻辑推理是什么？"
+    },
+    {
+      "type": "step1",
+      "template_en": "Begin from the definitions. What is the first logical consequence we can derive?",
+      "template_zh": "从定义出发。我们能推导出的第一个逻辑结果是什么？"
+    },
+    {
+      "type": "step2",
+      "template_en": "Step by step: Real differentiability: limit from left = limit from right → 1 constraint Complex differentiability: limit must agree along EVERY path → infinite constraints Write f = u + iv, approach along real axis: derivative = u_x + iv_x Approach along imaginary axis: derivative = -iu_y + v_y (since h = iΔy) Equating: u_x = v_y and u_y = -v_x → Cauchy-Riemann equations CR ⇒ u and v are harmonic (u_xx + u_yy = 0) and v is the harmonic conjugate of u",
+      "template_zh": "逐步推导：实可微：从左极限 = 从右极限 → 1 个约束 复可微：极限必须沿每条路径一致 → 无穷多个约束 写 f = u + iv，沿实轴方向：导数 = u_x + iv_x 沿虚轴方向：导数 = -iu_y + v_y（因 h = iΔy） 令相等：u_x = v_y 且 u_y = -v_x → Cauchy-Riemann 方程 CR ⇒ u 和 v 是调和的 (u_xx + u_yy = 0)，v 是 u 的调和共轭"
+    },
+    {
+      "type": "step3",
+      "template_en": "Therefore, Complex differentiability is not just 'real differentiability in 2D' — it's a fundamentally stronger condition that forces analytic functions to be infinitely smooth and rigidly structured. Every step followed logically from definitions — no leaps of faith.",
+      "template_zh": "因此，复可微不只是'二维中的实可微'——它是一个根本更强的条件，强制解析函数无穷光滑且结构刚性。 每一步都逻辑地跟随定义——没有跳跃。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Variant: what changes if we modify one of the assumptions? Does the theorem still hold? Construct a counterexample to test the boundary.",
+      "template_zh": "变体：如果我们修改其中一个假设，会改变什么？定理是否仍然成立？构造一个反例来测试边界。"
+    },
+    {
+      "type": "meta",
+      "template_en": "The key meta-lesson from Deductive Derivation (Cauchy's Integral Formula: $f(a) = \\frac{1}{2\\pi i}\\oint_\\gamma \\frac{f(z)}{z-a}\\,dz$): every theorem in this course follows from a small set of definitions and logical reasoning. The structure of the proof reveals WHY the theorem is true, not just THAT it is true. When studying, always trace each step back to a definition — that builds a connected understanding rather than isolated facts.",
+      "template_zh": "关于Deductive Derivation (Cauchy's Integral Formula: $f(a) = \\frac{1}{2\\pi i}\\oint_\\gamma \\frac{f(z)}{z-a}\\,dz$)的关键元认知：本课程中的每个定理都源于一组小定义和逻辑推理。证明的结构揭示了定理为什么成立，而不仅仅是它成立。学习时，始终将每一步追溯到一个定义——这建立了联系性的理解，而非孤立的事实。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT334H1",
+    "skillType": "deductive",
+    "difficulty": 4,
+    "version": "1.0"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "name": "MAT334H1 — Correction ($\\log(z)$ is multi-valued — forgetting branch cuts)",
+  "description": "Fix the common conceptual error: $\\log(z)$ is multi-valued — forgetting branch cuts.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT334H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT334H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: Thinking 'complex differentiable means partial derivatives exist' — but partials existing alone (even satisfying CR) is NOT sufficient without continuity This mistake is natural — it comes from over-generalising a pattern that works in simpler cases.",
+      "template_zh": "常见错误：认为'复可微就是偏导存在'——但只有偏导（甚至满足 CR）是不够的，还需要连续性。这个错误很自然——它来自于过度泛化一个在简单情况下有效的模式。"
+    },
+    {
+      "type": "question",
+      "template_en": "Let's test your understanding. I give you u(x,y) = x³ - 3xy² and v(x,y) = 3x²y - y³. They satisfy CR everywhere. But is f(z) = z³ differentiable? Does satisfying CR at a point guarantee differentiability there? What's missing? Work through the problem carefully. What assumption did you just make? Is it justified?",
+      "template_zh": "让我们测试你的理解。给定 u(x,y) = x³ - 3xy² 和 v(x,y) = 3x²y - y³。它们处处满足 CR。但 f(z) = z³ 可微吗？在某点满足 CR 就保证可微吗？还缺什么？ 仔细解题。你刚才做了什么假设？这个假设合理吗？"
+    },
+    {
+      "type": "explore",
+      "template_en": "Let's explore this more deeply. What does the correct understanding look like? Consider the fundamental reason behind the error: it comes from over-generalizing a pattern that works in simple cases but breaks down in general. The key is to identify the hidden assumption that is not always justified.\n\nAsk yourself: what condition must hold for this pattern to work? When does that condition fail? The boundary between where it works and where it doesn't defines the precise scope of the concept.",
+      "template_zh": "让我们更深入地探讨。正确的理解是什么样的？考虑错误背后的根本原因：它来自于过度推广一个在简单情况下有效但在一般情况下会失效的模式。关键是识别出那个并不总是成立的隐藏假设。\n\n问问自己：这个模式成立需要什么条件？该条件何时失效？它有效和无效的边界定义了该概念的精确范围。"
+    },
+    {
+      "type": "insight",
+      "template_en": "The correct reasoning: CR alone guarantee differentiability only if u_x, u_y, v_x, v_y are continuous (or f is continuous). The classic counterexample: f(z) = (z̅)²/z near 0 satisfies CR at 0 but isn't differentiable there. Always check the limit definition, not just CR. The subtlety is that intuition from elementary cases doesn't always carry over.",
+      "template_zh": "正确的推理是：仅 CR 不足以保证可微——还需要 u_x, u_y, v_x, v_y 连续（或 f 连续）。经典反例：f(z) = (z̅)²/z 在 0 附近满足 CR(0) 但不可微。始终用极限定义检查，不只依赖 CR。。微妙之处在于，从初等情况得到的直觉并不总是能推广。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Find where this error appears in the wild: (1) search your work for this pattern. (2) Correct it. (3) Explain to a peer why the correction matters.",
+      "template_zh": "找出这个错误出现在你之前作业中的位置：(1) 在你的作业中搜索这个模式。(2) 修正它。(3) 向同学解释为什么这个修正很重要。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Reflection: What was the core misconception behind this error? How does the corrected understanding change the way you think about MAT334H1 — Correction ($\\log(z)$ is multi-valued — forgetting branch cuts)? The best mathematicians don't avoid mistakes — they learn from them faster by analyzing the gap between their intuition and the correct reasoning. What will you watch out for in the future?",
+      "template_zh": "反思：这个错误背后的核心误解是什么？修正后的理解如何改变你对MAT334H1 — Correction ($\\log(z)$ is multi-valued — forgetting branch cuts)的看法？最好的数学家不会避免错误——他们通过分析直觉与正确推理之间的差距来更快地从中学习。你将来会注意什么？"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/counterexamples.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT334H1",
+    "skillType": "correction",
+    "difficulty": 4,
+    "version": "1.0"
+  }
+}

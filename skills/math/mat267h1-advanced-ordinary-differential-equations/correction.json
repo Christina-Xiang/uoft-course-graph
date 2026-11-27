@@ -1,0 +1,86 @@
+{
+  "name": "MAT267H1 — Correction Attribution (Perturbation Methods)",
+  "description": "'If ε is small, set ε=0.' Works for REGULAR perturbation. For SINGULAR perturbation, setting ε=0 changes equation type (e.g., reduces ODE order). Need",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT267H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT267H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'If ε is small, set ε=0.' Works for REGULAR perturbation. For SINGULAR perturbation, setting ε=0 changes equation type (e.g., reduces ODE order). Need matched asymptotic expansions.",
+      "template_zh": "'如果ε很小，设ε=0就行。'对正则摄动可行。对奇异摄动，设ε=0改变方程类型(如降低ODE阶)。需要匹配渐近展开。"
+    },
+    {
+      "type": "question",
+      "template_en": "εy''+y'+y=0, y(0)=0, y(1)=1. If ε=0: y'+y=0 → y=Ce^{-x}. Can't satisfy both BCs! BOUNDARY LAYER near x=0 where εy'' matters.",
+      "template_zh": "εy''+y'+y=0, y(0)=0, y(1)=1。若ε=0：y'+y=0→y=Ce^{-x}。无法满足两个边条！在x=0有边界层。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Regular: x''+x+εx³=0. x=x₀+εx₁+... O(1): x₀=cost. O(ε): x₁''+x₁=-cos³t → secular term (t·sint). Need multiple scales.",
+      "template_zh": "正则：x''+x+εx³=0。x=x₀+εx₁+... O(1): x₀=cost。O(ε): x₁''+x₁=-cos³t→长期项(t·sint)。需多重尺度。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Matched asymptotics: (1) OUTER: set ε=0, misses boundary layer. (2) INNER: rescale X=x/ε^α. (3) MATCH: inner and outer agree in overlap. (4) COMPOSITE: inner+outer-overlap.",
+      "template_zh": "匹配渐近：(1)外部解：设ε=0，缺边界层。(2)内部解：重新标度X=x/ε^α。(3)匹配：内外在重叠区一致。(4)复合：内+外-重叠。"
+    },
+    {
+      "type": "practice",
+      "template_en": "εy''-y'=0, y(0)=1, y(1)=0. (1) Outer (satisfy y(1)=0). (2) Boundary layer location? (3) Inner solution. (4) Match and form composite. (5) Sketch for ε=0.01.",
+      "template_zh": "εy''-y'=0, y(0)=1, y(1)=0。(1)外部解(满足y(1)=0)。(2)边界层位置？(3)内部解。(4)匹配得复合解。(5)画ε=0.01的图。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Perturbation: exact solutions impossible. Regular: expansion works. Singular: boundary layers, WKB, multiple scales. KEY: identify DOMINANT BALANCE in each region.",
+      "template_zh": "摄动方法：精确解不可行时。正则：展开可行。奇异：边界层、WKB、多重尺度。关键：各区域确定主导平衡。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT267H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-2",
+      "unit-3",
+      "unit-4",
+      "c1"
+    ]
+  }
+}

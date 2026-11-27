@@ -1,0 +1,86 @@
+{
+  "name": "MAT267H1 — Socratic Discovery (Nonlinear Systems and Phase Portraits)",
+  "description": "For 2D x'=f(x,y), y'=g(x,y), we draw the phase portrait. Fixed points: f=g=0. Linearize near each: Jacobian J. Eigenvalues of J determine LOCAL behavi",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT267H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT267H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "For 2D x'=f(x,y), y'=g(x,y), we draw the phase portrait. Fixed points: f=g=0. Linearize near each: Jacobian J. Eigenvalues of J determine LOCAL behavior.",
+      "template_zh": "对2D x'=f(x,y), y'=g(x,y)，画相图。不动点：f=g=0。附近线性化：雅可比J。J的特征值决定局部行为。"
+    },
+    {
+      "type": "question",
+      "template_en": "x'=y, y'=-x: J=[[0,1],[-1,0]], eigenvalues ±i → CENTER (closed orbits). x'=y, y'=x: eigenvalues ±1 → SADDLE. Stability determined by REAL PART of eigenvalues.",
+      "template_zh": "x'=y, y'=-x: J=[[0,1],[-1,0]], 特征值±i→中心。x'=y, y'=x: 特征值±1→鞍点。稳定性由特征值实部决定。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Classification: (1) Real λ₁>0>λ₂ → saddle. (2) Both negative → stable node. (3) Both positive → unstable node. (4) Complex Re<0 → stable spiral. (5) Complex Re>0 → unstable spiral. (6) Purely imaginary → center (Hartman-Grobman needed).",
+      "template_zh": "分类：(1)实λ₁>0>λ₂→鞍。(2)都负→稳定结点。(3)都正→不稳定结点。(4)复Re<0→稳定螺旋。(5)复Re>0→不稳定螺旋。(6)纯虚→中心(需Hartman-Grobman)。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Hartman-Grobman: If NO eigenvalues on imaginary axis (hyperbolic fixed point), the nonlinear system is LOCALLY TOPOLOGICALLY CONJUGATE to the linearized system. Phase portrait near fixed point looks the same.",
+      "template_zh": "Hartman-Grobman：若无虚轴特征值(双曲不动点)，非线性系统局部拓扑共轭于线性化系统。不动点附近相图相同。"
+    },
+    {
+      "type": "practice",
+      "template_en": "For x'=y, y'=-x-x²: (1) Find all fixed points. (2) Linearize at each. (3) Classify. (4) Nonlinear term x² breaks center — what happens? (5) Use Poincaré-Bendixson for limit cycles.",
+      "template_zh": "对x'=y, y'=-x-x²：(1)找所有不动点。(2)在每个点线性化。(3)分类。(4)非线性项x²破坏中心？(5)用Poincaré-Bendixson找极限环。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Poincaré-Bendixson: in 2D, bounded trajectory not approaching a fixed point → LIMIT CYCLE. Only in 2D — in 3D+ you get CHAOS (strange attractors). Why weather prediction is fundamentally limited.",
+      "template_zh": "Poincaré-Bendixson：2D中不趋于不动点的有界轨迹→极限环。只在2D成立——3D+得混沌(奇异吸引子)。天气预测的根本局限。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT267H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-2",
+      "unit-3",
+      "unit-4",
+      "c1"
+    ]
+  }
+}

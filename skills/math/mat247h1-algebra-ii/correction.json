@@ -1,0 +1,86 @@
+{
+  "name": "MAT247H1 — Correction Attribution (Bilinear Forms)",
+  "description": "'Every bilinear form is symmetric.' WRONG! B:V×V→F is SYMMETRIC if B(v,w)=B(w,v); ALTERNATING if B(v,w)=-B(w,v), B(v,v)=0. Classification depends on f",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT247H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT247H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'Every bilinear form is symmetric.' WRONG! B:V×V→F is SYMMETRIC if B(v,w)=B(w,v); ALTERNATING if B(v,w)=-B(w,v), B(v,v)=0. Classification depends on field characteristic.",
+      "template_zh": "'每个双线性型是对称的。'错！对称若B(v,w)=B(w,v)；交错若B(v,w)=-B(w,v), B(v,v)=0。分类依赖于域特征。"
+    },
+    {
+      "type": "question",
+      "template_en": "Standard inner product = dot product. In a basis, B(v,w)=vᵀAw. Symmetric ⟺ Aᵀ=A. Alternating ⟺ Aᵀ=-A, diag=0.",
+      "template_zh": "标准内积=点积。在基中，B(v,w)=vᵀAw。对称⟺Aᵀ=A。交错⟺Aᵀ=-A，对角=0。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Over ℝ: SYLVESTER'S LAW OF INERTIA — symmetric bilinear form diagonalizes with p positive, q negative, r zero. Signature (p,q,r) is INVARIANT. Classification of real quadratic forms.",
+      "template_zh": "在ℝ上：Sylvester惯性定律——对称双线性型对角化有p正q负r零。符号差(p,q,r)不变量。实二次型分类。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Applications: (1) Metric tensors in differential geometry. (2) Special relativity: Minkowski metric signature (3,1,0). (3) Symplectic forms in Hamiltonian mechanics.",
+      "template_zh": "应用：(1)微分几何度量张量。(2)狭义相对论：Minkowski度量符号差(3,1,0)。(3)哈密顿力学辛型。"
+    },
+    {
+      "type": "practice",
+      "template_en": "For each bilinear form on ℝ²: (1) vᵀw. (2) v₁w₁-v₂w₂. (3) v₁w₂-v₂w₁. (4) v₁w₁. Classify as symmetric/alternating/neither. Find matrix. Find signature.",
+      "template_zh": "对ℝ²上每个双线性型：(1)vᵀw。(2)v₁w₁-v₂w₂。(3)v₁w₂-v₂w₁。(4)v₁w₁。分为对称/交错/都不是。求矩阵和符号差。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Bilinear forms generalize 'scalar product.' Different geometries: inner product (symmetric positive definite), symplectic (alternating nondegenerate), Minkowski (indefinite symmetric). Each = DIFFERENT geometry.",
+      "template_zh": "双线性型推广'标量积'。不同几何：内积(对称正定)、辛型(交错非退化)、Minkowski(不定对称)。每个=不同几何。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT247H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-2",
+      "unit-3",
+      "unit-4",
+      "c1"
+    ]
+  }
+}

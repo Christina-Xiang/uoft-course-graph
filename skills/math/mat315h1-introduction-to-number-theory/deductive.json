@@ -1,0 +1,75 @@
+{
+  "name": "MAT315H1 — Deductive Derivation (Law of Quadratic Reciprocity)",
+  "description": "Derive Law of Quadratic Reciprocity step by logical step.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT315H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT315H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "We start from: The division algorithm: for any integers a, n > 0, there exist unique q, r with a = qn + r and 0 ≤ r < n.. Congruence modulo n is an equivalence relation that respects addition and multiplication — this compatibility is what makes modular arithmetic a consistent system. What is the first logical step?",
+      "template_zh": "我们从 带余除法：对任意整数 a 和 n > 0，存在唯一的 q, r 使得 a = qn + r，0 ≤ r < n。 出发。模 n 同余是保持加法和乘法的等价关系——这种兼容性使模算术成为一致的体系。 第一步逻辑推理是什么？"
+    },
+    {
+      "type": "step1",
+      "template_en": "Begin from the definitions. What is the first logical consequence we can derive?",
+      "template_zh": "从定义出发。我们能推导出的第一个逻辑结果是什么？"
+    },
+    {
+      "type": "step2",
+      "template_en": "Step by step: Define a ≡ b (mod n) iff n | (a - b) — equivalently, a and b have the same remainder upon division by n Prove reflexivity (a ≡ a), symmetry (a ≡ b ⇒ b ≡ a), transitivity (a ≡ b ∧ b ≡ c ⇒ a ≡ c) — these make it an equivalence relation partitioning Z into n classes Prove compatibility: if a ≡ b and c ≡ d (mod n), then a + c ≡ b + d and a·c ≡ b·d (mod n) — arithmetic mod n is well-defined on equivalence classes Derive CRT: given pairwise coprime moduli n₁, ..., nₖ and residues r₁, ..., rₖ, there exists a unique solution x modulo N = n₁·...·nₖ Derive Fermat: a^p ≡ a (mod p) via binomial theorem — (a+1)^p = a^p + Σ(p choose k)a^{p-k} + 1, and p divides each (p choose k) for 0 < k < p Derive Euler: a^φ(n) ≡ 1 (mod n) for gcd(a,n) = 1 via the reduced residue system argument",
+      "template_zh": "逐步推导：定义 a ≡ b (mod n) 当且仅当 n | (a - b)——等价于 a 和 b 除以 n 有相同余数 证明自反性(a ≡ a)、对称性(a ≡ b ⇒ b ≡ a)、传递性(a ≡ b ∧ b ≡ c ⇒ a ≡ c)——同余将 Z 划分为 n 个等价类 证明兼容性：若 a ≡ b, c ≡ d (mod n)，则 a + c ≡ b + d 且 a·c ≡ b·d (mod n)——模 n 算术在等价类上定义良好 推导 CRT：给定两两互质的模数 n₁, ..., nₖ 和余数 r₁, ..., rₖ，存在唯一解 x 模 N = n₁·...·nₖ 推导 Fermat：a^p ≡ a (mod p) 通过二项式定理——(a+1)^p = a^p + Σ(p choose k)a^{p-k} + 1，0<k<p 时 p 整除每个 (p choose k) 推导 Euler：gcd(a,n)=1 时 a^φ(n) ≡ 1 (mod n) 通过缩剩余系论证"
+    },
+    {
+      "type": "step3",
+      "template_en": "Therefore, Modular arithmetic is not a collection of computational tricks — it is the arithmetic of equivalence classes under the relation 'difference is a multiple of n'. Congruence, CRT, Fermat, and Euler all follow from this single foundational idea: wrapping Z around a circle of n points. Every step followed logically from definitions — no leaps of faith.",
+      "template_zh": "因此，模算术不是计算技巧的集合——它是在'差为 n 的倍数'这一关系下等价类的算术。同余、CRT、Fermat 和 Euler 都源自同一个基础思想：将 Z 缠绕在 n 个点的圆上。 每一步都逻辑地跟随定义——没有跳跃。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Variant: what changes if we modify one of the assumptions? Does the theorem still hold? Construct a counterexample to test the boundary.",
+      "template_zh": "变体：如果我们修改其中一个假设，会改变什么？定理是否仍然成立？构造一个反例来测试边界。"
+    },
+    {
+      "type": "meta",
+      "template_en": "The key meta-lesson from Deductive Derivation (Law of Quadratic Reciprocity): every theorem in this course follows from a small set of definitions and logical reasoning. The structure of the proof reveals WHY the theorem is true, not just THAT it is true. When studying, always trace each step back to a definition — that builds a connected understanding rather than isolated facts.",
+      "template_zh": "关于Deductive Derivation (Law of Quadratic Reciprocity)的关键元认知：本课程中的每个定理都源于一组小定义和逻辑推理。证明的结构揭示了定理为什么成立，而不仅仅是它成立。学习时，始终将每一步追溯到一个定义——这建立了联系性的理解，而非孤立的事实。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT315H1",
+    "skillType": "deductive",
+    "difficulty": 4,
+    "version": "1.0"
+  }
+}

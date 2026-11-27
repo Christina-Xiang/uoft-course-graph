@@ -1,0 +1,76 @@
+{
+  "name": "MAT334H1 — Socratic Discovery (complex differentiability)",
+  "description": "Guide the student to discover Cauchy-Riemann equations: $f(z)=u+iv$ is analytic $\\iff$ $u_x=v_y$ and $u_y=-v_x$ through scaffolded Socratic questioning.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT334H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT334H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "For a real function f: R → R, what does it mean to be differentiable at x = a? Draw the picture. Now count: how many 'directions' can you approach a from on the real line?\n\nThe derivative is the slope of the tangent line. How many sides can you come from on a line?\n\nOn the real line, you can only approach from left or right. Differentiability requires both limits agree. That's only 2 directions.",
+      "template_zh": "对于实函数 f: R → R，在 x = a 处可微意味着什么？画出图。数一数：在实线上你能从多少个方向接近 a？\n\n导数就是切线的斜率。在一条线上你能从多少边接近？\n\n在实线上只能从左或右接近。可微要求两个方向的极限一致。只有 2 个方向。"
+    },
+    {
+      "type": "question",
+      "template_en": "Now for f: C → C at point z₀. How many directions can you approach z₀ from? Draw the complex plane. Is 'from the left' still well-defined?\n\nIn the complex plane, every angle is a direction. How many angles are there between 0° and 360°?\n\nInfinitely many directions — every angle from 0 to 2π. Differentiability in complex sense must work for ALL of them. This is why complex differentiability is so restrictive.",
+      "template_zh": "现在对 f: C → C 在点 z₀ 处。你能从多少个方向接近 z₀？画出复平面。'从左'还有意义吗？\n\n在复平面上，每个角度都是一个方向。0° 到 360° 之间有多少个角度？\n\n无穷多个方向——0 到 2π 的每个角度。复可微必须对所有方向成立。这就是为什么复可微性如此严格。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Take f(z) = z̅ (complex conjugate). Compute the limit (f(z₀+h) - f(z₀))/h as h → 0 along the real axis. Now along the imaginary axis. What do you get? Are they equal?\n\nWrite h = t (real) for real approach, h = it (purely imaginary) for imaginary approach. Compute both limits.\n\nAlong real axis: f(z₀+t)-f(z₀) = t̅ = t, so limit = t/t = 1. Along imaginary: f(z₀+it)-f(z₀) = (it)̅ = -it, so limit = -it/it = -1. Different limits! So z̅ is not complex-differentiable anywhere.",
+      "template_zh": "取 f(z) = z̅（复共轭）。计算 (f(z₀+h)-f(z₀))/h 当 h → 0 沿实轴。再沿虚轴。结果是什么？它们相等吗？\n\n实方向取 h = t（实数），虚方向取 h = it（纯虚数）。分别计算极限。\n\n沿实轴：f(z₀+t)-f(z₀) = t̅ = t，所以极限 = t/t = 1。沿虚轴：f(z₀+it)-f(z₀) = (it)̅ = -it，所以极限 = -it/it = -1。极限不同！所以 z̅ 处处不可微。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Generalize: write f(z) = u(x,y) + iv(x,y) and h = Δx + iΔy. Write the difference quotient. If you demand the limit be independent of the direction of h, what equations must u and v satisfy?\n\nFirst set Δy = 0 (real approach), then Δx = 0 (imaginary approach). Equate the two expressions for the derivative.\n\nSetting Δy=0 gives f'(z) = u_x + iv_x. Setting Δx=0 gives f'(z) = -iu_y + v_y. Equating: u_x = v_y and u_y = -v_x — these are the Cauchy-Riemann equations.",
+      "template_zh": "推广：写 f(z) = u(x,y) + iv(x,y) 和 h = Δx + iΔy。写出差商。如果要求极限与 h 的方向无关，u 和 v 必须满足什么方程？\n\n先设 Δy = 0（实轴方向），再设 Δx = 0（虚轴方向）。令两个导数的表达式相等。\n\nΔy=0 得 f'(z) = u_x + iv_x。Δx=0 得 f'(z) = -iu_y + v_y。令相等：u_x = v_y 且 u_y = -v_x——这就是 Cauchy-Riemann 方程。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Based on what we've explored about Socratic Discovery (complex differentiability), try these: (1) Explain the core idea in your own words. (2) Work through an example that illustrates the key concept. (3) How would you teach this to a peer who missed the class?",
+      "template_zh": "基于我们对Socratic Discovery (complex differentiability)的探索，尝试以下练习：(1) 用自己的话解释核心思想。(2) 通过一个例子说明关键概念。(3) 你会如何向缺课的同学讲解这个内容？"
+    },
+    {
+      "type": "insight",
+      "template_en": "Key insight: Socratic Discovery (complex differentiability) is not just a collection of definitions — it's a way of thinking. The examples and non-examples build a mental model that lets you reason about new situations. The formal definition captures something you already understood intuitively; it just makes it precise enough to work with rigorously.",
+      "template_zh": "关键洞察：Socratic Discovery (complex differentiability) 不仅是定义的集合——它是一种思维方式。示例和反例构建了一个思维模型，让你能够推理新情况。形式化定义捕捉了你已经直觉理解的东西；它只是使其足够精确以便严格处理。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/concept-map.md",
+    "references/counterexamples.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT334H1",
+    "skillType": "socratic",
+    "difficulty": 4,
+    "version": "1.0"
+  }
+}
