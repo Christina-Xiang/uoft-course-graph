@@ -1,0 +1,86 @@
+{
+  "name": "CSC301H1 — Correction Attribution (Agile vs No Planning)",
+  "description": "Common misconception: 'We use agile, so we just start coding and figure it out.' Agile is NOT about no planning — it's about ADAPTIVE PLANNING. The Ag",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC301H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC301H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common misconception: 'We use agile, so we just start coding and figure it out.' Agile is NOT about no planning — it's about ADAPTIVE PLANNING. The Agile Manifesto values 'Responding to change over following a plan' — but you need a plan to RESPOND to!",
+      "template_zh": "常见误解：'我们用敏捷，所以直接开始编码。'敏捷不是不计划——它是关于适应性计划。敏捷宣言更重视'响应变化而非遵循计划'——但你需要计划才能响应！"
+    },
+    {
+      "type": "question",
+      "template_en": "Scrum defines: Sprint Planning (2-week cycle, plan what to build), Daily Standup (15 min sync), Sprint Review (demo + feedback), Retrospective (improve process). Which of these is a planning activity? ALL of them! Agile has MORE planning, not less.",
+      "template_zh": "Scrum定义：Sprint规划（2周周期，规划构建什么）、每日站会（15分钟同步）、Sprint评审（演示+反馈）、回顾（改进过程）。哪个是规划活动？全部！敏捷有更多的规划，不是更少。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Waterfall: plan everything upfront (months) → build → test → deploy. Agile: plan 2 weeks → build → test → deploy → plan next 2 weeks. Waterfall assumes requirements are stable. Agile embraces change — but change requires RE-planning, which requires planning skills.",
+      "template_zh": "瀑布：预先全面计划（数月）→构建→测试→部署。敏捷：规划2周→构建→测试→部署→规划下2周。瀑布假设需求稳定。敏捷拥抱变化——但变化需要重新规划，而重新规划需要规划技能。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Misunderstanding agile leads to: (1) No documentation ('working software over comprehensive documentation' ≠ NO documentation). (2) No design ('emergent design' ≠ no design upfront). (3) No process. These are 'cargo cult agile' — following the rituals without understanding the principles.",
+      "template_zh": "误解敏捷导致：(1)无文档（'可工作软件胜于全面文档'≠无文档）。(2)无设计（'涌现设计'≠无预先设计）。(3)无过程。这些是'货物崇拜敏捷'——遵循仪式而不理解原则。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Your team says they're agile but: (1) There are no user stories. (2) There are no sprint reviews. (3) There is no product owner. (4) There are no retrospectives. What would you change? Create a 1-page proposal explaining the minimal agile ceremonies and their purposes.",
+      "template_zh": "你的团队说他们在用敏捷但：(1)没有用户故事。(2)没有sprint评审。(3)没有产品负责人。(4)没有回顾。你会改变什么？创建一页提案解释最小化敏捷仪式及其目的。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Agile = iterative planning + continuous feedback + willingness to change course. 'Plan, Do, Check, Act' (Deming cycle) applied to software. The plan IS important — what changes is WHEN you plan (continuously) and HOW MUCH detail (just-in-time, not upfront).",
+      "template_zh": "敏捷=迭代式规划+持续反馈+愿意改变方向。'计划、执行、检查、行动'（戴明环）应用于软件。计划是重要的——改变的是何时计划（持续地）和多少细节（即时而非预先）。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC301H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

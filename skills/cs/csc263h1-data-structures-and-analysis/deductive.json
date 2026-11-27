@@ -1,0 +1,86 @@
+{
+  "name": "CSC263H1 — Deductive Derivation (Union-Find with Path Compression)",
+  "description": "Union-Find tracks disjoint sets. Three operations: Makeset(x), Find(x) (returns set representative), Union(x,y) (merges sets). With union by rank + pa",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC263H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC263H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Union-Find tracks disjoint sets. Three operations: Makeset(x), Find(x) (returns set representative), Union(x,y) (merges sets). With union by rank + path compression, m operations on n elements run in O(m·α(n)) — essentially constant!",
+      "template_zh": "Union-Find跟踪不相交集合。三个操作：Makeset(x)、Find(x)（返回集合代表）、Union(x,y)（合并集合）。使用按秩合并+路径压缩，n个元素上的m次操作为O(m·α(n))——几乎常数！"
+    },
+    {
+      "type": "step1",
+      "template_en": "Makeset(x): parent[x] = x; rank[x] = 0. Find(x): if parent[x]==x: return x; else: parent[x] = find(parent[x]); return parent[x]. Path compression: during find, point ALL traversed nodes directly to the root.",
+      "template_zh": "Makeset(x): parent[x]=x; rank[x]=0。Find(x): if parent[x]==x: return x; else: parent[x]=find(parent[x]); return parent[x]。路径压缩：在find期间，将所有经过的节点直接指向根。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Union(x,y): rx=find(x), ry=find(y). If rx==ry: return. If rank[rx]<rank[ry]: parent[rx]=ry. If rank[rx]>rank[ry]: parent[ry]=rx. If equal: parent[ry]=rx; rank[rx]++. Union by rank: always attach smaller tree under larger tree — keeps height O(log n) without compression.",
+      "template_zh": "Union(x,y): rx=find(x), ry=find(y)。若rx==ry: return。若rank[rx]<rank[ry]: parent[rx]=ry。若rank[rx]>rank[ry]: parent[ry]=rx。若相等: parent[ry]=rx; rank[rx]++。按秩合并：始终将小树附在大树下——无压缩时高度O(log n)。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Without compression: find is O(log n). With compression: subsequent finds become O(1). The total work for m finds is O(m·α(n)) where α is the inverse Ackermann function — grows so slowly that α(n) ≤ 4 for n up to 2^65536.",
+      "template_zh": "无压缩：find是O(log n)。有压缩：后续find变为O(1)。m次find的总工作量为O(m·α(n))，其中α是反Ackermann函数——增长如此之慢，对n≤2^65536有α(n)≤4。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Union-Find with both optimizations = '(near) constant time' per operation. The inverse Ackermann bound is the SLOWEST-growing function that appears in algorithm analysis. This makes Union-Find one of the most elegant data structures.",
+      "template_zh": "Union-Find加上两种优化=每次操作'(近)常数时间'。反Ackermann界是算法分析中出现的最慢增长函数。这使Union-Find成为最优雅的数据结构之一。"
+    },
+    {
+      "type": "meta",
+      "template_en": "Path compression is SELF-ADJUSTING — each find pays a little extra to make future finds cheaper. This 'pay now, benefit later' pattern appears in splay trees (self-adjusting BSTs) and other amortized data structures. The key insight: tall trees get flattened.",
+      "template_zh": "路径压缩是自调整的——每次find多花一点成本使后续find更便宜。这种'现在付出，以后受益'模式出现在伸展树（自调整BST）和其他分摊数据结构中。关键洞见：高树被压平。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC263H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

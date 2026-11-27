@@ -1,0 +1,86 @@
+{
+  "name": "CSC373H1 — Socratic Discovery (Optimal Substructure in Dynamic Programming)",
+  "description": "Shortest path A→D is A→B→C→D. Subpath A→C is also the shortest A→C. If it weren't, we could replace it and get a shorter overall path. This is OPTIMAL",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC373H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC373H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Shortest path A→D is A→B→C→D. Subpath A→C is also the shortest A→C. If it weren't, we could replace it and get a shorter overall path. This is OPTIMAL SUBSTRUCTURE — an optimal solution contains optimal sub-solutions. This is the KEY property enabling DP.",
+      "template_zh": "最短路径A→D是A→B→C→D。子路径A→C也是最短的A→C。如果不是，我们可以替换它得到更短的总路径。这是最优子结构——最优解包含最优子解。这是使DP成为可能的关键性质。"
+    },
+    {
+      "type": "question",
+      "template_en": "Weighted interval scheduling: each job has start time, end time, weight. Goal: max-weight set of non-overlapping jobs. If job j is in the optimal solution, what can we say about the subproblem? (Jobs compatible before job j). Does this problem have optimal substructure? YES.",
+      "template_zh": "加权区间调度：每个作业有开始时间、结束时间、权重。目标：不重叠作业的最大权重集。如果作业j在最优解中，我们能对子问题说什么？（作业j之前兼容的作业）。这问题有最优子结构吗？有。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Longest simple path is DIFFERENT. In a graph with cycles, a subpath of the longest simple path may NOT be the longest simple path between its endpoints. Example: A→B→C→D→E has subpath B→C→D, but the longest B→D might go through a cycle.",
+      "template_zh": "最长简单路径不同。在有环的图中，最长简单路径的子路径不一定是其端点间的最长简单路径。例子：A→B→C→D→E有子路径B→C→D，但最长的B→D可能经过一个环。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "DP recipe: (1) Define subproblems — clever indexing. (2) Relate subproblems — recurrence. (3) Order subproblems — topological order. (4) Base cases. (5) Solve original from subproblems. The recurrence IS the optimal substructure.",
+      "template_zh": "DP配方：(1)定义子问题——巧妙索引。(2)关联子问题——递推关系。(3)排序子问题——拓扑序。(4)基础情况。(5)从子问题求解原问题。递推关系就是最优子结构。"
+    },
+    {
+      "type": "practice",
+      "template_en": "For each, does it have optimal substructure? If yes, define subproblems and recurrence: (1) 0/1 Knapsack. (2) Huffman coding. (3) Longest common subsequence. (4) Traveling salesman (small city count). (5) Matrix chain multiplication.",
+      "template_zh": "对每个，它有最优子结构吗？如果有，定义子问题和递推关系：(1)0/1背包。(2)Huffman编码。(3)最长公共子序列。(4)旅行商（小城市数）。(5)矩阵链乘法。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Not all optimization problems have optimal substructure! It's a property you must PROVE, not assume. The 'cut-and-paste' argument: if a sub-solution is not optimal, replace it with the optimal one to get a better overall solution → contradiction → sub-solution must be optimal.",
+      "template_zh": "不是所有优化问题都有最优子结构！这是一个必须证明、不能假设的性质。'剪贴'论证：如果子解不是最优的，用最优的替换得到更好的整体解→矛盾→子解必须是最优的。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC373H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "CSC263H1 — Correction Attribution (Hash Table Worst-Case Fallacy)",
+  "description": "Common error: 'Hash table lookups are O(1).' TRUE for average case with good hash function. FALSE for worst case: ALL keys hash to same bucket → O(n).",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC263H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC263H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: 'Hash table lookups are O(1).' TRUE for average case with good hash function. FALSE for worst case: ALL keys hash to same bucket → O(n). This happens with: (1) a poor hash function, (2) malicious input (hash DoS attack).",
+      "template_zh": "常见错误：'哈希表查找是O(1)。'使用好哈希函数时平均情况为真。最坏情况为假：所有键哈希到同一桶→O(n)。发生在：(1)坏哈希函数，(2)恶意输入（哈希DoS攻击）。"
+    },
+    {
+      "type": "question",
+      "template_en": "If we insert n keys and they all hash to bucket 7, how long does a lookup take? The answer is O(n) — we must linearly search through all n keys. But isn't the hash table supposed to be fast? It is FAST in expectation if keys are distributed uniformly.",
+      "template_zh": "如果插入n个键全哈希到桶7，一次查找需要多长时间？答案是O(n)——必须线性搜索所有n个键。但哈希表不是应该很快吗？如果键均匀分布，它在期望上是快的。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Worst-case scenarios: (1) String.hashCode() in Java — easily construct many strings with same hash. (2) Universal hashing — randomly pick hash function from a family, making worst-case unlikely. (3) Perfect hashing — guarantee O(1) worst-case for STATIC key sets.",
+      "template_zh": "最坏情况场景：(1)Java的String.hashCode()——容易构造具有相同哈希的许多串。(2)全域哈希——从族中随机选取哈希函数，使最坏情况几乎不可能。(3)完美哈希——对静态键集保证O(1)最坏情况。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Average-case O(1) requires: (1) hash function distributes keys uniformly, (2) load factor α = n/m is bounded (rehashing when α too high). Java 8+: tree-based buckets (threshold 8) degrade to O(log n) instead of O(n). Cuckoo hashing: O(1) worst-case lookup.",
+      "template_zh": "平均情况O(1)需要：(1)哈希函数均匀分布键，(2)负载因子α=n/m有界（α太高时rehash）。Java 8+：基于树的桶（阈值8）退化为O(log n)而非O(n)。布谷鸟哈希：O(1)最坏情况查找。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Analyze worst-case: (1) n=10000, hash(x)=x%10. Insert keys 0,10,20,...,99990. What's lookup time? (2) Same keys, hash(x)=x%9973. What's lookup time? (3) If an adversary knows your hash function, can they force O(n) behavior?",
+      "template_zh": "分析最坏情况：(1)n=10000，hash(x)=x%10。插入键0,10,20,...,99990。查找时间？(2)相同键，hash(x)=x%9973。查找时间？(3)如果攻击者知道你的哈希函数，他们能强制O(n)行为吗？"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Always specify: 'Hash table operations are EXPECTED O(1), worst-case O(n).' Use balanced BST (O(log n) guaranteed) if worst-case matters more than average. Know your data — if keys are predictable (sequential integers), a simple modulo works great. If adversarial, use universal hashing.",
+      "template_zh": "始终说明：'哈希表操作是期望O(1)，最坏情况O(n)。'如果最坏情况比平均更重要，使用平衡BST（保证O(log n)）。了解你的数据——如果键可预测（顺序整数），简单取模就很好。如果存在恶意，使用全域哈希。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC263H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "CSC311H1 — Socratic Discovery (Empirical Risk Minimization)",
+  "description": "We want f:X→Y minimizing expected loss E[loss(f(X),Y)]. We don't know the true distribution — only training data. ERM: minimize (1/n)Σ loss(f(xᵢ),yᵢ),",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC311H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC311H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "We want f:X→Y minimizing expected loss E[loss(f(X),Y)]. We don't know the true distribution — only training data. ERM: minimize (1/n)Σ loss(f(xᵢ),yᵢ), hoping this ≈ expected risk. This is the FUNDAMENTAL learning framework.",
+      "template_zh": "我们希望最小化期望损失E[loss(f(X),Y)]的f:X→Y。我们不知道真实分布——只有训练数据。ERM：最小化(1/n)Σloss(f(xᵢ),yᵢ)，希望这≈期望风险。这是基本学习框架。"
+    },
+    {
+      "type": "question",
+      "template_en": "Complex f can achieve ZERO empirical risk (memorize data) but have POOR expected risk (bad generalization). Simple f has higher empirical risk but may generalize better. This is the OVERFITTING dilemma. How do we choose the right complexity?",
+      "template_zh": "复杂的f能实现零经验风险（记忆数据）但期望风险差（泛化差）。简单的f有更高经验风险但可能泛化更好。这是过拟合困境。如何选择正确复杂度？"
+    },
+    {
+      "type": "explore",
+      "template_en": "ERM unifies ML algorithms: (1) Linear regression: loss = MSE. (2) Classification: loss = cross-entropy. (3) SVM: loss = hinge loss + regularization. (4) Decision trees: loss = misclassification rate. All minimize training error + regularization.",
+      "template_zh": "ERM统一了ML算法：(1)线性回归：loss=MSE。(2)分类：loss=交叉熵。(3)SVM：loss=合页损失+正则化。(4)决策树：loss=误分类率。都最小化训练误差+正则化。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "The gap between empirical risk R̂ₙ(f) and expected risk R(f) depends on: (1) n (more data → smaller gap). (2) Complexity of hypothesis class H (more complex → larger gap). PAC learning: R(f) ≤ R̂ₙ(f) + O(√(d/n)) where d = VC dimension.",
+      "template_zh": "经验风险R̂ₙ(f)与期望风险R(f)之间的差距取决于：(1)n（更多数据→更小差距）。(2)假设类H的复杂度（更复杂→更大差距）。PAC学习：R(f)≤R̂ₙ(f)+O(√(d/n))其中d=VC维。"
+    },
+    {
+      "type": "practice",
+      "template_en": "For each scenario, would you use a simple or complex model? Explain using ERM: (1) n=100 features=10000. (2) n=10⁶ features=10. (3) Medical diagnosis (0.1% false negative tolerance). (4) Movie recommendation (no tolerance for slow inference).",
+      "template_zh": "对每个场景，用简单还是复杂模型？用ERM解释：(1)n=100,特征=10000。(2)n=10⁶,特征=10。(3)医疗诊断（0.1%假阴性容忍）。(4)电影推荐（不能容忍慢推理）。"
+    },
+    {
+      "type": "insight",
+      "template_en": "ERM + regularization = the bias-variance tradeoff. Simple models: high bias (assumptions may be wrong), low variance (stable). Complex models: low bias, high variance (sensitive to data). The optimal complexity minimizes TOTAL error = bias² + variance + irreducible error.",
+      "template_zh": "ERM+正则化=偏差-方差权衡。简单模型：高偏差（假设可能错）、低方差（稳定）。复杂模型：低偏差、高方差（对数据敏感）。最优复杂度最小化总误差=偏差²+方差+不可约误差。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC311H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

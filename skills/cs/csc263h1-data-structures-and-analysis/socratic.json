@@ -1,0 +1,86 @@
+{
+  "name": "CSC263H1 — Socratic Discovery (Amortized Analysis of Dynamic Arrays)",
+  "description": "A dynamic array grows when full: allocate 2× size, copy all elements. Most inserts are O(1). The doubling step is O(n). Is the average O(1)? Let's com",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC263H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC263H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "A dynamic array grows when full: allocate 2× size, copy all elements. Most inserts are O(1). The doubling step is O(n). Is the average O(1)? Let's compute total cost for n inserts.",
+      "template_zh": "动态数组满时增长：分配2×大小，复制所有元素。大多数插入是O(1)。翻倍步骤是O(n)。平均是O(1)吗？计算n次插入的总成本。"
+    },
+    {
+      "type": "question",
+      "template_en": "Sizes: 1→2→4→8→... up to n. Copies at each doubling: 1, 2, 4, 8, ..., n/2. Sum = 1+2+4+...+n/2 = n-1. Total cost = n inserts + (n-1) copies = O(n). Average = O(1) per operation. This is AGGREGATE ANALYSIS.",
+      "template_zh": "大小：1→2→4→8→...直到n。每次翻倍复制：1、2、4、8、...、n/2。和=1+2+4+...+n/2=n-1。总成本=n次插入+(n-1)次复制=O(n)。平均=每次操作O(1)。这是聚合分析。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Accounting (banker's) method: 'Charge' $3 for each insert. $1 pays for the insert itself. $2 is banked. When doubling occurs, each of the n/2 old elements uses its banked $2 to copy itself. Total charge = 3n = O(n). The bank balance is never negative → amortized O(1).",
+      "template_zh": "记账（银行家）法：每次插入'收取'$3。$1支付插入本身。$2存入银行。翻倍时，n/2个旧元素各用其存储的$2复制自己。总收费=3n=O(n)。银行余额永不变成负→分摊O(1)。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Potential method: Define Φ = 2n - capacity (where n = size, capacity = allocated space). After insert without doubling: Φ increases by 2. After insert with doubling: Φ drops by n. Amortized cost = actual + ΔΦ = (n+1) + (-n+2) = 3 = O(1).",
+      "template_zh": "势能法：定义Φ=2n-capacity（n=大小，capacity=分配空间）。无翻倍的插入后：Φ增加2。有翻倍的插入后：Φ减少n。分摊成本=实际+ΔΦ=(n+1)+(-n+2)=3=O(1)。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Analyze with accounting method: (1) Stack: Push costs 1, Multipop(k) costs k. Show amortized O(1). (2) Binary counter: Increment flips k bits in worst case. Show amortized O(1) per increment. (3) Queue with two stacks.",
+      "template_zh": "用记账法分析：(1)栈：Push成本1，Multipop(k)成本k。证明分摊O(1)。(2)二进制计数器：最坏情况Increment翻转k位。证明每次increment分摊O(1)。(3)用两个栈实现队列。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Amortized analysis gives AVERAGE cost per operation over a sequence, not worst-case per operation. 'Amortized' = spread the cost. Dynamic arrays, Union-Find, splay trees — all analyzed this way. The potential function method is the most powerful (and hardest to invent).",
+      "template_zh": "分摊分析给出操作序列上的平均成本，不是每次操作的最坏情况。'分摊'=分散成本。动态数组、Union-Find、伸展树——都这样分析。势能函数法最强大（也最难发明）。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC263H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

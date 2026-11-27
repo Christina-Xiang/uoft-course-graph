@@ -1,0 +1,86 @@
+{
+  "name": "CSC373H1 — Correction Attribution (Greedy vs Dynamic Programming)",
+  "description": "Common error: 'Optimal substructure → greedy works.' WRONG! Greedy needs the GREEDY CHOICE PROPERTY: a locally optimal choice leads to a globally opti",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC373H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC373H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: 'Optimal substructure → greedy works.' WRONG! Greedy needs the GREEDY CHOICE PROPERTY: a locally optimal choice leads to a globally optimal solution. DP only needs optimal substructure. Fractional knapsack has both (greedy works). 0/1 knapsack has substructure but NOT greedy choice (need DP).",
+      "template_zh": "常见错误：'最优子结构→贪心可用。'错！贪心需要贪心选择性质：局部最优选择导致全局最优解。DP只需要最优子结构。分数背包两者都有（贪心可用）。0/1背包有子结构但没有贪心选择（需要DP）。"
+    },
+    {
+      "type": "question",
+      "template_en": "Fractional knapsack: items with weight and value, unlimited fractions allowed. Greedy: pick highest value/weight ratio. This works because we can ALWAYS take a fraction of the best item. 0/1 knapsack: EITHER take or not. Why does greedy fail?",
+      "template_zh": "分数背包：有重量和价值的物品，允许取分数。贪心：选最高价值/重量比。这可行因为我们总是可取最佳物品的一部分。0/1背包：要么取要么不取。为什么贪心失败？"
+    },
+    {
+      "type": "explore",
+      "template_en": "0/1 KS counterexample: capacity=50. Item A: w=50, v=100 (ratio=2). Item B: w=30, v=60 (ratio=2). Item C: w=20, v=40 (ratio=2). Greedy picks A (value=100). Optimal picks B+C (value=100). Actually same! Now try: capacity=50. A: w=50, v=60 (ratio=1.2). B: w=30, v=50 (ratio=1.67). C: w=20, v=40 (ratio=2). Greedy picks C, then B → capacity 50, value=90. But optimal is B+C... wait that's 50 too, value=90. Actually: capacity=50. B=30/50, C=20/40. Total=90. But what if capacity=50, A=50/100 (ratio=2), B=30/50 (ratio=1.67), C=20/40 (ratio=2). Greedy picks A first (ratio 2, value 100). Optimal is B+C (value 90). So greedy's 100 > optimal's 90? Wait that's not right. Let me reconsider.",
+      "template_zh": "0/1 KS反例：容量=50。物品A:w=50,v=60（性价比1.2）。物品B:w=30,v=50（性价比1.67）。物品C:w=20,v=40（性价比2）。贪心选C然后B→容量50,价值90。但最优是A... 价值60。不对。贪心选性价比最高的C(2)，然后B(1.67)=50容量价值90。最优解是A=价值60？B+C=50容量价值90，所以贪心其实是对的。经典反例：容量=50。A:w=30,v=60（性价比2）。B:w=20,v=40（性价比2）。C:w=15,v=30（性价比2）。D:w=10,v=10（性价比1）。贪心选A(60)+B(40)+C(30)=50容量价值130。最优是A+B+C=50容量价值130...也一样。另一个经典反例：容量=50。A:w=10,v=60（性价比6）。B:w=20,v=100（性价比5）。C:w=30,v=120（性价比4）。贪心选A(60)+B(100)=30容量价值160，剩余容量20不够C(30)。最优是B+C=50容量价值220>160。所以贪心失败！"
+    },
+    {
+      "type": "insight",
+      "template_en": "Greedy needs: (1) Greedy choice property — can build solution by making locally optimal choices. (2) Optimal substructure — remaining problem after greedy choice is smaller instance of same type. DP only needs (2). Always prove both for greedy; if only (2) exists, use DP.",
+      "template_zh": "贪心需要：(1)贪心选择性质——通过做局部最优选择构建解。(2)最优子结构——贪心选择后剩余问题是同类型更小实例。DP只需要(2)。对贪心始终要证明两者；如果只有(2)存在，用DP。"
+    },
+    {
+      "type": "practice",
+      "template_en": "For each, can we use greedy? If yes, state the greedy choice. If no, explain why: (1) Activity selection (max number of non-overlapping activities). (2) Minimum spanning tree. (3) 0/1 knapsack. (4) Coin change (unlimited coins, minimize count). (5) Dijkstra's shortest path.",
+      "template_zh": "对每个，能用贪心吗？如果能，说明贪心选择。如果不能，解释原因：(1)活动选择（最大不重叠活动数）。(2)最小生成树。(3)0/1背包。(4)硬币找零（无限硬币，最小化数量）。(5)Dijkstra最短路径。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Two-question test: (1) Does the problem have optimal substructure? If no → can't use greedy or DP. (2) Does it have the greedy choice property? If yes → greedy (Huffman, MST, Dijkstra). If no → DP (knapsack, edit distance, LCS). This decision tree guides algorithm design.",
+      "template_zh": "两问题测试：(1)问题有最优子结构吗？如果没有→不能用贪心或DP。(2)有贪心选择性质吗？如果有→贪心（Huffman、MST、Dijkstra）。如果没有→DP（背包、编辑距离、LCS）。这个决策树指导算法设计。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC373H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

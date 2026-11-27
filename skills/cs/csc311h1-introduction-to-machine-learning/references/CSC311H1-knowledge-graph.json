@@ -1,0 +1,1006 @@
+{
+  "courseId": "CSC311H1",
+  "courseName": "Introduction to Machine Learning",
+  "nodes": [
+    {
+      "id": "unit-1",
+      "type": "Unit",
+      "label": "Linear Regression & Beyond",
+      "labelCn": "线性回归与扩展",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-2",
+      "type": "Concept",
+      "label": "Linear regression review",
+      "labelCn": "线性回归回顾",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-3",
+      "type": "Concept",
+      "label": "Ridge regression",
+      "labelCn": "岭回归",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-4",
+      "type": "Concept",
+      "label": "LASSO",
+      "labelCn": "LASSO",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-5",
+      "type": "Concept",
+      "label": "Polynomial features",
+      "labelCn": "多项式特征",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-6",
+      "type": "Concept",
+      "label": "Basis expansion",
+      "labelCn": "基扩展",
+      "unit": "unit-1"
+    },
+    {
+      "id": "theorem-7",
+      "type": "Theorem",
+      "label": "Closed-form solution for linear regression",
+      "labelCn": "线性回归闭式解",
+      "unit": "unit-1"
+    },
+    {
+      "id": "method-8",
+      "type": "Method",
+      "label": "Gradient descent",
+      "labelCn": "梯度下降",
+      "unit": "unit-1"
+    },
+    {
+      "id": "technique-9",
+      "type": "Technique",
+      "label": "Feature scaling",
+      "labelCn": "特征缩放",
+      "unit": "unit-1"
+    },
+    {
+      "id": "pitfall-10",
+      "type": "Pitfall",
+      "label": "Vanishing/exploding gradients",
+      "labelCn": "梯度消失/爆炸",
+      "unit": "unit-1"
+    },
+    {
+      "id": "skill-11",
+      "type": "Skill",
+      "label": "Regression modeling",
+      "labelCn": "回归建模",
+      "unit": "unit-1"
+    },
+    {
+      "id": "learningmethod-12",
+      "type": "LearningMethod",
+      "label": "Gradient descent visualization",
+      "labelCn": "梯度下降可视化",
+      "unit": "unit-1"
+    },
+    {
+      "id": "unit-13",
+      "type": "Unit",
+      "label": "Classification",
+      "labelCn": "分类",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-14",
+      "type": "Concept",
+      "label": "Logistic regression",
+      "labelCn": "逻辑回归",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-15",
+      "type": "Concept",
+      "label": "Softmax regression",
+      "labelCn": "Softmax回归",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-16",
+      "type": "Concept",
+      "label": "Decision boundary",
+      "labelCn": "决策边界",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-17",
+      "type": "Concept",
+      "label": "KNN",
+      "labelCn": "K近邻",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-18",
+      "type": "Concept",
+      "label": "Naive Bayes",
+      "labelCn": "朴素贝叶斯",
+      "unit": "unit-2"
+    },
+    {
+      "id": "theorem-19",
+      "type": "Theorem",
+      "label": "Cross-entropy loss",
+      "labelCn": "交叉熵损失",
+      "unit": "unit-2"
+    },
+    {
+      "id": "method-20",
+      "type": "Method",
+      "label": "One-vs-all classification",
+      "labelCn": "一对多分类",
+      "unit": "unit-2"
+    },
+    {
+      "id": "technique-21",
+      "type": "Technique",
+      "label": "Hyperparameter tuning",
+      "labelCn": "超参数调优",
+      "unit": "unit-2"
+    },
+    {
+      "id": "pitfall-22",
+      "type": "Pitfall",
+      "label": "Class imbalance",
+      "labelCn": "类别不平衡",
+      "unit": "unit-2"
+    },
+    {
+      "id": "skill-23",
+      "type": "Skill",
+      "label": "Classification pipeline",
+      "labelCn": "分类管道",
+      "unit": "unit-2"
+    },
+    {
+      "id": "learningmethod-24",
+      "type": "LearningMethod",
+      "label": "Classification comparison lab",
+      "labelCn": "分类比较实验",
+      "unit": "unit-2"
+    },
+    {
+      "id": "unit-25",
+      "type": "Unit",
+      "label": "Neural Networks",
+      "labelCn": "神经网络",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-26",
+      "type": "Concept",
+      "label": "Perceptron",
+      "labelCn": "感知机",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-27",
+      "type": "Concept",
+      "label": "MLP",
+      "labelCn": "多层感知机",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-28",
+      "type": "Concept",
+      "label": "Backpropagation",
+      "labelCn": "反向传播",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-29",
+      "type": "Concept",
+      "label": "Activation functions",
+      "labelCn": "激活函数",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-30",
+      "type": "Concept",
+      "label": "Regularization",
+      "labelCn": "正则化",
+      "unit": "unit-3"
+    },
+    {
+      "id": "theorem-31",
+      "type": "Theorem",
+      "label": "Universal approximation theorem",
+      "labelCn": "通用逼近定理",
+      "unit": "unit-3"
+    },
+    {
+      "id": "method-32",
+      "type": "Method",
+      "label": "Neural network training",
+      "labelCn": "神经网络训练",
+      "unit": "unit-3"
+    },
+    {
+      "id": "technique-33",
+      "type": "Technique",
+      "label": "Dropout",
+      "labelCn": "Dropout",
+      "unit": "unit-3"
+    },
+    {
+      "id": "pitfall-34",
+      "type": "Pitfall",
+      "label": "Overfitting in neural nets",
+      "labelCn": "神经网络过拟合",
+      "unit": "unit-3"
+    },
+    {
+      "id": "skill-35",
+      "type": "Skill",
+      "label": "Deep learning fundamentals",
+      "labelCn": "深度学习基础",
+      "unit": "unit-3"
+    },
+    {
+      "id": "learningmethod-36",
+      "type": "LearningMethod",
+      "label": "From scratch NN implementation",
+      "labelCn": "从头实现神经网络",
+      "unit": "unit-3"
+    },
+    {
+      "id": "unit-37",
+      "type": "Unit",
+      "label": "Decision Trees & Ensemble Methods",
+      "labelCn": "决策树与集成方法",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-38",
+      "type": "Concept",
+      "label": "Decision tree",
+      "labelCn": "决策树",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-39",
+      "type": "Concept",
+      "label": "Random forest",
+      "labelCn": "随机森林",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-40",
+      "type": "Concept",
+      "label": "Gradient boosting",
+      "labelCn": "梯度提升",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-41",
+      "type": "Concept",
+      "label": "Bagging vs boosting",
+      "labelCn": "装袋vs提升",
+      "unit": "unit-4"
+    },
+    {
+      "id": "method-42",
+      "type": "Method",
+      "label": "Random forest training",
+      "labelCn": "随机森林训练",
+      "unit": "unit-4"
+    },
+    {
+      "id": "technique-43",
+      "type": "Technique",
+      "label": "Feature importance",
+      "labelCn": "特征重要性",
+      "unit": "unit-4"
+    },
+    {
+      "id": "pitfall-44",
+      "type": "Pitfall",
+      "label": "Tree depth overfitting",
+      "labelCn": "树深度过拟合",
+      "unit": "unit-4"
+    },
+    {
+      "id": "skill-45",
+      "type": "Skill",
+      "label": "Ensemble learning",
+      "labelCn": "集成学习",
+      "unit": "unit-4"
+    },
+    {
+      "id": "learningmethod-46",
+      "type": "LearningMethod",
+      "label": "Ensemble method comparison",
+      "labelCn": "集成方法对比",
+      "unit": "unit-4"
+    },
+    {
+      "id": "unit-47",
+      "type": "Unit",
+      "label": "Unsupervised Learning",
+      "labelCn": "无监督学习",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-48",
+      "type": "Concept",
+      "label": "K-means clustering",
+      "labelCn": "K均值聚类",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-49",
+      "type": "Concept",
+      "label": "Hierarchical clustering",
+      "labelCn": "层次聚类",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-50",
+      "type": "Concept",
+      "label": "PCA",
+      "labelCn": "主成分分析",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-51",
+      "type": "Concept",
+      "label": "Gaussian mixture model",
+      "labelCn": "高斯混合模型",
+      "unit": "unit-5"
+    },
+    {
+      "id": "theorem-52",
+      "type": "Theorem",
+      "label": "PCA = SVD of centered data",
+      "labelCn": "PCA=中心化数据SVD",
+      "unit": "unit-5"
+    },
+    {
+      "id": "method-53",
+      "type": "Method",
+      "label": "EM for GMM",
+      "labelCn": "高斯混合EM",
+      "unit": "unit-5"
+    },
+    {
+      "id": "pitfall-54",
+      "type": "Pitfall",
+      "label": "K-means sensitive to initialization",
+      "labelCn": "K均值对初始化敏感",
+      "unit": "unit-5"
+    },
+    {
+      "id": "skill-55",
+      "type": "Skill",
+      "label": "Unsupervised learning techniques",
+      "labelCn": "无监督学习技术",
+      "unit": "unit-5"
+    },
+    {
+      "id": "learningmethod-56",
+      "type": "LearningMethod",
+      "label": "Clustering analysis lab",
+      "labelCn": "聚类分析实验",
+      "unit": "unit-5"
+    },
+    {
+      "id": "unit-57",
+      "type": "Unit",
+      "label": "ML Best Practices",
+      "labelCn": "机器学习最佳实践",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-58",
+      "type": "Concept",
+      "label": "Cross-validation",
+      "labelCn": "交叉验证",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-59",
+      "type": "Concept",
+      "label": "Bias-variance tradeoff",
+      "labelCn": "偏差-方差权衡",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-60",
+      "type": "Concept",
+      "label": "Data leakage",
+      "labelCn": "数据泄漏",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-61",
+      "type": "Concept",
+      "label": "Model evaluation metrics",
+      "labelCn": "模型评估指标",
+      "unit": "unit-6"
+    },
+    {
+      "id": "method-62",
+      "type": "Method",
+      "label": "ML pipeline design",
+      "labelCn": "ML管道设计",
+      "unit": "unit-6"
+    },
+    {
+      "id": "pitfall-63",
+      "type": "Pitfall",
+      "label": "Data leakage in CV",
+      "labelCn": "交叉验证数据泄漏",
+      "unit": "unit-6"
+    },
+    {
+      "id": "skill-64",
+      "type": "Skill",
+      "label": "ML experimentation",
+      "labelCn": "ML实验",
+      "unit": "unit-6"
+    },
+    {
+      "id": "learningmethod-65",
+      "type": "LearningMethod",
+      "label": "Kaggle competition exercise",
+      "labelCn": "Kaggle竞赛练习",
+      "unit": "unit-6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-unit-1-concept-2",
+      "source": "unit-1",
+      "target": "concept-2",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-concept-3",
+      "source": "unit-1",
+      "target": "concept-3",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-2-concept-3",
+      "source": "concept-2",
+      "target": "concept-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concept-4",
+      "source": "unit-1",
+      "target": "concept-4",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-3-concept-4",
+      "source": "concept-3",
+      "target": "concept-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concept-5",
+      "source": "unit-1",
+      "target": "concept-5",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-4-concept-5",
+      "source": "concept-4",
+      "target": "concept-5",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concept-6",
+      "source": "unit-1",
+      "target": "concept-6",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-5-concept-6",
+      "source": "concept-5",
+      "target": "concept-6",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-theorem-7",
+      "source": "unit-1",
+      "target": "theorem-7",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-method-8",
+      "source": "unit-1",
+      "target": "method-8",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-technique-9",
+      "source": "unit-1",
+      "target": "technique-9",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-pitfall-10",
+      "source": "unit-1",
+      "target": "pitfall-10",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-skill-11",
+      "source": "unit-1",
+      "target": "skill-11",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-1-learningmethod-12",
+      "source": "unit-1",
+      "target": "learningmethod-12",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-13-concept-14",
+      "source": "unit-13",
+      "target": "concept-14",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-13-concept-15",
+      "source": "unit-13",
+      "target": "concept-15",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-14-concept-15",
+      "source": "concept-14",
+      "target": "concept-15",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-13-concept-16",
+      "source": "unit-13",
+      "target": "concept-16",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-15-concept-16",
+      "source": "concept-15",
+      "target": "concept-16",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-13-concept-17",
+      "source": "unit-13",
+      "target": "concept-17",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-16-concept-17",
+      "source": "concept-16",
+      "target": "concept-17",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-13-concept-18",
+      "source": "unit-13",
+      "target": "concept-18",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-17-concept-18",
+      "source": "concept-17",
+      "target": "concept-18",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-13-theorem-19",
+      "source": "unit-13",
+      "target": "theorem-19",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-13-method-20",
+      "source": "unit-13",
+      "target": "method-20",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-13-technique-21",
+      "source": "unit-13",
+      "target": "technique-21",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-13-pitfall-22",
+      "source": "unit-13",
+      "target": "pitfall-22",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-13-skill-23",
+      "source": "unit-13",
+      "target": "skill-23",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-13-learningmethod-24",
+      "source": "unit-13",
+      "target": "learningmethod-24",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-25-concept-26",
+      "source": "unit-25",
+      "target": "concept-26",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-25-concept-27",
+      "source": "unit-25",
+      "target": "concept-27",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-26-concept-27",
+      "source": "concept-26",
+      "target": "concept-27",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-25-concept-28",
+      "source": "unit-25",
+      "target": "concept-28",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-27-concept-28",
+      "source": "concept-27",
+      "target": "concept-28",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-25-concept-29",
+      "source": "unit-25",
+      "target": "concept-29",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-28-concept-29",
+      "source": "concept-28",
+      "target": "concept-29",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-25-concept-30",
+      "source": "unit-25",
+      "target": "concept-30",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-29-concept-30",
+      "source": "concept-29",
+      "target": "concept-30",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-25-theorem-31",
+      "source": "unit-25",
+      "target": "theorem-31",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-25-method-32",
+      "source": "unit-25",
+      "target": "method-32",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-25-technique-33",
+      "source": "unit-25",
+      "target": "technique-33",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-25-pitfall-34",
+      "source": "unit-25",
+      "target": "pitfall-34",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-25-skill-35",
+      "source": "unit-25",
+      "target": "skill-35",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-25-learningmethod-36",
+      "source": "unit-25",
+      "target": "learningmethod-36",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-37-concept-38",
+      "source": "unit-37",
+      "target": "concept-38",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-37-concept-39",
+      "source": "unit-37",
+      "target": "concept-39",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-38-concept-39",
+      "source": "concept-38",
+      "target": "concept-39",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-37-concept-40",
+      "source": "unit-37",
+      "target": "concept-40",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-39-concept-40",
+      "source": "concept-39",
+      "target": "concept-40",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-37-concept-41",
+      "source": "unit-37",
+      "target": "concept-41",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-40-concept-41",
+      "source": "concept-40",
+      "target": "concept-41",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-37-method-42",
+      "source": "unit-37",
+      "target": "method-42",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-37-technique-43",
+      "source": "unit-37",
+      "target": "technique-43",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-37-pitfall-44",
+      "source": "unit-37",
+      "target": "pitfall-44",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-37-skill-45",
+      "source": "unit-37",
+      "target": "skill-45",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-37-learningmethod-46",
+      "source": "unit-37",
+      "target": "learningmethod-46",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-47-concept-48",
+      "source": "unit-47",
+      "target": "concept-48",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-47-concept-49",
+      "source": "unit-47",
+      "target": "concept-49",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-48-concept-49",
+      "source": "concept-48",
+      "target": "concept-49",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-47-concept-50",
+      "source": "unit-47",
+      "target": "concept-50",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-49-concept-50",
+      "source": "concept-49",
+      "target": "concept-50",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-47-concept-51",
+      "source": "unit-47",
+      "target": "concept-51",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-50-concept-51",
+      "source": "concept-50",
+      "target": "concept-51",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-47-theorem-52",
+      "source": "unit-47",
+      "target": "theorem-52",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-47-method-53",
+      "source": "unit-47",
+      "target": "method-53",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-47-pitfall-54",
+      "source": "unit-47",
+      "target": "pitfall-54",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-47-skill-55",
+      "source": "unit-47",
+      "target": "skill-55",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-47-learningmethod-56",
+      "source": "unit-47",
+      "target": "learningmethod-56",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-57-concept-58",
+      "source": "unit-57",
+      "target": "concept-58",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-57-concept-59",
+      "source": "unit-57",
+      "target": "concept-59",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-58-concept-59",
+      "source": "concept-58",
+      "target": "concept-59",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-57-concept-60",
+      "source": "unit-57",
+      "target": "concept-60",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-59-concept-60",
+      "source": "concept-59",
+      "target": "concept-60",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-57-concept-61",
+      "source": "unit-57",
+      "target": "concept-61",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-60-concept-61",
+      "source": "concept-60",
+      "target": "concept-61",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-57-method-62",
+      "source": "unit-57",
+      "target": "method-62",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-57-pitfall-63",
+      "source": "unit-57",
+      "target": "pitfall-63",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-57-skill-64",
+      "source": "unit-57",
+      "target": "skill-64",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-57-learningmethod-65",
+      "source": "unit-57",
+      "target": "learningmethod-65",
+      "type": "teaches"
+    },
+    {
+      "id": "e-cross-unit-1-unit-2",
+      "source": "unit-2",
+      "target": "unit-1",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-2-unit-3",
+      "source": "unit-3",
+      "target": "unit-2",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-3-unit-4",
+      "source": "unit-4",
+      "target": "unit-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-4-unit-5",
+      "source": "unit-5",
+      "target": "unit-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-5-unit-6",
+      "source": "unit-6",
+      "target": "unit-5",
+      "type": "requires"
+    }
+  ],
+  "crossUnitEdges": [
+    {
+      "id": "e-cross-unit-1-unit-2",
+      "source": "unit-2",
+      "target": "unit-1",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-2-unit-3",
+      "source": "unit-3",
+      "target": "unit-2",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-3-unit-4",
+      "source": "unit-4",
+      "target": "unit-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-4-unit-5",
+      "source": "unit-5",
+      "target": "unit-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-5-unit-6",
+      "source": "unit-6",
+      "target": "unit-5",
+      "type": "requires"
+    }
+  ],
+  "skillProgressionPaths": []
+}

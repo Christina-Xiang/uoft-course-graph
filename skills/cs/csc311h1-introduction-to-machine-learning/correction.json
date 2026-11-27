@@ -1,0 +1,86 @@
+{
+  "name": "CSC311H1 — Correction Attribution (Training Accuracy ≠ Real-World Performance)",
+  "description": "99.9% training accuracy but 60% test accuracy → CLASSIC OVERFITTING. The model memorized the training data (including noise) instead of learning gener",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC311H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC311H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "99.9% training accuracy but 60% test accuracy → CLASSIC OVERFITTING. The model memorized the training data (including noise) instead of learning generalizable patterns. This is THE most common mistake in applied ML.",
+      "template_zh": "99.9%训练准确率但60%测试准确率→经典过拟合。模型记忆了训练数据（包括噪声）而非学习可泛化的模式。这是应用ML中最常见的错误。"
+    },
+    {
+      "type": "question",
+      "template_en": "A model achieves 100% on training data but 50% on test data (binary classification). What's happening? The model has simply MEMORIZED all training examples — it's a lookup table, not a learner. It has zero ability to generalize to unseen examples.",
+      "template_zh": "模型在训练数据上达到100%但在测试数据上50%（二分类）。发生了什么？模型只是记忆了所有训练样本——它是查找表，不是学习器。它对未见示例完全没有泛化能力。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Signs of overfitting: (1) Training loss << validation loss (large gap). (2) Model weights are very large (especially with linear models). (3) Model changes dramatically with small data changes. (4) Feature importance is unstable. (5) Performance on random noise is near-perfect.",
+      "template_zh": "过拟合的迹象：(1)训练损失<<验证损失（大差距）。(2)模型权重非常大（尤其线性模型）。(3)模型随小数据变化剧烈变化。(4)特征重要性不稳定。(5)在随机噪声上性能接近完美。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Solutions: (1) More training data — hardest but most effective. (2) Regularization (L1/L2/dropout). (3) Simpler model (reduce features/depth/complexity). (4) Early stopping — stop training when validation loss stops improving. (5) Ensemble methods — bagging, boosting.",
+      "template_zh": "解决方案：(1)更多训练数据——最难但最有效。(2)正则化（L1/L2/dropout）。(3)更简单模型（减少特征/深度/复杂度）。(4)早停——当验证损失停止改进时停止训练。(5)集成方法——bagging、boosting。"
+    },
+    {
+      "type": "practice",
+      "template_en": "You train 100 models on the same dataset. The best model on training data (99% acc) achieves 55% on test. The 50th best on training (85% acc) achieves 82% on test. Why? What should you do instead of picking the best training model?",
+      "template_zh": "你在同一数据集上训练100个模型。训练数据上最好的模型（99%准确率）在测试上达到55%。训练上第50好的（85%）在测试上达到82%。为什么？你应该怎么做而不是选训练上最好的模型？"
+    },
+    {
+      "type": "reflection",
+      "template_en": "'If you torture the data long enough, it will confess.' — Ronald Coase. The test set should be used EXACTLY ONCE — at the very end. Use a VALIDATION set for model selection. Cross-validation is even better. But NEVER use test performance to decide between models.",
+      "template_zh": "'如果你折磨数据足够久，它终将招供。'——Ronald Coase。测试集应该只用一次——在最后。用验证集做模型选择。交叉验证更好。但绝不用测试性能在模型间做决定。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC311H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "CSC369H1 — Socratic Discovery (Virtual Memory and Address Translation)",
+  "description": "Two programs run simultaneously. How can both use address 0x100? They don't! Each process has its OWN virtual address space. The OS + MMU translates v",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC369H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC369H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Two programs run simultaneously. How can both use address 0x100? They don't! Each process has its OWN virtual address space. The OS + MMU translates virtual → physical addresses. Process A's 0x100 → physical 0x300. Process B's 0x100 → physical 0x700.",
+      "template_zh": "两个程序同时运行。它们怎么能都用地址0x100？不能！每个进程有自己的虚拟地址空间。OS+MMU将虚拟地址翻译为物理地址。进程A的0x100→物理0x300。进程B的0x100→物理0x700。"
+    },
+    {
+      "type": "question",
+      "template_en": "A program accesses address 0x1234. Walk through the translation: (1) Split into VPN (virtual page number) and offset. (2) Look up VPN in page table. (3) If valid+present → get physical frame number. (4) Concatenate with offset. How many memory accesses does this take WITHOUT TLB?",
+      "template_zh": "程序访问地址0x1234。跟踪翻译过程：(1)拆分为VPN（虚拟页号）和偏移量。(2)在页表中查找VPN。(3)如果有效+存在→获得物理帧号。(4)与偏移量拼接。没有TLB时这需要多少次内存访问？"
+    },
+    {
+      "type": "explore",
+      "template_en": "A TLB (Translation Lookaside Buffer) caches recent VPN→PFN mappings. With TLB hit: 1 memory access (no page table walk). With TLB miss: 2+ accesses (walk page table). Temporal locality: recently accessed pages likely accessed again → TLB works well.",
+      "template_zh": "TLB（转译后备缓冲器）缓存最近的VPN→PFN映射。TLB命中：1次内存访问（无需页表遍历）。TLB未命中：2+次访问（遍历页表）。时间局部性：最近访问的页面可能再次访问→TLB工作良好。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Multi-level page tables save space. For 64-bit address space with 4KB pages: single-level page table = 2⁵² entries × 8 bytes = impractical. 4-level page table: only allocate levels that have valid mappings. Each process has its own page table hierarchy.",
+      "template_zh": "多级页表节省空间。对64位地址空间和4KB页：单级页表=2⁵²个条目×8字节=不切实际。4级页表：只分配有有效映射的级别。每个进程有自己的页表层次。"
+    },
+    {
+      "type": "practice",
+      "template_en": "A process uses 4KB pages, 32-bit virtual addresses. (1) How many entries in a single-level page table? (2) If page table entry = 4 bytes, what's the table size? (3) With 2-level page table (10+10+12 bits), what's the max number of page table pages needed?",
+      "template_zh": "一个进程使用4KB页，32位虚拟地址。(1)单级页表有多少条目？(2)如果页表条目=4字节，表大小是多少？(3)用2级页表（10+10+12位），最多需要多少页表页？"
+    },
+    {
+      "type": "insight",
+      "template_en": "Virtual memory provides: (1) ISOLATION — processes can't touch each other's memory. (2) SIMPLICITY — each process has a clean linear address space. (3) EFFICIENCY — only frequently used pages in physical RAM. (4) SHARING — shared libraries mapped into multiple address spaces. This is why your laptop runs 100+ processes with 8GB RAM.",
+      "template_zh": "虚拟内存提供：(1)隔离——进程不能互相访问内存。(2)简单——每个进程有干净的线性地址空间。(3)高效——只有频繁使用的页面在物理RAM中。(4)共享——共享库映射到多个地址空间。这就是为什么笔记本能用8GB RAM运行100+个进程。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC369H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

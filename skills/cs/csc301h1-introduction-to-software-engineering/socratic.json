@@ -1,0 +1,86 @@
+{
+  "name": "CSC301H1 — Socratic Discovery (Functional vs Non-Functional Requirements)",
+  "description": "Client: 'I need a login system.' What do they REALLY need? Requirements engineering is about discovering the true needs, not just writing down what th",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC301H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC301H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Client: 'I need a login system.' What do they REALLY need? Requirements engineering is about discovering the true needs, not just writing down what the client says. Let's distinguish two types.",
+      "template_zh": "客户：'我需要一个登录系统。'他们真正需要什么？需求工程是关于发现真实需求，而不仅仅是写下客户说的。让我们区分两种类型。"
+    },
+    {
+      "type": "question",
+      "template_en": "Functional requirement: 'Users can register with email/password, authenticate, reset password.' Non-functional: 'Authentication must complete in <200ms, support 10K concurrent users, be PCI-DSS compliant.' Which is harder to validate? Which is more costly to fix if wrong?",
+      "template_zh": "功能需求：'用户能用邮箱/密码注册、认证、重置密码。'非功能：'认证必须在<200ms内完成，支持10K并发用户，符合PCI-DSS标准。'哪个更难验证？哪个错了修正成本更高？"
+    },
+    {
+      "type": "explore",
+      "template_en": "Non-functional requirements (NFRs) are often neglected until the system fails. A login system that's functionally perfect but takes 30 seconds to authenticate is USELESS. NFRs include: performance, security, scalability, reliability, usability, maintainability, portability.",
+      "template_zh": "非功能需求（NFR）常被忽视，直到系统失败。功能完美的登录系统但需30秒认证是没用的。NFR包括：性能、安全、可伸缩性、可靠性、可用性、可维护性、可移植性。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Good requirements are: (1) CORRECT — each is a true stakeholder need. (2) UNAMBIGUOUS — only one interpretation. (3) COMPLETE — all scenarios covered. (4) CONSISTENT — no conflicts. (5) VERIFIABLE — testable. 'The system should be fast' → 'Page load < 2s under 95th percentile with 1000 concurrent users.'",
+      "template_zh": "好需求是：(1)正确——每个都是真实的利益相关者需要。(2)无歧义——只有一种解释。(3)完整——覆盖所有场景。(4)一致——无冲突。(5)可验证——可测试。'系统应快速'→'在1000并发用户下，95分位页面加载<2秒。'"
+    },
+    {
+      "type": "practice",
+      "template_en": "Rewrite these vague requirements: (1) 'The system should be user-friendly.' (2) 'The system should handle high traffic.' (3) 'The system should be secure.' (4) 'The system should be reliable.' For each, propose a verifiable metric and acceptance criteria.",
+      "template_zh": "重写这些模糊需求：(1)'系统应友好用户。'(2)'系统应处理高流量。'(3)'系统应安全。'(4)'系统应可靠。'对每个，提出可验证的度量标准和验收标准。"
+    },
+    {
+      "type": "insight",
+      "template_en": "'The hardest part of building software is deciding WHAT to build, not building it.' — Fred Brooks. Incorrect requirements are the MOST expensive defect to fix (10-100× more than coding errors). Invest in requirements elicitation: interviews, prototyping, observation, Use Cases, User Stories.",
+      "template_zh": "'构建软件最难的部分是决定构建什么，而不是构建它。'——Fred Brooks。不正确的需求是最昂贵的缺陷（比编码错误贵10-100倍）。投资需求获取：访谈、原型、观察、用例、用户故事。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC301H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

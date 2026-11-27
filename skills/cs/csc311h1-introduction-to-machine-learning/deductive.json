@@ -1,0 +1,86 @@
+{
+  "name": "CSC311H1 — Deductive Derivation (Bias-Variance Decomposition)",
+  "description": "For any predictor f̂ trained on data D: E[(y-f̂(x))²] = Bias[f̂(x)]² + Var[f̂(x)] + σ². Bias = E[f̂(x)]-f*(x) (systematic error). Var = E[(f̂(x)-E[f̂(",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC311H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC311H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "For any predictor f̂ trained on data D: E[(y-f̂(x))²] = Bias[f̂(x)]² + Var[f̂(x)] + σ². Bias = E[f̂(x)]-f*(x) (systematic error). Var = E[(f̂(x)-E[f̂(x)])²] (sensitivity to data). σ² = irreducible noise.",
+      "template_zh": "对在数据D上训练的任何预测器f̂：E[(y-f̂(x))²]=Bias[f̂(x)]²+Var[f̂(x)]+σ²。偏差=E[f̂(x)]-f*(x)（系统误差）。方差=E[(f̂(x)-E[f̂(x)])²]（对数据的敏感度）。σ²=不可约噪声。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Let f*(x) = E[y|x] be the optimal predictor (Bayes predictor). Then y = f*(x) + ε where E[ε]=0, Var[ε]=σ². Write E[(y-f̂)²] = E[(f*+ε-f̂)²] = E[(f*-E[f̂]+E[f̂]-f̂+ε)²]. Expand the square.",
+      "template_zh": "设f*(x)=E[y|x]为最优预测器（贝叶斯预测器）。则y=f*(x)+ε其中E[ε]=0,Var[ε]=σ²。写出E[(y-f̂)²]=E[(f*+ε-f̂)²]=E[(f*-E[f̂]+E[f̂]-f̂+ε)²]。展开平方。"
+    },
+    {
+      "type": "step2",
+      "template_en": "The cross terms vanish because E[ε]=0 and E[f̂-E[f̂]]=0. So: E[(y-f̂)²] = (f*-E[f̂])² + E[(f̂-E[f̂])²] + σ² = Bias² + Variance + Irreducible Error. This is the BIAS-VARIANCE DECOMPOSITION.",
+      "template_zh": "交叉项消失因为E[ε]=0且E[f̂-E[f̂]]=0。所以：E[(y-f̂)²]=(f*-E[f̂])²+E[(f̂-E[f̂])²]+σ²=偏差²+方差+不可约误差。这是偏差-方差分解。"
+    },
+    {
+      "type": "step3",
+      "template_en": "k-NN: k=1 → bias≈0 (flexible), variance high (overfits). k=100 → bias high (oversmooths), variance≈0 (stable). Ridge regression: λ↑ → bias↑ (shrinkage), variance↓. The optimal λ minimizes total error.",
+      "template_zh": "k-NN：k=1→偏差≈0（灵活），方差高（过拟合）。k=100→偏差高（过度平滑），方差≈0（稳定）。岭回归：λ↑→偏差↑（收缩），方差↓。最优λ最小化总误差。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Bias-variance tradeoff: INCREASING model complexity: bias↓ (fits better), variance↑ (more sensitive). DECREASING complexity: bias↑, variance↓. The U-shape of total error = find the sweet spot where bias²+variance is minimized.",
+      "template_zh": "偏差-方差权衡：增加模型复杂度：偏差↓（拟合更好），方差↑（更敏感）。减少复杂度：偏差↑，方差↓。总误差的U形=找到偏差²+方差最小化的最佳点。"
+    },
+    {
+      "type": "meta",
+      "template_en": "The decomposition explains: (1) Overfitting = low bias, high variance. (2) Underfitting = high bias, low variance. (3) Regularization controls variance at the cost of bias. (4) More data reduces variance without increasing bias. This is the CENTRAL concept in ML theory.",
+      "template_zh": "分解解释：(1)过拟合=低偏差、高方差。(2)欠拟合=高偏差、低方差。(3)正则化以偏差为代价控制方差。(4)更多数据在不大幅增加偏差情况下减少方差。这是ML理论的核心概念。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC311H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

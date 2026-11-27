@@ -1,0 +1,86 @@
+{
+  "name": "CSC301H1 — Deductive Derivation (COCOMO Cost Estimation)",
+  "description": "COCOMO (Constructive Cost Model) estimates software effort from size. Basic COCOMO: Effort = a(KLoC)^b person-months. Organic (simple, small team): a=",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC301H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC301H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "COCOMO (Constructive Cost Model) estimates software effort from size. Basic COCOMO: Effort = a(KLoC)^b person-months. Organic (simple, small team): a=2.4, b=1.05. Semi-detached: a=3.0, b=1.12. Embedded (complex, tight constraints): a=3.6, b=1.20.",
+      "template_zh": "COCOMO（构造性成本模型）根据大小估算软件工作量。基本COCOMO：工作量=a(KLoC)^b人月。有机（简单、小团队）：a=2.4,b=1.05。半独立：a=3.0,b=1.12。嵌入式（复杂、严格约束）：a=3.6,b=1.20。"
+    },
+    {
+      "type": "step1",
+      "template_en": "For a 50 KLoC organic project: Effort = 2.4 × (50)^1.05 ≈ 2.4 × 62 ≈ 149 person-months. Schedule: TDEV = 2.5 × (Effort)^0.38 ≈ 2.5 × 149^0.38 ≈ 14 months. Team size ≈ Effort/TDEV ≈ 11 developers.",
+      "template_zh": "对50 KLoC的有机项目：工作量=2.4×(50)^1.05≈2.4×62≈149人月。进度：TDEV=2.5×(工作量)^0.38≈2.5×149^0.38≈14个月。团队规模≈工作量/TDEV≈11名开发者。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Intermediate COCOMO multiplies by 15 effort adjustment factors: required reliability, database size, product complexity, analyst capability, experience, programming language, etc. Each factor multiplies the nominal effort. A complex project could have product of factors from 0.9 to 2.5.",
+      "template_zh": "中级COCOMO乘以15个工作调整因子：所需可靠性、数据库大小、产品复杂度、分析师能力、经验、编程语言等。每个因子乘以名义工作量。复杂项目的因子乘积可达0.9到2.5。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Detailed COCOMO adds phase-by-phase estimates: Plans & Reqs (6%), Product Design (16%), Detailed Design (26%), Code & Unit Test (42%), Integration & Test (10%). These percentages vary by project type.",
+      "template_zh": "详细COCOMO增加了分阶段估算：计划与需求(6%)、产品设计(16%)、详细设计(26%)、编码与单元测试(42%)、集成与测试(10%)。这些百分比随项目类型变化。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "COCOMO gives ORDER-OF-MAGNITUDE estimates. Accuracy: ±20% within the calibrated range, ±50% outside. Modern alternatives: Planning Poker (expert-based, agile), Story Points (relative sizing), Function Points (language-independent).",
+      "template_zh": "COCOMO给出数量级估算。精度：校准范围内±20%，范围外±50%。现代替代方案：Planning Poker（基于专家的、敏捷）、故事点（相对大小）、功能点（语言无关的）。"
+    },
+    {
+      "type": "meta",
+      "template_en": "Estimation is not a prediction — it's a RISK MANAGEMENT tool. 'How long will this take?' is the wrong question. Better: 'Given our constraints, what's the 80th-percentile estimate?' All estimates are wrong; some are useful. Always include confidence intervals.",
+      "template_zh": "估算不是预测——它是风险管理工具。'需要多长时间？'是错误的问题。更好：'给定我们的约束，80分位估算是什么？'所有估算都是错的；有些是有用的。始终包含置信区间。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC301H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

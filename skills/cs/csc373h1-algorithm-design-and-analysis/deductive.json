@@ -1,0 +1,86 @@
+{
+  "name": "CSC373H1 — Deductive Derivation (Max-Flow Min-Cut Theorem)",
+  "description": "The maximum flow from source s to sink t equals the minimum capacity of an s-t cut. A CUT partitions vertices into S and T with s∈S, t∈T. Capacity = s",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC373H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC373H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "The maximum flow from source s to sink t equals the minimum capacity of an s-t cut. A CUT partitions vertices into S and T with s∈S, t∈T. Capacity = sum of capacities of edges from S to T. This is the fundamental duality theorem of network flow.",
+      "template_zh": "从源s到汇t的最大流等于s-t割的最小容量。割将顶点分为S和T，s∈S、t∈T。容量=从S到T的边的容量之和。这是网络流的基本对偶定理。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Ford-Fulkerson: while there's an augmenting path in residual graph, push flow. Let f* be max flow. Remove edges with zero residual capacity. Let S = vertices reachable from s. All edges from S to V\\S are SATURATED (flow = capacity).",
+      "template_zh": "Ford-Fulkerson：当残量图中有增广路径时推送流。设f*为最大流。移除零残量容量的边。设S=从s可达的顶点。所有从S到V\\S的边都是饱和的（流量=容量）。"
+    },
+    {
+      "type": "step2",
+      "template_en": "The sum of flow from S to V\\S minus flow from V\\S to S = |f*| (net flow across cut). But edges V\\S→S have 0 flow in residual graph (otherwise S would be larger). Edges S→V\\S are saturated. So |f*| = capacity(S, V\\S).",
+      "template_zh": "从S到V\\S的流之和减去V\\S到S的流=|f*|（穿过割的净流量）。但V\\S→S的边在残量图中流为0（否则S会更大）。S→V\\S的边是饱和的。所以|f*|=capacity(S, V\\S)。"
+    },
+    {
+      "type": "step3",
+      "template_en": "For ANY cut (A,B), the net flow from A to B = |f| ≤ capacity(A,B). So max flow ≤ min cut. But we just found a cut with capacity = |f*|. Therefore |f*| = min cut capacity. The min cut is the BOTTLENECK of the network.",
+      "template_zh": "对任何割(A,B)，从A到B的净流量=|f|≤capacity(A,B)。所以最大流≤最小割。但我们刚找到了一个容量=|f*|的割。因此|f*|=最小割容量。最小割是网络的瓶颈。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Max flow = min cut. This duality means: to find max flow, find the bottleneck. Applications: (1) Edge connectivity = min cut between any two vertices. (2) Bipartite matching = max flow in a bipartite graph. (3) Image segmentation = min cut in a specially constructed graph.",
+      "template_zh": "最大流=最小割。这个对偶意味着：要找最大流，找瓶颈。应用：(1)边连通度=任两点间的最小割。(2)二分图匹配=二分图中的最大流。(3)图像分割=特别构造图中的最小割。"
+    },
+    {
+      "type": "meta",
+      "template_en": "The max-flow min-cut theorem is a special case of LINEAR PROGRAMMING DUALITY. The Primal (max flow) and its Dual (min cut) have equal optimal values. This duality appears everywhere: shortest path (P) ↔ potential (D), assignment (P) ↔ price (D).",
+      "template_zh": "最大流最小割定理是线性规划对偶的特例。原始问题（最大流）及其对偶（最小割）有相等的最优值。这种对偶无处不在：最短路径(P)↔势(D)、指派(P)↔价格(D)。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC373H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

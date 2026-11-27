@@ -1,0 +1,86 @@
+{
+  "name": "CSC369H1 — Deductive Derivation (Banker's Algorithm for Deadlock Avoidance)",
+  "description": "Deadlock requires 4 Coffman conditions: Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait. Banker's Algorithm AVOIDS deadlock by checking if",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC369H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC369H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Deadlock requires 4 Coffman conditions: Mutual Exclusion, Hold & Wait, No Preemption, Circular Wait. Banker's Algorithm AVOIDS deadlock by checking if granting a request leads to a SAFE state — one where processes can finish in some order.",
+      "template_zh": "死锁需要4个Coffman条件：互斥、持有并等待、非剥夺、循环等待。银行家算法通过检查批准请求是否导致安全状态来避免死锁——安全状态意味着进程能按某种顺序完成。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Data structures: Available[m] = resources available. Max[n][m] = max demand per process. Allocation[n][m] = currently allocated. Need[n][m] = Max - Allocation. A state is SAFE if there exists a sequence where all processes complete.",
+      "template_zh": "数据结构：Available[m]=可用资源。Max[n][m]=每个进程的最大需求。Allocation[n][m]=当前已分配。Need[n][m]=Max-Allocation。如果存在一个所有进程完成的序列，状态是安全的。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Safety algorithm: Work = Available; Finish = [false]*n. Find i where Finish[i]=false AND Need[i]≤Work. If found: Work += Allocation[i]; Finish[i]=true; repeat. If all Finish[i]=true → SAFE. Otherwise → UNSAFE.",
+      "template_zh": "安全性算法：Work=Available；Finish=[false]*n。找到满足Finish[i]=false且Need[i]≤Work的i。如果找到：Work+=Allocation[i]; Finish[i]=true; 重复。如果所有Finish[i]=true→安全。否则→不安全。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Resource request: If Requestᵢ ≤ Needᵢ and Requestᵢ ≤ Available: pretend to allocate, run safety check. If resulting state is SAFE → approve. If UNSAFE → block (process must wait). The pretends are rolled back if unsafe.",
+      "template_zh": "资源请求：如果Requestᵢ≤Needᵢ且Requestᵢ≤Available：假装分配，运行安全性检查。如果结果状态安全→批准。如果不安全→阻塞（进程必须等待）。如果不安全则回滚假装分配。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Banker's prevents deadlock by ensuring the system is always in a safe state. A deadlock can NEVER occur — it's 'prevented' before it could happen. Cost: requires knowing Max demand in advance (unrealistic in practice). Used in some database systems, rarely in OS kernels.",
+      "template_zh": "银行家算法通过确保系统始终处于安全状态来预防死锁。死锁永远不会发生——在发生之前就被'预防'了。代价：需要预先知道最大需求（实际中不现实）。在一些数据库系统中使用，很少在OS内核中使用。"
+    },
+    {
+      "type": "meta",
+      "template_en": "Avoidance vs prevention vs detection: (1) Prevention: break one of 4 Coffman conditions statically. (2) Avoidance: dynamically check safety (Banker's). (3) Detection + Recovery: allow deadlock, detect it, kill processes or preempt resources. Most practical systems use detection + recovery (UNIX kill -9).",
+      "template_zh": "预防vs避免vs检测：(1)预防：静态打破4个Coffman条件之一。(2)避免：动态检查安全性（银行家）。(3)检测+恢复：允许死锁、检测它、杀死进程或抢占资源。多数实际系统使用检测+恢复（UNIX kill -9）。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC369H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

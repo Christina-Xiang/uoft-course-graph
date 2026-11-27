@@ -1,0 +1,86 @@
+{
+  "name": "CSC369H1 — Correction Attribution (Locking and Race Conditions)",
+  "description": "Common error: 'I put a lock on the shared variable, so the code is thread-safe.' WRONG! If one thread locks but another thread accesses the variable W",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC369H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC369H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: 'I put a lock on the shared variable, so the code is thread-safe.' WRONG! If one thread locks but another thread accesses the variable WITHOUT the lock, the lock provides NO protection. A lock only works when ALL threads use the SAME lock for the SAME data.",
+      "template_zh": "常见错误：'我在共享变量上放了锁，所以代码是线程安全的。'错！如果一个线程加锁但另一个线程不加锁访问变量，锁不提供任何保护。锁只在对同一数据的所有线程使用同一锁时才有效。"
+    },
+    {
+      "type": "question",
+      "template_en": "Thread 1: lock(mtx); x++; unlock(mtx). Thread 2: x-- (no lock). What are the possible values of x if both run concurrently? Answer: x can be anything — Thread 2's read-modify-write of x-- interleaves unpredictably with Thread 1's x++.",
+      "template_zh": "线程1：lock(mtx); x++; unlock(mtx)。线程2：x--（无锁）。两者并发运行时x的可能值？答案：x可以是任何值——线程2对x--的读-改-写与线程1的x++不可预测地交错。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Even WITH locks, deadlock is possible: Thread 1: lock(A); lock(B). Thread 2: lock(B); lock(A). This is the 'deadly embrace.' Solution: LOCK ORDERING — always acquire locks in the same order. If both threads lock A then B, deadlock cannot occur.",
+      "template_zh": "即使有锁，死锁也可能：线程1：lock(A); lock(B)。线程2：lock(B); lock(A)。这是'致命拥抱'。解决方案：锁排序——始终以相同顺序获取锁。如果两个线程都先锁A再锁B，死锁不会发生。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Lock discipline: (1) Always lock for shared data. (2) Always unlock (use try/finally or RAII). (3) Establish a global lock ordering. (4) Keep critical sections small. (5) Consider lock-free data structures when performance-critical (atomic ops, RCU).",
+      "template_zh": "锁规范：(1)始终为共享数据加锁。(2)始终解锁（使用try/finally或RAII）。(3)建立全局锁顺序。(4)保持临界区小。(5)性能关键时考虑无锁数据结构（原子操作、RCU）。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Find the bug: (1) void f() { static int x; lock(m); x++; unlock(m); }. (2) void transfer(Acct a, Acct b, int amt) { lock(a.mtx); lock(b.mtx); a-=amt; b+=amt; unlock(b.mtx); unlock(a.mtx); }. (3) if(shared==null) { lock(m); shared = new Data(); unlock(m); } return shared;",
+      "template_zh": "找bug：(1)void f() { static int x; lock(m); x++; unlock(m); }。(2)void transfer(Acct a, Acct b, int amt) { lock(a.mtx); lock(b.mtx); a-=amt; b+=amt; unlock(b.mtx); unlock(a.mtx); }。(3)if(shared==null) { lock(m); shared=new Data(); unlock(m); } return shared;"
+    },
+    {
+      "type": "reflection",
+      "template_en": "'Concurrency is not parallelism' — Rob Pike. Concurrency = dealing with many things simultaneously (structure). Parallelism = doing many things simultaneously (execution). Locks are about CORRECTNESS first, performance second. A correct but slow program can be fixed; a fast but wrong program is useless.",
+      "template_zh": "'并发不是并行'——Rob Pike。并发=同时处理多件事（结构）。并行=同时做多件事（执行）。锁首先关乎正确性，其次才是性能。正确但慢的程序可以修复；快但错的程序没有用。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC369H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}
