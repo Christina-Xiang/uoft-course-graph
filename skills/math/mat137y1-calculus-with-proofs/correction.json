@@ -1,0 +1,87 @@
+{
+  "name": "MAT137Y1 — Common Pitfall Correction: Chain Rule Inner Derivative",
+  "description": "Target a specific, high-frequency student error — forgetting to multiply by the inner derivative when applying the chain rule. Through Socratic questioning, force the student to confront the inconsistency in their reasoning and derive the correct understanding from first principles.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT137Y1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT137Y1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: d/dx[sin(2x)] = cos(2x). The student applies the derivative of sin (which is cos) but forgets to multiply by the inner derivative of 2x (which is 2). The correct answer is 2·cos(2x). This error is NOT a 'silly mistake' — it reveals a conceptual gap in understanding the chain rule as a rate-of-change composition.",
+      "template_zh": "常见错误：d/dx[sin(2x)] = cos(2x)。学生用了 sin 的导数（cos），但忘了乘以内层函数 2x 的导数（2）。正确答案是 2·cos(2x)。这个错误不是一个'粗心失误'——它揭示了关于链式法则作为变化率合成这一概念的理解缺陷。"
+    },
+    {
+      "type": "question",
+      "template_en": "You wrote d/dx[sin(2x)] = cos(2x). Compare sin(x) and sin(2x) near x = 0. For a tiny change Δx, sin(x+Δx) ≈ sin(x) + cos(x)·Δx. But sin(2(x+Δx)) = sin(2x + 2Δx). The input to sin changes TWICE as fast. Should the output change at the same rate as sin(x)? Test numerically: at x = 0.1, what is [sin(0.2) − sin(0)]/0.1 versus [sin(2·0.1) − sin(2·0)]/0.1 ?",
+      "template_zh": "你写了 d/dx[sin(2x)] = cos(2x)。比较 sin(x) 和 sin(2x) 在 x = 0 附近。对于微小变化 Δx，sin(x+Δx) ≈ sin(x) + cos(x)·Δx。但 sin(2(x+Δx)) = sin(2x + 2Δx)——sin 的输入变化快了一倍。输出的变化速度应该与 sin(x) 相同吗？数值测试：x = 0.1 时，[sin(0.2) − sin(0)]/0.1 与 [sin(2·0.1) − sin(2·0)]/0.1 的值是多少？"
+    },
+    {
+      "type": "explore",
+      "template_en": "Let's explore this more deeply. What does the correct understanding look like? Consider the fundamental reason behind the error: it comes from over-generalizing a pattern that works in simple cases but breaks down in general. The key is to identify the hidden assumption that is not always justified.\n\nAsk yourself: what condition must hold for this pattern to work? When does that condition fail? The boundary between where it works and where it doesn't defines the precise scope of the concept.",
+      "template_zh": "让我们更深入地探讨。正确的理解是什么样的？考虑错误背后的根本原因：它来自于过度推广一个在简单情况下有效但在一般情况下会失效的模式。关键是识别出那个并不总是成立的隐藏假设。\n\n问问自己：这个模式成立需要什么条件？该条件何时失效？它有效和无效的边界定义了该概念的精确范围。"
+    },
+    {
+      "type": "insight",
+      "template_en": "The chain rule is NOT an arbitrary extra step — it is a necessary consequence of function composition. When you feed 2x into sin, the input to sin changes at speed 2 (relative to x). So the output's rate of change must be sin's derivative evaluated at 2x, MULTIPLIED by the input's speed (2). Formally: d/dx[f(g(x))] = f'(g(x)) · g'(x). The inner derivative g'(x) is the 'speed multiplier' that converts the rate of change of g into the rate of change of f∘g. Forgetting it is equivalent to ignoring that 2x and x move at completely different speeds.",
+      "template_zh": "链式法则不是一个随意添加的额外步骤——它是函数复合的必然结果。当你把 2x 输入 sin 时，sin 的输入以速度 2（相对于 x）变化。所以输出的变化率必须是 sin 在 2x 处的导数，乘以输入的速度（2）。形式化地：d/dx[f(g(x))] = f'(g(x)) · g'(x)。内层导数 g'(x) 是'速度乘数'，将 g 的变化率转化为 f∘g 的变化率。遗漏它等于忽略 2x 和 x 以完全不同的速度变化。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Fix each of the following, then explain why the original answer is wrong using the 'speed multiplier' concept: (1) d/dx[cos(x²)] = −sin(x²) → correct: ? (2) d/dx[e^{3x}] = e^{3x} → correct: ? (3) d/dx[ln(sin x)] = 1/sin x → correct: ? After solving, create your own chain-rule error and challenge a study partner to find it.",
+      "template_zh": "修正以下每个并解释为何原答案是错的（用'速度乘数'概念）：(1) d/dx[cos(x²)] = −sin(x²) → 正确：？(2) d/dx[e^{3x}] = e^{3x} → 正确：？(3) d/dx[ln(sin x)] = 1/sin x → 正确：？ 解完后，自己创造一个链式法则错误并挑战你的学习伙伴找出它。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Reflection: What was the core misconception behind this error? How does the corrected understanding change the way you think about MAT137Y1 — Common Pitfall Correction: Chain Rule Inner Derivative? The best mathematicians don't avoid mistakes — they learn from them faster by analyzing the gap between their intuition and the correct reasoning. What will you watch out for in the future?",
+      "template_zh": "反思：这个错误背后的核心误解是什么？修正后的理解如何改变你对MAT137Y1 — Common Pitfall Correction: Chain Rule Inner Derivative的看法？最好的数学家不会避免错误——他们通过分析直觉与正确推理之间的差距来更快地从中学习。你将来会注意什么？"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/counterexamples.md",
+    "references/proof-techniques.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT137Y1",
+    "skillType": "correction",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-3"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "c17",
+      "c18",
+      "m9",
+      "f9",
+      "t10",
+      "t11"
+    ]
+  }
+}

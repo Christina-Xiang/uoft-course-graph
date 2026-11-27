@@ -1,0 +1,86 @@
+{
+  "name": "MAT240H1 — Correction Attribution (Determinants and Cayley-Hamilton)",
+  "description": "Common error: 'det(A+B)=det(A)+det(B).' WRONG! Determinant is MULTILINEAR and ALTERNATING: linear in each row SEPARATELY, swapping two rows multiplies",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT240H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT240H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: 'det(A+B)=det(A)+det(B).' WRONG! Determinant is MULTILINEAR and ALTERNATING: linear in each row SEPARATELY, swapping two rows multiplies by -1. This defines it.",
+      "template_zh": "常见错误：'det(A+B)=det(A)+det(B)。'错！行列式是多重线性和交替的：对每行分别线性，交换两行乘以-1。这是定义性质。"
+    },
+    {
+      "type": "question",
+      "template_en": "det(A) for T:V→V? It's INDEPENDENT of basis! If A and P⁻¹AP are similar, det(P⁻¹AP)=det(A). So determinant is a property of the LINEAR TRANSFORMATION, not just the matrix.",
+      "template_zh": "对T:V→V，det(A)不依赖于基！如果A和P⁻¹AP相似，det(P⁻¹AP)=det(A)。所以行列式是线性变换的性质，不仅是矩阵的。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Cayley-Hamilton: Every matrix satisfies its own characteristic polynomial. If p(λ)=det(A-λI), then p(A)=0. Example: A=[[a,b],[c,d]], p(λ)=λ²-(a+d)λ+(ad-bc). A²-(a+d)A+(ad-bc)I=0. This gives a POLYNOMIAL identity for A.",
+      "template_zh": "Cayley-Hamilton：每个矩阵满足自己的特征多项式。若p(λ)=det(A-λI)，则p(A)=0。例：A=[[a,b],[c,d]]，p(λ)=λ²-(a+d)λ+(ad-bc)。A²-(a+d)A+(ad-bc)I=0。给出A的多项式恒等式。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Cayley-Hamilton is powerful: (1) Compute A⁻¹ as polynomial in A. (2) Express Aᵏ (k≥n) as linear combination of I,A,...,Aⁿ⁻¹. (3) Minimal polynomial divides characteristic polynomial. (4) A diagonalizable ⟺ minimal polynomial has distinct linear factors.",
+      "template_zh": "Cayley-Hamilton强大：(1)将A⁻¹计算为A的多项式。(2)将Aᵏ(k≥n)表示为I,A,...,Aⁿ⁻¹的线性组合。(3)最小多项式整除特征多项式。(4)A可对角化⟺最小多项式有互异线性因子。"
+    },
+    {
+      "type": "practice",
+      "template_en": "For A=[[2,1],[1,2]]: (1) Find characteristic polynomial. (2) Verify Cayley-Hamilton: A²-4A+3I. (3) Use it to find A⁻¹. (4) Express A⁵ as combination of I and A. (5) What is the minimal polynomial?",
+      "template_zh": "对A=[[2,1],[1,2]]：(1)求特征多项式。(2)验证Cayley-Hamilton: A²-4A+3I。(3)用它求A⁻¹。(4)将A⁵表示为I和A的组合。(5)最小多项式是什么？"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Cayley-Hamilton bridges algebra (polynomials) and linear algebra (matrices). Every matrix generates a finite-dimensional algebra — Aᵏ are linearly dependent for k≥n. Applications from ODEs to quantum mechanics.",
+      "template_zh": "Cayley-Hamilton连接代数(多项式)和线性代数(矩阵)。每个矩阵生成有限维代数——Aᵏ对k≥n线性相关。应用从ODE到量子力学。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT240H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-2",
+      "unit-3",
+      "unit-4",
+      "unit-5"
+    ]
+  }
+}

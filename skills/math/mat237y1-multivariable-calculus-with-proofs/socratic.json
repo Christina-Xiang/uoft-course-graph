@@ -1,0 +1,76 @@
+{
+  "name": "MAT237Y1 — Socratic Discovery (topology of $\\mathbb{R}^n$)",
+  "description": "Guide the student to discover open/closed/compact/connected sets in higher dimensions through scaffolded Socratic questioning.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT237Y1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT237Y1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "The Contraction Mapping Theorem says: if T: X → X is a contraction (d(Tx,Ty) ≤ c·d(x,y) with 0 ≤ c < 1) on a complete metric space X, then T has a unique fixed point. Where does 'complete' enter the proof? Can you construct an example where X is not complete and T is a contraction but has no fixed point?\n\nThink about the iteration xₙ₊₁ = T(xₙ). If X is missing the limit point, the sequence converges to something not in X. Try X = (0,1] and T(x) = x/2.\n\nCompleteness guarantees the Cauchy sequence xₙ converges inside X. Without it, the limit could fall outside the space — e.g., X=(0,1], T(x)=x/2 has no fixed point because 0 ∉ X.",
+      "template_zh": "压缩映射定理说：如果 T: X → X 是压缩映射（d(Tx,Ty) ≤ c·d(x,y)，0 ≤ c < 1）且 X 是完备度量空间，则 T 有唯一不动点。证明中'完备'用在哪里？你能构造一个 X 不完备、T 是压缩但没有不动点的例子吗？\n\n考虑迭代 xₙ₊₁ = T(xₙ)。如果 X 缺少了极限点，序列收敛到 X 之外的东西。试试 X=(0,1]，T(x)=x/2。\n\n完备性保证了柯西序列 xₙ 在 X 内收敛。没有它，极限可能落在空间外——如 X=(0,1]，T(x)=x/2 无不动点因为 0∉X。"
+    },
+    {
+      "type": "question",
+      "template_en": "Now aim for the Inverse Function Theorem. Suppose f: Rⁿ → Rⁿ is C¹ and Df(a) is invertible. I want to solve f(x)=y for x near a, given y near f(a). How can I turn this into a fixed point problem? What operator's fixed point would give me f⁻¹(y)?\n\nI want x such that f(x)=y. Rearrange: x = x + A(y - f(x)) for some matrix A. If I pick A = Df(a)⁻¹, can I show this map is a contraction near a?\n\nDefine T_y(x) = x + Df(a)⁻¹(y - f(x)). A fixed point of T_y solves f(x)=y. By the C¹ condition, T_y is a contraction in a neighborhood. The Contraction Mapping Theorem then yields a unique fixed point, proving f is locally invertible.",
+      "template_zh": "现在目标是反函数定理。假设 f: Rⁿ → Rⁿ 是 C¹ 且 Df(a) 可逆。我想对靠近 f(a) 的 y 解 f(x)=y，找到靠近 a 的 x。怎样才能把它变成一个不动点问题？什么算子的不动点能给我 f⁻¹(y)？\n\n我想找 x 使 f(x)=y。重新排列：x = x + A(y - f(x))，A 是某个矩阵。如果我取 A = Df(a)⁻¹，能否证明这个映射在 a 附近是压缩？\n\n定义 T_y(x) = x + Df(a)⁻¹(y - f(x))。T_y 的不动点满足 f(x)=y。由 C¹ 条件，T_y 在某邻域内是压缩。压缩映射定理给出唯一不动点，证明 f 局部可逆。"
+    },
+    {
+      "type": "explore",
+      "template_en": "From Inverse Function Theorem to Implicit Function Theorem. Suppose F: Rⁿ × Rᵐ → Rᵐ has F(a,b)=0 and ∂F/∂y(a,b) is invertible. Show there exists g(x) near a such that F(x,g(x))=0. How does IFT⁻¹ apply? What function should I define whose local invertibility gives me g?\n\nDefine Φ(x,y) = (x, F(x,y)). If you compute DΦ, can you apply IFT⁻¹? What does the invertibility of Φ tell you about the existence of g?\n\nDefine Φ(x,y) = (x, F(x,y)). Then DΦ = [I, 0; ∂F/∂x, ∂F/∂y], so det(DΦ) = det(∂F/∂y) ≠ 0. By IFT⁻¹, Φ is locally invertible. Let Ψ = Φ⁻¹. Then Ψ(x,0) = (x, g(x)), giving the implicit function.",
+      "template_zh": "从反函数定理到隐函数定理。设 F: Rⁿ × Rᵐ → Rᵐ 满足 F(a,b)=0 且 ∂F/∂y(a,b) 可逆。证明存在 a 附近的 g(x) 使 F(x,g(x))=0。反函数定理如何应用？我应该定义什么函数，其局部可逆性给出 g？\n\n定义 Φ(x,y) = (x, F(x,y))。如果你计算 DΦ，能应用反函数定理吗？Φ 的可逆性告诉我们 g 的存在性？\n\n定义 Φ(x,y) = (x, F(x,y))。则 DΦ = [I, 0; ∂F/∂x, ∂F/∂y]，所以 det(DΦ)=det(∂F/∂y)≠0。由反函数定理，Φ 局部可逆。令 Ψ=Φ⁻¹，则 Ψ(x,0)=(x,g(x))，给出了隐函数。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "From Implicit Function Theorem to Rank Theorem. Suppose f: Rⁿ → Rᵐ has Df(x) of constant rank k near a. The Rank Theorem says locally f(x₁,...,xₙ) = (y₁,...,yₖ, 0,...,0) after a change of coordinates. Can you outline the two coordinate changes — one in the domain, one in the codomain — that achieve this?\n\nUse IFT to split coordinates into 'directions where f changes' (rank k) and 'directions where f is constant'. Choose coordinates in domain to align with the kernel of Df, and in codomain to align with the image.\n\nPick coordinates so that Df(a) has invertible k×k block. By IFT, the first k components of f can be used as part of the domain coordinates (inverse function trick). The remaining n−k domain coordinates parametrize the kernel. In the codomain, choose a complementary basis to the image of Df, and the remaining components vanish by constant rank.",
+      "template_zh": "从隐函数定理到秩定理。设 f: Rⁿ → Rᵐ 在 a 附近 Df(x) 恒为秩 k。秩定理说：经过坐标变换后，局部上 f(x₁,...,xₙ) = (y₁,...,yₖ, 0,...,0)。你能勾勒出实现这个的两个坐标变换——一个在定义域，一个在陪域——吗？\n\n用隐函数定理将坐标分为'f 改变的方向'（秩 k）和'f 恒定的方向'。在定义域选坐标使其与 Df 的核对齐，在陪域选坐标与像对齐。\n\n选坐标使 Df(a) 有可逆的 k×k 块。由隐函数定理，f 的前 k 个分量可作为定义域坐标的一部分（反函数技巧）。剩余 n−k 个定义域坐标参数化核。在陪域中，选 Df 的像的补基，剩余分量由常秩条件消失。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Based on what we've explored about Socratic Discovery (topology of $\\mathbb{R}^n$), try these: (1) Explain the core idea in your own words. (2) Work through an example that illustrates the key concept. (3) How would you teach this to a peer who missed the class?",
+      "template_zh": "基于我们对Socratic Discovery (topology of $\\mathbb{R}^n$)的探索，尝试以下练习：(1) 用自己的话解释核心思想。(2) 通过一个例子说明关键概念。(3) 你会如何向缺课的同学讲解这个内容？"
+    },
+    {
+      "type": "insight",
+      "template_en": "Key insight: Socratic Discovery (topology of $\\mathbb{R}^n$) is not just a collection of definitions — it's a way of thinking. The examples and non-examples build a mental model that lets you reason about new situations. The formal definition captures something you already understood intuitively; it just makes it precise enough to work with rigorously.",
+      "template_zh": "关键洞察：Socratic Discovery (topology of $\\mathbb{R}^n$) 不仅是定义的集合——它是一种思维方式。示例和反例构建了一个思维模型，让你能够推理新情况。形式化定义捕捉了你已经直觉理解的东西；它只是使其足够精确以便严格处理。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/concept-map.md",
+    "references/counterexamples.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT237Y1",
+    "skillType": "socratic",
+    "difficulty": 5,
+    "version": "1.0"
+  }
+}

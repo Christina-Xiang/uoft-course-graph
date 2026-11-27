@@ -1,0 +1,75 @@
+{
+  "name": "MAT244H1 — Correction (assuming $e^{\\int p}$ is always the correct integrating factor)",
+  "description": "Fix the common conceptual error: assuming $e^{\\int p}$ is always the correct integrating factor.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT244H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT244H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: Treating a sum as separable — assuming dy/dx = x + y can be written as f(x)g(y) because 'everything is on one side'. This mistake is natural — it comes from over-generalising a pattern that works in simpler cases.",
+      "template_zh": "常见错误：把加法结构误认为可分离——认为 dy/dx = x + y 可以写成 f(x)g(y) 因为'所有东西都在一边'。。这个错误很自然——它来自于过度泛化一个在简单情况下有效的模式。"
+    },
+    {
+      "type": "question",
+      "template_en": "Let's test your understanding. 你觉得 dy/dx = x + y 是可分离的吗？试试看能不能写成 f(x)g(y) 的形式。不能？那它可能是什么类型？关键区别是什么？ Work through the problem carefully. What assumption did you just make? Is it justified?",
+      "template_zh": "让我们测试你的理解。Do you think dy/dx = x + y is separable? Try writing it as f(x)g(y). Can't? Then what type might it be? What's the key difference? 仔细解题。你刚才做了什么假设？这个假设合理吗？"
+    },
+    {
+      "type": "explore",
+      "template_en": "Let's explore this more deeply. What does the correct understanding look like? Consider the fundamental reason behind the error: it comes from over-generalizing a pattern that works in simple cases but breaks down in general. The key is to identify the hidden assumption that is not always justified.\n\nAsk yourself: what condition must hold for this pattern to work? When does that condition fail? The boundary between where it works and where it doesn't defines the precise scope of the concept.",
+      "template_zh": "让我们更深入地探讨。正确的理解是什么样的？考虑错误背后的根本原因：它来自于过度推广一个在简单情况下有效但在一般情况下会失效的模式。关键是识别出那个并不总是成立的隐藏假设。\n\n问问自己：这个模式成立需要什么条件？该条件何时失效？它有效和无效的边界定义了该概念的精确范围。"
+    },
+    {
+      "type": "insight",
+      "template_en": "The correct reasoning: dy/dx = x + y 不能分离成 f(x)g(y)，因为 x + y 是'和'不是'积'。但它是标准的线性一阶方程。关键是区分'加法耦合'和'乘法耦合'——可分离需要乘法结构，线性只需要加法结构。 The subtlety is that intuition from elementary cases doesn't always carry over.",
+      "template_zh": "正确的推理是：dy/dx = x + y cannot be separated into f(x)g(y) because x + y is a 'sum' not a 'product'. But it is a standard linear first-order equation. The key is distinguishing 'additive coupling' from 'multiplicative coupling' — separability needs multiplicative structure, linearity only needs additive structure.。微妙之处在于，从初等情况得到的直觉并不总是能推广。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Find where this error appears in the wild: (1) search your work for this pattern. (2) Correct it. (3) Explain to a peer why the correction matters.",
+      "template_zh": "找出这个错误出现在你之前作业中的位置：(1) 在你的作业中搜索这个模式。(2) 修正它。(3) 向同学解释为什么这个修正很重要。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Reflection: What was the core misconception behind this error? How does the corrected understanding change the way you think about MAT244H1 — Correction (assuming $e^{\\int p}$ is always the correct integrating factor)? The best mathematicians don't avoid mistakes — they learn from them faster by analyzing the gap between their intuition and the correct reasoning. What will you watch out for in the future?",
+      "template_zh": "反思：这个错误背后的核心误解是什么？修正后的理解如何改变你对MAT244H1 — Correction (assuming $e^{\\int p}$ is always the correct integrating factor)的看法？最好的数学家不会避免错误——他们通过分析直觉与正确推理之间的差距来更快地从中学习。你将来会注意什么？"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/counterexamples.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT244H1",
+    "skillType": "correction",
+    "difficulty": 3,
+    "version": "1.0"
+  }
+}

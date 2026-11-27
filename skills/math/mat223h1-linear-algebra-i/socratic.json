@@ -1,0 +1,87 @@
+{
+  "name": "MAT223H1 — Geo-Algebra Translation: Socratic Visualization",
+  "description": "Guide the student to discover the fundamental duality of linear algebra: every algebraic operation has a geometric meaning. Through scaffolded Socratic questioning, the student rediscovers that vectors are arrows, spans are planes/lines, determinants are signed volumes, and transformations are geometric actions.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT223H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT223H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "You have vector v = (3, 1). Without computing, predict: what does 2v look like? What about -v? How does scalar multiplication change the geometry — not just the numbers?\n\nThink of v as an arrow from the origin. What does 'multiply by 2' physically do to an arrow? What does 'multiply by -1' do?\n\nScalar multiplication scales the arrow: 2v is twice as long in the same direction, -v flips direction. Every scalar operation has a geometric twin. This is the seed of the fundamental insight: linear algebra IS geometry expressed in numbers.",
+      "template_zh": "你有向量 v = (3, 1)。不计算，预测：2v 长什么样？-v 呢？标量乘法如何改变几何——不只是改变数字？\n\n把 v 看作从原点出发的箭头。'乘以 2'对箭头做了什么物理操作？'乘以 -1'呢？\n\n标量乘法缩放箭头：2v 同向加倍，-v 反向。每个标量操作都有几何孪生兄弟。这是核心洞察的种子：线性代数就是用数字表达的几何。"
+    },
+    {
+      "type": "question",
+      "template_en": "Now take v = (1, 2) and w = (3, 1). Predict v + w before computing. What geometric operation does vector addition correspond to — can you describe it without using coordinates?\n\nDraw v, then place w's tail at v's head. What shape appears? What's the diagonal?\n\nVector addition is tip-to-tail: v + w is the diagonal of the parallelogram formed by v and w. This parallelogram law is the geometric definition of addition — and it works in any dimension.",
+      "template_zh": "取 v = (1, 2) 和 w = (3, 1)。计算前先预测 v + w。向量加法对应什么几何操作——你能不用坐标描述吗？\n\n画出 v，然后将 w 的尾放在 v 的头。出现了什么形状？对角线是什么？\n\n向量加法是尾对头：v + w 是以 v 和 w 为边的平行四边形的对角线。平行四边形法则是加法的几何定义——在任何维度都成立。"
+    },
+    {
+      "type": "explore",
+      "template_en": "You have v = (1, 0) and w = (0, 1). The set {av + bw | a,b ∈ R} spans all of R². Now take v = (1, 0) and w = (2, 0). What's the span now? Can you reach (0, 1) with combinations of these two vectors?\n\nBoth vectors lie on the x-axis. Their span is everything on the x-axis — a line, not a plane. This is the geometric meaning of linear dependence: the vectors collapse into a lower-dimensional subspace.",
+      "template_zh": "v = (1, 0) 和 w = (0, 1) 的集合 {av + bw | a,b ∈ R} 生成整个 R²。换成 v = (1, 0) 和 w = (2, 0) 呢？能用这两个向量的组合到达 (0, 1) 吗？\n\n两个向量都在 x 轴上。它们的 span 是 x 轴上的所有点——一条线，不是平面。这是线性相关的几何含义：向量坍缩到一个低维子空间。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Given matrix A = [[1,2],[3,4]]. Before computing det(A), can you predict whether it will be positive or negative? What does the sign of the determinant tell you about what this matrix does to R²?\n\nCheck what happens to the standard basis vectors e₁=(1,0) and e₂=(0,1). Does A flip their relative orientation?\n\ndet(A) = 1·4 − 2·3 = -2 < 0. The negative sign means the linear transformation flips orientation — like a mirror reflection reverses left and right. The absolute value |det| = 2 means the transformation scales areas by a factor of 2. Determinant = signed volume scaling factor.",
+      "template_zh": "矩阵 A = [[1,2],[3,4]]。计算 det(A) 之前，你能预测结果是正还是负吗？行列式的符号告诉你矩阵对 R² 做了什么？\n\n检查标准基向量 e₁=(1,0) 和 e₂=(0,1) 发生了什么事。A 翻转了它们之间的相对方向吗？\n\ndet(A) = 1·4 − 2·3 = -2 < 0。负号意味着线性变换翻转了定向——就像镜像翻转左右。绝对值 |det| = 2 意味着变换将面积缩放 2 倍。行列式 = 有向体积缩放因子。"
+    },
+    {
+      "type": "practice",
+      "template_en": "For each of these, describe the geometric action WITHOUT computing: (1) A = [[0,1],[1,0]] — what does it do to the unit square? (2) A = [[2,0],[0,2]] — what shape results? (3) A = [[1,1],[0,1]] — this is a shear. What does it shear? After describing, compute the determinants to verify your geometric predictions.",
+      "template_zh": "对每个矩阵，不计算先描述其几何作用：(1) A = [[0,1],[1,0]]——对单位正方形做了什么？(2) A = [[2,0],[0,2]]——得到什么形状？(3) A = [[1,1],[0,1]]——这是一个剪切。它剪切了什么？描述后计算行列式验证你的几何预测。"
+    },
+    {
+      "type": "insight",
+      "template_en": "The fundamental insight: linear algebra IS geometry. Every algebraic operation (scalar multiplication, vector addition, span, determinant) has a geometric twin. When you compute, you should also visualize. The geometry gives meaning to the algebra, and the algebra gives precision to the geometry. This duality is what makes linear algebra so powerful — you can switch between the two perspectives depending on which is more useful for the problem at hand.",
+      "template_zh": "核心洞察：线性代数就是几何。每个代数运算（标量乘法、向量加法、生成空间、行列式）都有几何孪生兄弟。当你计算时，也应该可视化。几何赋予代数意义，代数赋予几何精确性。这种双重性是线性代数如此强大的原因——你可以根据问题的需要在这两种视角之间切换。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/concept-map.md",
+    "references/counterexamples.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT223H1",
+    "skillType": "socratic",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1",
+      "unit-2",
+      "unit-5",
+      "unit-7"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-3",
+      "unit-4"
+    ]
+  }
+}

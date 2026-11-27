@@ -1,0 +1,84 @@
+{
+  "name": "MAT223H1 — Correction: λ = 0 Is an Eigenvalue",
+  "description": "Target a pervasive conceptual error: students often dismiss λ = 0 as 'not a real eigenvalue' or confuse it with the zero vector. Through Socratic questioning and geometric reasoning, force the student to recognize that λ = 0 signals singularity — the transformation collapses at least one dimension. This correction builds deeper understanding of determinant = product of eigenvalues and the geometric meaning of singularity.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT223H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT223H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: Student finds eigenvalues of a matrix, gets λ = 0 from the characteristic polynomial, and says 'this eigenvalue is trivial, we can ignore it' — or worse, 'the eigenvector for λ = 0 is the zero vector.' Both are wrong. λ = 0 IS a valid eigenvalue with non-zero eigenvectors, and it carries crucial geometric information: the transformation has a non-trivial null space.",
+      "template_zh": "常见错误：学生求矩阵的特征值，从特征多项式得到 λ = 0，然后说'这个特征值是平凡的，可以忽略'——或者更糟：'λ = 0 的特征向量是零向量。'两者都错了。λ = 0 是一个有效的特征值，有非零的特征向量，并且携带关键的几何信息：该变换有非平凡的零空间。"
+    },
+    {
+      "type": "question",
+      "template_en": "Consider the matrix A = [[1,2],[2,4]]. Its rows are multiples of each other. Check: what is det(A)? Now compute the characteristic polynomial and find both eigenvalues. You'll get λ₁ = 5 and λ₂ = 0. If λ = 0 is an eigenvalue, what does the equation A·v = 0·v = 0 tell you? Can v be zero? If not, what space does v belong to?",
+      "template_zh": "考虑矩阵 A = [[1,2],[2,4]]。它的行相互成比例。检查：det(A) 是多少？现在计算特征多项式并找到两个特征值。你会得到 λ₁ = 5 和 λ₂ = 0。如果 λ = 0 是一个特征值，方程 A·v = 0·v = 0 告诉你什么？v 能为零吗？如果不能，v 属于哪个空间？"
+    },
+    {
+      "type": "explore",
+      "template_en": "Let's explore this more deeply. What does the correct understanding look like? Consider the fundamental reason behind the error: it comes from over-generalizing a pattern that works in simple cases but breaks down in general. The key is to identify the hidden assumption that is not always justified.\n\nAsk yourself: what condition must hold for this pattern to work? When does that condition fail? The boundary between where it works and where it doesn't defines the precise scope of the concept.",
+      "template_zh": "让我们更深入地探讨。正确的理解是什么样的？考虑错误背后的根本原因：它来自于过度推广一个在简单情况下有效但在一般情况下会失效的模式。关键是识别出那个并不总是成立的隐藏假设。\n\n问问自己：这个模式成立需要什么条件？该条件何时失效？它有效和无效的边界定义了该概念的精确范围。"
+    },
+    {
+      "type": "insight",
+      "template_en": "λ = 0 means A·v = 0, which is EXACTLY the definition of ker(A). The eigenvector for λ = 0 is ANY non-zero vector in the null space of A. Geometrically: the matrix A projects everything onto the line y = 2x, and vectors perpendicular to that line get killed (sent to zero). The eigenvalue λ = 0 tells you the transformation is NOT invertible — it squishes at least one direction flat. This connects directly to: det(A) = 0 (singular), rank(A) < n, and non-trivial null space. The product of eigenvalues equals the determinant — if any eigenvalue is 0, the determinant is 0. λ = 0 is not trivial; it's the single most important eigenvalue for understanding singularity.",
+      "template_zh": "λ = 0 意味着 A·v = 0，这正是 ker(A) 的定义。λ = 0 的特征向量是零空间中任何非零向量。几何上：矩阵 A 将所有东西投影到直线 y = 2x 上，垂直于该直线的向量会被消灭（送到零）。特征值 λ = 0 告诉你变换不可逆——它至少将一个方向压平。这直接连接到：det(A) = 0（奇异），rank(A) < n，以及非平凡零空间。特征值之积等于行列式——如果任何特征值为 0，行列式就是 0。λ = 0 并不平凡；它是理解奇异性的唯一最重要的特征值。"
+    },
+    {
+      "type": "practice",
+      "template_en": "For each matrix below, identify which eigenvalues are zero, find an eigenvector for λ = 0, and explain geometrically what the transformation does to R² or R³: (1) A = [[0,1],[0,0]] — what's its only eigenvalue? (2) B = [[1,-1],[2,-2]] — find the null space direction. (3) C = [[3,0,0],[0,0,0],[0,0,1]] — what do the eigenvalues tell you about C's rank and invertibility?",
+      "template_zh": "对下面每个矩阵，找出哪些特征值为 0，求 λ = 0 的一个特征向量，并几何解释变换对 R² 或 R³ 做了什么：(1) A = [[0,1],[0,0]]——它唯一的特征值是什么？(2) B = [[1,-1],[2,-2]]——找到零空间方向。(3) C = [[3,0,0],[0,0,0],[0,0,1]]——特征值告诉你 C 的秩和可逆性是什么？"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Reflection: What was the core misconception behind this error? How does the corrected understanding change the way you think about MAT223H1 — Correction: λ = 0 Is an Eigenvalue? The best mathematicians don't avoid mistakes — they learn from them faster by analyzing the gap between their intuition and the correct reasoning. What will you watch out for in the future?",
+      "template_zh": "反思：这个错误背后的核心误解是什么？修正后的理解如何改变你对MAT223H1 — Correction: λ = 0 Is an Eigenvalue的看法？最好的数学家不会避免错误——他们通过分析直觉与正确推理之间的差距来更快地从中学习。你将来会注意什么？"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/counterexamples.md",
+    "references/concept-map.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT223H1",
+    "skillType": "correction",
+    "difficulty": 4,
+    "relatedUnits": [
+      "unit-6"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-6",
+      "c43",
+      "unit-4"
+    ]
+  }
+}

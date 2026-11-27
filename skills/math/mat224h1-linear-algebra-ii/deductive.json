@@ -1,0 +1,75 @@
+{
+  "name": "MAT224H1 — Deductive Derivation (Spectral Theorem for real symmetric matrices: $A = Q\\Lambda Q^T$)",
+  "description": "Derive Spectral Theorem for real symmetric matrices: $A = Q\\Lambda Q^T$ step by logical step.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT224H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT224H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "We start from: Set with two operations (+, ·) that we want to behave like ℝⁿ.. A vector space is any set where linear combinations make sense — i.e., the 8 axioms hold. These axioms are the minimal rules that make 'linear algebra' work. What is the first logical step?",
+      "template_zh": "我们从 带有两个操作（+, ·）且我们希望其行为像 ℝⁿ 的集合 出发。向量空间是线性组合有意义的任何集合——即 8 条公理成立。这些公理是使'线性代数'成立的最小规则集。 第一步逻辑推理是什么？"
+    },
+    {
+      "type": "step1",
+      "template_en": "Begin from the definitions. What is the first logical consequence we can derive?",
+      "template_zh": "从定义出发。我们能推导出的第一个逻辑结果是什么？"
+    },
+    {
+      "type": "step2",
+      "template_en": "Step by step: Start with any nonempty set V and a field 𝔽 (usually ℝ or ℂ) Define addition ⊕: V × V → V and scalar multiplication ⊙: 𝔽 × V → V Closure is the implicit contract: ⊕ and ⊙ must stay inside V Addition must be commutative, associative, have identity 𝟘, and every v has inverse -v Scalar multiplication must be compatible with field arithmetic: (ab)⊙v = a⊙(b⊙v), 1⊙v = v Distributivity bridges the two operations: a⊙(u⊕v) = a⊙u ⊕ a⊙v and (a+b)⊙v = a⊙v ⊕ b⊙v These 8 axioms are not arbitrary — they abstract the essential behavior of ℝⁿ so that any proof that uses only these 8 properties applies to ALL vector spaces",
+      "template_zh": "逐步推导：从任意非空集合 V 和域 𝔽（通常是 ℝ 或 ℂ）开始 定义加法 ⊕: V × V → V 和数乘 ⊙: 𝔽 × V → V 封闭性是隐含契约：⊕ 和 ⊙ 的结果必须在 V 内 加法必须交换、结合、有零元 𝟘、每个 v 有逆元 -v 数乘必须与域运算兼容：(ab)⊙v = a⊙(b⊙v)，1⊙v = v 分配律连接两个操作：a⊙(u⊕v) = a⊙u ⊕ a⊙v 和 (a+b)⊙v = a⊙v ⊕ b⊙v 这 8 条公理不是任意的——它们抽象了 ℝⁿ 的本质行为，使得任何只使用这 8 条性质的证明适用于所有向量空间"
+    },
+    {
+      "type": "step3",
+      "template_en": "Therefore, Therefore, abstract vector spaces are not 'more complicated' than ℝⁿ — they are just the minimal setting where linear algebra works. Every theorem proven from axioms alone is universal: it applies to polynomials, functions, matrices, and sequences simultaneously. Every step followed logically from definitions — no leaps of faith.",
+      "template_zh": "因此，因此，抽象向量空间并不比 ℝⁿ '更复杂'——它们只是线性代数成立的最小设定。仅从公理证明的每个定理都是普适的：同时适用于多项式、函数、矩阵和数列。 每一步都逻辑地跟随定义——没有跳跃。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Variant: what changes if we modify one of the assumptions? Does the theorem still hold? Construct a counterexample to test the boundary.",
+      "template_zh": "变体：如果我们修改其中一个假设，会改变什么？定理是否仍然成立？构造一个反例来测试边界。"
+    },
+    {
+      "type": "meta",
+      "template_en": "The key meta-lesson from Deductive Derivation (Spectral Theorem for real symmetric matrices: $A = Q\\Lambda Q^T$): every theorem in this course follows from a small set of definitions and logical reasoning. The structure of the proof reveals WHY the theorem is true, not just THAT it is true. When studying, always trace each step back to a definition — that builds a connected understanding rather than isolated facts.",
+      "template_zh": "关于Deductive Derivation (Spectral Theorem for real symmetric matrices: $A = Q\\Lambda Q^T$)的关键元认知：本课程中的每个定理都源于一组小定义和逻辑推理。证明的结构揭示了定理为什么成立，而不仅仅是它成立。学习时，始终将每一步追溯到一个定义——这建立了联系性的理解，而非孤立的事实。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT224H1",
+    "skillType": "deductive",
+    "difficulty": 4,
+    "version": "1.0"
+  }
+}

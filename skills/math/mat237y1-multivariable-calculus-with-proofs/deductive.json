@@ -1,0 +1,75 @@
+{
+  "name": "MAT237Y1 — Deductive Derivation (Implicit Function Theorem)",
+  "description": "Derive Implicit Function Theorem step by logical step.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT237Y1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT237Y1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "We start from: Contraction Mapping Fixed Point Theorem. Every major theorem in multivariable differential calculus is a corollary of a cleverly disguised fixed point argument. The chain is: CM → IFT⁻¹ → IFT → Rank. What is the first logical step?",
+      "template_zh": "我们从 压缩映射不动点定理 出发。多变量微分微积分中的每条主要定理都是一个巧妙伪装的不动点论证的推论。链条为：压缩映射→反函数→隐函数→秩定理。 第一步逻辑推理是什么？"
+    },
+    {
+      "type": "step1",
+      "template_en": "Begin from the definitions. What is the first logical consequence we can derive?",
+      "template_zh": "从定义出发。我们能推导出的第一个逻辑结果是什么？"
+    },
+    {
+      "type": "step2",
+      "template_en": "Step by step: CM → IFT⁻¹: To invert f near a, set up T_y(x) = x + Df(a)⁻¹(y - f(x)). T_y's fixed point solves f(x)=y. The C¹ condition and Df(a) invertible make T_y a contraction in a neighborhood. IFT⁻¹ → IFT: For F(x,y)=0 with ∂F/∂y invertible, define Φ(x,y) = (x, F(x,y)). DΦ is invertible, so by IFT⁻¹, Φ is locally invertible. Its second component gives the implicit function. IFT → Rank Theorem: Factor Df into invertible (rank k) and zero parts. Use IFT to make the first k components of f new coordinates; the remaining n−k directions parametrize the level sets. The constant rank ensures no new directions appear. Extension: Every link in the chain weakens or generalizes. CM is metric; IFT⁻¹ is differentiable; IFT separates variables; Rank Theorem classifies all constant-rank maps. The deductive power increases at each step.",
+      "template_zh": "逐步推导：压缩映射→反函数：为在 a 附近反演 f，设置 T_y(x) = x + Df(a)⁻¹(y - f(x))。T_y 的不动点解 f(x)=y。C¹ 条件和 Df(a) 可逆使 T_y 在邻域内为压缩映射。 反函数→隐函数：对 F(x,y)=0 且 ∂F/∂y 可逆，定义 Φ(x,y)=(x,F(x,y))。DΦ 可逆，由反函数定理 Φ 局部可逆。其第二个分量给出隐函数。 隐函数→秩定理：将 Df 分解为可逆（秩 k）和零部分。用隐函数定理将 f 的前 k 个分量变为新坐标；剩余 n−k 个方向参数化水平集。常秩保证没有新方向出现。 延伸：链中每个环节或弱化或推广。压缩映射是度量的；反函数是可微的；隐函数分离变量；秩定理分类所有常秩映射。演绎力每步增强。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Therefore, These four theorems form a deductive spine of multivariable calculus. Master the chain, and you see that every local result about differentiable maps traces back to a single idea: finding a fixed point of a contraction. Every step followed logically from definitions — no leaps of faith.",
+      "template_zh": "因此，这四个定理构成多变量微积分的演绎脊柱。掌握了这条链，你就看到每个关于可微映射的局部结果都追溯到一个核心思想：寻找一个压缩映射的不动点。 每一步都逻辑地跟随定义——没有跳跃。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Variant: what changes if we modify one of the assumptions? Does the theorem still hold? Construct a counterexample to test the boundary.",
+      "template_zh": "变体：如果我们修改其中一个假设，会改变什么？定理是否仍然成立？构造一个反例来测试边界。"
+    },
+    {
+      "type": "meta",
+      "template_en": "The key meta-lesson from Deductive Derivation (Implicit Function Theorem): every theorem in this course follows from a small set of definitions and logical reasoning. The structure of the proof reveals WHY the theorem is true, not just THAT it is true. When studying, always trace each step back to a definition — that builds a connected understanding rather than isolated facts.",
+      "template_zh": "关于Deductive Derivation (Implicit Function Theorem)的关键元认知：本课程中的每个定理都源于一组小定义和逻辑推理。证明的结构揭示了定理为什么成立，而不仅仅是它成立。学习时，始终将每一步追溯到一个定义——这建立了联系性的理解，而非孤立的事实。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT237Y1",
+    "skillType": "deductive",
+    "difficulty": 5,
+    "version": "1.0"
+  }
+}

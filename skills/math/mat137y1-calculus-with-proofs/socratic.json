@@ -1,0 +1,92 @@
+{
+  "name": "MAT137Y1 — ε-δ Socratic Definition Discovery",
+  "description": "Guide the student to reconstruct the ε-δ definition of a limit through Socratic dialogue. The skill uses progressive questioning to reveal why intuitive 'approaching' language is insufficient, leading the student to discover the formal quantifier structure themselves.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT137Y1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT137Y1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "If I say 'as x approaches 2, f(x) approaches 5', how would you PROVE I'm not 'close enough'? What is your standard for judging 'closeness'?",
+      "template_zh": "如果我说 '当 x 趋近于 2 时 f(x) 趋近于 5'，你如何证明我说得不够'接近'？你用什么标准判断'足够接近'？"
+    },
+    {
+      "type": "question",
+      "template_en": "Think in terms of distance: if the distance between f(x) and L can be made smaller than any specified tolerance, can you express that using a variable ε (precision demand) and δ (allowed x-deviation)?",
+      "template_zh": "从距离的角度思考：如果 f(x) 和 L 的距离可以被缩小到任意指定的容限以下，你能用变量 ε（精度要求）和 δ（x 的允许偏差）来表达吗？"
+    },
+    {
+      "type": "explore",
+      "template_en": "Can you state: 'For every ε > 0 (any precision demand), there exists a δ > 0 (a corresponding allowed deviation) such that 0 < |x − a| < δ implies |f(x) − L| < ε'? If not, what part confuses you — the quantifier order, the strictness of inequality, or the relationship between ε and δ?",
+      "template_zh": "你能表述：'对任意 ε > 0（任何精度要求），存在 δ > 0（相应的允许偏差），使得当 0 < |x − a| < δ 时，|f(x) − L| < ε' 吗？如果不能，哪一部分让你困惑——量词顺序、不等式的严格性，还是 ε 和 δ 的关系？"
+    },
+    {
+      "type": "formalize",
+      "template_en": "lim_{x→a} f(x) = L means: ∀ε > 0, ∃δ > 0 such that 0 < |x − a| < δ ⇒ |f(x) − L| < ε. ε is the precision you demand; δ is the allowed wiggle room for x. The existential quantifier ∃ ('there exists') means YOU get to choose δ based on ε — you are NOT required to find one δ that works for all ε simultaneously. This distinction is the most common source of confusion in ε-δ reasoning.",
+      "template_zh": "lim_{x→a} f(x) = L 的意思是：∀ε > 0, ∃δ > 0 使得 0 < |x − a| < δ ⇒ |f(x) − L| < ε。ε 是你要求的精度；δ 是给 x 的允许波动范围。存在量词 ∃（'存在'）意味着你可以根据 ε 来选择 δ——你不需要找到对所有 ε 同时有效的唯一的 δ。这个区别是 ε-δ 推理中最常见的混淆来源。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Apply the definition to f(x) = 2x + 1 at a = 1 with L = 3. Given ε, find an explicit δ in terms of ε. |(2x+1) − 3| = 2|x−1|. Force this < ε → |x−1| < ε/2 → choose δ = ε/2. Try it yourself with f(x) = x² at a = 2 (L = 4).",
+      "template_zh": "将定义应用到 f(x) = 2x + 1 在 a = 1 处（L = 3）。给定 ε，用 ε 显式表示 δ。|(2x+1) − 3| = 2|x−1|。令 < ε → |x−1| < ε/2 → 取 δ = ε/2。你自己试试 f(x) = x² 在 a = 2 处（L = 4）。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Now take a step back. What we've discovered is that the formal definition is not arbitrary — it emerges naturally from trying to make our intuition precise. Every time you encounter a new definition, ask yourself: what problem does this definition solve? What informal idea is it trying to capture?",
+      "template_zh": "现在退一步看。我们发现的这种形式化定义并非随意——它从试图使直觉精确化的过程中自然产生。每次遇到新定义时，问问自己：这个定义解决了什么问题？它试图捕捉什么非正式的想法？"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md",
+    "references/checklist.md",
+    "references/planetary-orbits-lagrange.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT137Y1",
+    "skillType": "socratic",
+    "difficulty": 5,
+    "relatedUnits": [
+      "unit-1",
+      "unit-2",
+      "unit-5"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "c2",
+      "c9",
+      "t1",
+      "t3",
+      "p1",
+      "p4",
+      "p13"
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "name": "MAT224H1 — Socratic Discovery (abstract vector space axioms)",
+  "description": "Guide the student to discover generalising from $\\mathbb{R}^n$ to arbitrary fields through scaffolded Socratic questioning.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT224H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT224H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "I give you V = {f: ℝ → ℝ | f(0) = 0}. I say it's a vector space. How many things do you need to check? What's the core question?\n\nThink about the two operations of a vector space. Is addition closed? If both functions are 0 at 0, what about their sum at 0?\n\nCheck closure under addition and scalar multiplication (value at 0 stays 0), plus all 8 axioms. But closure is the gatekeeper: if the sum leaves the set, nothing else matters.",
+      "template_zh": "我给了你一个集合 V = {f: ℝ → ℝ | f(0) = 0}。我说它是向量空间，你觉得我需要检查几件事？最核心的问题是什么？\n\n想想'向量空间'的两个操作。加法封闭吗？如果两个函数在0处都是0，它们的和在0处呢？\n\n需要检查加法和数乘是否封闭（在0处值保持0），以及8条公理。但封闭性是第一关：如果和不在集合里，后面就不用看了。"
+    },
+    {
+      "type": "question",
+      "template_en": "Pₙ and ℝⁿ⁺¹ are completely different sets — one is polynomials, the other is number tuples. How do you prove they're 'the same space' in a linear algebra sense?\n\nWhat if I could assign each polynomial a unique coordinate vector, with addition and scalar multiplication matching one-to-one?\n\nConstruct isomorphism φ(a₀ + a₁x + ... + aₙxⁿ) = (a₀, a₁, ..., aₙ). Verify φ is bijective and preserves both operations. Key insight: 'isomorphism is just relabeling'.",
+      "template_zh": "Pₙ 和 ℝⁿ⁺¹ 作为集合完全不同——一个是多项式，一个是数字元组。你怎么证明它们在'线性代数意义上'是同一个空间？\n\n如果我能给每个多项式分配一个唯一的坐标向量，且加法和数乘一一对应呢？\n\n构造同构 φ(a₀ + a₁x + ... + aₙxⁿ) = (a₀, a₁, ..., aₙ)。验证 φ 是双射且保持加法和数乘。关键洞见：'同构就是换了个标签'。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Let V = ℝ² and W = the line y = 2x. What are the 'elements' of the quotient space V/W? What does 'a vector plus a line' mean?\n\nThink of ℝ² being partitioned by lines parallel to y = 2x. Each 'element' is one of these lines.\n\nElements of a quotient space are affine subspaces (cosets) parallel to W. Intuitively, you 'fold away' all information along W, keeping only the perpendicular component. dim(V/W) = dim V - dim W.",
+      "template_zh": "假设 V 是 ℝ²，W 是直线 y = 2x 上的向量。商空间 V/W 里的'元素'是什么？一个'向量加直线'是什么意思？\n\n想想 ℝ² 被平行于 y=2x 的直线划分成什么？每个'元素'是这些直线中的一条。\n\n商空间的元素是平行于子空间 W 的仿射子空间（陪集）。直观上，你把所有沿着 W 方向的信息'折叠'掉了，只保留垂直方向的信息。商空间的维数 = dim V - dim W。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "If 'all polynomials of degree ≤ n form a vector space', why is {1, x, x², ..., xⁿ} a basis? If I replace one with 1 + x, is it still a basis?\n\nTwo conditions for a basis: linear independence and spanning. Are 1 + x, 1, and x linearly dependent?\n\nThe standard monomials are linearly independent and span Pₙ. But 1 + x is dependent on 1 and x (since 1 + x = 1·1 + 1·x), so replacing one breaks independence. This reveals: basis = minimal spanning set = maximal independent set.",
+      "template_zh": "如果我说'所有次数 ≤ n 的多项式构成一个向量空间'，那么这组多项式 {1, x, x², ..., xⁿ} 为什么是基？如果我把其中一个换成 1 + x，还构成基吗？\n\n基的两个条件：线性无关和生成整个空间。1 + x 和 1、x 线性相关吗？\n\n标准单项式基线性无关且生成整个 Pₙ。1 + x 与 1、x 线性相关（因为 1 + x = 1·1 + 1·x），所以替换后集合仍然生成但不再线性无关——不是基。这个例子揭示了基的本质：最小生成集 = 最大无关集。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Based on what we've explored about Socratic Discovery (abstract vector space axioms), try these: (1) Explain the core idea in your own words. (2) Work through an example that illustrates the key concept. (3) How would you teach this to a peer who missed the class?",
+      "template_zh": "基于我们对Socratic Discovery (abstract vector space axioms)的探索，尝试以下练习：(1) 用自己的话解释核心思想。(2) 通过一个例子说明关键概念。(3) 你会如何向缺课的同学讲解这个内容？"
+    },
+    {
+      "type": "insight",
+      "template_en": "Key insight: Socratic Discovery (abstract vector space axioms) is not just a collection of definitions — it's a way of thinking. The examples and non-examples build a mental model that lets you reason about new situations. The formal definition captures something you already understood intuitively; it just makes it precise enough to work with rigorously.",
+      "template_zh": "关键洞察：Socratic Discovery (abstract vector space axioms) 不仅是定义的集合——它是一种思维方式。示例和反例构建了一个思维模型，让你能够推理新情况。形式化定义捕捉了你已经直觉理解的东西；它只是使其足够精确以便严格处理。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/concept-map.md",
+    "references/counterexamples.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT224H1",
+    "skillType": "socratic",
+    "difficulty": 4,
+    "version": "1.0"
+  }
+}

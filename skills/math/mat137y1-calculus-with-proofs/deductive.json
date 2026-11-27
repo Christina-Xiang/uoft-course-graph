@@ -1,0 +1,89 @@
+{
+  "name": "MAT137Y1 — Product Rule Deductive Derivation",
+  "description": "Walk the student through a complete deductive chain: starting from the limit definition of the derivative, logically derive the product rule (fg)'(x) = f'(x)g(x) + f(x)g'(x). Each step builds on the previous one; the student must justify the logical transition before proceeding.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT137Y1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT137Y1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Definition of the derivative: f'(x) = lim_{h→0} [f(x+h) − f(x)] / h. Every differentiation rule is a logical consequence of this limit — none is an independent fact. Our goal: prove (fg)'(x) = f'(x)g(x) + f(x)g'(x) without memorizing, only by deduction.",
+      "template_zh": "导数定义：f'(x) = lim_{h→0} [f(x+h) − f(x)] / h。每个求导法则都是这个极限的逻辑推论——没有一个是独立的事实。目标：仅通过推演证明 (fg)'(x) = f'(x)g(x) + f(x)g'(x)，不靠记忆。"
+    },
+    {
+      "type": "step",
+      "template_en": "Step 1 — Set up the difference quotient. (fg)'(x) = lim_{h→0} [(fg)(x+h) − (fg)(x)] / h = lim_{h→0} [f(x+h)g(x+h) − f(x)g(x)] / h. Before reading further, can you see why this raw expression is hard to simplify directly? If f and g were simple numbers (not functions), what algebraic trick would you use?\n\nHint: The numerator has four terms conceptually (f(x+h), g(x+h), f(x), g(x)) but only two groupings. A classic deductive trick: add and subtract the same quantity to create a telescoping structure. What should you add and subtract?",
+      "template_zh": "步骤 1——建立差商。(fg)'(x) = lim_{h→0} [(fg)(x+h) − (fg)(x)] / h = lim_{h→0} [f(x+h)g(x+h) − f(x)g(x)] / h。继续阅读前，你能理解为什么这个原始表达式难以直接化简吗？如果 f 和 g 是简单数字（不是函数），你会用什么代数技巧？\n\n提示：分子在概念上有四项 (f(x+h), g(x+h), f(x), g(x))，但只有两个分组。经典推演技巧：加减同一个量以创建可消结构。你该加什么减什么？"
+    },
+    {
+      "type": "step",
+      "template_en": "Step 2 — Add-subtract trick. Insert f(x+h)g(x): numerator = [f(x+h)g(x+h) − f(x+h)g(x)] + [f(x+h)g(x) − f(x)g(x)] = f(x+h)[g(x+h) − g(x)] + g(x)[f(x+h) − f(x)]. Why does this rearrangement help? Because it SPLITS the coupled product into two independent differences, each involving only ONE function changing at a time.",
+      "template_zh": "步骤 2——加减项技巧。插入 f(x+h)g(x)：分子 = [f(x+h)g(x+h) − f(x+h)g(x)] + [f(x+h)g(x) − f(x)g(x)] = f(x+h)[g(x+h) − g(x)] + g(x)[f(x+h) − f(x)]。为什么这个重排有帮助？因为它将有耦合的乘积分解为两个独立的差，每个只涉及一个函数的变化。"
+    },
+    {
+      "type": "step",
+      "template_en": "Step 3 — Divide by h and separate limits. (fg)'(x) = lim_{h→0} { f(x+h) · [g(x+h)−g(x)]/h + g(x) · [f(x+h)−f(x)]/h }. By limit laws (sum of limits = limit of sum): = lim_{h→0} f(x+h) · lim_{h→0} [g(x+h)−g(x)]/h + g(x) · lim_{h→0} [f(x+h)−f(x)]/h. Why can we move g(x) outside the limit? Because g(x) is a CONSTANT with respect to h — it does not depend on h at all.",
+      "template_zh": "步骤 3——除以 h 并分离极限。(fg)'(x) = lim_{h→0} { f(x+h) · [g(x+h)−g(x)]/h + g(x) · [f(x+h)−f(x)]/h }。由极限法则（和的极限 = 极限的和）：= lim_{h→0} f(x+h) · lim_{h→0} [g(x+h)−g(x)]/h + g(x) · lim_{h→0} [f(x+h)−f(x)]/h。为什么可以把 g(x) 移到极限外？因为 g(x) 关于 h 是常数——它完全不由 h 决定。"
+    },
+    {
+      "type": "step",
+      "template_en": "Step 4 — Recognize the derivative definitions. lim_{h→0} [f(x+h)−f(x)]/h = f'(x) (by definition). lim_{h→0} [g(x+h)−g(x)]/h = g'(x). And lim_{h→0} f(x+h) = f(x) (if f is continuous — and differentiability implies continuity!). Therefore: (fg)'(x) = f(x)g'(x) + f'(x)g(x). Notice: we did NOT just 'remember' this formula. We DERIVED every algebraic step from the limit definition alone.",
+      "template_zh": "步骤 4——识别导数定义。lim_{h→0} [f(x+h)−f(x)]/h = f'(x)（由定义）。lim_{h→0} [g(x+h)−g(x)]/h = g'(x)。且 lim_{h→0} f(x+h) = f(x)（如果 f 连续——可导性蕴含连续性！）。因此：(fg)'(x) = f(x)g'(x) + f'(x)g(x)。注意：我们并非只是'记住'了这个公式。我们仅从极限定义推导了每一步代数操作。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Meta-pattern: The add-subtract trick is NOT unique to the product rule. It appears in integration by parts derivation, Taylor's theorem with remainder, and many approximation arguments. Once you recognize this deductive STRUCTURE ('add zero in a clever way'), you see it everywhere. Deductive learning means: learn the PATTERN, not the individual formula.",
+      "template_zh": "元模式：加减项技巧并非仅供乘积法则。它出现在分部积分的推导中、带余项的泰勒定理中，以及许多逼近论证中。一旦你识别出这种推演结构（'巧妙地加零'），你会在各处看到它。推演式学习意味着：学习模式，而非单个公式。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/concept-map.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT137Y1",
+    "skillType": "deductive",
+    "difficulty": 4,
+    "relatedUnits": [
+      "unit-3",
+      "unit-4"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "c17",
+      "c18",
+      "c27",
+      "c30",
+      "m9",
+      "t9",
+      "t10"
+    ]
+  }
+}

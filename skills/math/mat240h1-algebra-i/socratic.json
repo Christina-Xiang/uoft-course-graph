@@ -1,0 +1,86 @@
+{
+  "name": "MAT240H1 — Socratic Discovery (Vector Spaces over Arbitrary Fields)",
+  "description": "Vector spaces over ℝ are familiar: ℝⁿ with componentwise addition/scalar multiplication. But vectors can also be over ℚ, ℂ, or 𝔽ₚ. The DEFINITION is t",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT240H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT240H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Vector spaces over ℝ are familiar: ℝⁿ with componentwise addition/scalar multiplication. But vectors can also be over ℚ, ℂ, or 𝔽ₚ. The DEFINITION is the same: an abelian group (V,+) with scalar multiplication from a field F. What changes when the field is not ℝ?",
+      "template_zh": "在ℝ上的向量空间是我们熟悉的：ℝⁿ配合分量加法和标量乘法。但向量也可以在ℚ、ℂ或𝔽ₚ上定义。定义是相同的：一个阿贝尔群(V,+)配合来自域F的标量乘法。当域不是ℝ时，什么变了？"
+    },
+    {
+      "type": "question",
+      "template_en": "Is ℚⁿ a vector space over ℚ? Yes. Over ℝ? No — scalar multiplication by √2 gives irrational components, which aren't in ℚⁿ. The SCALARS must come from the field F. So ℚⁿ is a ℚ-vector space but not an ℝ-vector space. The field determines what scalars are allowed.",
+      "template_zh": "ℚⁿ是ℚ上的向量空间吗？是的。是ℝ上的吗？不是——乘以√2得到无理数分量，不在ℚⁿ中。标量必须来自域F。所以ℚⁿ是ℚ向量空间但不是ℝ向量空间。域决定了允许的标量。"
+    },
+    {
+      "type": "explore",
+      "template_en": "What changes over finite fields? In 𝔽₂ = {0,1}, 1+1=0. In 𝔽₂ⁿ, the vector (1,1,1)+(1,1,1)=(0,0,0). Every vector is its own additive inverse. Concepts like orthogonality behave differently — a nonzero vector can be orthogonal to itself: v·v = 1+1+1 = 1 (in 𝔽₂) ≠ 0.",
+      "template_zh": "在有限域上什么变了？在𝔽₂={0,1}中，1+1=0。在𝔽₂ⁿ中，向量(1,1,1)+(1,1,1)=(0,0,0)。每个向量是自己的加法逆元。正交等概念行为不同——非零向量可以自正交：v·v=1+1+1=1（在𝔽₂中）≠0。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "A vector space V over F: (V,+) is an abelian group. Scalar multiplication: F×V→V satisfying: (a+b)v = av+bv; a(v+w)=av+aw; (ab)v=a(bv); 1·v=v. The field axioms of F are ESSENTIAL — if F is only a ring, we get a MODULE, not a vector space.",
+      "template_zh": "域F上的向量空间V：(V,+)是一个阿贝尔群。标量乘法：F×V→V满足：(a+b)v=av+bv; a(v+w)=av+aw; (ab)v=a(bv); 1·v=v。F的域公理是必不可少的——如果F只是一个环，我们得到的是模，而不是向量空间。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Determine whether each is a vector space: (1) ℂ over ℚ. (2) ℝ over ℚ. (3) ℂ over ℝ. (4) 𝔽ₚⁿ over 𝔽ₚ. (5) Polynomials with coefficients in F, over F. (6) The set of all functions f:ℕ→F. For each, state the field and the vector space.",
+      "template_zh": "判断每个是否为向量空间：(1)ℂ在ℚ上。(2)ℝ在ℚ上。(3)ℂ在ℝ上。(4)𝔽ₚⁿ在𝔽ₚ上。(5)系数在F中的多项式，在F上。(6)所有函数f:ℕ→F的集合。对每个说明域和向量空间。"
+    },
+    {
+      "type": "insight",
+      "template_en": "The field is PART of the data of a vector space. Changing the field changes the vector space entirely. ℝ² over ℝ is 2-dimensional, but ℝ² over ℚ is infinite-dimensional. Dimension depends on the field! ℚ-vector spaces are a window into the structure of ℝ.",
+      "template_zh": "域是向量空间数据的一部分。改变域完全改变了向量空间。ℝ²在ℝ上是2维的，但在ℚ上是无穷维的。维数取决于域！ℚ向量空间是理解ℝ结构的窗口。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT240H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "unit-2",
+      "unit-3",
+      "unit-4",
+      "unit-5"
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "name": "MAT244H1 — Deductive Derivation (variation of parameters for $y''+p(t)y'+q(t)y = g(t)$)",
+  "description": "Derive variation of parameters for $y''+p(t)y'+q(t)y = g(t)$ step by logical step.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT244H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT244H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "We start from: The classification of first-order ODEs is rooted in structural differences in differential forms.. Each ODE type corresponds to a specific 'integrability structure' — separable structure, linear structure, exact structure — understanding structure matters more than memorizing methods. What is the first logical step?",
+      "template_zh": "我们从 一阶 ODE 的分类体系源自微分形式的结构差异。 出发。每一类 ODE 对应一种特定的'可积性结构'——分离结构、线性结构、恰当结构——理解结构比记忆解法更重要。 第一步逻辑推理是什么？"
+    },
+    {
+      "type": "step1",
+      "template_en": "Begin from the definitions. What is the first logical consequence we can derive?",
+      "template_zh": "从定义出发。我们能推导出的第一个逻辑结果是什么？"
+    },
+    {
+      "type": "step2",
+      "template_en": "Step by step: Inspect the ODE's form and extract characteristic components: M(x,y), N(x,y), P(x), Q(x), f(x), g(y) Check separability: can the equation be written as dy/dx = f(x)g(y)? If yes, separate and integrate Check linearity: can it be written as dy/dx + P(x)y = Q(x)? If yes, use integrating factor e^∫P dx Check exactness: does M dx + N dy satisfy ∂M/∂y = ∂N/∂x? If yes, find potential function u If none apply, seek an integrating factor μ — solve ∂(μM)/∂y = ∂(μN)/∂x under an assumption on μ's variables Once classified, execute the corresponding solution protocol with structural awareness",
+      "template_zh": "逐步推导：审视 ODE 形式，提取特征组件：M(x,y), N(x,y), P(x), Q(x), f(x), g(y) 检查可分离性：能否写成 dy/dx = f(x)g(y)？若能，分离变量并两边积分 检查线性：能否写成 dy/dx + P(x)y = Q(x)？若能，用积分因子 e^∫P dx 检查恰当性：M dx + N dy 是否满足 ∂M/∂y = ∂N/∂x？若能，寻找势函数 u 若均不满足，寻找积分因子 μ——在关于 μ 的变量假设下求解 ∂(μM)/∂y = ∂(μN)/∂x 一旦确定类型，带着结构意识执行对应的解法流程"
+    },
+    {
+      "type": "step3",
+      "template_en": "Therefore, ODE classification is not rote memorization — it is 'reading' the differential structure behind the equation. Each type is a natural way a problem asks itself, and the solution method is the answer. Every step followed logically from definitions — no leaps of faith.",
+      "template_zh": "因此，ODE 分类不是死记硬背——它是'读'方程背后的微分结构。每种类型都是问题自然地提问方式，解法就是回答。 每一步都逻辑地跟随定义——没有跳跃。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Variant: what changes if we modify one of the assumptions? Does the theorem still hold? Construct a counterexample to test the boundary.",
+      "template_zh": "变体：如果我们修改其中一个假设，会改变什么？定理是否仍然成立？构造一个反例来测试边界。"
+    },
+    {
+      "type": "meta",
+      "template_en": "The key meta-lesson from Deductive Derivation (variation of parameters for $y''+p(t)y'+q(t)y = g(t)$): every theorem in this course follows from a small set of definitions and logical reasoning. The structure of the proof reveals WHY the theorem is true, not just THAT it is true. When studying, always trace each step back to a definition — that builds a connected understanding rather than isolated facts.",
+      "template_zh": "关于Deductive Derivation (variation of parameters for $y''+p(t)y'+q(t)y = g(t)$)的关键元认知：本课程中的每个定理都源于一组小定义和逻辑推理。证明的结构揭示了定理为什么成立，而不仅仅是它成立。学习时，始终将每一步追溯到一个定义——这建立了联系性的理解，而非孤立的事实。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT244H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "version": "1.0"
+  }
+}

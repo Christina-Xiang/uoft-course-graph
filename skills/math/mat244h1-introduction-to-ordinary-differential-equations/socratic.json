@@ -1,0 +1,76 @@
+{
+  "name": "MAT244H1 — Socratic Discovery (direction fields and geometric intuition for ODEs)",
+  "description": "Guide the student to discover reading slope fields to predict solution behaviour without solving through scaffolded Socratic questioning.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT244H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT244H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Given dy/dx = f(x)g(y), how do you know it's solvable? What mathematical operation is 'separation of variables' really doing?\n\nThink of dy/dx as a 'ratio' of dy and dx. If you move all y's to one side and all x's to the other, what does integrating each side mean?\n\nSeparation splits a coupled differential relation into two independent integrals — all y on one side, all x on the other, integrate each.",
+      "template_zh": "给你 dy/dx = f(x)g(y)，你怎么知道它能解？'分离变量'到底在做什么数学操作？\n\n把 dy/dx 看成 dy 和 dx 的'比例'——如果把 y 和 x 分到等号两边，两边各自积分意味着什么？\n\n分离变量的本质是把一个耦合的微分关系拆成两个独立的积分问题——等式一边全是 y，另一边全是 x，各自积分即可。"
+    },
+    {
+      "type": "question",
+      "template_en": "The standard form of a linear first-order ODE is dy/dx + P(x)y = Q(x). What does 'linear' actually mean here? Linear in x or linear in y?\n\nLook at the powers of y and y' in the equation. Is there y²? Is there y·y'? Can P(x) and Q(x) be any crazy functions of x?\n\n'Linear' means the unknown function y and its derivative appear only to the first power — no y², y³, sin y, etc. P(x) and Q(x) can be any functions of x.",
+      "template_zh": "线性一阶 ODE 的标准形式是 dy/dx + P(x)y = Q(x)。'线性'在这里是对谁线性？是 x 的线性还是 y 的线性？\n\n考虑 y 和 y' 在方程中出现的'次数'——有没有 y²？有没有 y·y'？P(x) 和 Q(x) 可以是任意 x 的函数。\n\n'线性'是指关于未知函数 y 及其导数是一次式——没有 y²、y³、sin y 等非线性项。P(x) 和 Q(x) 可以是 x 的任何复杂函数。"
+    },
+    {
+      "type": "explore",
+      "template_en": "An exact equation M dx + N dy = 0 satisfies ∂M/∂y = ∂N/∂x. Where does this condition come from? What does it guarantee?\n\nIf a function u(x,y) has total differential du = M dx + N dy, what must be true about its mixed partial derivatives?\n\nThe exactness condition comes from equality of mixed partials — it guarantees a potential function u exists with du = M dx + N dy, so du = 0 solves to u = C.",
+      "template_zh": "恰当方程 M dx + N dy = 0 满足 ∂M/∂y = ∂N/∂x。这个条件从哪来的？它保证了什么？\n\n如果一个函数 u(x,y) 的全微分 du = M dx + N dy，那么 u 的混合偏导满足什么关系？\n\n恰当条件 ∂M/∂y = ∂N/∂x 就是混合偏导相等——它保证了存在势函数 u 使得 du = M dx + N dy，于是方程 du = 0 的解是 u = C。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "If the equation isn't exact, how does an integrating factor 'fix' it? After multiplying by μ, when does μM dx + μN dy = 0 become exact?\n\nDifferentiate μM with respect to y and μN with respect to x and set them equal — this gives a PDE for μ. When does this PDE become solvable?\n\nThe integrating factor μ is a 'corrector.' Key equation: ∂(μM)/∂y = ∂(μN)/∂x. If μ depends only on x (or only on y), this PDE reduces to an ODE solvable for μ.",
+      "template_zh": "如果方程不恰当，积分因子怎么'修复'它？乘以 μ 后，新方程 μM dx + μN dy = 0 什么时候变恰当？\n\n对 μM 关于 y 求偏导，对 μN 关于 x 求偏导，令它们相等——这会给出一个关于 μ 的 PDE。什么情况下这个 PDE 可解？\n\n积分因子 μ 是一个'校正因子'。关键方程是 ∂(μM)/∂y = ∂(μN)/∂x。如果 μ 只依赖于 x（或只依赖 y），这个 PDE 退化为常微分方程，可解出 μ。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Based on what we've explored about Socratic Discovery (direction fields and geometric intuition for ODEs), try these: (1) Explain the core idea in your own words. (2) Work through an example that illustrates the key concept. (3) How would you teach this to a peer who missed the class?",
+      "template_zh": "基于我们对Socratic Discovery (direction fields and geometric intuition for ODEs)的探索，尝试以下练习：(1) 用自己的话解释核心思想。(2) 通过一个例子说明关键概念。(3) 你会如何向缺课的同学讲解这个内容？"
+    },
+    {
+      "type": "insight",
+      "template_en": "Key insight: Socratic Discovery (direction fields and geometric intuition for ODEs) is not just a collection of definitions — it's a way of thinking. The examples and non-examples build a mental model that lets you reason about new situations. The formal definition captures something you already understood intuitively; it just makes it precise enough to work with rigorously.",
+      "template_zh": "关键洞察：Socratic Discovery (direction fields and geometric intuition for ODEs) 不仅是定义的集合——它是一种思维方式。示例和反例构建了一个思维模型，让你能够推理新情况。形式化定义捕捉了你已经直觉理解的东西；它只是使其足够精确以便严格处理。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/concept-map.md",
+    "references/counterexamples.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT244H1",
+    "skillType": "socratic",
+    "difficulty": 3,
+    "version": "1.0"
+  }
+}

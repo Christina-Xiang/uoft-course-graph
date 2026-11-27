@@ -1,0 +1,75 @@
+{
+  "name": "MAT237Y1 — Correction (confusing path-connected with connected)",
+  "description": "Fix the common conceptual error: confusing path-connected with connected.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "MAT237Y1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "MAT237Y1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: Students often try to apply the Inverse Function Theorem without checking the invertibility condition Df(a) ≠ 0 (in R¹) or invertible Jacobian (in Rⁿ). They also conflate 'Df(a) invertible ensures local invertibility' with 'Df(a) not invertible ensures non-invertibility' — forgetting f(x)=x³ at x=0. This mistake is natural — it comes from over-generalising a pattern that works in simpler cases.",
+      "template_zh": "常见错误：学生经常在未检查可逆条件 Df(a)≠0（R¹）或雅可比可逆（Rⁿ）的情况下就应用反函数定理。他们还混淆了'Df(a)可逆确保局部可逆'与'Df(a)不可逆确保不可逆'——忘记了 f(x)=x³ 在 x=0 的例子。。这个错误很自然——它来自于过度泛化一个在简单情况下有效的模式。"
+    },
+    {
+      "type": "question",
+      "template_en": "Let's test your understanding. Does Df(a) being non-invertible guarantee f is NOT locally invertible near a? Consider f: R → R, f(x) = x³ at a=0. f'(0) = 0. Is f locally invertible near 0? It is — f⁻¹(y) = ∛y exists and is continuous. So what did f'(0)=0 tell us that was wrong, and what does it really say? Work through the problem carefully. What assumption did you just make? Is it justified?",
+      "template_zh": "让我们测试你的理解。Df(a) 不可逆是否保证 f 在 a 附近不局部可逆？考虑 f:R→R, f(x)=x³ 在 a=0 处。f'(0)=0。f 在 0 附近局部可逆吗？是的——f⁻¹(y)=∛y 存在且连续。那么 f'(0)=0 到底告诉了我们什么错误的，它实际说了什么？ 仔细解题。你刚才做了什么假设？这个假设合理吗？"
+    },
+    {
+      "type": "explore",
+      "template_en": "Let's explore this more deeply. What does the correct understanding look like? Consider the fundamental reason behind the error: it comes from over-generalizing a pattern that works in simple cases but breaks down in general. The key is to identify the hidden assumption that is not always justified.\n\nAsk yourself: what condition must hold for this pattern to work? When does that condition fail? The boundary between where it works and where it doesn't defines the precise scope of the concept.",
+      "template_zh": "让我们更深入地探讨。正确的理解是什么样的？考虑错误背后的根本原因：它来自于过度推广一个在简单情况下有效但在一般情况下会失效的模式。关键是识别出那个并不总是成立的隐藏假设。\n\n问问自己：这个模式成立需要什么条件？该条件何时失效？它有效和无效的边界定义了该概念的精确范围。"
+    },
+    {
+      "type": "insight",
+      "template_en": "The correct reasoning: Df(a) invertible is sufficient but not necessary for local invertibility. The Inverse Function Theorem provides a sufficient condition only. When Df(a) is singular, the function may still be locally invertible (like x³), but the theorem cannot guarantee it. The invertibility of the derivative gives linear-locality; without it, the inverse may exist but fail to be differentiable or may exist nonlinearly. The subtlety is that intuition from elementary cases doesn't always carry over.",
+      "template_zh": "正确的推理是：Df(a) 可逆是局部可逆的充分但不必要条件。反函数定理只给出了一个充分条件。当 Df(a) 奇异时，函数仍然可能局部可逆（如 x³），但定理无法保证。导数的可逆性给出了线性局部性；没有它，逆可能存在但不可微，或以非线性方式存在。。微妙之处在于，从初等情况得到的直觉并不总是能推广。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Find where this error appears in the wild: (1) search your work for this pattern. (2) Correct it. (3) Explain to a peer why the correction matters.",
+      "template_zh": "找出这个错误出现在你之前作业中的位置：(1) 在你的作业中搜索这个模式。(2) 修正它。(3) 向同学解释为什么这个修正很重要。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Reflection: What was the core misconception behind this error? How does the corrected understanding change the way you think about MAT237Y1 — Correction (confusing path-connected with connected)? The best mathematicians don't avoid mistakes — they learn from them faster by analyzing the gap between their intuition and the correct reasoning. What will you watch out for in the future?",
+      "template_zh": "反思：这个错误背后的核心误解是什么？修正后的理解如何改变你对MAT237Y1 — Correction (confusing path-connected with connected)的看法？最好的数学家不会避免错误——他们通过分析直觉与正确推理之间的差距来更快地从中学习。你将来会注意什么？"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/counterexamples.md",
+    "references/checklist.md"
+  ],
+  "metadata": {
+    "domain": "math",
+    "course": "MAT237Y1",
+    "skillType": "correction",
+    "difficulty": 5,
+    "version": "1.0"
+  }
+}
