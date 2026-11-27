@@ -1,0 +1,86 @@
+{
+  "name": "STA347H1 — Socratic Discovery (Modes of Convergence)",
+  "description": "Four modes of convergence for random variables: (1) Almost surely (a.s.): P(lim Xₙ=X)=1. (2) In probability: P(|Xₙ-X|>ε)→0. (3) In distribution: F_{Xₙ",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA347H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA347H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Four modes of convergence for random variables: (1) Almost surely (a.s.): P(lim Xₙ=X)=1. (2) In probability: P(|Xₙ-X|>ε)→0. (3) In distribution: F_{Xₙ}(x)→F_X(x) at continuity points. (4) In Lᵖ: E[|Xₙ-X|ᵖ]→0.",
+      "template_zh": "四种收敛模式：(1)几乎必然(a.s.)。(2)依概率。(3)依分布。(4)Lᵖ。"
+    },
+    {
+      "type": "question",
+      "template_en": "Relationships: a.s. ⇒ in prob ⇒ in dist. Lᵖ ⇒ in prob. But converse fails. Example: Xₙ=1 on [0,1/n], 0 elsewhere. Xₙ→0 in prob (P(|Xₙ|>ε)=1/n→0). But NOT a.s. BC1: ΣP(|Xₙ|>ε)=∞, so P(|Xₙ|>ε i.o.)=1 not 0!",
+      "template_zh": "关系：a.s.⇒依概率⇒依分布。但逆不成立。例：Xₙ→0依概率但不a.s.。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Counterexample for convergence in dist NOT in prob: Let X~Bernoulli(0.5). Define Xₙ=1-X. Xₙ has SAME distribution as X (same CDF) → Xₙ→X in dist. But P(|Xₙ-X|>0)=P(Xₙ≠X)=1. Does NOT converge in prob.",
+      "template_zh": "考虑一个依分布收敛但不依概率收敛的反例：设 X ~ Bernoulli(0.5)，定义随机变量序列 X_n = 1 - X。请思考为什么 X_n 依分布收敛到 X，但不依概率收敛到 X。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Slutsky's Theorem: if Xₙ→X in dist and Yₙ→c in prob, then Xₙ+Yₙ→X+c, XₙYₙ→cX, Xₙ/Yₙ→X/c (c≠0). Essential for asymptotics: t-statistic works because numerator converges in dist, denominator in prob.",
+      "template_zh": "Slutsky定理：Xₙ→X依分布且Yₙ→c依概率则Xₙ+Yₙ→X+c等。t统计量因此有效。"
+    },
+    {
+      "type": "practice",
+      "template_en": "(1) If Xₙ a.s. and Yₙ a.s., show Xₙ+Yₙ a.s. (2) Show: Xₙ→X in prob ⟺ every subsequence has further subsequence converging a.s. (3) If Xₙ→X in L², does Xₙ→X in L¹? (4) Prove: Xₙ→X a.s. ⇒ Xₙ→X in prob.",
+      "template_zh": "(1)a.s.收敛的和a.s.收敛。(2)依概率收敛⇔每个子列有a.s.收敛子子列。(3)L²⇒L¹？(4)a.s.⇒依概率。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Each mode is useful: (1) a.s. for strong limit theorems (SLLN). (2) In prob for consistency (WLLN, MLE consistency). (3) In dist for CLT (the CENTRAL result in statistics). (4) L² for mean-squared prediction. Slutsky connects them.",
+      "template_zh": "每种模式有用：(1)a.s.用于强极限定理。(2)依概率用于相合性。(3)依分布用于CLT(统计中心结果)。(4)L²用于均方预测。Slutsky连接它们。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA347H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

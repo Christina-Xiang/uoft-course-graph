@@ -1,0 +1,86 @@
+{
+  "name": "STA304H1 — Socratic Discovery (Survey Design and Sampling Methods)",
+  "description": "Goal: estimate population parameters from a sample. The SAMPLING DESIGN determines how representative the sample is. Key: probability sampling (every ",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA304H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA304H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Goal: estimate population parameters from a sample. The SAMPLING DESIGN determines how representative the sample is. Key: probability sampling (every unit has known selection probability).",
+      "template_zh": "目标：从样本估计总体参数。抽样设计决定样本代表性。关键：概率抽样(每单元有已知选择概率)。"
+    },
+    {
+      "type": "question",
+      "template_en": "Simple Random Sample (SRS): each subset of size n equally likely. Estimator for μ: ȳ = (1/n)Σyᵢ. Unbiased: E[ȳ]=μ. Variance: Var(ȳ)=σ²/n·(1-n/N) (finite population correction).",
+      "template_zh": "简单随机抽样(SRS)：每个大小为n的子集等可能。估计量ȳ无偏。方差含有限总体校正。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Stratified sampling: split population into strata (groups), sample EACH stratum. Var(ȳ_strat) < Var(ȳ_SRS) if strata homogeneous. Optimal allocation: n_h ∝ N_h·σ_h.",
+      "template_zh": "分层抽样：分为层(组)，每层独立抽样。若层内同质则方差小于SRS。最优分配：n_h∝N_h·σ_h。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Horvitz-Thompson estimator: τ̂ = Σ yᵢ/πᵢ where πᵢ = inclusion probability. UNBIASED for any sampling design where πᵢ>0. Weights wᵢ=1/πᵢ. Design effect: Var(actual)/Var(SRS).",
+      "template_zh": "Horvitz-Thompson估计：τ̂=Σyᵢ/πᵢ，πᵢ=入样概率。任何πᵢ>0的抽样设计下无偏。设计效应=实际方差/SRS方差。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Population size N=1000, take n=100 SRS. (1) Estimate mean and SE. (2) If population has 2 equal-sized strata with σ₁=10, σ₂=20, find optimal allocation. (3) Compute design effect. (4) Compare to stratified sample of same n.",
+      "template_zh": "N=1000,n=100。SRS vs 最优分层 vs 同n分层。比较精度。"
+    },
+    {
+      "type": "insight",
+      "template_en": "'All sampling is done with a purpose.' The design determines the analysis. Complex surveys require: (1) Sampling weights. (2) Stratum indicators. (3) Cluster indicators. Ignoring design → biased SEs and wrong inferences.",
+      "template_zh": "'所有抽样都有目的。'设计决定分析。复杂调查需要：抽样权重、层指标、群指标。忽略设计→SE偏倚、错误推断。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA304H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

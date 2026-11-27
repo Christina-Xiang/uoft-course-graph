@@ -1,0 +1,86 @@
+{
+  "name": "STA414H1 — Correction Attribution (Graphical Models)",
+  "description": "'Directed edges mean causation.' NOT necessarily! Bayesian networks encode CONDITIONAL INDEPENDENCE, not causation. A directed edge might represent a ",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA414H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA414H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'Directed edges mean causation.' NOT necessarily! Bayesian networks encode CONDITIONAL INDEPENDENCE, not causation. A directed edge might represent a causal relationship, but it could also be a convenient factorization.",
+      "template_zh": "'有向边意味因果。'不一定！贝叶斯网编码条件独立，不是因果。有向边可能表示因果关系，也可能是方便的因子分解。"
+    },
+    {
+      "type": "question",
+      "template_en": "Directed Graphical Model (Bayesian Net): nodes=variables, edges=dependencies. Factorization: P(X₁,...,Xₙ)=∏P(Xᵢ|Pa(Xᵢ)). DAG required (no cycles). Chain: X→Y→Z ⟺ X ⟂ Z | Y.",
+      "template_zh": "有向图模型(贝叶斯网)：P(X₁,...,Xₙ)=∏P(Xᵢ|Pa(Xᵢ))。需DAG(无环)。链：X→Y→Z⟺X⟂Z|Y。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Undirected (Markov Random Field): factorization over cliques. P(X)∝∏_{cliques} ψ_C(X_C). Potentials ψ_C are non-negative, NOT probabilities (must normalize). Used for: image segmentation (pixel CRF), spatial statistics.",
+      "template_zh": "无向图(Markov随机场)：在团上分解。势函数ψ_C非负不是概率(需归一化)。用于：图像分割、空间统计。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Conditional Random Field (CRF): P(Y|X)∝exp(Σλₖfₖ(Y_c,X)). Discriminative! Rather than modeling P(X,Y), model P(Y|X) directly. Better when X has complex dependencies we don't want to model.",
+      "template_zh": "条件随机场(CRF)：P(Y|X)∝exp(Σλₖfₖ(Y_c,X))。判别式！直接建模P(Y|X)。当X有复杂依赖时更好。"
+    },
+    {
+      "type": "practice",
+      "template_en": "(1) Draw a Bayesian net for: Cloudy → Rain, Cloudy → Sprinkler. Rain → Wet Grass, Sprinkler → Wet Grass. (2) Is Rain ⟂ Sprinkler? (3) Condition on Wet Grass — are they independent? (4) What if we also condition on Cloudy?",
+      "template_zh": "(1)画贝叶斯网。(2)Rain和Sprinkler独立吗？(3)给定Wet Grass后独立吗？(4)再给定Cloudy呢？"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Graphical models = VISUAL language for probability. Structure LEARNING (finding the graph from data) is NP-hard. BUT given a graph, inference (computing probabilities) uses message passing (belief propagation). The junction tree algorithm generalizes this.",
+      "template_zh": "图模型=概率的可视化语言。结构学习(NP难)。给定图，推断用消息传递(信念传播)。联结树算法推广了这一点。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA414H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

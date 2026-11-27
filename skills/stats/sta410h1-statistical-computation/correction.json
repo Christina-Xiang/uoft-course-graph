@@ -1,0 +1,86 @@
+{
+  "name": "STA410H1 — Correction Attribution (MCMC and the EM Algorithm)",
+  "description": "'MCMC samples are independent.' WRONG! MCMC produces CORRELATED samples. Chain must be thinned or we need larger n. Effective sample size accounts for",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA410H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA410H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'MCMC samples are independent.' WRONG! MCMC produces CORRELATED samples. Chain must be thinned or we need larger n. Effective sample size accounts for autocorrelation. Always check trace plots and ESS.",
+      "template_zh": "'MCMC样本独立。'错！MCMC产生相关样本。需稀释或更大n。有效样本量考虑自相关。始终检查迹图和ESS。"
+    },
+    {
+      "type": "question",
+      "template_en": "Metropolis-Hastings: propose θ*~q(θ*|θ_t). Accept with prob α=min(1, [π(θ*)q(θ_t|θ*)]/[π(θ_t)q(θ*|θ_t)]). Simple version: random walk MH, q(θ*|θ_t)=N(θ_t, σ²). Requires tuning σ².",
+      "template_zh": "Metropolis-Hastings：建议θ*~q(θ*|θ_t)。以α=min(1,...)接受。简单：随机游走MH。需要调整σ²。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Convergence diagnostics: (1) Trace plot — should look like 'hairy caterpillar.' (2) Autocorrelation — should drop quickly. (3) Gelman-Rubin: run multiple chains, compare within vs between variance. R̂≈1 means convergence.",
+      "template_zh": "收敛诊断：(1)迹图——应像'毛虫'。(2)自相关——应快降。(3)Gelman-Rubin：多链，比组内组间方差。R̂≈1表示收敛。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "EM Algorithm: for latent variable models. E-step: compute Q(θ|θ^{(t)}) = E_{Z|X,θ^{(t)}}[log L(θ|X,Z)]. M-step: θ^{(t+1)} = argmax Q(θ|θ^{(t)}). Guaranteed to increase observed likelihood each step.",
+      "template_zh": "EM算法：潜变量模型。E步：计算Q函数。M步：最大化Q。保证每步增加观测似然。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Together: (1) Gibbs sampling — sample from conditional distributions (special case of MH). (2) MH — general purpose. (3) HMC — Hamiltonian Monte Carlo, uses gradients. (4) EM — for MLE with missing data.",
+      "template_zh": "一起：(1)Gibbs抽样——从条件分布抽样(MH特例)。(2)MH——通用。(3)HMC——哈密顿MC，用梯度。(4)EM——缺失数据的MLE。"
+    },
+    {
+      "type": "meta",
+      "template_en": "MCMC revolutionized Bayesian statistics. Before MCMC (pre-1990): Bayesian inference limited to conjugate models. After MCMC: any model is computationally feasible. 'MCMC is to Bayes what CLT is to frequentists.'",
+      "template_zh": "MCMC革命化了贝叶斯统计。MCMC前：贝叶斯限于共轭模型。MCMC后：任何模型计算可行。'MCMC对贝叶斯如同CLT对频率学派。'"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA410H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

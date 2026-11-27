@@ -1,0 +1,86 @@
+{
+  "name": "STA410H1 — Socratic Discovery (Random Variate Generation)",
+  "description": "We need to generate samples from distributions using only uniform(0,1) random numbers. Inverse transform: if U~Unif(0,1) and F_X is invertible, then X",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA410H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA410H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "We need to generate samples from distributions using only uniform(0,1) random numbers. Inverse transform: if U~Unif(0,1) and F_X is invertible, then X=F⁻¹(U) ~ F.",
+      "template_zh": "需要用均匀随机数从分布中生成样本。逆变换：若U~Unif(0,1)且F_X可逆，则X=F⁻¹(U)~F。"
+    },
+    {
+      "type": "question",
+      "template_en": "Exponential: F(x)=1-e^{-λx}. F⁻¹(u)=-log(1-u)/λ. So X=-log(U)/λ ~ Exp(λ). For discrete: if F(x)=Σ_{k≤x}p_k, find x such that F(x-1) < U ≤ F(x).",
+      "template_zh": "指数：F(x)=1-e^{-λx}。F⁻¹(u)=-log(1-u)/λ。离散：找x使F(x-1)<U≤F(x)。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Accept-Reject: sample from proposal g, accept with probability f(x)/[M·g(x)]. Efficiency = 1/M. Choose M = sup f(x)/g(x). Needs f(x)/g(x) bounded. Example: Beta(2,2) using Unif(0,1) proposal.",
+      "template_zh": "接受-拒绝：从建议分布g抽样，以概率f(x)/[M·g(x)]接受。效率=1/M。选M=sup f(x)/g(x)。需f(x)/g(x)有界。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Box-Muller: generate Z₁,Z₂~N(0,1) from U₁,U₂~Unif(0,1). Z₁=√(-2log U₁)cos(2πU₂), Z₂=√(-2log U₁)sin(2πU₂). Polar form avoids trig functions.",
+      "template_zh": "Box-Muller：从均匀生成正态。Z₁=√(-2log U₁)cos(2πU₂), Z₂=√(-2log U₁)sin(2πU₂)。"
+    },
+    {
+      "type": "practice",
+      "template_en": "(1) Write R function to generate Poisson(λ) using inverse transform + recursive PMF. (2) Generate Gamma(2,1) using sum of exponentials. (3) Generate Beta(2,2) using accept-reject. Histogram + theoretical density.",
+      "template_zh": "(1)用逆变换写R函数生成Poisson(λ)。(2)用指数和生成Gamma(2,1)。(3)用接受-拒绝生成Beta(2,2)。直方图+理论密度。"
+    },
+    {
+      "type": "insight",
+      "template_en": "'All of computational statistics reduces to generating uniform random numbers.' The quality of RNG matters (Mersenne Twister good). For complex distributions: MCMC (Metropolis-Hastings) — the 'universal' sampler, works when accept-reject fails.",
+      "template_zh": "'所有计算统计归结为生成均匀随机数。'RNG质量重要。复杂分布用MCMC(Metropolis-Hastings)——'通用'抽样器。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA410H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

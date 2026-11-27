@@ -1,0 +1,86 @@
+{
+  "name": "STA314H1 — Deductive Derivation (Classification and Decision Trees)",
+  "description": "Classification: predict discrete label. Logistic regression: P(Y=1|X)=1/(1+e^{-Xβ}). Decision boundary = where P=0.5. Linear boundary (in X). Can add ",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA314H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA314H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Classification: predict discrete label. Logistic regression: P(Y=1|X)=1/(1+e^{-Xβ}). Decision boundary = where P=0.5. Linear boundary (in X). Can add polynomial terms for nonlinear boundaries.",
+      "template_zh": "分类：预测离散标签。逻辑回归：P(Y=1|X)=1/(1+e^{-Xβ})。决策边界=P=0.5处。线性边界。加多项式项得非线性边界。"
+    },
+    {
+      "type": "question",
+      "template_en": "Decision trees: recursive partition of predictor space. At each node: find split (variable + threshold) that minimizes impurity. Gini index: 1-Σpₖ². Entropy: -Σpₖlog pₖ. Both measure NODE PURITY.",
+      "template_zh": "决策树：递归划分预测空间。每节点找最小化不纯度的分割。Gini指数：1-Σpₖ²。熵：-Σpₖlog pₖ。都度量节点纯度。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Tree growing: until minimum node size or no impurity reduction. PRUNING: cut back to avoid overfitting. Cost-complexity pruning: minimize Σmisclassifications + α·|tree|. α chosen by CV.",
+      "template_zh": "树生长：直到最小节点大小或无纯度改进。剪枝：剪回避免过拟合。成本复杂度剪枝：最小化误分类+α·|tree|。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Random Forest: build B trees on bootstrap samples, at each split consider m random predictors. Aggregate by majority vote (classification) or average (regression). Reduces variance without increasing bias.",
+      "template_zh": "随机森林：在B个bootstrap样本上建树，每分割考虑m个随机变量。多数投票(分类)或平均(回归)聚合。降低方差而不增偏差。"
+    },
+    {
+      "type": "practice",
+      "template_en": "On the iris dataset: (1) Fit a decision tree: rpart(Species~.). (2) Plot the tree. (3) Prune using cp parameter. (4) Fit random forest: randomForest(). (5) Compare accuracy vs logistic regression.",
+      "template_zh": "在iris数据集上：(1)拟合决策树。(2)画树。(3)用cp剪枝。(4)拟合随机森林。(5)比较准确率vs逻辑回归。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Trees are INTERPRETABLE but high variance. Random Forest: less interpretable but MUCH better accuracy. The key insight: DECORRELATE the trees by random feature selection → averaged predictions are stable and accurate.",
+      "template_zh": "树可解释但高方差。随机森林：解释性略差但精度好很多。关键：随机选择特征使树去相关→平均预测稳定且准确。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA314H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

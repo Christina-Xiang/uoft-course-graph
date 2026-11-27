@@ -1,0 +1,86 @@
+{
+  "name": "STA304H1 — Correction Attribution (Sampling Bias and Nonresponse)",
+  "description": "'A large sample automatically represents the population.' WRONG! A biased large sample is WORSE than a small unbiased one. Literary Digest poll (1936)",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA304H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA304H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'A large sample automatically represents the population.' WRONG! A biased large sample is WORSE than a small unbiased one. Literary Digest poll (1936): 2.4M responses predicted Landon → Roosevelt won. Response bias!",
+      "template_zh": "'大样本自动代表总体。'错！有偏大样本比小的无偏样本更糟。Literary Digest民调(1936)：240万回复预测Landon→Roosevelt胜。回复偏差！"
+    },
+    {
+      "type": "question",
+      "template_en": "US presidential election 1936: Literary Digest sent 10M postcards (from phone books + car registrations). 2.4M returned → Landon 57%. Actual: Roosevelt 62%. Why? Sampling frame excluded poor voters (Great Depression). SELECTION BIAS.",
+      "template_zh": "1936年大选：从电话簿+车牌发送1000万明信片。240万回复→Landon 57%。实际：Roosevelt 62%。抽样框排除穷人→选择性偏差。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Types of bias: (1) Selection bias — frame doesn't match population. (2) Nonresponse bias — respondents differ from non-respondents. (3) Response bias — lying, misunderstanding. (4) Recall bias — memory errors.",
+      "template_zh": "偏差类型：(1)选择性偏差。(2)无回答偏差。(3)回答偏差。(4)回忆偏差。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Nonresponse: even 70% response rate can have severe bias if non-respondents differ systematically. Solutions: (1) Increase response rate. (2) Weighting adjustments (post-stratification). (3) Imputation. (4) Sensitivity analysis.",
+      "template_zh": "无回答：即使70%回答率，若无回答者有系统性差异，偏差可能严重。解决：(1)提高回答率。(2)加权调整。(3)插补。(4)敏感性分析。"
+    },
+    {
+      "type": "practice",
+      "template_en": "A mail survey gets 30% response. Respondents tend to be older, wealthier, more educated. (1) Is the sample representative? (2) How would nonresponse bias affect estimates of income? (3) Design a weighting scheme using census data. (4) What's the likely direction of bias?",
+      "template_zh": "邮件调查30%回答。回答者年龄更大、更富、更受教育。(1)样本有代表性吗？(2)无回答偏差如何影响收入估计？(3)用普查数据设计加权方案。(4)偏差方向？"
+    },
+    {
+      "type": "reflection",
+      "template_en": "'The plural of anecdote is not data.' Bias can NEVER be fixed by increasing sample size — only by improving the design. Register your survey design: target population, sampling frame, response rate, weighting plan.",
+      "template_zh": "'轶事的复数不是数据。'偏差永远不能通过增加样本量解决——只能通过改进设计。登记调查设计：目标总体、抽样框、回答率、加权计划。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA304H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

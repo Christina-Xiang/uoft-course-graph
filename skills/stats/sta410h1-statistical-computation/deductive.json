@@ -1,0 +1,86 @@
+{
+  "name": "STA410H1 — Deductive Derivation (Monte Carlo Methods)",
+  "description": "Monte Carlo: estimate θ=E[f(X)] by θ̂=(1/n)Σf(Xᵢ) where Xᵢ~f_X. SLLN: θ̂→θ a.s. CLT: √n(θ̂-θ)→N(0,Var(f(X))). Standard error = σ/√n. Accuracy ∝ 1/√n r",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA410H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA410H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Monte Carlo: estimate θ=E[f(X)] by θ̂=(1/n)Σf(Xᵢ) where Xᵢ~f_X. SLLN: θ̂→θ a.s. CLT: √n(θ̂-θ)→N(0,Var(f(X))). Standard error = σ/√n. Accuracy ∝ 1/√n regardless of dimension!",
+      "template_zh": "蒙特卡洛：用θ̂=(1/n)Σf(Xᵢ)估计θ=E[f(X)]。SLLN: θ̂→θ a.s.。CLT: 标准误=σ/√n。精度∝1/√n与维数无关！"
+    },
+    {
+      "type": "question",
+      "template_en": "Estimate π: generate (U,V)~Unif(0,1)². Count proportion in unit circle: π̂ = 4·(count_in_circle)/n. SE = √(π(4-π)/n). For SE=0.001, n≈10⁶ needed. The 'curse' is in the CONSTANT, not the rate.",
+      "template_zh": "估计π：生成(U,V)~Unif(0,1)²。统计圆内比例。SE=√(π(4-π)/n)。SE=0.001需n≈10⁶。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Variance reduction: (1) Antithetic variates — use negatively correlated pairs. (2) Control variates — exploit known E[g(X)] to reduce variance. (3) Importance sampling — sample from a proposal, weight by f/proposal ratio.",
+      "template_zh": "方差缩减：(1)对偶变量。(2)控制变量——利用已知E[g(X)]。(3)重要性抽样——从建议分布抽样，用f/建议比加权。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Importance sampling: θ=E[f(X)]=∫f(x)p(x)dx = ∫f(x)p(x)/q(x)·q(x)dx = E_q[f(X)p(X)/q(X)]. Choose q with heavier tails than p. Effective sample size ESS=n/(1+CV²(wᵢ)).",
+      "template_zh": "重要性抽样：选尾部更厚的q。有效样本量ESS=n/(1+CV²(wᵢ))。"
+    },
+    {
+      "type": "practice",
+      "template_en": "(1) Estimate P(X>5) for X~Exp(1) using MC with n=1000. (2) Use importance sampling with Exp(0.2) proposal — compare variance. (3) Estimate ∫₀¹ cos(πx/2)dx. (4) Use antithetic: pair U and 1-U. Compare variances.",
+      "template_zh": "(1)估计Exp(1)的P(X>5)。(2)用Exp(0.2)建议的重要性抽样——比较方差。(3)估计积分。(4)用对偶变量：配对U和1-U。比较方差。"
+    },
+    {
+      "type": "insight",
+      "template_en": "MC beats numerical integration in high dimensions. Quadrature: error ∝ n^{-2/d} (exponential in d). MC: error ∝ n^{-1/2} (independent of d). For d>4, MC is faster. 'The integral is the expected value, and the Monte Carlo method just computes it.'",
+      "template_zh": "高维中MC胜过数值积分。求积：误差∝n^{-2/d}(d的指数)。MC：误差∝n^{-1/2}(与d无关)。d>4时MC更快。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA410H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

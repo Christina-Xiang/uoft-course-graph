@@ -1,0 +1,86 @@
+{
+  "name": "STA314H1 — Socratic Discovery (Supervised Learning and Regularization)",
+  "description": "Supervised learning: given (xᵢ,yᵢ), learn f:X→Y. Regression (Y continuous) or classification (Y discrete). Loss function measures prediction error. Mi",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA314H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA314H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Supervised learning: given (xᵢ,yᵢ), learn f:X→Y. Regression (Y continuous) or classification (Y discrete). Loss function measures prediction error. Minimize expected loss, approximate with empirical loss.",
+      "template_zh": "监督学习：给定(xᵢ,yᵢ)，学习f:X→Y。回归(Y连续)或分类(Y离散)。损失函数度量预测误差。最小化期望损失，用经验损失近似。"
+    },
+    {
+      "type": "question",
+      "template_en": "Overfitting: model memorizes training data but can't generalize. Bias-variance tradeoff: complex model → low bias, high variance. Simple model → high bias, low variance. Goal: minimize TOTAL error = bias²+variance+irreducible error.",
+      "template_zh": "过拟合：模型记忆训练数据但不能泛化。偏差-方差权衡：复杂→低偏差高方差。简单→高偏差低方差。目标：最小化总误差=偏差²+方差+不可约误差。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Regularization: add penalty to loss. L2 (ridge): λΣβⱼ². Shrinks coefficients toward zero. L1 (lasso): λΣ|βⱼ|. Shrinks AND selects (some βⱼ=0). Elastic Net: λ₁Σ|βⱼ|+λ₂Σβⱼ².",
+      "template_zh": "正则化：在损失上加惩罚。L2(岭)：收缩向零。L1(lasso)：收缩+选择(一些βⱼ=0)。弹性网：L1+L2。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Cross-validation: estimate test error without a test set. k-fold CV: split data into k folds, train on k-1, validate on 1, repeat. Choose λ that minimizes CV error. NEVER use test set for model selection.",
+      "template_zh": "交叉验证：无需测试集估计测试误差。k折CV：数据分k份，k-1训练1验证，重复。选最小化CV误差的λ。绝不用测试集做模型选择。"
+    },
+    {
+      "type": "practice",
+      "template_en": "With the mtcars dataset: (1) Fit ridge and lasso for mpg ~ all predictors. (2) Use cv.glmnet() to find optimal λ. (3) Compare coefficients. (4) Which predictors does lasso select? (5) Evaluate on a test set.",
+      "template_zh": "用mtcars数据集：(1)拟合岭和lasso。(2)用cv.glmnet()找最优λ。(3)比较系数。(4)lasso选择了哪些变量？(5)在测试集上评估。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Regularization trades bias for variance. By shrinking coefficients, we accept some bias to REDUCE variance dramatically. The net effect: LOWER prediction error. 'Shrinkage' = 'stealing strength' from other predictors.",
+      "template_zh": "正则化以偏差换方差。收缩系数以偏差换取方差大幅降低。净效应：更低的预测误差。'收缩'=从其他预测变量'借用力量'。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA314H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

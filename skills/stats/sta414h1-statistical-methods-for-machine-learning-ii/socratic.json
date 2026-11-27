@@ -1,0 +1,86 @@
+{
+  "name": "STA414H1 — Socratic Discovery (Deep Learning Fundamentals)",
+  "description": "Neural networks: layers of neurons. Each neuron: z = w·x + b, a = σ(z) (activation function). Universal Approximation Theorem: a single hidden layer w",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA414H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA414H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Neural networks: layers of neurons. Each neuron: z = w·x + b, a = σ(z) (activation function). Universal Approximation Theorem: a single hidden layer with enough neurons can approximate ANY continuous function on a compact set.",
+      "template_zh": "神经网络：神经元层。通用近似定理：足够神经元的单隐层可逼近紧集上任何连续函数。"
+    },
+    {
+      "type": "question",
+      "template_en": "Backpropagation: compute gradients via chain rule. Forward pass: compute activations layer by layer. Backward pass: compute ∂Loss/∂w for each weight. Gradient descent: w ← w - η·∂L/∂w.",
+      "template_zh": "反向传播：通过链式法则算梯度。前向：逐层计算激活。反向：算每权重∂Loss/∂w。梯度下降。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Activation functions: (1) Sigmoid: 1/(1+e^{-x}) — saturates, vanishing gradient. (2) ReLU: max(0,x) — non-saturating, faster. (3) Tanh: (e^x-e^{-x})/(e^x+e^{-x}). (4) Softmax: e^{zᵢ}/Σe^{zⱼ} for classification.",
+      "template_zh": "激活函数：(1)Sigmoid——饱和、梯度消失。(2)ReLU——不饱和、更快。(3)Tanh。(4)Softmax用于分类。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Training challenges: (1) Vanishing/exploding gradients (use ReLU, batch norm, residual connections). (2) Overfitting (dropout, data augmentation, weight decay). (3) Local minima (plateaus, saddle points). (4) Learning rate tuning (Adam optimizer).",
+      "template_zh": "训练挑战：(1)梯度消失/爆炸(ReLU、批归一化)。(2)过拟合(dropout、数据增强)。(3)局部极小。(4)学习率调节(Adam)。"
+    },
+    {
+      "type": "practice",
+      "template_en": "In R/TensorFlow: (1) Build a 2-hidden-layer net for MNIST. (2) Use ReLU activations. (3) Train with Adam. (4) Add dropout for regularization. (5) Compare with logistic regression.",
+      "template_zh": "在R/TensorFlow中：(1)为MNIST建2隐层网络。(2)用ReLU。(3)用Adam训练。(4)加dropout正则化。(5)与逻辑回归比较。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Deep learning's power: learn HIERARCHICAL representations — early layers detect edges, middle layers detect shapes, late layers detect objects. This hierarchy LEARNED, not hand-crafted. More data + more compute → better performance.",
+      "template_zh": "深度学习力量：学习层次表示——早期检边、中层检形状、晚期检物体。层次是学习来的，不是手工设计的。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA414H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

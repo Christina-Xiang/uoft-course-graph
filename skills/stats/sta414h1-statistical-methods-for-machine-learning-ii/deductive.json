@@ -1,0 +1,86 @@
+{
+  "name": "STA414H1 — Deductive Derivation (Gaussian Processes)",
+  "description": "A Gaussian Process (GP) is a distribution over FUNCTIONS. f(x)~GP(m(x),k(x,x')). Mean m(x) usually 0. Covariance k(x,x') defines function properties: ",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA414H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA414H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "A Gaussian Process (GP) is a distribution over FUNCTIONS. f(x)~GP(m(x),k(x,x')). Mean m(x) usually 0. Covariance k(x,x') defines function properties: smoothness, periodicity, stationarity.",
+      "template_zh": "高斯过程(GP)是函数上的分布。f(x)~GP(m(x),k(x,x'))。协方差k(x,x')定义函数性质：平滑性、周期性、平稳性。"
+    },
+    {
+      "type": "question",
+      "template_en": "RBF kernel: k(x,x')=σ²exp(-‖x-x'‖²/2ℓ²). ℓ=lengthscale (smoothness). σ²=signal variance. Key property: RBF generates INFINITELY smooth (C∞) functions. Matern kernel: less smooth (ν=3/2 → C¹, ν=5/2 → C²).",
+      "template_zh": "RBF核：k(x,x')=σ²exp(-‖x-x'‖²/2ℓ²)。ℓ=长度尺度(平滑性)。RBF产生无穷光滑函数。Matern核：较不光滑。"
+    },
+    {
+      "type": "explore",
+      "template_en": "GP regression: given (xᵢ,yᵢ), predict f(x*). Joint: [y; f*]~N(0, [K+σ²I, K*; K*ᵀ, K**]). Predictive: f*|data ~ N(K*ᵀ(K+σ²I)⁻¹y, K**-K*ᵀ(K+σ²I)⁻¹K*). Provides UNCERTAINTY estimates.",
+      "template_zh": "GP回归：给定(xᵢ,yᵢ)预测f(x*)。预测分布提供不确定性估计。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Kernel selection encodes PRIOR knowledge about the function. Additive kernels: k=k₁+k₂ (sum of independent functions). Product kernels: k=k₁·k₂ (interaction). Automatic Relevance Determination (ARD): different ℓ per dimension.",
+      "template_zh": "核选择编码关于函数的先验知识。加性、乘积核、ARD(每维不同ℓ)。"
+    },
+    {
+      "type": "practice",
+      "template_en": "(1) Simulate data: y=sin(x)+ε. (2) Fit GP with RBF kernel. (3) Plot predictive mean ± 2SD. (4) Compare with Matern(3/2) kernel. (5) Optimize hyperparameters (ℓ, σ², σ²_n) via marginal likelihood.",
+      "template_zh": "(1)模拟y=sin(x)+ε。(2)用RBF核拟合GP。(3)画预测均值±2SD。(4)与Matern(3/2)比较。(5)通过边际似然优化超参数。"
+    },
+    {
+      "type": "insight",
+      "template_en": "GP = 'infinite-dimensional Bayesian regression.' Training = computing posterior over functions. Prediction = posterior predictive with uncertainty. Key advantage: well-calibrated uncertainty. Key limit: O(n³) computation (n>10k hard). Solutions: sparse GPs, inducing points.",
+      "template_zh": "GP='无穷维贝叶斯回归'。训练=计算函数的后验。关键优势：良好校准的不确定性。关键局限：O(n³)计算。解决：稀疏GP、诱导点。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA414H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

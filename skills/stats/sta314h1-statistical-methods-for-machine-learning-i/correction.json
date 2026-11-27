@@ -1,0 +1,86 @@
+{
+  "name": "STA314H1 — Correction Attribution (Kernel Methods and Representer Theorem)",
+  "description": "'SVM finds a separating hyperplane.' TRUE for linearly separable. But SVM WITH KERNELS finds nonlinear boundaries in ORIGINAL space by computing linea",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA314H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA314H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'SVM finds a separating hyperplane.' TRUE for linearly separable. But SVM WITH KERNELS finds nonlinear boundaries in ORIGINAL space by computing linear boundary in FEATURE space. The kernel trick makes this efficient.",
+      "template_zh": "'SVM找分离超平面。'线性可分时为真。但核SVM通过在高维特征空间找线性边界来在原空间找非线性边界。核技巧使其高效。"
+    },
+    {
+      "type": "question",
+      "template_en": "Kernel: k(x,x') = φ(x)·φ(x'), where φ maps to feature space. RBF kernel: k(x,x')=exp(-‖x-x'‖²/σ²). Implicitly maps to INFINITE-dimensional feature space. But we never compute φ explicitly — just k(x,x').",
+      "template_zh": "核：k(x,x')=φ(x)·φ(x'), φ映射到特征空间。RBF核：exp(-‖x-x'‖²/σ²)。隐式映射到无穷维特征空间。但从不显式计算φ——只计算k(x,x')。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Representer Theorem: the optimal w in the feature space has the form w = Σαᵢφ(xᵢ). Thus f(x)=w·φ(x)=Σαᵢk(xᵢ,x). Learning reduces to finding αᵢ. This is why kernel methods work with ANY kernel.",
+      "template_zh": "Representer定理：特征空间中最优w的形式为w=Σαᵢφ(xᵢ)。学习简化为求αᵢ。这就是核方法适用于任何核的原因。"
+    },
+    {
+      "type": "insight",
+      "template_en": "The kernel trick enables: (1) Nonlinear classification with linear methods. (2) Working in infinite-dim spaces with finite computation. (3) Using domain-specific similarity measures as kernels. (4) Combining kernels (multiple kernel learning).",
+      "template_zh": "核技巧使能：(1)用线性方法做非线性分类。(2)有限计算处理无穷维空间。(3)用领域特定相似度量作为核。(4)组合核(多核学习)。"
+    },
+    {
+      "type": "practice",
+      "template_en": "On a nonlinear dataset: (1) Fit SVM with linear kernel. (2) Fit SVM with RBF kernel. (3) Tune C and γ via CV. (4) Plot decision boundaries. (5) Compare: when does RBF outperform linear?",
+      "template_zh": "在非线性数据集上：(1)线性核SVM。(2)RBF核SVM。(3)通过CV调整C和γ。(4)画决策边界。(5)比较：RBF何时优于线性？"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Kernel methods are 'lazy learners' — they keep training data and use it at prediction time. Computational cost O(n²) or O(n³). For large n, neural nets scale better. But for small-to-medium n, SVMs are often state-of-the-art.",
+      "template_zh": "核方法是'懒惰学习'——保留训练数据，预测时使用。计算成本O(n²)或O(n³)。大n时神经网络扩展性更好。但中小n时SVM常是最优的。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA314H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "STA347H1 — Deductive Derivation (Conditional Expectation)",
+  "description": "E[X|Y] is a RANDOM VARIABLE — a function of Y. Defined as the UNIQUE random variable satisfying: (1) E[X|Y] is measurable w.r.t. σ(Y). (2) For any A∈σ",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA347H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA347H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "E[X|Y] is a RANDOM VARIABLE — a function of Y. Defined as the UNIQUE random variable satisfying: (1) E[X|Y] is measurable w.r.t. σ(Y). (2) For any A∈σ(Y), E[E[X|Y]·I_A]=E[X·I_A]. This is the PROJECTION of X onto L²(σ(Y)).",
+      "template_zh": "E[X|Y]是随机变量——Y的函数。它是满足某些条件的唯一随机变量：X在L²(σ(Y))上的投影。"
+    },
+    {
+      "type": "question",
+      "template_en": "If X and Y are independent, E[X|Y]=E[X] (knowing Y gives no info about X). If X=g(Y), E[X|Y]=g(Y). Tower property: E[E[X|Y]]=E[X]. If Z=g(Y): E[ZE[X|Y]]=E[ZX]. Linearity: E[aX+bZ|Y]=aE[X|Y]+bE[Z|Y].",
+      "template_zh": "X,Y独立则E[X|Y]=E[X]。塔性质：E[E[X|Y]]=E[X]。线性性。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Example: (X,Y) bivariate normal. E[X|Y=y]=μ_X+ρ(σ_X/σ_Y)(y-μ_Y). Var(X|Y=y)=σ_X²(1-ρ²). Conditional expectation is LINEAR for normal. For general, E[X|Y] minimizes MSE among ALL functions of Y.",
+      "template_zh": "例：(X,Y)二元正态。E[X|Y=y]线性。Var(X|Y=y)=σ_X²(1-ρ²)。一般情况E[X|Y]在所有Y的函数中最小化MSE。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Conditional variance: Var(X|Y)=E[(X-E[X|Y])²|Y]. Law of total variance: Var(X)=E[Var(X|Y)]+Var(E[X|Y]). Decomposes variance into 'within-group' + 'between-group.'",
+      "template_zh": "条件方差：Var(X|Y)=E[(X-E[X|Y])²|Y]。总方差公式：Var(X)=E[Var(X|Y)]+Var(E[X|Y])。分解为'组内'+'组间'。"
+    },
+    {
+      "type": "practice",
+      "template_en": "(1) If X~Exp(λ) and Y=I(X>1). Find E[X|Y]. (2) Roll a die, X=result, Y=parity. Find E[X|Y]. (3) Prove: Var(X)=E[Var(X|Y)]+Var(E[X|Y]). (4) Show E[(X-E[X|Y])²] ≤ E[(X-g(Y))²] for any g.",
+      "template_zh": "(1)X~Exp(λ), Y=I(X>1), 求E[X|Y]。(2)掷骰子。求E[X|Y]。(3)证总方差公式。(4)E[X|Y]是最小MSE预测。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Conditional expectation = BEST PREDICTION of X given Y (in MSE sense). It's the foundation of: martingales (fair games), Markov processes, Kalman filter, and the EM algorithm. 'Conditioning is the soul of statistics.'",
+      "template_zh": "条件期望=给定Y时X的最佳预测(MSE意义)。是鞅、Markov过程、Kalman滤波和EM算法的基础。'条件是统计的灵魂。'"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA347H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

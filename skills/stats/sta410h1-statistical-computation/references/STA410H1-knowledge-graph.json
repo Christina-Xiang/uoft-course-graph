@@ -1,0 +1,1106 @@
+{
+  "courseId": "STA410H1",
+  "courseName": "Statistical Computation",
+  "nodes": [
+    {
+      "id": "unit-1",
+      "type": "Unit",
+      "label": "Random Variate Generation",
+      "labelCn": "随机变量生成",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-2",
+      "type": "Concept",
+      "label": "PRNG",
+      "labelCn": "伪随机数生成器",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-3",
+      "type": "Concept",
+      "label": "LCG",
+      "labelCn": "线性同余生成器",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-4",
+      "type": "Concept",
+      "label": "Mersenne Twister",
+      "labelCn": "梅森旋转",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-5",
+      "type": "Concept",
+      "label": "Inverse CDF method",
+      "labelCn": "逆CDF法",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-6",
+      "type": "Concept",
+      "label": "Acceptance-rejection sampling",
+      "labelCn": "接受-拒绝抽样",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-7",
+      "type": "Concept",
+      "label": "Box-Muller",
+      "labelCn": "Box-Muller变换",
+      "unit": "unit-1"
+    },
+    {
+      "id": "method-8",
+      "type": "Method",
+      "label": "Inverse CDF implementation",
+      "labelCn": "逆CDF实现",
+      "unit": "unit-1"
+    },
+    {
+      "id": "method-9",
+      "type": "Method",
+      "label": "Rejection sampling",
+      "labelCn": "拒绝抽样",
+      "unit": "unit-1"
+    },
+    {
+      "id": "pitfall-10",
+      "type": "Pitfall",
+      "label": "Poor PRNG quality",
+      "labelCn": "PRNG质量差",
+      "unit": "unit-1"
+    },
+    {
+      "id": "skill-11",
+      "type": "Skill",
+      "label": "Random generation",
+      "labelCn": "随机生成",
+      "unit": "unit-1"
+    },
+    {
+      "id": "unit-12",
+      "type": "Unit",
+      "label": "Monte Carlo Methods",
+      "labelCn": "蒙特卡洛方法",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-13",
+      "type": "Concept",
+      "label": "Monte Carlo integration",
+      "labelCn": "MC积分",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-14",
+      "type": "Concept",
+      "label": "MC error estimation",
+      "labelCn": "MC误差估计",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-15",
+      "type": "Concept",
+      "label": "Importance sampling",
+      "labelCn": "重要性抽样",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-16",
+      "type": "Concept",
+      "label": "Control variates",
+      "labelCn": "控制变量法",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-17",
+      "type": "Concept",
+      "label": "Antithetic variates",
+      "labelCn": "对偶变量法",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-18",
+      "type": "Concept",
+      "label": "Rao-Blackwellization",
+      "labelCn": "Rao-Blackwell化",
+      "unit": "unit-2"
+    },
+    {
+      "id": "theorem-19",
+      "type": "Theorem",
+      "label": "√n convergence of MC",
+      "labelCn": "MC的√n收敛",
+      "unit": "unit-2"
+    },
+    {
+      "id": "method-20",
+      "type": "Method",
+      "label": "Importance sampling implementation",
+      "labelCn": "重要性抽样实现",
+      "unit": "unit-2"
+    },
+    {
+      "id": "method-21",
+      "type": "Method",
+      "label": "Control variate regression",
+      "labelCn": "控制变量回归",
+      "unit": "unit-2"
+    },
+    {
+      "id": "pitfall-22",
+      "type": "Pitfall",
+      "label": "Importance weight degeneracy",
+      "labelCn": "重要性权重退化",
+      "unit": "unit-2"
+    },
+    {
+      "id": "skill-23",
+      "type": "Skill",
+      "label": "Variance reduction",
+      "labelCn": "方差缩减",
+      "unit": "unit-2"
+    },
+    {
+      "id": "unit-24",
+      "type": "Unit",
+      "label": "Numerical Linear Algebra",
+      "labelCn": "数值线性代数",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-25",
+      "type": "Concept",
+      "label": "LU decomposition",
+      "labelCn": "LU分解",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-26",
+      "type": "Concept",
+      "label": "QR decomposition",
+      "labelCn": "QR分解",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-27",
+      "type": "Concept",
+      "label": "Cholesky decomposition",
+      "labelCn": "Cholesky分解",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-28",
+      "type": "Concept",
+      "label": "SVD",
+      "labelCn": "奇异值分解",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-29",
+      "type": "Concept",
+      "label": "Condition number",
+      "labelCn": "条件数",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-30",
+      "type": "Concept",
+      "label": "Woodbury identity",
+      "labelCn": "Woodbury恒等式",
+      "unit": "unit-3"
+    },
+    {
+      "id": "theorem-31",
+      "type": "Theorem",
+      "label": "QR for least squares",
+      "labelCn": "QR最小二乘",
+      "unit": "unit-3"
+    },
+    {
+      "id": "method-32",
+      "type": "Method",
+      "label": "solve() vs qr()(solve() vs qr())",
+      "labelCn": "",
+      "unit": "unit-3"
+    },
+    {
+      "id": "method-33",
+      "type": "Method",
+      "label": "Cholesky for MVN sampling",
+      "labelCn": "Cholesky多元正态抽样",
+      "unit": "unit-3"
+    },
+    {
+      "id": "pitfall-34",
+      "type": "Pitfall",
+      "label": "Solving X'X directly is unstable",
+      "labelCn": "直接求解X'X不稳定",
+      "unit": "unit-3"
+    },
+    {
+      "id": "skill-35",
+      "type": "Skill",
+      "label": "Matrix computation",
+      "labelCn": "矩阵计算",
+      "unit": "unit-3"
+    },
+    {
+      "id": "unit-36",
+      "type": "Unit",
+      "label": "Optimization for Statistics",
+      "labelCn": "统计优化",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-37",
+      "type": "Concept",
+      "label": "Newton-Raphson",
+      "labelCn": "牛顿-拉夫森",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-38",
+      "type": "Concept",
+      "label": "Fisher scoring",
+      "labelCn": "Fisher得分法",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-39",
+      "type": "Concept",
+      "label": "BFGS",
+      "labelCn": "BFGS",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-40",
+      "type": "Concept",
+      "label": "Nelder-Mead",
+      "labelCn": "Nelder-Mead",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-41",
+      "type": "Concept",
+      "label": "Coordinate descent",
+      "labelCn": "坐标下降",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-42",
+      "type": "Concept",
+      "label": "SGD",
+      "labelCn": "随机梯度下降",
+      "unit": "unit-4"
+    },
+    {
+      "id": "theorem-43",
+      "type": "Theorem",
+      "label": "Quadratic convergence of Newton",
+      "labelCn": "牛顿二次收敛",
+      "unit": "unit-4"
+    },
+    {
+      "id": "method-44",
+      "type": "Method",
+      "label": "optim() in R(R的optim())",
+      "labelCn": "",
+      "unit": "unit-4"
+    },
+    {
+      "id": "method-45",
+      "type": "Method",
+      "label": "IRLS for GLMs",
+      "labelCn": "GLM的IRLS",
+      "unit": "unit-4"
+    },
+    {
+      "id": "pitfall-46",
+      "type": "Pitfall",
+      "label": "Newton diverges far from optimum",
+      "labelCn": "牛顿法远离最优值发散",
+      "unit": "unit-4"
+    },
+    {
+      "id": "skill-47",
+      "type": "Skill",
+      "label": "Numerical optimization",
+      "labelCn": "数值优化",
+      "unit": "unit-4"
+    },
+    {
+      "id": "unit-48",
+      "type": "Unit",
+      "label": "EM Algorithm & Missing Data",
+      "labelCn": "EM算法与缺失数据",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-49",
+      "type": "Concept",
+      "label": "EM algorithm",
+      "labelCn": "EM算法",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-50",
+      "type": "Concept",
+      "label": "E-step",
+      "labelCn": "E步",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-51",
+      "type": "Concept",
+      "label": "M-step",
+      "labelCn": "M步",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-52",
+      "type": "Concept",
+      "label": "Missing data mechanisms",
+      "labelCn": "缺失数据机制",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-53",
+      "type": "Concept",
+      "label": "Mixture models via EM",
+      "labelCn": "EM混合模型",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-54",
+      "type": "Concept",
+      "label": "Censored data",
+      "labelCn": "删失数据",
+      "unit": "unit-5"
+    },
+    {
+      "id": "theorem-55",
+      "type": "Theorem",
+      "label": "EM monotonically increases likelihood",
+      "labelCn": "EM单调增似然",
+      "unit": "unit-5"
+    },
+    {
+      "id": "method-56",
+      "type": "Method",
+      "label": "EM for Gaussian mixtures",
+      "labelCn": "高斯混合EM",
+      "unit": "unit-5"
+    },
+    {
+      "id": "pitfall-57",
+      "type": "Pitfall",
+      "label": "EM may converge to local optimum",
+      "labelCn": "EM可能收敛到局部最优",
+      "unit": "unit-5"
+    },
+    {
+      "id": "skill-58",
+      "type": "Skill",
+      "label": "EM derivation",
+      "labelCn": "EM推导",
+      "unit": "unit-5"
+    },
+    {
+      "id": "unit-59",
+      "type": "Unit",
+      "label": "MCMC & Bayesian Computation",
+      "labelCn": "MCMC与贝叶斯计算",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-60",
+      "type": "Concept",
+      "label": "Markov chain theory",
+      "labelCn": "马尔可夫链理论",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-61",
+      "type": "Concept",
+      "label": "Metropolis-Hastings",
+      "labelCn": "Metropolis-Hastings",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-62",
+      "type": "Concept",
+      "label": "Gibbs sampling",
+      "labelCn": "Gibbs抽样",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-63",
+      "type": "Concept",
+      "label": "Hamiltonian Monte Carlo",
+      "labelCn": "哈密顿蒙特卡洛",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-64",
+      "type": "Concept",
+      "label": "Convergence diagnostics",
+      "labelCn": "收敛诊断",
+      "unit": "unit-6"
+    },
+    {
+      "id": "theorem-65",
+      "type": "Theorem",
+      "label": "Detailed balance => stationary",
+      "labelCn": "细致平衡=>平稳分布",
+      "unit": "unit-6"
+    },
+    {
+      "id": "method-66",
+      "type": "Method",
+      "label": "MH implementation",
+      "labelCn": "MH实现",
+      "unit": "unit-6"
+    },
+    {
+      "id": "method-67",
+      "type": "Method",
+      "label": "coda for diagnostics",
+      "labelCn": "coda诊断",
+      "unit": "unit-6"
+    },
+    {
+      "id": "pitfall-68",
+      "type": "Pitfall",
+      "label": "Poor mixing",
+      "labelCn": "high autocorrelation",
+      "unit": "unit-6"
+    },
+    {
+      "id": "skill-69",
+      "type": "Skill",
+      "label": "MCMC methodology",
+      "labelCn": "MCMC方法论",
+      "unit": "unit-6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-unit-1-concept-2",
+      "source": "unit-1",
+      "target": "concept-2",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-concept-3",
+      "source": "unit-1",
+      "target": "concept-3",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-2-concept-3",
+      "source": "concept-2",
+      "target": "concept-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concept-4",
+      "source": "unit-1",
+      "target": "concept-4",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-3-concept-4",
+      "source": "concept-3",
+      "target": "concept-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concept-5",
+      "source": "unit-1",
+      "target": "concept-5",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-4-concept-5",
+      "source": "concept-4",
+      "target": "concept-5",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concept-6",
+      "source": "unit-1",
+      "target": "concept-6",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-5-concept-6",
+      "source": "concept-5",
+      "target": "concept-6",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concept-7",
+      "source": "unit-1",
+      "target": "concept-7",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-6-concept-7",
+      "source": "concept-6",
+      "target": "concept-7",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-method-8",
+      "source": "unit-1",
+      "target": "method-8",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-method-9",
+      "source": "unit-1",
+      "target": "method-9",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-pitfall-10",
+      "source": "unit-1",
+      "target": "pitfall-10",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-skill-11",
+      "source": "unit-1",
+      "target": "skill-11",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-12-concept-13",
+      "source": "unit-12",
+      "target": "concept-13",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-12-concept-14",
+      "source": "unit-12",
+      "target": "concept-14",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-13-concept-14",
+      "source": "concept-13",
+      "target": "concept-14",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-12-concept-15",
+      "source": "unit-12",
+      "target": "concept-15",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-14-concept-15",
+      "source": "concept-14",
+      "target": "concept-15",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-12-concept-16",
+      "source": "unit-12",
+      "target": "concept-16",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-15-concept-16",
+      "source": "concept-15",
+      "target": "concept-16",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-12-concept-17",
+      "source": "unit-12",
+      "target": "concept-17",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-16-concept-17",
+      "source": "concept-16",
+      "target": "concept-17",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-12-concept-18",
+      "source": "unit-12",
+      "target": "concept-18",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-17-concept-18",
+      "source": "concept-17",
+      "target": "concept-18",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-12-theorem-19",
+      "source": "unit-12",
+      "target": "theorem-19",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-12-method-20",
+      "source": "unit-12",
+      "target": "method-20",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-12-method-21",
+      "source": "unit-12",
+      "target": "method-21",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-12-pitfall-22",
+      "source": "unit-12",
+      "target": "pitfall-22",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-12-skill-23",
+      "source": "unit-12",
+      "target": "skill-23",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-24-concept-25",
+      "source": "unit-24",
+      "target": "concept-25",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-24-concept-26",
+      "source": "unit-24",
+      "target": "concept-26",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-25-concept-26",
+      "source": "concept-25",
+      "target": "concept-26",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-24-concept-27",
+      "source": "unit-24",
+      "target": "concept-27",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-26-concept-27",
+      "source": "concept-26",
+      "target": "concept-27",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-24-concept-28",
+      "source": "unit-24",
+      "target": "concept-28",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-27-concept-28",
+      "source": "concept-27",
+      "target": "concept-28",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-24-concept-29",
+      "source": "unit-24",
+      "target": "concept-29",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-28-concept-29",
+      "source": "concept-28",
+      "target": "concept-29",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-24-concept-30",
+      "source": "unit-24",
+      "target": "concept-30",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-29-concept-30",
+      "source": "concept-29",
+      "target": "concept-30",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-24-theorem-31",
+      "source": "unit-24",
+      "target": "theorem-31",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-24-method-32",
+      "source": "unit-24",
+      "target": "method-32",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-24-method-33",
+      "source": "unit-24",
+      "target": "method-33",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-24-pitfall-34",
+      "source": "unit-24",
+      "target": "pitfall-34",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-24-skill-35",
+      "source": "unit-24",
+      "target": "skill-35",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-36-concept-37",
+      "source": "unit-36",
+      "target": "concept-37",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-36-concept-38",
+      "source": "unit-36",
+      "target": "concept-38",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-37-concept-38",
+      "source": "concept-37",
+      "target": "concept-38",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-36-concept-39",
+      "source": "unit-36",
+      "target": "concept-39",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-38-concept-39",
+      "source": "concept-38",
+      "target": "concept-39",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-36-concept-40",
+      "source": "unit-36",
+      "target": "concept-40",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-39-concept-40",
+      "source": "concept-39",
+      "target": "concept-40",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-36-concept-41",
+      "source": "unit-36",
+      "target": "concept-41",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-40-concept-41",
+      "source": "concept-40",
+      "target": "concept-41",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-36-concept-42",
+      "source": "unit-36",
+      "target": "concept-42",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-41-concept-42",
+      "source": "concept-41",
+      "target": "concept-42",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-36-theorem-43",
+      "source": "unit-36",
+      "target": "theorem-43",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-36-method-44",
+      "source": "unit-36",
+      "target": "method-44",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-36-method-45",
+      "source": "unit-36",
+      "target": "method-45",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-36-pitfall-46",
+      "source": "unit-36",
+      "target": "pitfall-46",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-36-skill-47",
+      "source": "unit-36",
+      "target": "skill-47",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-48-concept-49",
+      "source": "unit-48",
+      "target": "concept-49",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-48-concept-50",
+      "source": "unit-48",
+      "target": "concept-50",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-49-concept-50",
+      "source": "concept-49",
+      "target": "concept-50",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-48-concept-51",
+      "source": "unit-48",
+      "target": "concept-51",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-50-concept-51",
+      "source": "concept-50",
+      "target": "concept-51",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-48-concept-52",
+      "source": "unit-48",
+      "target": "concept-52",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-51-concept-52",
+      "source": "concept-51",
+      "target": "concept-52",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-48-concept-53",
+      "source": "unit-48",
+      "target": "concept-53",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-52-concept-53",
+      "source": "concept-52",
+      "target": "concept-53",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-48-concept-54",
+      "source": "unit-48",
+      "target": "concept-54",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-53-concept-54",
+      "source": "concept-53",
+      "target": "concept-54",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-48-theorem-55",
+      "source": "unit-48",
+      "target": "theorem-55",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-48-method-56",
+      "source": "unit-48",
+      "target": "method-56",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-48-pitfall-57",
+      "source": "unit-48",
+      "target": "pitfall-57",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-48-skill-58",
+      "source": "unit-48",
+      "target": "skill-58",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-59-concept-60",
+      "source": "unit-59",
+      "target": "concept-60",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-59-concept-61",
+      "source": "unit-59",
+      "target": "concept-61",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-60-concept-61",
+      "source": "concept-60",
+      "target": "concept-61",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-59-concept-62",
+      "source": "unit-59",
+      "target": "concept-62",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-61-concept-62",
+      "source": "concept-61",
+      "target": "concept-62",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-59-concept-63",
+      "source": "unit-59",
+      "target": "concept-63",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-62-concept-63",
+      "source": "concept-62",
+      "target": "concept-63",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-59-concept-64",
+      "source": "unit-59",
+      "target": "concept-64",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-63-concept-64",
+      "source": "concept-63",
+      "target": "concept-64",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-59-theorem-65",
+      "source": "unit-59",
+      "target": "theorem-65",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-59-method-66",
+      "source": "unit-59",
+      "target": "method-66",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-59-method-67",
+      "source": "unit-59",
+      "target": "method-67",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-59-pitfall-68",
+      "source": "unit-59",
+      "target": "pitfall-68",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-59-skill-69",
+      "source": "unit-59",
+      "target": "skill-69",
+      "type": "develops"
+    },
+    {
+      "id": "e-cross-unit-1-unit-2",
+      "source": "unit-2",
+      "target": "unit-1",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-2-unit-3",
+      "source": "unit-3",
+      "target": "unit-2",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-3-unit-4",
+      "source": "unit-4",
+      "target": "unit-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-4-unit-5",
+      "source": "unit-5",
+      "target": "unit-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-5-unit-6",
+      "source": "unit-6",
+      "target": "unit-5",
+      "type": "requires"
+    }
+  ],
+  "crossUnitEdges": [
+    {
+      "id": "e-cross-unit-1-unit-2",
+      "source": "unit-2",
+      "target": "unit-1",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-2-unit-3",
+      "source": "unit-3",
+      "target": "unit-2",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-3-unit-4",
+      "source": "unit-4",
+      "target": "unit-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-4-unit-5",
+      "source": "unit-5",
+      "target": "unit-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-5-unit-6",
+      "source": "unit-6",
+      "target": "unit-5",
+      "type": "requires"
+    }
+  ],
+  "skillProgressionPaths": []
+}

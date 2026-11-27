@@ -1,0 +1,86 @@
+{
+  "name": "STA347H1 — Correction Attribution (Kolmogorov's Three Series Theorem)",
+  "description": "'If E[Xₙ]=0, ΣXₙ converges a.s.' WRONG! Need more than zero mean. Kolmogorov's Three Series Theorem gives NECESSARY AND SUFFICIENT conditions for a.s.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA347H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA347H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'If E[Xₙ]=0, ΣXₙ converges a.s.' WRONG! Need more than zero mean. Kolmogorov's Three Series Theorem gives NECESSARY AND SUFFICIENT conditions for a.s. convergence of ΣXₙ with independent Xₙ.",
+      "template_zh": "'若E[Xₙ]=0则ΣXₙ a.s.收敛。'错！需更多条件。Kolmogorov三系列定理给出独立变量和a.s.收敛的充要条件。"
+    },
+    {
+      "type": "question",
+      "template_en": "Three series: Choose c>0. Let Yₙ=XₙI(|Xₙ|≤c) (truncated). Series 1: ΣP(|Xₙ|>c) < ∞. Series 2: ΣE[Yₙ] converges. Series 3: ΣVar(Yₙ) < ∞. If ALL THREE converge, then ΣXₙ converges a.s. If ANY diverges, ΣXₙ diverges a.s.",
+      "template_zh": "三个级数：选c>0。Yₙ=XₙI(|Xₙ|≤c)。级数1: ΣP(|Xₙ|>c)<∞。级数2: ΣE[Yₙ]收敛。级数3: ΣVar(Yₙ)<∞。三者都收敛则ΣXₙ a.s.收敛。任一发散则ΣXₙ a.s.发散。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Example: Xₙ = ±1/n with equal probability. Check: P(|Xₙ|>1)=0 so ΣP=0<∞. E[Yₙ]=0. Var(Yₙ)=1/n². Σ1/n²<∞. All three → ΣXₙ converges a.s. Contrast: Xₙ=±1/√n. Var(Yₙ)=1/n. Σ1/n diverges → diverges a.s.",
+      "template_zh": "例：Xₙ=±1/n等概。三个条件都满足→a.s.收敛。Xₙ=±1/√n: Σ1/n发散→a.s.发散。"
+    },
+    {
+      "type": "insight",
+      "template_en": "The truncation is KEY: large values (Series 1) rarely occur. The mean of truncated vars (Series 2) controls drift. The variance (Series 3) controls oscillation. Together they characterize convergence.",
+      "template_zh": "截断是关键：大值(级数1)罕见发生。截断变量均值(级数2)控制漂移。方差(级数3)控制振荡。一起刻画收敛。"
+    },
+    {
+      "type": "practice",
+      "template_en": "For each, does ΣXₙ converge a.s.? (1) Xₙ=(-1)ⁿ/n. (2) Xₙ=±1/n² with P(Xₙ=1/n²)=P(Xₙ=-1/n²)=0.5. (3) Xₙ=±√n with prob 1/n each, 0 otherwise. (4) Xₙ=(-1)ⁿ.",
+      "template_zh": "对每个，ΣXₙ a.s.收敛吗？(1)Xₙ=(-1)ⁿ/n。(2)Xₙ=±1/n²。(3)Xₙ=±√n各1/n概率否则0。(4)Xₙ=(-1)ⁿ。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Three Series Theorem is the culmination of classical probability. It completely characterizes convergence of sums of independent RVs. Applications: SLLN, law of iterated logarithm, random walk recurrence/transience.",
+      "template_zh": "三系列定理是经典概率的顶峰。完全刻画独立RV和收敛。应用：SLLN、重对数律、随机游走常返/暂留。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA347H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "STA304H1 — Deductive Derivation (Observational Studies and Confounding)",
+  "description": "Correlation ≠ Causation. Observational studies only show ASSOCIATION. Confounder: variable associated with BOTH treatment and outcome. Simpson's parad",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA304H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA304H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Correlation ≠ Causation. Observational studies only show ASSOCIATION. Confounder: variable associated with BOTH treatment and outcome. Simpson's paradox: trend reverses when grouping by confounder.",
+      "template_zh": "相关≠因果。观测研究只展示关联。混杂：与处理和结果都相关的变量。Simpson悖论：按混杂分组时趋势反转。"
+    },
+    {
+      "type": "question",
+      "template_en": "Example: Hospital A has lower survival rate than B (73% vs 79%). But within good-condition patients, A is better (93% vs 87%). Within poor-condition, A also better (73% vs 67%). A treats sicker patients → aggregation hides truth.",
+      "template_zh": "例：A院生存率低于B(73% vs 79%)。但良好状态患者中A更好(93% vs 87%)。差状态中A也更好。A治疗更重病人→聚合隐藏真相。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Methods to adjust for confounders: (1) Stratification. (2) Multivariable regression. (3) Propensity score matching — P(treatment|covariates). (4) Instrumental variables. (5) Difference-in-differences.",
+      "template_zh": "调整混杂的方法：(1)分层。(2)多元回归。(3)倾向评分匹配。(4)工具变量。(5)双重差分。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Propensity score: e(X)=P(T=1|X). Key property: treatment assignment is INDEPENDENT of potential outcomes conditional on e(X). Matching on PS creates balanced groups.",
+      "template_zh": "倾向评分：e(X)=P(T=1|X)。关键：在e(X)条件下处理分配独立于潜在结果。PS匹配创建平衡组。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Study: new drug vs placebo. Patients on drug are younger. Outcomes: drug group recovers faster. (1) Is age a confounder? (2) How would you adjust? (3) Compute propensity score. (4) Match or stratify by PS. (5) After adjustment, does effect remain?",
+      "template_zh": "新药研究：用药组更年轻，恢复更快。(1)年龄是混杂吗？(2)如何调整？(3)计算倾向评分。(4)用PS匹配或分层。(5)调整后效应还在吗？"
+    },
+    {
+      "type": "insight",
+      "template_en": "'Correlation does not imply causation' — the most important warning in statistics. But advanced methods (RCTs, IV, DiD, RDD) can identify causal effects. The GOLD STANDARD is the randomized controlled trial.",
+      "template_zh": "'相关不意味因果'——统计最重要警告。但高级方法(RCT、IV、DiD、RDD)可识别因果效应。金标准是随机对照试验。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA304H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}
