@@ -1,0 +1,86 @@
+{
+  "name": "STA237H1 — Correction Attribution (Sampling Distributions)",
+  "description": "'Sampling distribution of X̄ = histogram of data.' WRONG. Sampling distribution = distribution of X̄ across ALL possible samples of size n. A theoreti",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA237H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA237H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'Sampling distribution of X̄ = histogram of data.' WRONG. Sampling distribution = distribution of X̄ across ALL possible samples of size n. A theoretical concept — we usually see ONE sample.",
+      "template_zh": "'X̄的抽样分布=数据直方图。'错。抽样分布=所有可能样本中X̄的分布。理论概念——通常只看到一个样本。"
+    },
+    {
+      "type": "question",
+      "template_en": "Population {1,3,5}, n=2 with replacement. Possible (1,1)→1, (1,3)→2, ..., (5,5)→5. Sampling distribution: P(1)=1/9, P(2)=2/9, ..., P(5)=1/9. E[X̄]=μ, Var(X̄)=σ²/n.",
+      "template_zh": "总体{1,3,5}, n=2有放回。抽样分布：E[X̄]=μ, Var(X̄)=σ²/n。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Sampling distribution: mean=μ (UNBIASED), variance=σ²/n (decreases with n). Normal data: X̄~N(μ,σ²/n). Non-normal: CLT → approx normal for large n. Enables inference.",
+      "template_zh": "X̄的抽样分布：均值=μ(无偏)，方差=σ²/n(随n减)。正态数据：X̄~N(μ,σ²/n)。非正态：CLT→大n近似正态。使推断可能。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Standard error SE=σ/√n. Unknown σ → use S/√n. SE tells PRECISION: smaller SE → more precise. Doubling n reduces SE by only √2 — '√n law' of diminishing returns.",
+      "template_zh": "标准误SE=σ/√n。σ未知→S/√n。SE告诉精度：更小SE→更精确。n翻倍SE仅降√2——'√n定律'边际递减。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Population μ=100, σ=15, n=25: (1) Sampling distribution of X̄? (2) P(X̄>106)? (3) For SE=2, what n needed? (4) Sample: X̄=104. What can we infer about μ?",
+      "template_zh": "总体μ=100,σ=15, n=25：(1)X̄的抽样分布？(2)P(X̄>106)？(3)SE=2需多大n？(4)样本X̄=104，推断μ？"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Sampling distribution is BRIDGE between probability and statistics. Probability: given population, likely samples? Statistics: given sample, what is population? CENTRAL concept in frequentist inference.",
+      "template_zh": "抽样分布是连接概率和统计的桥梁。概率：给定总体，什么样本可能？统计：给定样本，总体是什么？频率学派推断的核心概念。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA237H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

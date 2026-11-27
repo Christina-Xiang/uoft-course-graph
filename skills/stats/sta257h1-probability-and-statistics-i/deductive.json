@@ -1,0 +1,86 @@
+{
+  "name": "STA257H1 — Deductive Derivation (Borel-Cantelli Lemmas and Strong LLN)",
+  "description": "BC1: if ΣP(Aₙ)<∞ then P(Aₙ i.o.)=0. If total probability finite, almost surely only finitely many events occur. Used for SLLN, Kolmogorov's Three Seri",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA257H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA257H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "BC1: if ΣP(Aₙ)<∞ then P(Aₙ i.o.)=0. If total probability finite, almost surely only finitely many events occur. Used for SLLN, Kolmogorov's Three Series Theorem.",
+      "template_zh": "BC1: 若ΣP(Aₙ)<∞则P(Aₙ i.o.)=0。总概率有限则几乎必然有限多事件。用于SLLN。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Example (independence NOT needed): Aₙ=[0,1/n²] in [0,1]. Σ1/n²=π²/6<∞. P(Aₙ i.o.)=0. Limsup set = {0}, P({0})=0.",
+      "template_zh": "例(无需独立)：Aₙ=[0,1/n²]。Σ1/n²=π²/6<∞。P(Aₙ i.o.)=0。"
+    },
+    {
+      "type": "step2",
+      "template_en": "BC2: if Aₙ INDEPENDENT and ΣP(Aₙ)=∞, then P(Aₙ i.o.)=1. Kolmogorov 0-1 Law: tail events have P=0 or 1. BC1+BC2 give ZERO-ONE law for independent events.",
+      "template_zh": "BC2: 若Aₙ独立且ΣP(Aₙ)=∞, 则P(Aₙ i.o.)=1。Kolmogorov 0-1律。BC1+BC2给出独立事件0-1律。"
+    },
+    {
+      "type": "step3",
+      "template_en": "SLLN: X₁,...,Xₙ i.i.d. with E[|X₁|]<∞, then X̄ₙ→E[X₁] a.s. Proof: split Xᵢ⁺-Xᵢ⁻, truncation, Chebyshev, BC, Kronecker's lemma. SLLN STRONGER than WLLN.",
+      "template_zh": "SLLN: X̄ₙ→E[X₁] a.s.。证明：分裂、截断、Chebyshev、BC、Kronecker引理。SLLN强于WLLN。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "BC1: 'rare events almost never occur i.o.' BC2 (+independence): 'events occur i.o. a.s.' Together prove: SLLN, law of iterated logarithm, random walk properties.",
+      "template_zh": "BC1：'罕见事几乎从不无穷发生。'BC2(+独立)：'事件无穷发生a.s.'一起证明：SLLN、重对数律、随机游走。"
+    },
+    {
+      "type": "meta",
+      "template_en": "Borel-Cantelli = 'sledgehammers' of probability. Convert sum calculations into almost-sure statements. To prove something happens a.s., show its complement covered by events with summable probabilities.",
+      "template_zh": "Borel-Cantelli=概率论'大锤'。将求和转化为几乎必然而然的陈述。要证某事a.s.发生，证其补被概率可和事件覆盖。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA257H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

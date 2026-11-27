@@ -1,0 +1,86 @@
+{
+  "name": "STA257H1 — Socratic Discovery (Measure-Theoretic Foundations)",
+  "description": "Kolmogorov: (Ω,F,P). F = σ-algebra (closed under countable ops, contains Ω). P:F→[0,1] countably additive: P(∪Aᵢ)=ΣP(Aᵢ) for DISJOINT events. Required",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA257H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA257H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Kolmogorov: (Ω,F,P). F = σ-algebra (closed under countable ops, contains Ω). P:F→[0,1] countably additive: P(∪Aᵢ)=ΣP(Aᵢ) for DISJOINT events. Required for continuous distributions and infinite processes.",
+      "template_zh": "Kolmogorov概率空间(Ω,F,P)。F=σ-代数，P可数可加。连续分布和无穷过程需要测度论。"
+    },
+    {
+      "type": "question",
+      "template_en": "Why can't we define P on EVERY subset of [0,1]? Vitali: partition [0,1] by x~y if x-y∈ℚ, pick one from each class → NON-MEASURABLE. Any P on ALL subsets can't be countably additive AND translation-invariant.",
+      "template_zh": "为什么不能对[0,1]所有子集定义P？Vitali构造不可测集。所有子集上的概率不能同时可数可加和平移不变。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Borel σ-algebra B(ℝ): smallest σ-algebra containing all open intervals. Contains 'nice' sets. |B(ℝ)| = c, |P(ℝ)| = 2^c. MOST subsets NOT Borel. Lebesgue measure λ extends to L(ℝ) ⊃ B(ℝ).",
+      "template_zh": "Borel σ-代数B(ℝ)：包含所有开区间的最小σ-代数。|B(ℝ)|=c, |P(ℝ)|=2^c。大多子集非Borel。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Measurable function X:Ω→ℝ: ∀B Borel, X⁻¹(B)∈F. Distribution = pushforward μ_X(B)=P(X⁻¹(B)). Expectation E[X]=∫_Ω X dP = ∫_ℝ x dμ_X (Lebesgue integral). Handles 'spiky' functions.",
+      "template_zh": "可测函数X:Ω→ℝ：每个Borel原像在F中。分布=前推测度。期望=Lebesgue积分。处理'尖刺'函数。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Show: (1) If F is σ-algebra and A∈F, A^c∈F. (2) Intersection of σ-algebras is σ-algebra. (3) If X measurable, X², |X|, e^X measurable. (4) X+Y, XY, X/Y (Y≠0) measurable.",
+      "template_zh": "证明：(1)若F是σ-代数且A∈F，则A^c∈F。(2)σ-代数的交是σ-代数。(3)若X可测，X²,|X|,e^X可测。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Measure theory = FOUNDATION. Tells us what events are 'legal' (measurable). Provides Lebesgue integral. Cost: check measurability. Benefit: rigorous handling of infinite-dim processes (martingales, Brownian motion).",
+      "template_zh": "测度论=基础。告诉我们什么事件'合法'(可测)。提供Lebesgue积分。代价：检查可测性。收益：严格处理无穷维过程。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA257H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

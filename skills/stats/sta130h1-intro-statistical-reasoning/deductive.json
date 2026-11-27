@@ -1,0 +1,86 @@
+{
+  "name": "STA130H1 — Deductive Derivation (Hypothesis Testing and p-values)",
+  "description": "H₀ (no effect) vs H₁ (effect). Assume H₀ true, calculate p = P(data as extreme or more | H₀). If p < α (usually 0.05), REJECT H₀.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA130H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA130H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "H₀ (no effect) vs H₁ (effect). Assume H₀ true, calculate p = P(data as extreme or more | H₀). If p < α (usually 0.05), REJECT H₀.",
+      "template_zh": "H₀(无效应)vs H₁(有效应)。假设H₀真，计算p=P(数据同样或更极端|H₀)。若p<α(通常0.05)，拒绝H₀。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Coin fairness: 100 flips, 65 heads. H₀: p=0.5. X~Bin(100,0.5). P(X≥65 or X≤35)=0.0035. p<0.05, reject H₀. Evidence the coin is biased.",
+      "template_zh": "硬币公平性：100次，65次正面。H₀:p=0.5。p<0.05，拒绝H₀。硬币有偏的证据。"
+    },
+    {
+      "type": "step2",
+      "template_en": "p-value MISINTERPRETATIONS: (1) NOT P(H₀ true). (2) NOT P(result by chance). (3) NOT P(Type I error). p = P(data|H₀). P(H₀|data) needs BAYES.",
+      "template_zh": "p值误解：(1)不是P(H₀真)。(2)不是P(结果偶然)。(3)不是P(I类错)。p=P(数据|H₀)。P(H₀|数据)需贝叶斯。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Type I: reject true H₀ (α). Type II: fail to reject false H₀ (β). Power = 1-β = P(reject|H₁ true). Power depends on: effect size, n, α, variability. More n → more power.",
+      "template_zh": "I类：拒绝真H₀。II类：未能拒绝假H₀。功效=1-β=P(拒绝|H₁真)。取决于效应量、n、α、变异性。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "'p<0.05' is CONVENTION, not truth. Problems: p-hacking, multiple comparisons (20 tests → 1 significant by chance). Solutions: pre-registration, Bonferroni, effect sizes, CIs.",
+      "template_zh": "'p<0.05'是惯例，不是真理。问题：p操纵、多重比较。解决：预先注册、Bonferroni、效应量、CI。"
+    },
+    {
+      "type": "meta",
+      "template_en": "ASA statement (2016): 'By itself, a p-value does not provide a good measure of evidence.' Better: effect sizes, CIs, Bayes factors. Statistical significance ≠ practical significance.",
+      "template_zh": "ASA声明(2016)：'p值本身不提供良好证据度量。'更好：效应量、CI、贝叶斯因子。统计显著性≠实际显著性。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA130H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

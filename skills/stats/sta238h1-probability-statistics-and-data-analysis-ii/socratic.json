@@ -1,0 +1,86 @@
+{
+  "name": "STA238H1 — Socratic Discovery (Maximum Likelihood Estimation)",
+  "description": "Given i.i.d. data x₁,...,xₙ from distribution with θ, likelihood L(θ)=∏f(xᵢ|θ). MLE θ̂=argmax L(θ). Maximize log ℓ=Σlog f(xᵢ|θ). MLE = parameter makin",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA238H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA238H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Given i.i.d. data x₁,...,xₙ from distribution with θ, likelihood L(θ)=∏f(xᵢ|θ). MLE θ̂=argmax L(θ). Maximize log ℓ=Σlog f(xᵢ|θ). MLE = parameter making observed data MOST PROBABLE.",
+      "template_zh": "MLE θ̂=argmax L(θ)。最大化对数似然ℓ=Σlog f(xᵢ|θ)。MLE=使观测数据最可能的参数。"
+    },
+    {
+      "type": "question",
+      "template_en": "X₁,...,Xₙ~Bernoulli(p): L(p)=p^{Σxᵢ}(1-p)^{n-Σxᵢ}. ℓ=(Σxᵢ)log p+(n-Σxᵢ)log(1-p). dℓ/dp=0 → p̂=Σxᵢ/n=x̄. MLE is the SAMPLE PROPORTION.",
+      "template_zh": "Bernoulli(p): ℓ=(Σxᵢ)log p+(n-Σxᵢ)log(1-p)。dℓ/dp=0→p̂=x̄。MLE=样本比例。"
+    },
+    {
+      "type": "explore",
+      "template_en": "For N(μ,σ²): ∂ℓ/∂μ=0→μ̂=x̄. ∂ℓ/∂σ=0→σ̂²=(1/n)Σ(xᵢ-x̄)². Note: σ̂² is BIASED (divides by n, not n-1).",
+      "template_zh": "对N(μ,σ²): μ̂=x̄。σ̂²=(1/n)Σ(xᵢ-x̄)²。注意：σ̂²有偏(除以n不是n-1)。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "MLE properties (regular): (1) CONSISTENCY: θ̂ₙ→pθ. (2) ASYMPTOTIC NORMALITY: √n(θ̂ₙ-θ)→N(0,I(θ)⁻¹). I(θ)=Fisher info. (3) EFFICIENCY: achieves Cramér-Rao bound. (4) INVARIANCE: if τ=g(θ), τ̂=g(θ̂).",
+      "template_zh": "MLE性质：(1)相合。(2)渐近正态：I(θ)=Fisher信息量。(3)有效：达到Cramér-Rao下界。(4)不变性：τ=g(θ)则τ̂=g(θ̂)。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Poisson(λ): (1) Derive MLE for λ. (2) Fisher information. (3) Asymptotic variance of λ̂? (4) MLE for √λ? (5) In R: compare MLE vs method of moments for n=10 and n=1000.",
+      "template_zh": "Poisson(λ): (1)推导λ的MLE。(2)Fisher信息量。(3)λ̂渐近方差？(4)√λ的MLE？(5)在R中比较n=10和n=1000。"
+    },
+    {
+      "type": "insight",
+      "template_en": "MLE is 'default' because ASYMPTOTICALLY OPTIMAL. Likelihood captures ALL info about θ. Maximizing it extracts maximum info. Fisher Info measures HOW MUCH info data provides about θ.",
+      "template_zh": "MLE是'默认'因渐近最优。似然捕获所有θ信息。最大化它提取最多信息。Fisher信息量衡量数据提供多少θ信息。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA238H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

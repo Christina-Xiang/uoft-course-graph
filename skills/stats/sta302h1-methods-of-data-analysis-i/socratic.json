@@ -1,0 +1,86 @@
+{
+  "name": "STA302H1 — Socratic Discovery (Simple Linear Regression)",
+  "description": "Yᵢ=β₀+β₁Xᵢ+εᵢ, εᵢ~N(0,σ²). β₁=slope, β₀=intercept. OLS: minimize Σ(Yᵢ-β₀-β₁Xᵢ)². β̂₁=S_xy/S_xx, β̂₀=Ȳ-β̂₁X̄.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA302H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA302H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Yᵢ=β₀+β₁Xᵢ+εᵢ, εᵢ~N(0,σ²). β₁=slope, β₀=intercept. OLS: minimize Σ(Yᵢ-β₀-β₁Xᵢ)². β̂₁=S_xy/S_xx, β̂₀=Ȳ-β̂₁X̄.",
+      "template_zh": "Yᵢ=β₀+β₁Xᵢ+εᵢ。OLS最小化Σ(Yᵢ-β₀-β₁Xᵢ)²。"
+    },
+    {
+      "type": "question",
+      "template_en": "Interpretation: Y=house price, X=size. β̂₁=0.5: each additional ft² → expected price ↑ $500. β̂₀=50: expected price at 0 ft² is $50K (extrapolation).",
+      "template_zh": "解释：β̂₁=0.5：每增加一平方英尺，预期价格增加$500。β̂₀=50：外推可能无意义。"
+    },
+    {
+      "type": "explore",
+      "template_en": "ANOVA: SS_total=SS_reg+SS_res. R²=SS_reg/SS_total = variance explained. H₀: β₁=0: t=β̂₁/SE(β̂₁)~t_{n-2} or F=MS_reg/MS_res~F_{1,n-2}. t²=F → same test.",
+      "template_zh": "R²=SS_reg/SS_total。检验H₀:β₁=0: t或F。t²=F→相同检验。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Assumptions: (1) Linearity: E[Y|X]=β₀+β₁X. (2) Independence. (3) Homoscedasticity: Var(εᵢ)=σ². (4) Normality for exact inference. OLS: E[β̂]=β (unbiased), Var(β̂)=σ²(XᵀX)⁻¹.",
+      "template_zh": "假设：(1)线性。(2)独立。(3)同方差。(4)正态性用于精确推断。OLS：无偏。"
+    },
+    {
+      "type": "practice",
+      "template_en": "In R: lm(y~x). (1) Extract β̂₀, β̂₁, R², F. (2) Test H₀:β₁=0. (3) Scatterplot + regression line. (4) Residuals vs fitted — assumptions hold? (5) Predict Y for new X + 95% PI.",
+      "template_zh": "在R中：(1)提取系数、R²、F。(2)检验H₀。(3)散点图+回归线。(4)残差诊断。(5)预测+95%预测区间。"
+    },
+    {
+      "type": "insight",
+      "template_en": "'Regression to the mean' (Galton): children of tall parents taller than avg but shorter than parents. |β₁|<1 → predicted Y CLOSER TO MEAN than X. NOT artifact — real!",
+      "template_zh": "'均值回归'(Galton)：高个子父母的孩子比平均高但比父母矮。|β₁|<1→预测Y比X更接近均值。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA302H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

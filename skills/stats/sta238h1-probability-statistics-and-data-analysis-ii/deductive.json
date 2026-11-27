@@ -1,0 +1,86 @@
+{
+  "name": "STA238H1 — Deductive Derivation (Neyman-Pearson Lemma and Hypothesis Testing)",
+  "description": "Neyman-Pearson Lemma: For H₀:θ=θ₀ vs H₁:θ=θ₁, MOST POWERFUL test at level α rejects when L(θ₀)/L(θ₁)<c. Threshold c chosen so P(reject|H₀)=α. Foundati",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA238H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA238H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Neyman-Pearson Lemma: For H₀:θ=θ₀ vs H₁:θ=θ₁, MOST POWERFUL test at level α rejects when L(θ₀)/L(θ₁)<c. Threshold c chosen so P(reject|H₀)=α. Foundation of optimal testing.",
+      "template_zh": "Neyman-Pearson引理：水平α的最优势检验当L(θ₀)/L(θ₁)<c时拒绝H₀。c选择使P(拒绝|H₀)=α。最优检验基础。"
+    },
+    {
+      "type": "step1",
+      "template_en": "X₁,...,Xₙ~N(μ,1). H₀:μ=0 vs H₁:μ=μ₁>0. LR: L(0)/L(μ₁)=exp[-μ₁Σxᵢ+nμ₁²/2]. Reject when Σxᵢ>k → X̄>k/n. Most powerful test rejects for LARGE X̄.",
+      "template_zh": "N(μ,1): H₀:μ=0 vs H₁:μ=μ₁>0。LR: 当X̄大时拒绝。最优势检验。"
+    },
+    {
+      "type": "step2",
+      "template_en": "t-test: H₀: μ=μ₀ vs H₁: μ≠μ₀. t=(X̄-μ₀)/(S/√n)~t_{n-1} under H₀. Reject when |t|>t_{n-1,α/2}. A LIKELIHOOD RATIO TEST.",
+      "template_zh": "t检验：t=(X̄-μ₀)/(S/√n)~t_{n-1}。|t|>t_{n-1,α/2}时拒绝。似然比检验。"
+    },
+    {
+      "type": "step3",
+      "template_en": "p-value = SMALLEST α where we reject H₀. t-test: p=2×P(T_{n-1}>|t_obs|). p≠P(H₀|data).",
+      "template_zh": "p值=拒绝H₀的最小α。t-test: p=2×P(T_{n-1}>|t_obs|)。p≠P(H₀|data)。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "NP lemma → THEORETICAL gold standard. Practice: LRTs (asymptotically optimal). Simple vs simple: NP exactly most powerful. Composite: need UMP tests (only special cases).",
+      "template_zh": "NP引理→理论金标准。实践：LRT(渐近最优)。简单vs简单：NP恰好最优势。复合：需UMP检验。"
+    },
+    {
+      "type": "meta",
+      "template_en": "Testing ASYMMETRIC: we control P(Type I)=α but H₀ gets 'benefit of the doubt.' Failing to reject ≠ H₀ true. 'Absence of evidence is not evidence of absence.'",
+      "template_zh": "检验不对称：控制P(I类)=α但H₀获'怀疑的好处。'没能拒绝≠H₀真。'没有证据≠证据不存在。'"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA238H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

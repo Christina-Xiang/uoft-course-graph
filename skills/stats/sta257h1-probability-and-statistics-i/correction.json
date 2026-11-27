@@ -1,0 +1,86 @@
+{
+  "name": "STA257H1 — Correction Attribution (Characteristic Functions and CLT)",
+  "description": "'MGFs always exist.' WRONG! Cauchy has NO moments and NO MGF. Characteristic functions φ_X(t)=E[e^{itX}] ALWAYS exist (|e^{itX}|=1). They're the RIGHT",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA257H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA257H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'MGFs always exist.' WRONG! Cauchy has NO moments and NO MGF. Characteristic functions φ_X(t)=E[e^{itX}] ALWAYS exist (|e^{itX}|=1). They're the RIGHT tool for studying convergence.",
+      "template_zh": "'MGF总存在。'错！Cauchy无矩无MGF。特征函数φ_X(t)=E[e^{itX}]总存在。研究收敛的正确工具。"
+    },
+    {
+      "type": "question",
+      "template_en": "φ_X(t)=E[cos(tX)]+iE[sin(tX)]. Properties: φ(0)=1. |φ(t)|≤1. φ_{aX+b}(t)=e^{ibt}φ_X(at). If X,Y independent: φ_{X+Y}=φ_Xφ_Y.",
+      "template_zh": "φ_X(t)=E[cos(tX)]+iE[sin(tX)]。性质：φ(0)=1。|φ(t)|≤1。独立时φ_{X+Y}=φ_Xφ_Y。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Examples: N(0,1): φ(t)=e^{-t²/2}. Bernoulli(p): 1-p+pe^{it}. Poisson(λ): exp(λ(e^{it}-1)). Cauchy: e^{-|t|}. Uniform(0,1): (e^{it}-1)/(it).",
+      "template_zh": "例子：N(0,1): e^{-t²/2}。Bernoulli(p): 1-p+pe^{it}。Poisson(λ): exp(λ(e^{it}-1))。Cauchy: e^{-|t|}。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Lévy Continuity: Xₙ→X in dist ⟺ φ_{Xₙ}→φ_X pointwise and limit continuous at 0. CLT proof: φ_{√n(X̄ₙ-μ)/σ}(t)=(φ_{X₁-μ}(t/(σ√n)))ⁿ→e^{-t²/2}. Cleanest proof of CLT.",
+      "template_zh": "Lévy连续性定理。CLT证明：φ_{√n(X̄ₙ-μ)/σ}(t)→e^{-t²/2}。CLT最干净证明。"
+    },
+    {
+      "type": "practice",
+      "template_en": "(1) CF of Exp(λ). (2) CF of X̄ for Exp(λ) sample. (3) Use CFs to show sum of n i.i.d. Exp(λ) ~ Gamma(n,λ). (4) Show Cauchy is STABLE: average of Cauchy is still Cauchy.",
+      "template_zh": "(1)Exp(λ)的CF。(2)Exp(λ)样本X̄的CF。(3)用CF证i.i.d.Exp(λ)和~Gamma(n,λ)。(4)Cauchy稳定：平均还是Cauchy。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Characteristic functions = most elegant tool: ALWAYS exist, uniquely determine distribution (inversion), convert sums → products. They're the 'Fourier transform' of probability — bridge between time and frequency domains.",
+      "template_zh": "特征函数=最优雅工具：总是存在、唯一确定分布、将和→积。概率的'傅里叶变换'——时域频域桥梁。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA257H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

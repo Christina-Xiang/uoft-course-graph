@@ -1,0 +1,86 @@
+{
+  "name": "STA302H1 — Correction Attribution (Geometry of Least Squares)",
+  "description": "'Correlation implies causation.' NO! Regression shows ASSOCIATION. Ice cream sales ↔ drowning (both ↑ in summer). CONFOUNDER = temperature. Regression",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA302H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA302H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'Correlation implies causation.' NO! Regression shows ASSOCIATION. Ice cream sales ↔ drowning (both ↑ in summer). CONFOUNDER = temperature. Regression doesn't identify causes.",
+      "template_zh": "'相关=因果。'不！回归展示关联。冰淇淋↔溺水(都夏天↑)。混杂=温度。回归不识别因果。"
+    },
+    {
+      "type": "question",
+      "template_en": "Geometric: Y in ℝⁿ. Columns of X span subspace. β̂=(XᵀX)⁻¹XᵀY = PROJECTION of Y onto subspace. Ŷ=HY (H=hat matrix). e=Y-Ŷ=(I-H)Y orthogonal to column space.",
+      "template_zh": "几何：Y在ℝⁿ中。X列张成子空间。β̂=Y的投影。Ŷ=HY。e正交于列空间。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Gauss-Markov: Any linear θ̂=cᵀY. Unbiased ⟺ cᵀX=eⱼᵀ. Var(cᵀY)=σ²‖c‖². OLS c₀=X(XᵀX)⁻¹eⱼ. For any c=c₀+a with aᵀX=0: ‖c‖²=‖c₀‖²+‖a‖²≥‖c₀‖². OLS minimizes variance.",
+      "template_zh": "Gauss-Markov证明：OLS方差最小。任何线性无偏估计c=c₀+a，其中aᵀX=0。‖c‖²=‖c₀‖²+‖a‖²≥‖c₀‖²。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Geometry clarifies: (1) R²=cos²(θ) where θ = angle between Y and Ŷ. (2) Adding predictors NEVER reduces R². (3) Orthogonal = independent estimates. (4) F-test = ratio of squared projection lengths.",
+      "template_zh": "几何澄清：(1)R²=cos²(θ)。(2)添加变量从不降低R²。(3)正交=独立估计。(4)F检验=投影长度平方比。"
+    },
+    {
+      "type": "practice",
+      "template_en": "(1) Show H symmetric and idempotent. (2) I-H also symmetric idempotent. (3) e ⟂ Ŷ. (4) Prove E[MSE]=σ². (5) In R: compute H for simple regression.",
+      "template_zh": "(1)证明H对称幂等。(2)I-H也对称幂等。(3)e⟂Ŷ。(4)E[MSE]=σ²。(5)R中计算简单回归的H。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Geometric view UNIFIES: regression = projection, ANOVA = decomposition into orthogonal subspaces, mixed models = projection onto random effects. Understanding ℝⁿ projections → understanding linear models.",
+      "template_zh": "几何视角统一：回归=投影，ANOVA=正交子空间分解，混合模型=投影到随机效应。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA302H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

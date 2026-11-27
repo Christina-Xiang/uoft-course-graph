@@ -1,0 +1,86 @@
+{
+  "name": "STA261H1 — Correction Attribution (Confidence Regions)",
+  "description": "'95% CI covers 95% of data.' WRONG! CI covers TRUE PARAMETER 95% of time in repeated sampling. About PARAMETER, not data. Prediction interval covers f",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA261H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA261H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'95% CI covers 95% of data.' WRONG! CI covers TRUE PARAMETER 95% of time in repeated sampling. About PARAMETER, not data. Prediction interval covers future obs (different).",
+      "template_zh": "'95%CI覆盖95%数据。'错！CI覆盖真实参数。关于参数，不是数据。预测区间覆盖未来观测。"
+    },
+    {
+      "type": "question",
+      "template_en": "For N(μ,σ²) known σ²: 95% CI = X̄±1.96σ/√n. Unknown σ²: X̄±t·S/√n. JOINT region for (μ,σ²): (n-1)S²/σ²~χ²_{n-1}. Invert → interval for σ².",
+      "template_zh": "μ的95%CI。联合区域：(n-1)S²/σ²~χ²_{n-1}。反演→σ²区间。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Confidence REGIONS: invert LRT. Set {θ: -2logΛ(θ|x)≤χ²_{p,α}} = asymptotic 95% region. 'Inverted test' approach — contains all θ not rejected by α-level test.",
+      "template_zh": "置信区域：反演LRT。区域包含所有不会被α水平检验拒绝的θ。"
+    },
+    {
+      "type": "insight",
+      "template_en": "CIs and tests are DUAL: 95% CI for μ={μ₀: t-test fails to reject μ=μ₀ at α=0.05}. Conceptually important, practically useful. Perform test = check if value lies in CI.",
+      "template_zh": "CI和检验对偶：95%CI={μ₀:t检验不拒绝μ=μ₀}。概念重要实践有用。"
+    },
+    {
+      "type": "practice",
+      "template_en": "(1) 95% CI for σ² given n=25, S²=4. (2) Joint 95% region for (μ,σ²). (3) Shape? (4) Does (μ=5,σ²=10) lie inside if X̄=3? (5) Interpret.",
+      "template_zh": "(1)σ²的95%CI。(2)(μ,σ²)联合95%区域。(3)形状？(4)(μ=5,σ²=10)在区域内？(5)解释。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Confidence regions quantify UNCERTAINTY in MULTIPLE dimensions. Shape reveals correlation. In high dimensions, become 'shells' — parameter likely near boundary (curse of dimensionality).",
+      "template_zh": "置信区域量化多维不确定性。形状揭示相关性。高维中变'壳'——参数可能在边界附近(维数灾难)。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA261H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "STA237H1 — Socratic Discovery (Probability Spaces and Random Variables)",
+  "description": "Probability space (Ω,F,P): Ω=sample space, F=σ-algebra (events), P=probability measure. Random variable X:Ω→ℝ is a FUNCTION assigning a number to each",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA237H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA237H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Probability space (Ω,F,P): Ω=sample space, F=σ-algebra (events), P=probability measure. Random variable X:Ω→ℝ is a FUNCTION assigning a number to each outcome. P(X≤x)=P({ω:X(ω)≤x}).",
+      "template_zh": "概率空间(Ω,F,P)：Ω=样本空间，F=σ-代数，P=概率测度。随机变量X:Ω→ℝ是给每个结果赋数的函数。"
+    },
+    {
+      "type": "question",
+      "template_en": "Roll two dice: Ω={(i,j):1≤i,j≤6}, |Ω|=36. X=sum of dice. P(X=7)=|{(1,6),(2,5),(3,4),(4,3),(5,2),(6,1)}|/36=1/6. X is a FUNCTION, not 'random.' Randomness is in Ω.",
+      "template_zh": "掷两个骰子：X=和。P(X=7)=1/6。X是函数不是随机，随机性在底层Ω。"
+    },
+    {
+      "type": "explore",
+      "template_en": "PMF: p_X(x)=P(X=x). CDF: F_X(x)=P(X≤x). For continuous: PDF f_X(x) where P(a≤X≤b)=∫_a^b f_X(x)dx. CDF works for BOTH.",
+      "template_zh": "PMF: p_X(x)=P(X=x)。CDF: F_X(x)=P(X≤x)。连续：PDF f_X(x)，P(a≤X≤b)=∫_a^b f_X(x)dx。CDF两者都适用。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Properties: P(A^c)=1-P(A). P(A∪B)=P(A)+P(B)-P(A∩B). If A⊆B, P(A)≤P(B). P(∪Aᵢ)≤ΣP(Aᵢ) (Boole). Law of total probability: P(B)=ΣP(B|Aᵢ)P(Aᵢ).",
+      "template_zh": "性质：P(A^c)=1-P(A)。P(A∪B)=P(A)+P(B)-P(A∩B)。全概率公式：P(B)=ΣP(B|Aᵢ)P(Aᵢ)。"
+    },
+    {
+      "type": "practice",
+      "template_en": "From 52 cards, draw 5 no replacement: (1) P(all hearts)? (2) P(at least one ace)? (3) X=number of aces. Find PMF. (4) P(X≥2)? (5) With replacement, how does PMF change?",
+      "template_zh": "52张牌无放回抽5：(1)P(全红心)？(2)P(至少一A)？(3)X=A数，求PMF。(4)P(X≥2)？(5)有放回PMF变化？"
+    },
+    {
+      "type": "insight",
+      "template_en": "Probability = SETS and FUNCTIONS. Kolmogorov's axioms gave rigorous foundation. Measure-theoretic foundation makes modern probability (martingales, Brownian motion) possible.",
+      "template_zh": "概率=集合和函数。Kolmogorov公理赋予严格基础。测度论使现代概率论(鞅、布朗运动)成为可能。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA237H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

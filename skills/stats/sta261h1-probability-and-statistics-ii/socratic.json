@@ -1,0 +1,86 @@
+{
+  "name": "STA261H1 — Socratic Discovery (Sufficiency and Rao-Blackwell)",
+  "description": "T(X) is SUFFICIENT for θ if distribution of X given T doesn't depend on θ. T captures ALL info about θ. Fisher-Neyman: T sufficient ⟺ f(x|θ)=g(T(x),θ)",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA261H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA261H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "T(X) is SUFFICIENT for θ if distribution of X given T doesn't depend on θ. T captures ALL info about θ. Fisher-Neyman: T sufficient ⟺ f(x|θ)=g(T(x),θ)·h(x). h(x) free of θ.",
+      "template_zh": "T(X)对θ充分若给定T时的条件分布不依赖θ。T捕获所有θ信息。Fisher-Neyman因子分解。"
+    },
+    {
+      "type": "question",
+      "template_en": "X₁,...,Xₙ~Bernoulli(p): f(x|p)=p^{Σxᵢ}(1-p)^{n-Σxᵢ}. T=Σxᵢ: g(T,p)=p^T(1-p)^{n-T}. T sufficient. Sample median? NOT sufficient — lose info.",
+      "template_zh": "Bernoulli(p): T=Σxᵢ充分。样本中位数？不充分——丢失信息。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Rao-Blackwell: If θ̂ unbiased and T sufficient, then θ̂*=E[θ̂|T] is: (1) VALID (function of T). (2) UNBIASED. (3) Var(θ̂*)≤Var(θ̂). Equality iff θ̂ already function of T.",
+      "template_zh": "Rao-Blackwell: 若θ̂无偏T充分，则θ̂*=E[θ̂|T]：(1)有效。(2)无偏。(3)方差≤Var(θ̂)。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Example: X₁,...,Xₙ~Poisson(λ). Unbiased for e^{-λ}: δ₀=I(X₁=0). T=ΣXᵢ sufficient. δ*=E[δ₀|T=t]=((n-1)/n)^t.",
+      "template_zh": "例：Poisson(λ)。e^{-λ}无偏估计：δ₀=I(X₁=0)。T=ΣXᵢ充分。δ*=E[δ₀|T=t]=((n-1)/n)^t。"
+    },
+    {
+      "type": "practice",
+      "template_en": "(1) Show X̄ sufficient for μ in N(μ,σ²) with known σ². (2) For X~Unif(0,θ), find sufficient statistic. (3) For Bernoulli(p), improve δ=I(X₁=1,X₂=0) via Rao-Blackwell. (4) UMVUE for p is X̄.",
+      "template_zh": "(1)N(μ,σ²)中X̄对μ充分。(2)Unif(0,θ)找充分统计量。(3)用Rao-Blackwell改进估计。(4)p的UMVUE是X̄。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Rao-Blackwell: OPTIMAL estimators by (1) any unbiased estimator → (2) condition on sufficient T. Never WORSE. Reduces search for UMVUE to functions of sufficient stats. Lehmann-Scheffé: if T COMPLETE sufficient → UNIQUE UMVUE.",
+      "template_zh": "Rao-Blackwell：通过(1)任意无偏估计→(2)在充分T上取条件找到最优估计。从不更差。将UMVUE搜索简化为充分统计量的函数。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA261H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

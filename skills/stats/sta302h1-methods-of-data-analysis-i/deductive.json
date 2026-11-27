@@ -1,0 +1,86 @@
+{
+  "name": "STA302H1 — Deductive Derivation (Multiple Regression and Diagnostics)",
+  "description": "Y=Xβ+ε. β̂=(XᵀX)⁻¹XᵀY. Gauss-Markov: OLS is BLUE. Var(β̂)=σ²(XᵀX)⁻¹. Each β̂ⱼ = PARTIAL effect of Xⱼ on Y, holding others constant.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA302H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA302H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Y=Xβ+ε. β̂=(XᵀX)⁻¹XᵀY. Gauss-Markov: OLS is BLUE. Var(β̂)=σ²(XᵀX)⁻¹. Each β̂ⱼ = PARTIAL effect of Xⱼ on Y, holding others constant.",
+      "template_zh": "Y=Xβ+ε。β̂=(XᵀX)⁻¹XᵀY。Gauss-Markov: OLS是BLUE。每个β̂ⱼ是偏效应。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Residual diagnostics: (1) Constant variance: residuals vs fitted. (2) Normality: Q-Q. (3) Independence: Durbin-Watson. (4) Linearity: partial residual plots.",
+      "template_zh": "残差诊断：(1)同方差：残差vs拟合。(2)正态性：Q-Q。(3)独立性：Durbin-Watson。(4)线性：偏残差图。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Influential points: (1) LEVERAGE hᵢᵢ from hat matrix H. (2) OUTLIER: |studentized residual|>3. (3) INFLUENTIAL: Cook's D>4/n. High leverage + outlier = dangerous!",
+      "template_zh": "影响点：(1)杠杆值hᵢᵢ。(2)异常值：|学生化残差|>3。(3)影响点：Cook D>4/n。高杠杆+异常值=危险！"
+    },
+    {
+      "type": "step3",
+      "template_en": "Multicollinearity: VIFⱼ=1/(1-R²_{Xⱼ|others}). VIF>10 → serious. Effects: inflated SEs, unstable estimates. Solutions: (1) Remove. (2) Ridge. (3) PCA.",
+      "template_zh": "共线性：VIF>10→严重。影响：SE膨胀、估计不稳定。解决：(1)移除。(2)岭回归。(3)主成分。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Variable selection: (1) Stepwise — fast but overfits. (2) All subsets — expensive. (3) AIC/BIC: lower better. (4) LASSO — L1 regularization, automatic selection.",
+      "template_zh": "变量选择：(1)逐步——快速但过拟合。(2)全子集——昂贵。(3)AIC/BIC：越低越好。(4)LASSO——自动选择。"
+    },
+    {
+      "type": "meta",
+      "template_en": "Multiple regression = 'Swiss Army Knife.' Used in: economics (hedonic pricing), epidemiology (adjusting confounders), ML (linear basis expansion). Diagnostics are ESSENTIAL for valid inference.",
+      "template_zh": "多元回归='瑞士军刀'。用于经济学、流行病学、机器学习。诊断是有效推断的必要条件。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA302H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

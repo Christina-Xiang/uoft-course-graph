@@ -1,0 +1,86 @@
+{
+  "name": "STA303H1 — Deductive Derivation (Mixed Effects Models)",
+  "description": "Fixed effects: levels we care about (e.g., drug vs placebo). Random effects: SAMPLE from larger population (students from schools). Mixed = BOTH.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA303H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA303H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Fixed effects: levels we care about (e.g., drug vs placebo). Random effects: SAMPLE from larger population (students from schools). Mixed = BOTH.",
+      "template_zh": "固定效应：关心的水平(如药物vs安慰剂)。随机效应：大总体的样本(来自学校的学生)。混合=两者。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Y=Xβ+Zγ+ε, β=fixed, γ~N(0,G)=random, ε~N(0,R). Var(Y)=ZGZᵀ+R. Estimation: REML (unbiased variance) rather than ML.",
+      "template_zh": "Y=Xβ+Zγ+ε。估计：REML(无偏方差)优于ML。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Students nested in schools: Yᵢⱼ=μ+Schoolᵢ+εᵢⱼ, Schoolᵢ~N(0,σ²_school). ICC=σ²_school/(σ²_school+σ²)=intraclass correlation — variance due to schools.",
+      "template_zh": "学生嵌套学校：Yᵢⱼ=μ+Schoolᵢ+εᵢⱼ。ICC=组内相关系数。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Longitudinal: Yᵢⱼ=β₀+β₁tⱼ+uᵢ+εᵢⱼ (random intercept). Can add random slope: Yᵢⱼ=β₀+β₁tⱼ+u_{0i}+u_{1i}tⱼ+εᵢⱼ (own trajectory per subject).",
+      "template_zh": "纵向：随机截距。可加随机斜率：每个受试者自己的轨迹。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Why mixed models? (1) Correct SEs for clustered data. (2) Borrow strength: partial pooling (shrinkage). (3) Unbalanced data. (4) Complex correlations.",
+      "template_zh": "为什么混合模型？(1)聚类数据校正SE。(2)借用力量：部分池化。(3)不平衡数据。(4)复杂相关。"
+    },
+    {
+      "type": "meta",
+      "template_en": "Mixed models use SHRINKAGE (like ridge): random effects 'shrunk' toward zero vs fitting each group separately. Improves prediction (bias-variance tradeoff). ESSENTIAL for small group sizes.",
+      "template_zh": "混合模型使用收缩(如岭)：随机效应'收缩'向零。改进预测(偏差-方差权衡)。小组样本量时至关重要。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA303H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

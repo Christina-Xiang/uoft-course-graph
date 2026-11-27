@@ -1,0 +1,86 @@
+{
+  "name": "STA303H1 — Socratic Discovery (ANOVA and Experimental Design)",
+  "description": "ANOVA tests if k group means EQUAL. H₀: μ₁=μ₂=...=μₖ. Compare BETWEEN-group vs WITHIN-group variability. F = MS_between/MS_within ~ F_{k-1,n-k} under ",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA303H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA303H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "ANOVA tests if k group means EQUAL. H₀: μ₁=μ₂=...=μₖ. Compare BETWEEN-group vs WITHIN-group variability. F = MS_between/MS_within ~ F_{k-1,n-k} under H₀.",
+      "template_zh": "ANOVA检验k组均值相等。H₀: μ₁=μ₂=...=μₖ。比较组间vs组内变异。F=MS_between/MS_within~F_{k-1,n-k}。"
+    },
+    {
+      "type": "question",
+      "template_en": "One-way ANOVA: Yᵢⱼ=μ+αᵢ+εᵢⱼ, αᵢ=group effect, Σαᵢ=0. SS_between=Σnᵢ(Ȳᵢ.-Ȳ..)². SS_within. Reject if F>F_crit. Post-hoc: Tukey's HSD for pairwise comparisons.",
+      "template_zh": "单因素ANOVA: Yᵢⱼ=μ+αᵢ+εᵢⱼ。事后：Tukey HSD用于配对比较。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Two-way ANOVA: Yᵢⱼₖ=μ+αᵢ+βⱼ+(αβ)ᵢⱼ+εᵢⱼₖ. Tests: (1) Factor A. (2) Factor B. (3) INTERACTION. Parallel lines = no interaction. Crossing = interaction.",
+      "template_zh": "双因素ANOVA。检验：(1)A主效应。(2)B主效应。(3)交互。平行线=无交互。交叉=有交互。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Assumptions: (1) Independence. (2) Homoscedasticity (Levene's test). (3) Normality (Q-Q). ANOVA ROBUST to normality violations for moderate n (CLT). Welch's ANOVA if variances unequal.",
+      "template_zh": "假设：(1)独立。(2)同方差(Levene检验)。(3)正态(Q-Q)。中等n时ANOVA稳健。方差不等用Welch。"
+    },
+    {
+      "type": "practice",
+      "template_en": "In R: summary(aov(y~group)). (1) Interpret F-test. (2) Check residuals. (3) TukeyHSD(). Which groups differ? (4) Add block: aov(y~group+block). Why block? (5) Effect sizes η², ω².",
+      "template_zh": "在R中：(1)解释F检验。(2)检查残差。(3)TukeyHSD()。哪些组不同？(4)加区组。为什么？(5)效应量η²,ω²。"
+    },
+    {
+      "type": "insight",
+      "template_en": "ANOVA = SPECIAL CASE of linear regression. F-test for group differences = F-test for β₁=...=β_{k-1}=0 with k-1 dummy variables. 'ANOVA' and 'regression' are SAME model — historical terminology.",
+      "template_zh": "ANOVA=线性回归特例。组差异F检验=有k-1个虚拟变量的回归。'ANOVA'和'回归'相同模型——历史术语。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA303H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

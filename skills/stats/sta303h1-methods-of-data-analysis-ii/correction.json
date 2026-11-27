@@ -1,0 +1,86 @@
+{
+  "name": "STA303H1 — Correction Attribution (Generalized Linear Models)",
+  "description": "'Logistic regression = logit transform Y.' WRONG! Logistic models log-ODDS. Y is BINARY. Y~Bernoulli(p), model log(p/(1-p))=Xβ. We model PROBABILITY t",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA303H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA303H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'Logistic regression = logit transform Y.' WRONG! Logistic models log-ODDS. Y is BINARY. Y~Bernoulli(p), model log(p/(1-p))=Xβ. We model PROBABILITY through LINK FUNCTION.",
+      "template_zh": "'逻辑回归=logit变换Y。'错！Y二元，Y~Bernoulli(p)，通过连接函数建模概率。"
+    },
+    {
+      "type": "question",
+      "template_en": "GLM = distribution + link function. (1) RANDOM: Y~Exponential Family. (2) SYSTEMATIC: η=Xβ. (3) LINK: g(μ)=η where μ=E[Y]. Link connects mean to linear predictor.",
+      "template_zh": "GLM=分布+连接函数。连接函数将均值连接到线性预测器。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Common GLMs: (1) Linear: Normal, identity. (2) Logistic: Binomial, logit. (3) Poisson: Poisson, log. (4) Gamma: Gamma, inverse. Each natural for the data type.",
+      "template_zh": "常见GLM：(1)线性：恒等。(2)逻辑：logit。(3)泊松：log。(4)Gamma：倒数。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Estimation via IRLS: compute working weights and response at each step, fit weighted LS. Converges rapidly. Deviance = -2log-likelihood ratio, generalizes residual SS.",
+      "template_zh": "通过IRLS估计：每步计算工作权重和响应，拟合加权最小二乘。快速收敛。偏差=-2对数似然比。"
+    },
+    {
+      "type": "practice",
+      "template_en": "For a binary outcome: (1) Fit logistic: glm(y~x, family=binomial). (2) Interpret coefficients as log-odds ratios. (3) Compute odds ratios. (4) Predict probabilities. (5) Check goodness-of-fit: deviance residuals.",
+      "template_zh": "二分类结果：(1)拟合逻辑回归。(2)解释系数为log-比值比。(3)计算比值比。(4)预测概率。(5)检查拟合优度。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "GLMs UNIFY linear, logistic, Poisson, Gamma regression under one framework. They're the workhorse of applied statistics. Modern extensions: GAMs (smooth terms), GLMMs (random effects), zero-inflated models.",
+      "template_zh": "GLM在线性、逻辑、泊松、Gamma回归下统一。现代扩展：GAM(平滑项)、GLMM(随机效应)、零膨胀模型。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA303H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

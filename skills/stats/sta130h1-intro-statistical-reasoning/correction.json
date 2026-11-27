@@ -1,0 +1,86 @@
+{
+  "name": "STA130H1 — Correction Attribution (Confidence Intervals)",
+  "description": "'95% CI means 95% probability parameter is in [a,b].' WRONG! Parameter is FIXED. 95% CI: if repeated sampling, ~95% of intervals would contain the tru",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA130H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA130H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'95% CI means 95% probability parameter is in [a,b].' WRONG! Parameter is FIXED. 95% CI: if repeated sampling, ~95% of intervals would contain the true parameter.",
+      "template_zh": "'95%CI意味着参数95%概率在区间内。'错！参数固定。95%CI：重复抽样时约95%区间含真实参数。"
+    },
+    {
+      "type": "question",
+      "template_en": "For x̄ from N(μ,σ²) with known σ: 95% CI = x̄±1.96σ/√n. Unknown σ: use t: x̄±t_{n-1}·s/√n. Why t? Estimating σ adds uncertainty → wider intervals.",
+      "template_zh": "σ已知：x̄±1.96σ/√n。σ未知：用t: x̄±t_{n-1}·s/√n。为什么t？估计σ增加了不确定性→更宽区间。"
+    },
+    {
+      "type": "explore",
+      "template_en": "CI = set of parameter values NOT rejected by two-sided test at α. Inversion: 95% CI contains all μ₀ where t-test fails to reject H₀: μ=μ₀. Duality is FUNDAMENTAL.",
+      "template_zh": "CI=在α水平双侧检验中不被拒绝的参数值集合。95%CI包含所有t检验不拒绝的μ₀。对偶性是基本的。"
+    },
+    {
+      "type": "insight",
+      "template_en": "95% CI communicates BOTH estimate (center) AND precision (width). Wide CI → imprecise. Narrow CI → precise. CI is MORE INFORMATIVE than p-value — shows RANGE of plausible effect sizes.",
+      "template_zh": "95%CI同时传达估计(中心)和精度(宽度)。宽CI→不精确。窄CI→精确。CI比p值更提供信息——展示可能的效应量范围。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Study: mean diff=2.3, 95% CI=[0.8,3.8], p=0.003. (1) Interpret CI correctly. (2) Would 99% CI be wider/narrower? (3) Would 90% CI include 0? (4) If n doubled, interval wider/narrower? (5) What does CI tell that p doesn't?",
+      "template_zh": "研究：均值差=2.3, 95% CI=[0.8,3.8], p=0.003。(1)正确解释CI。(2)99%CI更宽/窄？(3)90%CI包含0吗？(4)n翻倍区间更宽/窄？(5)CI告诉了什么p没告诉的？"
+    },
+    {
+      "type": "reflection",
+      "template_en": "CI ≠ Bayesian credible interval (though numerically similar). 95% credible: '95% probability parameter is in this range (given data + prior).' What most people THINK a CI means — needs Bayes.",
+      "template_zh": "CI≠贝叶斯可信区间(数值常相似)。95%可信：'参数有95%概率在此范围(给定数据和先验)。'大多数人认为CI的意思——需贝叶斯。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA130H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

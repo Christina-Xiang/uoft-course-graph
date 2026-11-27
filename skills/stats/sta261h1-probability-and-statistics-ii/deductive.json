@@ -1,0 +1,86 @@
+{
+  "name": "STA261H1 — Deductive Derivation (Likelihood Ratio Tests)",
+  "description": "LRT: H₀:θ∈Θ₀ vs H₁:θ∈Θ₁. Λ(x)=sup_{Θ₀}L(θ)/sup_{Θ}L(θ). Reject when Λ<c (H₀ much less likely). Generalization of Neyman-Pearson to COMPOSITE hypothese",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA261H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA261H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "LRT: H₀:θ∈Θ₀ vs H₁:θ∈Θ₁. Λ(x)=sup_{Θ₀}L(θ)/sup_{Θ}L(θ). Reject when Λ<c (H₀ much less likely). Generalization of Neyman-Pearson to COMPOSITE hypotheses.",
+      "template_zh": "LRT: Λ(x)=sup_{Θ₀}L(θ)/sup_{Θ}L(θ)。Λ小时拒绝。Neyman-Pearson到复合假设的推广。"
+    },
+    {
+      "type": "step1",
+      "template_en": "N(μ,σ²), both unknown. H₀:μ=μ₀. Λ=(σ̂₀²/σ̂²)^{-n/2}. Reject when Λ small ⟺ [Σ(xᵢ-μ₀)²/Σ(xᵢ-x̄)²] large ⟺ |t| large (t test!).",
+      "template_zh": "N(μ,σ²)都未知。H₀:μ=μ₀。Λ=(σ̂₀²/σ̂²)^{-n/2}。Λ小→t检验。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Wilks' Theorem: under H₀, -2logΛ→χ²_{dim(Θ)-dim(Θ₀)} in distribution. WHY we compute asymptotic p-values without exact sampling distribution! Critical values from χ² table.",
+      "template_zh": "Wilks定理：-2logΛ→χ²分布。这就是为什么可以计算渐近p值而无需精确抽样分布！"
+    },
+    {
+      "type": "step3",
+      "template_en": "Logistic regression: H₀: β₁=β₂=0. Full: β₀+β₁x₁+β₂x₂. Reduced: β₀ only. Λ=L(reduced)/L(full). -2logΛ>χ²_{2,0.05} → reject. The 'deviance test' in GLM.",
+      "template_zh": "逻辑回归：H₀:β₁=β₂=0。全模型vs简化。-2logΛ>χ²_{2,0.05}→拒绝。GLM中的'偏差检验'。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "LRTs WIDELY applicable: t, F, χ², deviance tests — ALL special cases. ASYMPTOTICALLY optimal. Cost: χ² approx poor for small n. Use exact (t, F) when available.",
+      "template_zh": "LRT广泛适用：t、F、χ²、偏差检验——都是特例。渐近最优。代价：小n时χ²近似不佳。"
+    },
+    {
+      "type": "meta",
+      "template_en": "LRT reveals UNIFYING principle: compare MAXIMIZED likelihoods. Extends to: (1) AIC/BIC (penalized log-likelihood). (2) Score tests. (3) Wald tests. The 'Holy Trinity' of testing.",
+      "template_zh": "LRT揭示统一原理：比较最大化似然。扩展到AIC/BIC、Score检验、Wald检验。检验的'神圣三一'。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA261H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

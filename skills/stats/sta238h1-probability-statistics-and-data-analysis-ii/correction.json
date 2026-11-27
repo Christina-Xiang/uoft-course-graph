@@ -1,0 +1,86 @@
+{
+  "name": "STA238H1 — Correction Attribution (Linear Models)",
+  "description": "'Linear regression assumes X is normal.' FALSE! Assumptions on ERRORS εᵢ: (1) E[εᵢ]=0. (2) Var(εᵢ)=σ². (3) Independent. (4) εᵢ~N(0,σ²) for inference.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA238H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA238H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'Linear regression assumes X is normal.' FALSE! Assumptions on ERRORS εᵢ: (1) E[εᵢ]=0. (2) Var(εᵢ)=σ². (3) Independent. (4) εᵢ~N(0,σ²) for inference.",
+      "template_zh": "'线性回归假设X正态。'错！假设在误差上：(1)E[εᵢ]=0。(2)Var(εᵢ)=σ²。(3)独立。(4)εᵢ~N(0,σ²)用于推断。"
+    },
+    {
+      "type": "question",
+      "template_en": "Yᵢ=β₀+β₁Xᵢ+εᵢ. OLS: minimize Σ(Yᵢ-β₀-β₁Xᵢ)². β̂₁=Σ(Xᵢ-X̄)(Yᵢ-Ȳ)/Σ(Xᵢ-X̄)², β̂₀=Ȳ-β̂₁X̄. Gauss-Markov: OLS is BLUE.",
+      "template_zh": "OLS最小化Σ(Yᵢ-β₀-β₁Xᵢ)²。β̂₁=Σ(Xᵢ-X̄)(Yᵢ-Ȳ)/Σ(Xᵢ-X̄)²。Gauss-Markov: OLS是BLUE。"
+    },
+    {
+      "type": "explore",
+      "template_en": "R²=1-SS_res/SS_total. adjR² adjusts for predictors. F-test: all βⱼ=0. t-test: individual βⱼ=0. Residuals vs fitted: check homoscedasticity. Q-Q: check normality.",
+      "template_zh": "R²=1-SS_res/SS_total。F检验：所有βⱼ=0。t检验：单个βⱼ=0。残差vs拟合检查方差齐性。Q-Q检查正态性。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Diagnostics MORE important than p-values. Check: (1) Linearity. (2) Constant variance. (3) Normality. (4) Independence. (5) Influential points (Cook's distance).",
+      "template_zh": "诊断比p值更重要。检查：(1)线性。(2)常数方差。(3)正态性。(4)独立性。(5)影响点(Cook距离)。"
+    },
+    {
+      "type": "practice",
+      "template_en": "In R: lm(weight~height, data=women). (1) Interpret β̂₀, β̂₁. (2) Test H₀: β₁=0. (3) R². (4) Plot residuals. (5) Add quadratic: lm(weight~height+I(height²)). Does R² improve?",
+      "template_zh": "在R中拟合线性模型：(1)解释β̂₀,β̂₁。(2)检验H₀:β₁=0。(3)R²。(4)残差图。(5)加二次项：R²改善了吗？"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Linear models are the FOUNDATION. Modern extensions: GLMs (logistic, Poisson), mixed models (random effects), GAMs (smooth terms), regularization (ridge, lasso). All BUILD on linear model framework.",
+      "template_zh": "线性模型是基础。现代扩展：GLM、混合模型、GAM、正则化。都建立在线性模型框架上。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA238H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

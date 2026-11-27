@@ -1,0 +1,86 @@
+{
+  "name": "STA237H1 — Deductive Derivation (Law of Large Numbers and Central Limit Theorem)",
+  "description": "X₁,...,Xₙ i.i.d. with mean μ, variance σ². X̄ₙ=(1/n)ΣXᵢ. WLLN: P(|X̄ₙ-μ|>ε)→0. SLLN: P(lim X̄ₙ=μ)=1. Average CONVERGES to expectation. Why polling wor",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "STA237H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "STA237H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "X₁,...,Xₙ i.i.d. with mean μ, variance σ². X̄ₙ=(1/n)ΣXᵢ. WLLN: P(|X̄ₙ-μ|>ε)→0. SLLN: P(lim X̄ₙ=μ)=1. Average CONVERGES to expectation. Why polling works!",
+      "template_zh": "WLLN: P(|X̄ₙ-μ|>ε)→0。SLLN: P(lim X̄ₙ=μ)=1。均值收敛到期望。这就是民调有效的原因！"
+    },
+    {
+      "type": "step1",
+      "template_en": "WLLN proof (Chebyshev): P(|X̄ₙ-μ|>ε) ≤ σ²/(nε²) → 0. Needs finite variance. SLLN deeper: needs E[|X₁|]<∞, martingale convergence.",
+      "template_zh": "WLLN证明(Chebyshev): P(|X̄ₙ-μ|>ε)≤σ²/(nε²)→0。需方差有限。SLLN更深。"
+    },
+    {
+      "type": "step2",
+      "template_en": "CLT: √n(X̄ₙ-μ)/σ → N(0,1) in distribution. Sample mean → NORMAL regardless of underlying distribution (if variance finite). Why normal is UNIVERSAL in statistics.",
+      "template_zh": "CLT: √n(X̄ₙ-μ)/σ→N(0,1)依分布。样本均值→正态不论底层分布。正态是统计中普适的。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Die roll (uniform {1..6}, μ=3.5, σ²=2.92). Roll 30 dice, average. Repeat 1000× → histogram is NORMAL, not uniform! CLT in action.",
+      "template_zh": "掷骰子(均匀，μ=3.5)。掷30次取平均。重复1000次→直方图正态！CLT在行动。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "LLN: more data → better estimate. CLT: uncertainty ~ normal (large n). Together justify: polling, quality control, Monte Carlo, confidence intervals.",
+      "template_zh": "LLN: 更多数据→更好估计。CLT: 不确定性近似正态。一起证明：民调、质量控制、蒙特卡洛、置信区间。"
+    },
+    {
+      "type": "meta",
+      "template_en": "'Emergence of certainty from randomness' is deepest insight. LLN+CLT explain WHY statistics works: individual unpredictable, AGGREGATES predictable. Monte Carlo method key application.",
+      "template_zh": "'从随机涌现确定性'是最深刻洞见。LLN+CLT解释为什么统计有效：个体不可预测，聚合可预测。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "stats",
+    "course": "STA237H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}
