@@ -1,0 +1,86 @@
+{
+  "name": "CSC236H1 — Correction Attribution (Decidable vs Recognizable Languages)",
+  "description": "Common error: confusing decidable with recognizable. A language L is DECIDABLE if some Turing machine halts on ALL inputs (accepts if w∈L, rejects if ",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC236H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC236H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: confusing decidable with recognizable. A language L is DECIDABLE if some Turing machine halts on ALL inputs (accepts if w∈L, rejects if w∉L). RECOGNIZABLE = halts (accepts) on strings in L but may LOOP on strings not in L. Decidable is STRONGER.",
+      "template_zh": "常见错误：混淆可判定与可识别。语言L可判定：存在图灵机在所有输入上停机（若w∈L接受，若w∉L拒绝）。可识别：对L中串停机（接受），对不在L中的串可能循环。可判定更强。"
+    },
+    {
+      "type": "question",
+      "template_en": "The Halting Problem HALT = {⟨M,w⟩ | M halts on w}. Is it recognizable? Yes — run M on w; if M halts, accept. If M loops, the recognizer also loops. This is fine for recognizability. Is it decidable? No — we proved it's undecidable by diagonalization.",
+      "template_zh": "停机问题 HALT = {⟨M,w⟩ | M在w上停机}。它是可识别的吗？是——在w上运行M；若M停机则接受。若M循环，识别器也循环。这对可识别性没问题。它是可判定的吗？否——我们用对角化证明了它不可判定。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Theorem: L is decidable ⟺ BOTH L and its complement are recognizable. Proof (⟹): If L decidable by TM M, then M recognizes L. Flip accept/reject to recognize complement. Proof (⟸): If L recognized by M₁ and complement by M₂, run M₁ and M₂ in parallel. One must halt. If M₁ halts → accept. If M₂ halts → reject.",
+      "template_zh": "定理：L可判定 ⟺ L和它的补都可识别。证明(⟹)：若L由TM M判定，则M识别L。翻转接受/拒绝来识别补。证明(⟸)：若L由M₁识别，补由M₂识别，并行运行M₁和M₂。其中一个必停机。若M₁停机→接受。若M₂停机→拒绝。"
+    },
+    {
+      "type": "insight",
+      "template_en": "The parallel simulation is key: it converts a recognizer into a decider by also running the complement recognizer. If only ONE recognizer exists (not the complement), the language is recognizable but NOT decidable. The Halting Problem is the classic example: recognizable, not decidable.",
+      "template_zh": "并行模拟是关键：通过同时运行补的识别器，将识别器转换为判定器。如果只有一个识别器存在（补的没有），语言是可识别的但不可判定。停机问题是经典例子：可识别，不可判定。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Classify each as decidable, recognizable but not decidable, or not recognizable: (1) {⟨M⟩ | M prints 'hello'}. (2) {⟨M⟩ | M has exactly 5 states}. (3) {⟨M⟩ | M accepts ε}. (4) {⟨M⟩ | M rejects all inputs}. For each, explain your reasoning using reductions.",
+      "template_zh": "将每个分类为可判定、可识别但不可判定、或不可识别：(1){⟨M⟩ | M打印'hello'}。(2){⟨M⟩ | M恰好有5个状态}。(3){⟨M⟩ | M接受ε}。(4){⟨M⟩ | M拒绝所有输入}。对每个，用归约解释你的推理。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Three categories: DECIDABLE (both L and ¬L recognizable), RECOGNIZABLE (but not decidable — L recognizable, ¬L not), NOT RECOGNIZABLE (neither L nor ¬L recognizable). The Halting Problem is in category 2. Its complement (does NOT halt) is in category 3.",
+      "template_zh": "三个类别：可判定（L和¬L都可识别）、可识别但不可判定（L可识别，¬L不可）、不可识别（L和¬L都不可识别）。停机问题在第2类。它的补（不停机）在第3类。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC236H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

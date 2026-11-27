@@ -1,0 +1,86 @@
+{
+  "name": "CSC209H1 — Deductive Derivation (UNIX Processes and System Calls)",
+  "description": "A process = program in execution. Each process has: PID, memory space, open files, registers. fork() CREATES a new process — returns 0 to child, child",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC209H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC209H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "A process = program in execution. Each process has: PID, memory space, open files, registers. fork() CREATES a new process — returns 0 to child, child PID to parent. After fork, BOTH processes continue from SAME point. They have IDENTICAL memory but SEPARATE copies (copy-on-write).",
+      "template_zh": "进程=执行中的程序。每个进程有：PID、内存空间、打开文件、寄存器。fork()创建新进程——子进程返回0，父进程返回子PID。fork后两个进程从同一点继续。内存相同但分离（写时复制）。"
+    },
+    {
+      "type": "step1",
+      "template_en": "fork() example: pid = fork(); if (pid == 0) { // child code } else { // parent code }. Common pattern: fork + exec. Child calls execvp() to load a NEW program (replace its memory). Parent waits with waitpid() for child to finish. This is how your SHELL runs commands.",
+      "template_zh": "fork()例子：if(pid==0){子进程代码}else{父进程代码}。常见模式：fork+exec。子进程调用execvp()加载新程序（替换其内存）。父进程用waitpid()等待子进程完成。这就是shell运行命令的方式。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Inter-Process Communication (IPC): (1) Pipes: int pipe(int fd[2]); fd[0]=read end, fd[1]=write end. Used for parent-child communication. (2) Signals: kill(pid, SIGINT) — async notification. (3) Shared memory: multiple processes access same memory region (shmget, shmat). (4) Sockets: networking.",
+      "template_zh": "进程间通信(IPC)：(1)管道：pipe(int fd[2])；fd[0]=读端，fd[1]=写端。用于父子通信。(2)信号：kill(pid, SIGINT)——异步通知。(3)共享内存。(4)套接字：网络。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Signals: SIGINT (Ctrl+C), SIGKILL (cannot be caught), SIGTERM (graceful termination). Signal handlers: void handler(int sig) { /* cleanup */ }; signal(SIGINT, handler). But handlers should be MINIMAL: only set a flag because async-signal-unsafe functions (malloc, printf) can't be called safely.",
+      "template_zh": "信号：SIGINT(Ctrl+C)、SIGKILL(不能捕获)、SIGTERM(优雅终止)。信号处理器应尽量小：只设一个标志，因为async-signal不安全的函数(malloc, printf)不能安全调用。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Processes vs Threads: processes have SEPARATE address spaces (isolated, heavy context switch). Threads share address space (shared memory, light context switch). But in C: no built-in threads — use pthreads library. Processes ≠ threads: choose based on isolation vs sharing needs.",
+      "template_zh": "进程vs线程：进程有独立地址空间（隔离、重上下文切换）。线程共享地址空间（共享内存、轻量切换）。但C无内置线程——用pthreads库。基于隔离vs共享需求选择。"
+    },
+    {
+      "type": "meta",
+      "template_en": "'Everything in Unix is a file.' Files, pipes, sockets, devices — all accessed through file descriptors (fd). stdin=0, stdout=1, stderr=2. Redirection: close(0); open('file.txt', O_RDONLY) — replaces stdin. This UNIFORMITY is the power of Unix — a pipe works like a file works like a socket.",
+      "template_zh": "'Unix中一切都是文件。'文件、管道、套接字、设备——都通过文件描述符(fd)访问。stdin=0, stdout=1, stderr=2。这种统一性是Unix的力量——管道像文件一样工作，文件像套接字一样工作。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC209H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

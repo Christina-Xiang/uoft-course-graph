@@ -1,0 +1,86 @@
+{
+  "name": "CSC207H1 — Deductive Derivation (Design Patterns)",
+  "description": "Design patterns = proven SOLUTIONS to recurring design problems. Categories: (1) CREATIONAL — object creation (Singleton, Factory, Builder). (2) STRUC",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC207H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC207H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Design patterns = proven SOLUTIONS to recurring design problems. Categories: (1) CREATIONAL — object creation (Singleton, Factory, Builder). (2) STRUCTURAL — object composition (Adapter, Decorator, Composite). (3) BEHAVIORAL — object interaction (Observer, Strategy, Command).",
+      "template_zh": "设计模式=对反复出现的设计问题的成熟解决方案。三类：(1)创建型——对象创建。(2)结构型——对象组合。(3)行为型——对象交互。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Singleton: ENSURE a class has exactly ONE instance. Python: class Singleton: _instance = None; def __new__(cls): if cls._instance is None: cls._instance = super().__new__(cls); return cls._instance. Use for: logging, configuration, database connection pool. But beware: makes testing hard.",
+      "template_zh": "单例：确保一个类只有一个实例。Python实现。用于：日志、配置、数据库连接池。但注意：使测试困难。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Strategy Pattern: define a FAMILY of algorithms, encapsulate each, make them interchangeable. Example: SortingStrategy — BubbleSort, QuickSort, MergeSort. Context chooses at runtime. Instead of if-elif chains for algorithms, encapsulate each in its OWN class.",
+      "template_zh": "策略模式：定义算法族，封装每个使可互换。例：SortingStrategy——BubbleSort、QuickSort、MergeSort。运行时选择。不用if-elif链，每个算法封装在自己的类中。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Observer Pattern: ONE-to-MANY dependency. When subject changes state, ALL observers are notified automatically. Python: observers = []; def register(o): observers.append(o); def notify(): for o in observers: o.update(). Used in: event systems, MVC architecture, GUI listeners.",
+      "template_zh": "观察者模式：一对多依赖。主体状态变化时自动通知所有观察者。用于：事件系统、MVC架构、GUI监听器。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Patterns are NOT recipes to copy — they're VOCABULARY for design. 'We should use Strategy here' communicates more than 'let's make a bunch of classes.' But DON'T overuse: 'If all you have is a hammer, everything looks like a nail.' Simpler solutions are often better.",
+      "template_zh": "模式不是要抄的菜谱——它们是设计的词汇。但别过度使用：'如果你只有锤子，看什么都像钉子。'更简单的方案常常更好。"
+    },
+    {
+      "type": "meta",
+      "template_en": "The GOF book (Gang of Four: Design Patterns) is the classic. But MODERN evolution: (1) Functional programming reduces need for some patterns. (2) Python decorators replace the Decorator pattern. (3) First-class functions make Strategy trivial. KNOW the patterns, but also know WHEN NOT TO USE them.",
+      "template_zh": "GOF书（设计模式）是经典。但现代演变：(1)函数式编程减少某些模式需求。(2)Python装饰器替代Decorator模式。(3)一等函数使Strategy变得简单。了解模式，也知道什么时候不该用。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC207H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

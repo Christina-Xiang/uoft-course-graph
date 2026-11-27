@@ -1,0 +1,86 @@
+{
+  "name": "CSC207H1 — Correction Attribution (Refactoring and Testing)",
+  "description": "'I'll refactor later. Ship it first.' LATER NEVER COMES. Technical debt compounds: each unrefactored hour costs more later. Refactoring = changing INT",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC207H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC207H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "'I'll refactor later. Ship it first.' LATER NEVER COMES. Technical debt compounds: each unrefactored hour costs more later. Refactoring = changing INTERNAL structure without changing EXTERNAL behavior. Needs TESTS to ensure behavior preserved. Without tests, you're not refactoring — you're rewriting.",
+      "template_zh": "'以后重构。先上线。'以后永远不会来。技术债复利：每未重构的一小时日后成本更高。重构=改变内部结构而不改变外部行为。需要测试确保行为不变。无测试就不是重构——是重写。"
+    },
+    {
+      "type": "question",
+      "template_en": "Bad smell: Long Method (>20 lines). Extract Method: select a logical block → extract as named method. Example: def process_order(): validate() + calculate_total() + apply_discount() + save_to_db() + send_confirmation(). Each becomes its OWN method.",
+      "template_zh": "坏味道：长方法（>20行）。提取方法：选逻辑块→提取为命名方法。例：process_order()→validate()+calculate_total()+apply_discount()+save_to_db()+send_confirmation()。各成独立方法。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Testing with pytest: def test_add(): assert Calculator().add(2,3) == 5. Key concepts: (1) FIXTURE — setup reusable test state. (2) MOCK — replace real objects with test doubles. (3) PARAMETRIZE — run same test with different inputs. (4) COVERAGE — measure which code lines are tested.",
+      "template_zh": "用pytest测试：def test_add(): assert Calculator().add(2,3) == 5。关键概念：fixture、mock、parametrize、coverage。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Test-Driven Development (TDD): RED (write failing test) → GREEN (make it pass) → REFACTOR (improve code). Benefits: (1) Forces you to think about DESIGN before code. (2) Gives a SAFETY NET for refactoring. (3) Documents behavior (tests = executable docs). (4) Catches regressions immediately.",
+      "template_zh": "测试驱动开发(TDD)：红（写失败测试）→绿（让它通过）→重构（改进代码）。好处：强迫先想设计、给重构安全网、文档化行为、立即捕获回归。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Apply TDD: (1) Write test for Stack: empty stack → is_empty()=True. (2) Write minimal Stack class to pass. (3) Write test: push(5)→peek()=5, is_empty()=False. (4) Implement. (5) Test: push(1)→push(2)→pop()=2, pop()=1. Repeat. (6) Refactor. Run tests after EVERY change.",
+      "template_zh": "应用TDD：(1)为Stack写测试。(2)写极简类通过。(3)写下一个测试。(4)实现。(5)不断重复。(6)重构。每次变更后运行测试。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "'Code without tests is bad code — regardless of how well-written it is.' Test quality matters: (1) Tests should be FAST. (2) Tests should be ISOLATED (order-independent). (3) Tests should be REPEATABLE. (4) One assertion per test is ideal. (5) Test BEHAVIOR, not implementation.",
+      "template_zh": "'没有测试的代码是坏代码——无论它写得多好。'测试质量重要：测试应快速、隔离、可重复。每个测试一个断言最好。测试行为，不是实现。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC207H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

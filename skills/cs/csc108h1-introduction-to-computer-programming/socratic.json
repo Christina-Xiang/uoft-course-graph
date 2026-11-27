@@ -1,0 +1,86 @@
+{
+  "name": "CSC165H1 — Socratic Discovery (The Halting Problem)",
+  "description": "Let's discover one of the most profound results in computer science: some problems CANNOT be solved by any computer program, no matter how powerful.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC165H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC165H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Let's discover one of the most profound results in computer science: some problems CANNOT be solved by any computer program, no matter how powerful.",
+      "template_zh": "让我们发现计算机科学中最深刻的结论之一：有些问题无论计算机多强大都不可解。"
+    },
+    {
+      "type": "question",
+      "template_en": "Can we write a program H that takes another program P and input I, and decides whether P halts on I? Imagine H(P, I) returns 'halts' or 'loops'. Is this possible?",
+      "template_zh": "我们能写一个程序 H，接受另一个程序 P 和输入 I，判断 P 在 I 上是否会停机吗？想象 H(P, I) 返回'停机'或'循环'。这可能吗？"
+    },
+    {
+      "type": "explore",
+      "template_en": "Suppose H exists. Create a new program D that takes program X and does: if H(X, X) = 'halts', then loop forever; else halt. Now run D(D). If H(D,D) = 'halts', then D loops forever → H was wrong. If H(D,D) = 'loops', then D halts → H was wrong. CONTRADICTION!",
+      "template_zh": "假设 H 存在。创建一个新程序 D，接受程序 X：如果 H(X,X)='停机'则永远循环；否则停机。现在运行 D(D)。若 H(D,D)='停机'则 D 永远循环→H 错了。若 H(D,D)='循环'则 D 停机→H 错了。矛盾！"
+    },
+    {
+      "type": "formalize",
+      "template_en": "The Halting Problem is UNDECIDABLE: no program can correctly determine whether any arbitrary program halts. This is the diagonalization argument — D is defined to do the OPPOSITE of what H predicts, creating a self-referential paradox.",
+      "template_zh": "停机问题不可判定：没有任何程序能正确判断任意程序是否停机。这是对角化论证——D 被定义为做 H 预测的相反行为，创造出自指悖论。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Show these are also undecidable: (1) Does program P ever print 'hello'? (2) Do programs P and Q always produce the same output? (3) Does program P ever reach line 42? Hint: If any were decidable, we could solve the Halting Problem.",
+      "template_zh": "证明以下也不可判定：(1)程序P是否打印'hello'？(2)程序P和Q是否总是产生相同输出？(3)程序P是否到达第42行？提示：如果任何可判定，就能解决停机问题。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Once you understand this ONE undecidable problem, you can prove THOUSANDS of problems undecidable via REDUCTION: show that if problem X were decidable, we could solve the Halting Problem. Rice's Theorem: ANY nontrivial property of program behavior is undecidable.",
+      "template_zh": "一旦理解了这一个不可判定问题，你可以通过归约证明数千个问题不可判定：证明如果问题X可判定，就能解决停机问题。Rice定理：程序行为的任何非平凡性质都不可判定。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC165H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

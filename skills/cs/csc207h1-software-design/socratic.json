@@ -1,0 +1,86 @@
+{
+  "name": "CSC207H1 — Socratic Discovery (Object-Oriented Design Principles)",
+  "description": "SOLID Principles: (1) SRP — Single Responsibility: a class should have ONE reason to change. (2) OCP — Open/Closed: open for extension, closed for mod",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC207H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC207H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "SOLID Principles: (1) SRP — Single Responsibility: a class should have ONE reason to change. (2) OCP — Open/Closed: open for extension, closed for modification. (3) LSP — Liskov Substitution: subtypes must be substitutable for base types. (4) ISP — Interface Segregation: many specific interfaces > one general. (5) DIP — Dependency Inversion: depend on abstractions, not concretions.",
+      "template_zh": "SOLID原则：(1)SRP单一职责。(2)OCP开闭。(3)LSP里氏替换。(4)ISP接口隔离。(5)DIP依赖倒置。"
+    },
+    {
+      "type": "question",
+      "template_en": "SRP example: a class Report that BOTH computes data AND formats HTML AND saves to file. THREE responsibilities! Changes to ANY one could break the others. Solution: split into DataCollector, HtmlFormatter, FileWriter. Each has ONE reason to change.",
+      "template_zh": "SRP例子：Report类同时计算数据、格式化HTML、保存文件。三个职责！任一变更可能破坏其他。解决：拆分为DataCollector、HtmlFormatter、FileWriter。各只有一个变更原因。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Dependency Injection: instead of new Database() inside a class, pass it in: class UserService: def __init__(self, db: Database). Now you can: (1) Swap databases without changing UserService. (2) Use a mock for testing. (3) Change implementations any time. This is DIP in practice.",
+      "template_zh": "依赖注入：不在类内部new Database()，而是传入：class UserService: __init__(self, db: Database)。可以(1)不改变UserService切换数据库。(2)用mock测试。(3)随时改实现。这是DIP的实践。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Cohesion vs Coupling: HIGH cohesion = related things belong together (good). LOW coupling = minimal dependencies between modules (good). A class that computes AND formats AND saves has LOW cohesion. A class that depends on 10 others has HIGH coupling. Goal: high cohesion, low coupling.",
+      "template_zh": "内聚vs耦合：高内聚=相关事物在一起（好）。低耦合=模块间最少依赖（好）。一个类同时计算+格式化+保存=低内聚。依赖10个其他类=高耦合。目标：高内聚、低耦合。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Refactor this: class ShoppingCart: def total(self)... def save_to_db(self)... def render_html(self)... def send_email_confirmation(self)... def validate_stock(self)... (1) Identify each responsibility. (2) Split into classes. (3) Identify dependencies. (4) Inject them. (5) Write tests for each separated class.",
+      "template_zh": "重构：找出各职责，拆分为类，识别依赖，注入它们，为每个分离类写测试。"
+    },
+    {
+      "type": "insight",
+      "template_en": "'Any fool can write code that a computer can understand. Good programmers write code that humans can understand.' — Fowler. Design principles are about MANAGING COMPLEXITY. They make code: (1) READABLE. (2) TESTABLE. (3) MAINTAINABLE. (4) EXTENSIBLE. Code is read 10× more than written.",
+      "template_zh": "'任何傻瓜都能写出计算机能理解的代码。优秀程序员写人类能理解的代码。'设计原则关乎管理复杂性。代码被读的次数比写的多10倍。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC207H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

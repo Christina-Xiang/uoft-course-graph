@@ -1,0 +1,86 @@
+{
+  "name": "CSC165H1 — Deductive Derivation (Master Theorem for Divide-and-Conquer)",
+  "description": "The Master Theorem solves recurrences of form T(n) = aT(n/b) + f(n) where a≥1, b>1. It compares f(n) with n^{log_b a} to determine asymptotic complexi",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC165H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC165H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "The Master Theorem solves recurrences of form T(n) = aT(n/b) + f(n) where a≥1, b>1. It compares f(n) with n^{log_b a} to determine asymptotic complexity in three cases.",
+      "template_zh": "主定理求解形式为 T(n) = aT(n/b) + f(n) 的递归式，其中 a≥1, b>1。它比较 f(n) 与 n^{log_b a} 来确定三种情况下的渐近复杂度。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Case 1: f(n) = O(n^{log_b a - ε}) for some ε>0. The cost is LEAF-DOMINATED. T(n) = Θ(n^{log_b a}). Example: T(n) = 9T(n/3) + n. Here a=9, b=3, log_b a = 2. f(n)=n = O(n^{2-1}) → Case 1 → T(n)=Θ(n²).",
+      "template_zh": "情况1：f(n) = O(n^{log_b a - ε}) 对某个 ε>0。成本由叶节点主导。T(n) = Θ(n^{log_b a})。例子：T(n)=9T(n/3)+n。a=9,b=3,log_b a=2。f(n)=n=O(n^{2-1}) → 情况1 → T(n)=Θ(n²)。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Case 2: f(n) = Θ(n^{log_b a} log^k n) for k≥0. Cost balanced across levels. T(n) = Θ(n^{log_b a} log^{k+1} n). Example: T(n) = 2T(n/2) + n. a=2,b=2,log_b a=1. f(n)=n=Θ(n¹ log⁰ n) → Case 2 (k=0) → T(n)=Θ(n log n). This is merge sort!",
+      "template_zh": "情况2：f(n)=Θ(n^{log_b a} log^k n) 对 k≥0。成本在各层间平衡。T(n)=Θ(n^{log_b a} log^{k+1} n)。例子：T(n)=2T(n/2)+n。a=2,b=2,log_b a=1。f(n)=n=Θ(n¹ log⁰ n)→情况2(k=0)→T(n)=Θ(n log n)。这就是归并排序！"
+    },
+    {
+      "type": "step3",
+      "template_en": "Case 3: f(n) = Ω(n^{log_b a + ε}) and af(n/b) ≤ cf(n) for some c<1. Root-dominated. T(n) = Θ(f(n)). Example: T(n) = 2T(n/2) + n². log_b a = 1. f(n)=n²=Ω(n^{1+1}). Check: 2·(n/2)² = n²/2 ≤ c·n² for c=1/2. → Case 3 → T(n)=Θ(n²).",
+      "template_zh": "情况3：f(n)=Ω(n^{log_b a+ε}) 且 af(n/b) ≤ cf(n) 对某 c<1。根节点主导。T(n)=Θ(f(n))。例子：T(n)=2T(n/2)+n²。log_b a=1。f(n)=n²=Ω(n^{1+1})。验证：2·(n/2)²=n²/2 ≤ c·n² 对 c=1/2。→情况3→T(n)=Θ(n²)。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "The Master Theorem provides a DIRECT formula for divide-and-conquer recurrences. No need to expand the recursion tree each time! Just compute n^{log_b a}, compare f(n), and read off the result. The three cases cover: leaves win, balanced, or root wins.",
+      "template_zh": "主定理为分治递归式提供直接公式。无需每次展开递归树！只需计算 n^{log_b a}，比较 f(n)，读取结果。三种情况覆盖：叶胜、平衡、根胜。"
+    },
+    {
+      "type": "meta",
+      "template_en": "The Master Theorem compares f(n) with n^{log_b a} — the 'watershed' function. If f grows slower → leaf-dominated (parallelizable). If f grows at same rate → balanced (merge sort). If f grows faster → root-dominated (overhead dominates).",
+      "template_zh": "主定理比较 f(n) 与 n^{log_b a}——'分水岭'函数。若f增长更慢→叶主导（可并行化）。若f增长相同→平衡（归并排序）。若f增长更快→根主导（开销主导）。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC165H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

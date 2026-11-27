@@ -1,0 +1,86 @@
+{
+  "name": "CSC165H1 — Correction Attribution (O vs Θ Confusion)",
+  "description": "Common error: 'n = O(n²), so n's asymptotic order is n².' WRONG. Big-O is an UPPER BOUND, not necessarily tight. n ≤ n² for large n, so n = O(n²). But",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC165H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC165H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: 'n = O(n²), so n's asymptotic order is n².' WRONG. Big-O is an UPPER BOUND, not necessarily tight. n ≤ n² for large n, so n = O(n²). But n also equals O(n), O(n log n), O(2ⁿ) — an infinite family of bounds!",
+      "template_zh": "常见错误：'n=O(n²)，所以n的渐近阶是n²。'错。Big-O是上界，不一定是紧界。n ≤ n² 对大n成立，所以 n=O(n²)。但 n 也等于 O(n)、O(n log n)、O(2ⁿ)——无限多个界！"
+    },
+    {
+      "type": "question",
+      "template_en": "What is the difference between upper bound and tight bound? If I say 'I can finish this in ≤ 1 year' (true) but also 'I can finish this in ≤ 1 hour' (also true for most tasks!), which is more useful? The TIGHTEST bound gives the most information.",
+      "template_zh": "上界和紧界有何不同？如果我说'我能在≤1年内完成'（真）但'我能在≤1小时内完成'（对大多数任务也真！），哪个更有用？最紧的界给出最多信息。"
+    },
+    {
+      "type": "explore",
+      "template_en": "We need Θ (Big-Theta) for tight bounds. f = Θ(g) means f = O(g) AND g = O(f) — both upper and lower bounds. Example: n = O(n²) but n² ≠ O(n). So n = O(n²) but n ≠ Θ(n²). Always use Θ when you know the EXACT growth rate.",
+      "template_zh": "我们需要 Θ（大Theta）表示紧界。f=Θ(g) 意味着 f=O(g) 且 g=O(f)——同时有上下界。例子：n=O(n²) 但 n²≠O(n)。所以 n=O(n²) 但 n≠Θ(n²)。当你知道确切增长率时始终用Θ。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Think of O as 'at most', Ω as 'at least', Θ as 'exactly'. O is useful for WORST-CASE guarantees: 'this algorithm runs in O(n²) time.' Θ is useful for AVERAGE characterization: 'merge sort runs in Θ(n log n).' Different tools for different questions!",
+      "template_zh": "将 O 视作'至多'，Ω 视作'至少'，Θ 视作'恰好'。O 对最坏情况保证有用：'该算法运行时间为 O(n²)'。Θ 对平均特征刻画有用：'归并排序运行时间为 Θ(n log n)'。不同工具回答不同问题！"
+    },
+    {
+      "type": "practice",
+      "template_en": "Classify each as O, Ω, Θ, or none: (1) n + log n = ___(n). (2) n² sin(n) = ___(n²). (3) 10n² + 5n = ___(n³). (4) n/log n = ___(n). For each, provide the constants c and n₀ that prove your bound.",
+      "template_zh": "将每个分类为 O、Ω、Θ 或无：(1) n + log n = ___(n)。(2) n² sin(n) = ___(n²)。(3) 10n² + 5n = ___(n³)。(4) n/log n = ___(n)。对每个，提供证明界的常数 c 和 n₀。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "One-rule: After you say O, ASK 'Is this Θ?' If yes, say Θ. If no, say O or Ω based on which bound you need. In algorithm analysis, O dominates because worst-case is usually the concern — but always mean O, not Θ, when you say O.",
+      "template_zh": "一规则：说出 O 后，问'这是 Θ 吗？'如果是，说 Θ。如果不是，根据你需要的界说 O 或 Ω。在算法分析中，O 占主导因为通常关注最坏情况——但说 O 时就意味着 O，不是 Θ。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC165H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

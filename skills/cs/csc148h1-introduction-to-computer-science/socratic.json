@@ -1,0 +1,86 @@
+{
+  "name": "CSC148H1 — Socratic Discovery (Abstract Data Types and Data Structures)",
+  "description": "An Abstract Data Type (ADT) is defined by its OPERATIONS, not its implementation. Stack: push, pop, peek, is_empty. Queue: enqueue, dequeue. List: get",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC148H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC148H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "An Abstract Data Type (ADT) is defined by its OPERATIONS, not its implementation. Stack: push, pop, peek, is_empty. Queue: enqueue, dequeue. List: get, set, insert, delete. Multiple implementations can satisfy the SAME ADT — with different tradeoffs.",
+      "template_zh": "抽象数据类型(ADT)由其操作定义，不由实现定义。栈：push、pop、peek、is_empty。队列：enqueue、dequeue。多种实现可满足相同ADT——各有不同的权衡。"
+    },
+    {
+      "type": "question",
+      "template_en": "Stack ADT: operations = push(item), pop()→item, peek()→item, is_empty()→bool. Array implementation: O(1) push/pop (amortized). Linked list: O(1) push/pop. Both implement the SAME ADT. Why use one over the other? Array: better cache locality. Linked: no resizing overhead.",
+      "template_zh": "栈ADT：数组实现：push/pop O(1)（分摊）。链表：push/pop O(1)。为什么选一个？数组：更好缓存局部性。链表：无调整大小开销。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Python list uses a DYNAMIC array (like ArrayList). When full: allocate 2× size, copy. Appending is amortized O(1). But inserting at beginning is O(n) — because all elements must shift. This is why deque from collections import deque for O(1) append/pop from BOTH ends.",
+      "template_zh": "Python列表用动态数组。满时分配2×大小并复制。尾部添加分摊O(1)。但头部插入是O(n)——所有元素需移位。这就是为什么用collections.deque可以从两端O(1)添加/弹出。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Implementation tradeoffs: (1) ArrayStack: O(1) push/pop at end, O(n) insert at front. (2) LinkedStack: O(1) push/pop at front, O(n) access by index. (3) ArrayQueue (circular): O(1) enqueue/dequeue, fixed capacity. (4) LinkedQueue: O(1) enqueue/dequeue, dynamic.",
+      "template_zh": "实现权衡：(1)数组栈：尾部O(1)压入/弹出，头部O(n)插入。(2)链表栈：头部O(1)压入/弹出，按索引访问O(n)。(3)循环数组队列：O(1)入队/出队，固定容量。(4)链表队列：O(1)入队/出队，动态。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Implement: (1) Stack using Python list. (2) Queue using two stacks (amortized O(1)). (3) Deque using doubly linked list. (4) Time each operation with timeit — compare list.pop(0) vs deque.popleft(). Which is faster and why?",
+      "template_zh": "实现：(1)用Python列表实现栈。(2)用两个栈实现队列（分摊O(1)）。(3)用双向链表实现双端队列。(4)用timeit计时每个操作——比较list.pop(0) vs deque.popleft()。哪个更快？为什么？"
+    },
+    {
+      "type": "insight",
+      "template_en": "'Program to an interface, not an implementation.' The ADT separates WHAT from HOW. Your code should depend on the ADT — swapping implementations should not break it. This is ENCAPSULATION and the foundation of modular software design.",
+      "template_zh": "'面向接口编程，而非实现。'ADT将什么与如何分离开。代码应依赖ADT——切换实现不应破坏它。这就是封装和模块化软件设计的基础。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC148H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

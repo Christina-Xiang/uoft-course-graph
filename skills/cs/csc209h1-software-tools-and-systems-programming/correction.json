@@ -1,0 +1,86 @@
+{
+  "name": "CSC209H1 — Correction Attribution (Socket Programming)",
+  "description": "Common error: 'I sent 1000 bytes, so recv() will return 1000 bytes.' WRONG! TCP is a STREAM protocol — no message boundaries. recv() may return anywhe",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC209H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC209H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: 'I sent 1000 bytes, so recv() will return 1000 bytes.' WRONG! TCP is a STREAM protocol — no message boundaries. recv() may return anywhere from 1 to 1000 bytes. You MUST loop: while (total < expected) { n = recv(fd, buf+total, remaining, 0); total += n; }.",
+      "template_zh": "常见错误：'我发送了1000字节，所以recv()会返回1000字节。'错！TCP是流协议——无消息边界。recv()可能返回1到1000字节的任何数。必须循环接收。"
+    },
+    {
+      "type": "question",
+      "template_en": "Socket API: server: socket()→bind()→listen()→accept()→recv()/send()→close(). Client: socket()→connect()→send()/recv()→close(). Key: bind() assigns address (IP+port). listen() makes it a passive socket. accept() BLOCKS until a client connects.",
+      "template_zh": "Socket API：服务器：socket()→bind()→listen()→accept()→recv()/send()→close()。客户端：socket()→connect()→send()/recv()→close()。关键：bind分配地址，listen使其为被动套接字，accept阻塞直到客户端连接。"
+    },
+    {
+      "type": "explore",
+      "template_en": "TCP vs UDP: TCP = connection-oriented, reliable, ordered, flow/congestion control. UDP = connectionless, unreliable, unordered, no control. TCP: SOCK_STREAM. UDP: SOCK_DGRAM. TCP: requires accept() for each client. UDP: connectionless — recvfrom()/sendto() with ANY client.",
+      "template_zh": "TCP vs UDP：TCP=面向连接、可靠、有序、有流/拥塞控制。UDP=无连接、不可靠、无序、无控制。TCP: SOCK_STREAM。UDP: SOCK_DGRAM。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "HTTP server basics: listen on port 80. Parse request: GET /path HTTP/1.1. Send response: HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<html>...</html>. This is what every web server does. Use telnet localhost 8080 to test manually — type raw HTTP.",
+      "template_zh": "HTTP服务器基础：监听80端口。解析请求：GET /path HTTP/1.1。发送响应：HTTP/1.1 200 OK...。这就是每个web服务器做的。用telnet localhost 8080手动测试——输入原始HTTP。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Write: (1) Echo server — receive, send back. (2) Multi-client chat server using select() or fork(). (3) Simple HTTP server serving static files. (4) Write a client that GETs a URL and saves to file. (5) Add threading: handle multiple clients simultaneously with pthreads.",
+      "template_zh": "写：(1)回显服务器——接收并返回。(2)用select()或fork()的多客户端聊天服务器。(3)提供静态文件的简单HTTP服务器。(4)写GET URL并保存到文件的客户端。(5)加线程：用pthreads同时处理多个客户端。"
+    },
+    {
+      "type": "reflection",
+      "template_en": "Socket programming is the FOUNDATION of the internet. HTTP, SSH, SMTP, FTP — ALL are socket protocols. Understanding sockets = understanding HOW the internet works. Once you master Berkeley sockets, you understand the core of distributed systems.",
+      "template_zh": "Socket编程是互联网的基础。HTTP、SSH、SMTP、FTP——都是socket协议。理解socket=理解互联网如何工作。一旦掌握Berkeley sockets，就理解了分布式系统的核心。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC209H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

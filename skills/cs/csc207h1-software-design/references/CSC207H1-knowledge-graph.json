@@ -1,0 +1,973 @@
+{
+  "courseId": "CSC207H1",
+  "courseName": "Software Design",
+  "nodes": [
+    {
+      "id": "unit-1",
+      "type": "Unit",
+      "label": "Design Principles",
+      "labelCn": "设计原则",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-2",
+      "type": "Concept",
+      "label": "SOLID principles",
+      "labelCn": "SOLID原则",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-3",
+      "type": "Concept",
+      "label": "Single responsibility",
+      "labelCn": "单一职责",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-4",
+      "type": "Concept",
+      "label": "Open/closed",
+      "labelCn": "开闭原则",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-5",
+      "type": "Concept",
+      "label": "Liskov substitution",
+      "labelCn": "里氏替换",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-6",
+      "type": "Concept",
+      "label": "Interface segregation",
+      "labelCn": "接口隔离",
+      "unit": "unit-1"
+    },
+    {
+      "id": "concept-7",
+      "type": "Concept",
+      "label": "Dependency inversion",
+      "labelCn": "依赖反转",
+      "unit": "unit-1"
+    },
+    {
+      "id": "method-8",
+      "type": "Method",
+      "label": "Refactoring techniques",
+      "labelCn": "重构技术",
+      "unit": "unit-1"
+    },
+    {
+      "id": "technique-9",
+      "type": "Technique",
+      "label": "Code smell detection",
+      "labelCn": "代码坏味检测",
+      "unit": "unit-1"
+    },
+    {
+      "id": "pitfall-10",
+      "type": "Pitfall",
+      "label": "Over-engineering",
+      "labelCn": "过度工程化",
+      "unit": "unit-1"
+    },
+    {
+      "id": "skill-11",
+      "type": "Skill",
+      "label": "Design principle application",
+      "labelCn": "设计原则应用",
+      "unit": "unit-1"
+    },
+    {
+      "id": "learningmethod-12",
+      "type": "LearningMethod",
+      "label": "Refactoring exercise",
+      "labelCn": "重构练习",
+      "unit": "unit-1"
+    },
+    {
+      "id": "unit-13",
+      "type": "Unit",
+      "label": "Design Patterns",
+      "labelCn": "设计模式",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-14",
+      "type": "Concept",
+      "label": "Strategy pattern",
+      "labelCn": "策略模式",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-15",
+      "type": "Concept",
+      "label": "Observer pattern",
+      "labelCn": "观察者模式",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-16",
+      "type": "Concept",
+      "label": "Factory pattern",
+      "labelCn": "工厂模式",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-17",
+      "type": "Concept",
+      "label": "Singleton pattern",
+      "labelCn": "单例模式",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-18",
+      "type": "Concept",
+      "label": "Decorator pattern",
+      "labelCn": "装饰器模式",
+      "unit": "unit-2"
+    },
+    {
+      "id": "concept-19",
+      "type": "Concept",
+      "label": "MVC pattern",
+      "labelCn": "MVC模式",
+      "unit": "unit-2"
+    },
+    {
+      "id": "method-20",
+      "type": "Method",
+      "label": "Pattern selection guide",
+      "labelCn": "模式选择指南",
+      "unit": "unit-2"
+    },
+    {
+      "id": "technique-21",
+      "type": "Technique",
+      "label": "UML for patterns",
+      "labelCn": "模式的UML",
+      "unit": "unit-2"
+    },
+    {
+      "id": "pitfall-22",
+      "type": "Pitfall",
+      "label": "Pattern overuse",
+      "labelCn": "过度使用模式",
+      "unit": "unit-2"
+    },
+    {
+      "id": "skill-23",
+      "type": "Skill",
+      "label": "Pattern recognition",
+      "labelCn": "模式识别",
+      "unit": "unit-2"
+    },
+    {
+      "id": "learningmethod-24",
+      "type": "LearningMethod",
+      "label": "Pattern implementation lab",
+      "labelCn": "模式实现实验",
+      "unit": "unit-2"
+    },
+    {
+      "id": "unit-25",
+      "type": "Unit",
+      "label": "Testing & Quality",
+      "labelCn": "测试与质量",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-26",
+      "type": "Concept",
+      "label": "Unit testing with JUnit",
+      "labelCn": "JUnit单元测试",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-27",
+      "type": "Concept",
+      "label": "Mock objects",
+      "labelCn": "模拟对象",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-28",
+      "type": "Concept",
+      "label": "Test coverage",
+      "labelCn": "测试覆盖",
+      "unit": "unit-3"
+    },
+    {
+      "id": "concept-29",
+      "type": "Concept",
+      "label": "Integration testing",
+      "labelCn": "集成测试",
+      "unit": "unit-3"
+    },
+    {
+      "id": "method-30",
+      "type": "Method",
+      "label": "TDD workflow",
+      "labelCn": "TDD工作流",
+      "unit": "unit-3"
+    },
+    {
+      "id": "technique-31",
+      "type": "Technique",
+      "label": "Parameterized tests",
+      "labelCn": "参数化测试",
+      "unit": "unit-3"
+    },
+    {
+      "id": "pitfall-32",
+      "type": "Pitfall",
+      "label": "Brittle tests",
+      "labelCn": "脆弱测试",
+      "unit": "unit-3"
+    },
+    {
+      "id": "skill-33",
+      "type": "Skill",
+      "label": "Test-driven development",
+      "labelCn": "测试驱动开发",
+      "unit": "unit-3"
+    },
+    {
+      "id": "learningmethod-34",
+      "type": "LearningMethod",
+      "label": "TDD kata",
+      "labelCn": "TDD练习",
+      "unit": "unit-3"
+    },
+    {
+      "id": "unit-35",
+      "type": "Unit",
+      "label": "Advanced Java",
+      "labelCn": "高级Java",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-36",
+      "type": "Concept",
+      "label": "Generics",
+      "labelCn": "泛型",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-37",
+      "type": "Concept",
+      "label": "Collections framework",
+      "labelCn": "集合框架",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-38",
+      "type": "Concept",
+      "label": "Streams API",
+      "labelCn": "Streams API",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-39",
+      "type": "Concept",
+      "label": "Lambda expressions",
+      "labelCn": "Lambda表达式",
+      "unit": "unit-4"
+    },
+    {
+      "id": "concept-40",
+      "type": "Concept",
+      "label": "Concurrency basics",
+      "labelCn": "并发基础",
+      "unit": "unit-4"
+    },
+    {
+      "id": "method-41",
+      "type": "Method",
+      "label": "Stream processing",
+      "labelCn": "流处理",
+      "unit": "unit-4"
+    },
+    {
+      "id": "technique-42",
+      "type": "Technique",
+      "label": "Functional programming in Java",
+      "labelCn": "Java函数式编程",
+      "unit": "unit-4"
+    },
+    {
+      "id": "pitfall-43",
+      "type": "Pitfall",
+      "label": "Generic type erasure",
+      "labelCn": "泛型擦除",
+      "unit": "unit-4"
+    },
+    {
+      "id": "skill-44",
+      "type": "Skill",
+      "label": "Java mastery",
+      "labelCn": "Java掌握",
+      "unit": "unit-4"
+    },
+    {
+      "id": "learningmethod-45",
+      "type": "LearningMethod",
+      "label": "Stream API exercises",
+      "labelCn": "Stream API练习",
+      "unit": "unit-4"
+    },
+    {
+      "id": "unit-46",
+      "type": "Unit",
+      "label": "Version Control & Collaboration",
+      "labelCn": "版本控制与协作",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-47",
+      "type": "Concept",
+      "label": "Git branching",
+      "labelCn": "Git分支",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-48",
+      "type": "Concept",
+      "label": "Merge vs rebase",
+      "labelCn": "合并vs变基",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-49",
+      "type": "Concept",
+      "label": "Pull requests",
+      "labelCn": "拉取请求",
+      "unit": "unit-5"
+    },
+    {
+      "id": "concept-50",
+      "type": "Concept",
+      "label": "Code review",
+      "labelCn": "代码审查",
+      "unit": "unit-5"
+    },
+    {
+      "id": "method-51",
+      "type": "Method",
+      "label": "Git workflow",
+      "labelCn": "GitFlow",
+      "unit": "unit-5"
+    },
+    {
+      "id": "pitfall-52",
+      "type": "Pitfall",
+      "label": "Merge conflicts",
+      "labelCn": "合并冲突",
+      "unit": "unit-5"
+    },
+    {
+      "id": "skill-53",
+      "type": "Skill",
+      "label": "Collaborative development",
+      "labelCn": "协作开发",
+      "unit": "unit-5"
+    },
+    {
+      "id": "learningmethod-54",
+      "type": "LearningMethod",
+      "label": "Team project",
+      "labelCn": "团队项目",
+      "unit": "unit-5"
+    },
+    {
+      "id": "unit-55",
+      "type": "Unit",
+      "label": "Software Architecture",
+      "labelCn": "软件架构",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-56",
+      "type": "Concept",
+      "label": "Layered architecture",
+      "labelCn": "分层架构",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-57",
+      "type": "Concept",
+      "label": "REST APIs",
+      "labelCn": "REST API",
+      "unit": "unit-6"
+    },
+    {
+      "id": "concept-58",
+      "type": "Concept",
+      "label": "Dependency injection",
+      "labelCn": "依赖注入",
+      "unit": "unit-6"
+    },
+    {
+      "id": "method-59",
+      "type": "Method",
+      "label": "Architecture documentation",
+      "labelCn": "架构文档",
+      "unit": "unit-6"
+    },
+    {
+      "id": "pitfall-60",
+      "type": "Pitfall",
+      "label": "Big ball of mud",
+      "labelCn": "大泥球架构",
+      "unit": "unit-6"
+    },
+    {
+      "id": "skill-61",
+      "type": "Skill",
+      "label": "Architectural thinking",
+      "labelCn": "架构思维",
+      "unit": "unit-6"
+    },
+    {
+      "id": "learningmethod-62",
+      "type": "LearningMethod",
+      "label": "System design discussion",
+      "labelCn": "系统设计讨论",
+      "unit": "unit-6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-unit-1-concept-2",
+      "source": "unit-1",
+      "target": "concept-2",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-concept-3",
+      "source": "unit-1",
+      "target": "concept-3",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-2-concept-3",
+      "source": "concept-2",
+      "target": "concept-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concept-4",
+      "source": "unit-1",
+      "target": "concept-4",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-3-concept-4",
+      "source": "concept-3",
+      "target": "concept-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concept-5",
+      "source": "unit-1",
+      "target": "concept-5",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-4-concept-5",
+      "source": "concept-4",
+      "target": "concept-5",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concept-6",
+      "source": "unit-1",
+      "target": "concept-6",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-5-concept-6",
+      "source": "concept-5",
+      "target": "concept-6",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-concept-7",
+      "source": "unit-1",
+      "target": "concept-7",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-6-concept-7",
+      "source": "concept-6",
+      "target": "concept-7",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-1-method-8",
+      "source": "unit-1",
+      "target": "method-8",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-technique-9",
+      "source": "unit-1",
+      "target": "technique-9",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-pitfall-10",
+      "source": "unit-1",
+      "target": "pitfall-10",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-1-skill-11",
+      "source": "unit-1",
+      "target": "skill-11",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-1-learningmethod-12",
+      "source": "unit-1",
+      "target": "learningmethod-12",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-13-concept-14",
+      "source": "unit-13",
+      "target": "concept-14",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-13-concept-15",
+      "source": "unit-13",
+      "target": "concept-15",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-14-concept-15",
+      "source": "concept-14",
+      "target": "concept-15",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-13-concept-16",
+      "source": "unit-13",
+      "target": "concept-16",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-15-concept-16",
+      "source": "concept-15",
+      "target": "concept-16",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-13-concept-17",
+      "source": "unit-13",
+      "target": "concept-17",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-16-concept-17",
+      "source": "concept-16",
+      "target": "concept-17",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-13-concept-18",
+      "source": "unit-13",
+      "target": "concept-18",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-17-concept-18",
+      "source": "concept-17",
+      "target": "concept-18",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-13-concept-19",
+      "source": "unit-13",
+      "target": "concept-19",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-18-concept-19",
+      "source": "concept-18",
+      "target": "concept-19",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-13-method-20",
+      "source": "unit-13",
+      "target": "method-20",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-13-technique-21",
+      "source": "unit-13",
+      "target": "technique-21",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-13-pitfall-22",
+      "source": "unit-13",
+      "target": "pitfall-22",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-13-skill-23",
+      "source": "unit-13",
+      "target": "skill-23",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-13-learningmethod-24",
+      "source": "unit-13",
+      "target": "learningmethod-24",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-25-concept-26",
+      "source": "unit-25",
+      "target": "concept-26",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-25-concept-27",
+      "source": "unit-25",
+      "target": "concept-27",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-26-concept-27",
+      "source": "concept-26",
+      "target": "concept-27",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-25-concept-28",
+      "source": "unit-25",
+      "target": "concept-28",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-27-concept-28",
+      "source": "concept-27",
+      "target": "concept-28",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-25-concept-29",
+      "source": "unit-25",
+      "target": "concept-29",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-28-concept-29",
+      "source": "concept-28",
+      "target": "concept-29",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-25-method-30",
+      "source": "unit-25",
+      "target": "method-30",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-25-technique-31",
+      "source": "unit-25",
+      "target": "technique-31",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-25-pitfall-32",
+      "source": "unit-25",
+      "target": "pitfall-32",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-25-skill-33",
+      "source": "unit-25",
+      "target": "skill-33",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-25-learningmethod-34",
+      "source": "unit-25",
+      "target": "learningmethod-34",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-35-concept-36",
+      "source": "unit-35",
+      "target": "concept-36",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-35-concept-37",
+      "source": "unit-35",
+      "target": "concept-37",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-36-concept-37",
+      "source": "concept-36",
+      "target": "concept-37",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-35-concept-38",
+      "source": "unit-35",
+      "target": "concept-38",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-37-concept-38",
+      "source": "concept-37",
+      "target": "concept-38",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-35-concept-39",
+      "source": "unit-35",
+      "target": "concept-39",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-38-concept-39",
+      "source": "concept-38",
+      "target": "concept-39",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-35-concept-40",
+      "source": "unit-35",
+      "target": "concept-40",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-39-concept-40",
+      "source": "concept-39",
+      "target": "concept-40",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-35-method-41",
+      "source": "unit-35",
+      "target": "method-41",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-35-technique-42",
+      "source": "unit-35",
+      "target": "technique-42",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-35-pitfall-43",
+      "source": "unit-35",
+      "target": "pitfall-43",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-35-skill-44",
+      "source": "unit-35",
+      "target": "skill-44",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-35-learningmethod-45",
+      "source": "unit-35",
+      "target": "learningmethod-45",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-46-concept-47",
+      "source": "unit-46",
+      "target": "concept-47",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-46-concept-48",
+      "source": "unit-46",
+      "target": "concept-48",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-47-concept-48",
+      "source": "concept-47",
+      "target": "concept-48",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-46-concept-49",
+      "source": "unit-46",
+      "target": "concept-49",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-48-concept-49",
+      "source": "concept-48",
+      "target": "concept-49",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-46-concept-50",
+      "source": "unit-46",
+      "target": "concept-50",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-49-concept-50",
+      "source": "concept-49",
+      "target": "concept-50",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-46-method-51",
+      "source": "unit-46",
+      "target": "method-51",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-46-pitfall-52",
+      "source": "unit-46",
+      "target": "pitfall-52",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-46-skill-53",
+      "source": "unit-46",
+      "target": "skill-53",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-46-learningmethod-54",
+      "source": "unit-46",
+      "target": "learningmethod-54",
+      "type": "teaches"
+    },
+    {
+      "id": "e-unit-55-concept-56",
+      "source": "unit-55",
+      "target": "concept-56",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-55-concept-57",
+      "source": "unit-55",
+      "target": "concept-57",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-56-concept-57",
+      "source": "concept-56",
+      "target": "concept-57",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-55-concept-58",
+      "source": "unit-55",
+      "target": "concept-58",
+      "type": "contains"
+    },
+    {
+      "id": "e-concept-57-concept-58",
+      "source": "concept-57",
+      "target": "concept-58",
+      "type": "requires"
+    },
+    {
+      "id": "e-unit-55-method-59",
+      "source": "unit-55",
+      "target": "method-59",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-55-pitfall-60",
+      "source": "unit-55",
+      "target": "pitfall-60",
+      "type": "contains"
+    },
+    {
+      "id": "e-unit-55-skill-61",
+      "source": "unit-55",
+      "target": "skill-61",
+      "type": "develops"
+    },
+    {
+      "id": "e-unit-55-learningmethod-62",
+      "source": "unit-55",
+      "target": "learningmethod-62",
+      "type": "teaches"
+    },
+    {
+      "id": "e-cross-unit-1-unit-2",
+      "source": "unit-2",
+      "target": "unit-1",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-2-unit-3",
+      "source": "unit-3",
+      "target": "unit-2",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-3-unit-4",
+      "source": "unit-4",
+      "target": "unit-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-4-unit-5",
+      "source": "unit-5",
+      "target": "unit-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-5-unit-6",
+      "source": "unit-6",
+      "target": "unit-5",
+      "type": "requires"
+    }
+  ],
+  "crossUnitEdges": [
+    {
+      "id": "e-cross-unit-1-unit-2",
+      "source": "unit-2",
+      "target": "unit-1",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-2-unit-3",
+      "source": "unit-3",
+      "target": "unit-2",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-3-unit-4",
+      "source": "unit-4",
+      "target": "unit-3",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-4-unit-5",
+      "source": "unit-5",
+      "target": "unit-4",
+      "type": "requires"
+    },
+    {
+      "id": "e-cross-unit-5-unit-6",
+      "source": "unit-6",
+      "target": "unit-5",
+      "type": "requires"
+    }
+  ],
+  "skillProgressionPaths": []
+}

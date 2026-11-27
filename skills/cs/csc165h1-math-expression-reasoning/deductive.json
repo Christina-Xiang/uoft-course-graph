@@ -1,0 +1,86 @@
+{
+  "name": "CSC165H1 — Deductive Derivation (Proof Techniques)",
+  "description": "Proof = logical argument establishing truth. Types: (1) DIRECT: assume premises, derive conclusion step by step. (2) CONTRAPOSITIVE: prove ¬Q→¬P inste",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC165H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC165H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Proof = logical argument establishing truth. Types: (1) DIRECT: assume premises, derive conclusion step by step. (2) CONTRAPOSITIVE: prove ¬Q→¬P instead of P→Q. (3) CONTRADICTION: assume P and ¬Q, derive impossible. (4) INDUCTION: prove base case and inductive step.",
+      "template_zh": "证明=确立真理的逻辑论证。类型：(1)直接：假设前提，逐步推导结论。(2)逆否：证明¬Q→¬P替代P→Q。(3)反证：假设P且¬Q，推出矛盾。(4)归纳：证基础情况和归纳步。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Direct proof: Prove 'if n is even, then n² is even.' Assume n=2k. Then n²=4k²=2(2k²). So n² is even. Done. Notice: we START with the assumption and BUILD to the conclusion. Every step follows from previous steps by a RULE OF INFERENCE.",
+      "template_zh": "直接证明：'若n为偶则n²为偶。'假设n=2k。则n²=4k²=2(2k²)。所以n²为偶。每步从前一步通过推理规则得出。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Proof by contradiction: Prove √2 is irrational. Assume √2 = p/q in lowest terms. Then 2=p²/q² → p²=2q² → p² even → p even → p=2k → 4k²=2q² → q²=2k² → q even → p and q both even → contradicts 'lowest terms.' Therefore √2 cannot be rational.",
+      "template_zh": "反证法：证√2无理。假设√2=p/q最简。则p²=2q²→p²偶→p偶→p=2k→4k²=2q²→q²=2k²→q偶→p,q都偶→与最简矛盾。所以√2不能是有理数。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Induction: Prove 1+2+...+n = n(n+1)/2. Base: n=1: 1=1(2)/2=1 ✓. Inductive: assume true for n=k. Show for n=k+1: 1+...+k+(k+1) = k(k+1)/2 + (k+1) = (k(k+1)+2(k+1))/2 = (k+1)(k+2)/2 ✓. Base + inductive step → true for ALL n.",
+      "template_zh": "归纳：证1+2+...+n=n(n+1)/2。基础：n=1成立。归纳步：假设n=k成立，证n=k+1成立。基础+归纳步→对所有n成立。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Choosing proof technique: (1) Direct: when conclusion directly follows from premises. (2) Contrapositive: when direct is messy (e.g., proving 'if n² odd then n odd'). (3) Contradiction: when proving NEGATIVE statements (irrationality, impossibility). (4) Induction: when proving statements about NATURAL NUMBERS.",
+      "template_zh": "选择证明技巧：(1)直接：结论直接跟随时。(2)逆否：直接证明复杂时。(3)反证：证否定陈述时。(4)归纳：证关于自然数的陈述时。"
+    },
+    {
+      "type": "meta",
+      "template_en": "Proofs are not just for math — they're REASONING. In CS: (1) Correctness proofs for algorithms (loop invariants). (2) Security proofs (a protocol is secure). (3) Termination proofs (a program halts). Every programmer should be able to reason logically about their code.",
+      "template_zh": "证明不仅用于数学——它们是推理。在CS中：(1)算法的正确性证明（循环不变量）。(2)安全证明（协议安全）。(3)停机证明（程序终止）。每个程序员都应能逻辑地推理自己的代码。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC165H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

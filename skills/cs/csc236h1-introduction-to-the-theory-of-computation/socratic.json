@@ -1,0 +1,86 @@
+{
+  "name": "CSC236H1 — Socratic Discovery (DFA Design and Regular Languages)",
+  "description": "Let's design a DFA for L = {w∈{0,1}* | w ends with 01}. A DFA has finite memory — it can only remember a BOUNDED amount of information. For this langu",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC236H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC236H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Let's design a DFA for L = {w∈{0,1}* | w ends with 01}. A DFA has finite memory — it can only remember a BOUNDED amount of information. For this language, we need to remember the last 1 or 2 bits.",
+      "template_zh": "让我们为 L = {w∈{0,1}* | w 以 01 结尾} 设计一个DFA。DFA有有限记忆——只能记住有界量的信息。对这个语言，我们需要记住最后1或2位。"
+    },
+    {
+      "type": "question",
+      "template_en": "What states do we need? We need to track: (1) no relevant suffix seen yet (start), (2) last bit was 0 (potentially starting '01'), (3) last bit was 01 (accepting). How many states total? Three! Now draw the transitions between them for inputs 0 and 1.",
+      "template_zh": "我们需要什么状态？需要跟踪：(1)尚未看到相关后缀（开始），(2)最后一位是0（可能开始'01'），(3)最后一位是01（接受）。总共几个状态？三个！现在画出0和1输入在它们之间的转移。"
+    },
+    {
+      "type": "explore",
+      "template_en": "From start state q₀: on 0 → q₁ (seen 0), on 1 → q₀ (stays start). From q₁: on 0 → q₁ (still just a 0), on 1 → q₂ (saw 01! Accept). From q₂: on 0 → q₁ (01 followed by 0 = last bit 0), on 1 → q₀ (01 followed by 1 = no relevant suffix). The DFA is complete!",
+      "template_zh": "从开始状态q₀：输入0→q₁（看到0），输入1→q₀（保持开始）。从q₁：输入0→q₁（仍然只有一个0），输入1→q₂（看到01！接受）。从q₂：输入0→q₁（01后跟0=最后一位是0），输入1→q₀（01后跟1=没有相关后缀）。DFA完成！"
+    },
+    {
+      "type": "formalize",
+      "template_en": "DFA = (Q,Σ,δ,q₀,F). Q = {q₀,q₁,q₂}, Σ={0,1}, δ defined by transition table, q₀ start, F={q₂}. This DFA accepts strings ending with 01. Check: '101' → q₀→q₀→q₁→q₂ (accept). '010' → q₀→q₁→q₂→q₁ (reject). The finite memory is the 3 states.",
+      "template_zh": "DFA = (Q,Σ,δ,q₀,F)。Q={q₀,q₁,q₂}，Σ={0,1}，δ由转移表定义，q₀开始，F={q₂}。这个DFA接受以01结尾的串。验证：'101'→q₀→q₀→q₁→q₂（接受）。'010'→q₀→q₁→q₂→q₁（拒绝）。有限记忆就是3个状态。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Design DFAs for: (1) L = strings containing '010' as substring. (2) L = strings with even number of 0s. (3) L = strings where every 1 is followed by a 0. For each, state the number of states needed and explain what each state 'remembers.'",
+      "template_zh": "为以下设计DFA：(1)包含'010'作为子串的串。(2)有偶数个0的串。(3)每个1后跟一个0的串。对每个，说明所需状态数并解释每个状态'记住'了什么。"
+    },
+    {
+      "type": "insight",
+      "template_en": "DFAs capture REGULAR languages — the simplest class in the Chomsky hierarchy. They can't count beyond a fixed bound (needs a stack for aⁿbⁿ). The state = finite memory. More states = more memory. But infinite memory requires a Turing machine.",
+      "template_zh": "DFA捕获正则语言——Chomsky层次中最简单的类别。它们不能计数超过有界（aⁿbⁿ需要栈）。状态 = 有限记忆。更多状态 = 更多记忆。但无限记忆需要图灵机。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC236H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

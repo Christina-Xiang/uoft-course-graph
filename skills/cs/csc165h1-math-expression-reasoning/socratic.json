@@ -1,0 +1,86 @@
+{
+  "name": "CSC165H1 — Socratic Discovery (Propositional and Predicate Logic)",
+  "description": "Logic is the LANGUAGE of computer science. Propositions: statements that are true or false. Logical connectives: ∧ (and), ∨ (or), ¬ (not), → (implies)",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC165H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC165H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "Logic is the LANGUAGE of computer science. Propositions: statements that are true or false. Logical connectives: ∧ (and), ∨ (or), ¬ (not), → (implies), ↔ (iff). Truth tables define their meaning. Predicate logic: statements with QUANTIFIERS: ∀ (for all), ∃ (exists).",
+      "template_zh": "逻辑是计算机科学的语言。命题：可真可假的陈述。逻辑连接词：∧(与)、∨(或)、¬(非)、→(蕴含)、↔(当且仅当)。真值表定义其含义。谓词逻辑：带量词的语句：∀(对所有)、∃(存在)。"
+    },
+    {
+      "type": "question",
+      "template_en": "Implication P→Q is ONLY false when P is true and Q is false. 'If it rains, the ground gets wet' — is this true when it doesn't rain? YES (vacuous truth). Common error: confusing → with 'causes.' P→Q is about TRUTH VALUES, not causality.",
+      "template_zh": "蕴含P→Q只在P真Q假时为假。'下雨则地面湿'——没下雨时也为真（空真）。常见错误：混淆→与'导致'。P→Q关于真值，不是因果。"
+    },
+    {
+      "type": "explore",
+      "template_en": "De Morgan's Laws: ¬(P∧Q) ≡ ¬P ∨ ¬Q. ¬(P∨Q) ≡ ¬P ∧ ¬Q. Distributivity: P∧(Q∨R) ≡ (P∧Q)∨(P∧R). P∨(Q∧R) ≡ (P∨Q)∧(P∨R). Contrapositive: P→Q ≡ ¬Q→¬P. Converse: Q→P (NOT equivalent).",
+      "template_zh": "De Morgan律：¬(P∧Q)≡¬P∨¬Q。分配律。逆否命题：P→Q≡¬Q→¬P。逆命题：Q→P（不等价）。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Negation of quantifiers: ¬∀x P(x) ≡ ∃x ¬P(x). ¬∃x P(x) ≡ ∀x ¬P(x). To disprove 'all swans are white': find ONE black swan (∃x ¬white(x)). To disprove 'there exists a unicorn': show NONE exist (∀x ¬unicorn(x)).",
+      "template_zh": "量词的否定：¬∀xP(x)≡∃x¬P(x)。¬∃xP(x)≡∀x¬P(x)。证伪'所有天鹅都是白的'：找一只黑天鹅。证伪'存在独角兽'：证明不存在。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Negate and simplify: (1) ∀x∈ℕ, ∃y∈ℕ: x<y. (2) ∃ε>0, ∀δ>0: |x-a|<δ → |f(x)-f(a)|<ε. (3) ∀x, P(x) → (∃y, Q(x,y)). Translate to English: (4) ∀x (Human(x) → ∃y (Human(y) ∧ Mother(y,x))).",
+      "template_zh": "否定并简化：(1)∀x∈ℕ,∃y∈ℕ:x<y。(2)∃ε>0,∀δ>0:|x-a|<δ→|f(x)-f(a)|<ε。(3)∀x,P(x)→(∃y,Q(x,y))。翻译为中文：(4)每个人都有母亲。"
+    },
+    {
+      "type": "insight",
+      "template_en": "Logic is the FOUNDATION of everything in CS: (1) Boolean algebra → digital circuits. (2) Propositional logic → SAT solvers (NP-complete but practical). (3) Predicate logic → database queries (SQL), program verification (Hoare logic). (4) Logic programming → Prolog.",
+      "template_zh": "逻辑是CS中一切的基础：(1)布尔代数→数字电路。(2)命题逻辑→SAT求解器。(3)谓词逻辑→数据库查询(SQL)、程序验证(Hoare逻辑)。(4)逻辑编程→Prolog。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC165H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

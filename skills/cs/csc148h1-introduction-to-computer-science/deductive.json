@@ -1,0 +1,86 @@
+{
+  "name": "CSC148H1 — Deductive Derivation (Recursion)",
+  "description": "Recursion: a function calls itself. Two parts: BASE CASE (trivial, no recursion) and RECURSIVE STEP (problem → smaller subproblem). Key: the subproble",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC148H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC148H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "Recursion: a function calls itself. Two parts: BASE CASE (trivial, no recursion) and RECURSIVE STEP (problem → smaller subproblem). Key: the subproblem must be SMALLER or SIMPLER. Otherwise: infinite recursion → stack overflow.",
+      "template_zh": "递归：函数调用自身。两部分：基本情况（平凡，无需递归）和递归步骤（问题→更小的子问题）。关键：子问题必须更小或更简单。否则：无限递归→栈溢出。"
+    },
+    {
+      "type": "step1",
+      "template_en": "Example: factorial(n) = 1 if n≤1 (base), else n×factorial(n-1) (recursive). Trace: factorial(4) = 4×factorial(3) = 4×3×factorial(2) = 4×3×2×factorial(1) = 4×3×2×1 = 24. The CALL STACK grows then shrinks.",
+      "template_zh": "例：factorial(n): n≤1时返回1，否则n×factorial(n-1)。追踪：factorial(4)=4×3×2×1=24。调用栈先增长后收缩。"
+    },
+    {
+      "type": "step2",
+      "template_en": "Divide and Conquer: sort example. Mergesort: split list in half, sort each half recursively, merge sorted halves. T(n)=2T(n/2)+O(n) → O(n log n). Binary search: check middle, recurse left or right. T(n)=T(n/2)+O(1) → O(log n).",
+      "template_zh": "分治：排序例子。归并排序：对半分，递归排序每半，合并。T(n)=2T(n/2)+O(n)→O(n log n)。二分搜索：检查中间，递归左或右。T(n)=T(n/2)+O(1)→O(log n)。"
+    },
+    {
+      "type": "step3",
+      "template_en": "Tree recursion: Fibonacci is BAD for recursion without memoization. fib(5) calls fib(4) and fib(3). fib(4) calls fib(3) and fib(2) — fib(3) computed TWICE. O(2ⁿ) vs O(n) with memoization. USE memoization (dynamic programming) for overlapping subproblems.",
+      "template_zh": "树形递归：Fibonacci不用记忆化很糟糕。fib(5)调用fib(4)和fib(3)，fib(3)被计算两次。O(2ⁿ) vs 用记忆化O(n)。对重叠子问题用记忆化（动态规划）。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "Recursion vs iteration: any recursive function CAN be written iteratively (with an explicit stack). Recursion is more ELEGANT for: (1) Tree/graph traversal. (2) Divide and conquer. (3) Backtracking. But iterative may be more EFFICIENT (no function call overhead).",
+      "template_zh": "递归vs迭代：任何递归函数可用迭代写（显式栈）。递归更优雅：(1)树/图遍历。(2)分治。(3)回溯。但迭代可能更高效（无函数调用开销）。"
+    },
+    {
+      "type": "meta",
+      "template_en": "'To understand recursion, you must first understand recursion.' The key insight: trust the RECURSIVE LEAP — assume the recursive call works correctly on the smaller input. Don't try to trace the full stack. Focus on the INDUCTION: base cases + recursive step → works for ALL inputs.",
+      "template_zh": "'要理解递归，必须先理解递归。'关键洞见：相信递归跳跃——假设递归调用在更小输入上正确工作。不要试图追踪整个栈。关注归纳：基本情况+递归步骤→对所有输入有效。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC148H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "CSC148H1 — Correction Attribution (Object-Oriented Programming)",
+  "description": "Common error: 'OOP is just classes and objects.' OOP is a PARADIGM. Four pillars: (1) ENCAPSULATION — bundle data + methods, hide internals. (2) ABSTR",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC148H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC148H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: 'OOP is just classes and objects.' OOP is a PARADIGM. Four pillars: (1) ENCAPSULATION — bundle data + methods, hide internals. (2) ABSTRACTION — expose interface, hide implementation. (3) INHERITANCE — reuse code, establish hierarchy. (4) POLYMORPHISM — same interface, different behaviors.",
+      "template_zh": "常见错误：'OOP就是类和对象。'OOP是一种编程范式。四大支柱：(1)封装——捆绑数据+方法，隐藏内部。(2)抽象——暴露接口，隐藏实现。(3)继承——复用代码，建立层次。(4)多态——相同接口，不同行为。"
+    },
+    {
+      "type": "question",
+      "template_en": "Python: class Dog(Animal): def __init__(self, name): super().__init__(); self.name = name. Override speak(): return self.name + ' says Woof!'. Polymorphism: animals = [Dog(), Cat()]; for a in animals: a.speak(). Each calls its OWN speak method.",
+      "template_zh": "Python: class Dog(Animal):。多态：animals=[Dog(),Cat()]；for a in animals: a.speak()。每个调用自己的speak方法。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Preconditions and Postconditions: a contract for methods. Precondition: what must be true before calling (caller's responsibility). Postcondition: what the method guarantees after (implementer's responsibility). Example: pop() on empty stack violates precondition → raise exception.",
+      "template_zh": "前置条件和后置条件：方法的契约。前置：调用前必须为真（调用者责任）。后置：方法保证的内容（实现者责任）。例：空栈上pop违反前置→抛出异常。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Class invariants: conditions that must ALWAYS hold for instances. Example: for BankAccount, balance >= 0 and balance == sum(transactions). Methods must PRESERVE the invariant. violations signal a bug. Enforce with assertions: assert self.balance >= 0.",
+      "template_zh": "类不变量：对实例必须始终成立的条件。例：BankAccount中balance>=0。方法必须保持不变量。违反表明bug。用assert强制检查。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Design a zoo hierarchy: (1) Class Animal with name, age, speak(). (2) Subclasses: Dog, Cat, Bird — each override speak(). (3) Zoo class maintains list of animals. (4) Add __str__ and __repr__. (5) Ensure encapsulation: make name private with property getter/setter.",
+      "template_zh": "设计动物园层次：(1)Animal类有name、age、speak()。(2)子类：Dog、Cat、Bird——各自覆盖speak()。(3)Zoo类维护动物列表。(4)添加__str__和__repr__。(5)确保封装：name私有化用property。"
+    },
+    {
+      "type": "insight",
+      "template_en": "OOP models the REAL WORLD. But 'favor composition over inheritance' — use HAS-A (composition) over IS-A (inheritance) when possible. Example: a Duck CAN fly and swim → Duck has FlyBehavior + SwimBehavior (Strategy Pattern) rather than inheriting from FlyingDuck.",
+      "template_zh": "OOP模拟真实世界。但'优先组合而非继承'——可能时用HAS-A（组合）优于IS-A（继承）。例：Duck会飞会游泳→用FlyBehavior+SwimBehavior组合而非继承。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC148H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

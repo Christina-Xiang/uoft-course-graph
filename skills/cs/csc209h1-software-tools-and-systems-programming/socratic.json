@@ -1,0 +1,86 @@
+{
+  "name": "CSC209H1 — Socratic Discovery (C Programming and Memory Management)",
+  "description": "C gives you DIRECT control over memory. Pointers: int *p = &x (p holds address of x). *p = 5 (dereference: access what p points to). Arrays: int arr[1",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC209H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC209H1-SKILL-S1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "setup",
+      "template_en": "C gives you DIRECT control over memory. Pointers: int *p = &x (p holds address of x). *p = 5 (dereference: access what p points to). Arrays: int arr[10] allocates 10 ints CONTIGUOUSLY. arr[i] ≡ *(arr+i). arr decays to pointer in function calls — size info LOST.",
+      "template_zh": "C给你对内存的直接控制。指针：int *p=&x（p存x的地址）。*p=5（解引用：访问p所指）。数组：int arr[10]连续分配10个int。arr[i]≡*(arr+i)。arr在函数调用中退化为指针——大小信息丢失。"
+    },
+    {
+      "type": "question",
+      "template_en": "What's WRONG with: char *s = 'hello'; s[0] = 'H';? String literal 'hello' is stored in READ-ONLY memory. Modifying causes undefined behavior (segfault on many systems). Use: char s[] = 'hello'; — allocates WRITABLE array on stack.",
+      "template_zh": "'hello'字符串字面量存在只读内存中。修改导致未定义行为（常segfault）。用char s[]='hello'——在栈上分配可写数组。"
+    },
+    {
+      "type": "explore",
+      "template_en": "malloc: void *malloc(size_t size) — allocates on HEAP. Always check return: if (ptr==NULL) { error; }. Always free: free(ptr). Common bugs: (1) Use-after-free — accessing freed memory. (2) Double-free — freeing twice. (3) Memory leak — forgetting to free. (4) Buffer overflow — writing past allocated bounds.",
+      "template_zh": "malloc在堆上分配。始终检查返回值。始终free。常见bug：(1)释放后使用。(2)双重释放。(3)内存泄漏。(4)缓冲区溢出。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Pointers and arrays: int arr[5]; int *p = arr; p+1 points to arr[1] (advances by sizeof(int) bytes). Pointer arithmetic: p++ moves to NEXT element, not next byte. Function pointers: int (*cmp)(int, int) = &compare; use for callbacks, qsort().",
+      "template_zh": "指针和数组：int arr[5]; int *p=arr; p+1指向arr[1]（前进sizeof(int)字节）。指针运算：p++移动到下一元素，不是下一字节。函数指针：用于回调、qsort()。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Write C functions: (1) int sum(int *arr, int n). (2) char *strdup_custom(const char *s) — duplicate string using malloc. (3) void swap(int *a, int *b). (4) A linked list: insert, delete, search. (5) Use valgrind to check for memory leaks: valgrind ./a.out.",
+      "template_zh": "写C函数：(1)sum。(2)strdup_custom——用malloc复制字符串。(3)swap。(4)链表：插入、删除、搜索。(5)用valgrind检查内存泄漏。"
+    },
+    {
+      "type": "insight",
+      "template_en": "C forces you to understand memory — that's WHY it's used in operating systems, embedded systems, and databases. Understanding C pointers is the KEY to understanding: (1) Virtual memory and page tables. (2) Buffer overflow vulnerabilities. (3) How Python/Java work under the hood. C is the 'lingua franca' of systems.",
+      "template_zh": "C迫使你理解内存——这就是为什么用于操作系统、嵌入式系统、数据库。理解C指针是理解虚拟内存、缓冲区溢出漏洞、Python/Java底层工作的关键。C是系统的'通用语'。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC209H1",
+    "skillType": "socratic",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

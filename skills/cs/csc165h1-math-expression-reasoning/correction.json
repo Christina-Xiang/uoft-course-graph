@@ -1,0 +1,86 @@
+{
+  "name": "CSC165H1 — Correction Attribution (Big-O Analysis and Running Time)",
+  "description": "Common error: 'My program runs in 2 seconds for n=1000, so it's O(n).' WRONG! Big-O describes ASYMPTOTIC growth, not actual runtime. A program that ta",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC165H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC165H1-SKILL-C1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "pitfall",
+      "template_en": "Common error: 'My program runs in 2 seconds for n=1000, so it's O(n).' WRONG! Big-O describes ASYMPTOTIC growth, not actual runtime. A program that takes 2s for n=1000 and 4s for n=2000 might be O(n) OR O(n log n) OR O(n²) — you need MULTIPLE data points and THEORETICAL analysis.",
+      "template_zh": "常见错误：'我的程序n=1000运行2秒，所以是O(n)。'错！大O描述渐近增长，不是实际运行时间。需多个数据点和理论分析。"
+    },
+    {
+      "type": "question",
+      "template_en": "What does O(n²) mean? There exist constants c>0 and n₀ such that for all n≥n₀, T(n) ≤ c·n². It's an UPPER BOUND. n²+3n+2 = O(n²) because for n≥1, n²+3n+2 ≤ n²+3n²+2n² = 6n². Similarly: Ω(n²) = LOWER BOUND. Θ(n²) = both O and Ω (TIGHT bound).",
+      "template_zh": "O(n²)意味着存在常数c>0和n₀使得对所有n≥n₀，T(n)≤c·n²。是上界。Ω(n²)=下界。Θ(n²)=同时是O和Ω（紧界）。"
+    },
+    {
+      "type": "explore",
+      "template_en": "Common growth rates (fastest to slowest): O(1) — constant (array access). O(log n) — logarithmic (binary search). O(n) — linear (linear search). O(n log n) — linearithmic (mergesort). O(n²) — quadratic (bubble sort). O(2ⁿ) — exponential (subset generation). O(n!) — factorial (permutations).",
+      "template_zh": "常见增长率（从快到慢）：O(1)常数、O(log n)对数、O(n)线性、O(n log n)线性对数、O(n²)二次、O(2ⁿ)指数、O(n!)阶乘。"
+    },
+    {
+      "type": "formalize",
+      "template_en": "Analysis of loops: (1) Single loop i=0..n-1 → O(n). (2) Nested loops i=0..n-1, j=0..n-1 → O(n²). (3) Loop with i *= 2 → O(log n). (4) Recursive T(n)=T(n-1)+O(1) → O(n). Master Theorem: T(n)=aT(n/b)+f(n). If f(n)=O(n^{log_b a - ε}), T=Θ(n^{log_b a}).",
+      "template_zh": "循环分析：(1)单层循环i=0..n-1→O(n)。(2)嵌套循环→O(n²)。(3)i*=2→O(log n)。(4)递归T(n)=T(n-1)+O(1)→O(n)。主定理。"
+    },
+    {
+      "type": "practice",
+      "template_en": "Find worst-case running time: (1) for i in range(n): if arr[i]==target: return i. (2) for i in range(n): for j in range(i): print(i,j). (3) def fib(n): return n if n≤1 else fib(n-1)+fib(n-2). (4) for i in range(n): i*=2. Express all in Big-O.",
+      "template_zh": "练习找最坏情况运行时间：对于以下代码段，请用大O表示法分析其最坏情况时间复杂度。例如：for i in range(n): if arr[i]==target: return i"
+    },
+    {
+      "type": "insight",
+      "template_en": "Big-O tells you HOW YOUR ALGORITHM SCALES. An O(n²) algorithm for n=10⁶ does 10¹² operations — IMPOSSIBLE (takes hours). An O(n log n) algorithm does ~20×10⁶ operations — FEASIBLE (seconds). ALWAYS analyze before implementing: choose the right ALGORITHM, not just the right CODE.",
+      "template_zh": "大O告诉你算法如何扩展。n=10⁶时O(n²)做10¹²运算——不可能（需数小时）。O(n log n)做~20×10⁶运算——可行（几秒）。实现前先分析：选对算法，不只是写好代码。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC165H1",
+    "skillType": "correction",
+    "difficulty": 2,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "name": "CSC236H1 — Deductive Derivation (Pumping Lemma for Regular Languages)",
+  "description": "The Pumping Lemma: For any regular language L, there exists p (pumping length) such that ∀w∈L with |w|≥p, w = xyz where |xy|≤p, |y|≥1, and ∀k≥0: xyᵏz∈",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "courseId": {
+        "type": "string",
+        "enum": [
+          "CSC236H1"
+        ]
+      },
+      "skillId": {
+        "type": "string",
+        "const": "CSC236H1-SKILL-D1"
+      },
+      "lang": {
+        "type": "string",
+        "enum": [
+          "en",
+          "zh"
+        ]
+      }
+    },
+    "required": [
+      "courseId",
+      "skillId",
+      "lang"
+    ]
+  },
+  "steps": [
+    {
+      "type": "principle",
+      "template_en": "The Pumping Lemma: For any regular language L, there exists p (pumping length) such that ∀w∈L with |w|≥p, w = xyz where |xy|≤p, |y|≥1, and ∀k≥0: xyᵏz∈L. This property must hold for ALL regular languages — so if a language VIOLATES it, it's NOT regular.",
+      "template_zh": "泵引理：对任何正则语言L，存在p（泵长度）使得对所有|w|≥p的w∈L，w=xyz其中|xy|≤p、|y|≥1，且对所有k≥0：xyᵏz∈L。该性质对所有正则语言必须成立——所以如果某个语言违反它，它就不是正则的。"
+    },
+    {
+      "type": "step1",
+      "template_en": "We'll prove L = {aⁿbⁿ | n≥0} is NOT regular. Assume it IS regular with pumping length p. Choose w = aᵖbᵖ (p a's followed by p b's). Since |w|=2p≥p, the pumping lemma applies.",
+      "template_zh": "我们将证明 L={aⁿbⁿ|n≥0} 不是正则的。假设它是正则的，泵长度为p。选择 w=aᵖbᵖ（p个a后跟p个b）。由于|w|=2p≥p，泵引理适用。"
+    },
+    {
+      "type": "step2",
+      "template_en": "By the lemma, w=xyz with |xy|≤p and |y|≥1. Since |xy|≤p, both x and y consist ONLY of a's (they're in the first p characters). So y = aᵐ for some m≥1. Now pump: xy²z = aᵖ⁺ᵐbᵖ. This has more a's than b's → NOT in L! Contradiction.",
+      "template_zh": "由引理，w=xyz其中|xy|≤p且|y|≥1。由于|xy|≤p，x和y都只包含a（在前p个字符中）。所以y=aᵐ对某个m≥1。现在泵：xy²z=aᵖ⁺ᵐbᵖ。a比b多→不在L中！矛盾。"
+    },
+    {
+      "type": "step3",
+      "template_en": "The contradiction proves L = {aⁿbⁿ} is NOT regular. Intuitively: a DFA has finite memory (p states). To check aⁿbⁿ, it must remember n — an unbounded count. But finite memory can only track up to p. So beyond p, it 'forgets' and can't distinguish aⁿbⁿ from aⁿ⁺ᵐbⁿ.",
+      "template_zh": "矛盾证明了L={aⁿbⁿ}不是正则的。直观理解：DFA有有限记忆（p个状态）。要检查aⁿbⁿ，它必须记住n——无界计数。但有限记忆只能跟踪到p。超过p就'忘记'了，无法区分aⁿbⁿ和aⁿ⁺ᵐbⁿ。"
+    },
+    {
+      "type": "conclusion",
+      "template_en": "The Pumping Lemma is a NECESSARY condition for regularity. If L violates it → L is NOT regular. But some non-regular languages satisfy it (converse fails). For proving non-regularity: choose w carefully, consider all possible splits, derive contradiction.",
+      "template_zh": "泵引理是正则性的必要条件。若L违反它→L不是正则的。但某些非正则语言满足它（逆不成立）。证明非正则性：仔细选择w，考虑所有可能分割，推导矛盾。"
+    },
+    {
+      "type": "meta",
+      "template_en": "This SAME proof structure works for many languages: pick w that forces y to be in a part that unbalances the count. Try: {aⁿbᵐ | n>m}, {wwᴿ}, {0²ⁿ}. Each requires choosing w cleverly so pumping creates a string outside L.",
+      "template_zh": "相同的证明结构适用于多种语言：选择w迫使y位于会破坏计数的部分。试试：{aⁿbᵐ|n>m}、{wwᴿ}、{0²ⁿ}。每个都需要巧妙地选择w使得泵产生L之外的串。"
+    }
+  ],
+  "references": [
+    "references/formulas.md",
+    "references/proof-techniques.md",
+    "references/counterexamples.md",
+    "references/concept-map.md"
+  ],
+  "metadata": {
+    "domain": "cs",
+    "course": "CSC236H1",
+    "skillType": "deductive",
+    "difficulty": 3,
+    "relatedUnits": [
+      "unit-1"
+    ],
+    "version": "1.0",
+    "knowledgeGraphNodes": [
+      "unit-1",
+      "concept-2",
+      "concept-3",
+      "concept-4",
+      "concept-5"
+    ]
+  }
+}
