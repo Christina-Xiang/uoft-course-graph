@@ -1,0 +1,657 @@
+{
+  "name": "UofT Math · Stats · CS — Course Skills",
+  "version": "1.0",
+  "description": "Anthropic Skills-compliant Socratic/deductive/correction course skills for University of Toronto Math Major, Statistics Major, and Computer Science Minor programs. Each skill guides the learner through discovery (Socratic), logical derivation (Deductive), or common error correction (Correction).",
+  "domains": {
+    "math": {
+      "label": "Mathematics Major",
+      "labelCn": "数学主修",
+      "courses": 12,
+      "path": "math/"
+    },
+    "stats": {
+      "label": "Statistics Major",
+      "labelCn": "统计主修",
+      "courses": 12,
+      "path": "stats/"
+    },
+    "cs": {
+      "label": "Computer Science Minor",
+      "labelCn": "计算机辅修",
+      "courses": 11,
+      "path": "cs/"
+    }
+  },
+  "skills": [
+    {
+      "id": "CSC108H1-SKILL-S1",
+      "courseId": "CSC108H1",
+      "mode": "socratic",
+      "file": "cs/csc108h1-introduction-to-computer-programming/socratic.json"
+    },
+    {
+      "id": "CSC108H1-SKILL-D1",
+      "courseId": "CSC108H1",
+      "mode": "deductive",
+      "file": "cs/csc108h1-introduction-to-computer-programming/deductive.json"
+    },
+    {
+      "id": "CSC108H1-SKILL-C1",
+      "courseId": "CSC108H1",
+      "mode": "correction",
+      "file": "cs/csc108h1-introduction-to-computer-programming/correction.json"
+    },
+    {
+      "id": "CSC148H1-SKILL-S1",
+      "courseId": "CSC148H1",
+      "mode": "socratic",
+      "file": "cs/csc148h1-introduction-to-computer-science/socratic.json"
+    },
+    {
+      "id": "CSC148H1-SKILL-D1",
+      "courseId": "CSC148H1",
+      "mode": "deductive",
+      "file": "cs/csc148h1-introduction-to-computer-science/deductive.json"
+    },
+    {
+      "id": "CSC148H1-SKILL-C1",
+      "courseId": "CSC148H1",
+      "mode": "correction",
+      "file": "cs/csc148h1-introduction-to-computer-science/correction.json"
+    },
+    {
+      "id": "CSC165H1-SKILL-S1",
+      "courseId": "CSC165H1",
+      "mode": "socratic",
+      "file": "cs/csc165h1-math-expression-reasoning/socratic.json"
+    },
+    {
+      "id": "CSC165H1-SKILL-D1",
+      "courseId": "CSC165H1",
+      "mode": "deductive",
+      "file": "cs/csc165h1-math-expression-reasoning/deductive.json"
+    },
+    {
+      "id": "CSC165H1-SKILL-C1",
+      "courseId": "CSC165H1",
+      "mode": "correction",
+      "file": "cs/csc165h1-math-expression-reasoning/correction.json"
+    },
+    {
+      "id": "CSC207H1-SKILL-S1",
+      "courseId": "CSC207H1",
+      "mode": "socratic",
+      "file": "cs/csc207h1-software-design/socratic.json"
+    },
+    {
+      "id": "CSC207H1-SKILL-D1",
+      "courseId": "CSC207H1",
+      "mode": "deductive",
+      "file": "cs/csc207h1-software-design/deductive.json"
+    },
+    {
+      "id": "CSC207H1-SKILL-C1",
+      "courseId": "CSC207H1",
+      "mode": "correction",
+      "file": "cs/csc207h1-software-design/correction.json"
+    },
+    {
+      "id": "CSC209H1-SKILL-S1",
+      "courseId": "CSC209H1",
+      "mode": "socratic",
+      "file": "cs/csc209h1-software-tools-and-systems-programming/socratic.json"
+    },
+    {
+      "id": "CSC209H1-SKILL-D1",
+      "courseId": "CSC209H1",
+      "mode": "deductive",
+      "file": "cs/csc209h1-software-tools-and-systems-programming/deductive.json"
+    },
+    {
+      "id": "CSC209H1-SKILL-C1",
+      "courseId": "CSC209H1",
+      "mode": "correction",
+      "file": "cs/csc209h1-software-tools-and-systems-programming/correction.json"
+    },
+    {
+      "id": "CSC236H1-SKILL-S1",
+      "courseId": "CSC236H1",
+      "mode": "socratic",
+      "file": "cs/csc236h1-introduction-to-the-theory-of-computation/socratic.json"
+    },
+    {
+      "id": "CSC236H1-SKILL-D1",
+      "courseId": "CSC236H1",
+      "mode": "deductive",
+      "file": "cs/csc236h1-introduction-to-the-theory-of-computation/deductive.json"
+    },
+    {
+      "id": "CSC236H1-SKILL-C1",
+      "courseId": "CSC236H1",
+      "mode": "correction",
+      "file": "cs/csc236h1-introduction-to-the-theory-of-computation/correction.json"
+    },
+    {
+      "id": "CSC263H1-SKILL-S1",
+      "courseId": "CSC263H1",
+      "mode": "socratic",
+      "file": "cs/csc263h1-data-structures-and-analysis/socratic.json"
+    },
+    {
+      "id": "CSC263H1-SKILL-D1",
+      "courseId": "CSC263H1",
+      "mode": "deductive",
+      "file": "cs/csc263h1-data-structures-and-analysis/deductive.json"
+    },
+    {
+      "id": "CSC263H1-SKILL-C1",
+      "courseId": "CSC263H1",
+      "mode": "correction",
+      "file": "cs/csc263h1-data-structures-and-analysis/correction.json"
+    },
+    {
+      "id": "CSC301H1-SKILL-S1",
+      "courseId": "CSC301H1",
+      "mode": "socratic",
+      "file": "cs/csc301h1-introduction-to-software-engineering/socratic.json"
+    },
+    {
+      "id": "CSC301H1-SKILL-D1",
+      "courseId": "CSC301H1",
+      "mode": "deductive",
+      "file": "cs/csc301h1-introduction-to-software-engineering/deductive.json"
+    },
+    {
+      "id": "CSC301H1-SKILL-C1",
+      "courseId": "CSC301H1",
+      "mode": "correction",
+      "file": "cs/csc301h1-introduction-to-software-engineering/correction.json"
+    },
+    {
+      "id": "CSC311H1-SKILL-S1",
+      "courseId": "CSC311H1",
+      "mode": "socratic",
+      "file": "cs/csc311h1-introduction-to-machine-learning/socratic.json"
+    },
+    {
+      "id": "CSC311H1-SKILL-D1",
+      "courseId": "CSC311H1",
+      "mode": "deductive",
+      "file": "cs/csc311h1-introduction-to-machine-learning/deductive.json"
+    },
+    {
+      "id": "CSC311H1-SKILL-C1",
+      "courseId": "CSC311H1",
+      "mode": "correction",
+      "file": "cs/csc311h1-introduction-to-machine-learning/correction.json"
+    },
+    {
+      "id": "CSC369H1-SKILL-S1",
+      "courseId": "CSC369H1",
+      "mode": "socratic",
+      "file": "cs/csc369h1-operating-systems/socratic.json"
+    },
+    {
+      "id": "CSC369H1-SKILL-D1",
+      "courseId": "CSC369H1",
+      "mode": "deductive",
+      "file": "cs/csc369h1-operating-systems/deductive.json"
+    },
+    {
+      "id": "CSC369H1-SKILL-C1",
+      "courseId": "CSC369H1",
+      "mode": "correction",
+      "file": "cs/csc369h1-operating-systems/correction.json"
+    },
+    {
+      "id": "CSC373H1-SKILL-S1",
+      "courseId": "CSC373H1",
+      "mode": "socratic",
+      "file": "cs/csc373h1-algorithm-design-and-analysis/socratic.json"
+    },
+    {
+      "id": "CSC373H1-SKILL-D1",
+      "courseId": "CSC373H1",
+      "mode": "deductive",
+      "file": "cs/csc373h1-algorithm-design-and-analysis/deductive.json"
+    },
+    {
+      "id": "CSC373H1-SKILL-C1",
+      "courseId": "CSC373H1",
+      "mode": "correction",
+      "file": "cs/csc373h1-algorithm-design-and-analysis/correction.json"
+    },
+    {
+      "id": "MAT137Y1-SKILL-C1",
+      "courseId": "MAT137Y1",
+      "mode": "correction",
+      "file": "math/mat137y1-calculus-with-proofs/correction.json"
+    },
+    {
+      "id": "MAT137Y1-SKILL-D1",
+      "courseId": "MAT137Y1",
+      "mode": "deductive",
+      "file": "math/mat137y1-calculus-with-proofs/deductive.json"
+    },
+    {
+      "id": "MAT137Y1-SKILL-S1",
+      "courseId": "MAT137Y1",
+      "mode": "socratic",
+      "file": "math/mat137y1-calculus-with-proofs/socratic.json"
+    },
+    {
+      "id": "MAT223H1-SKILL-C1",
+      "courseId": "MAT223H1",
+      "mode": "correction",
+      "file": "math/mat223h1-linear-algebra-i/correction.json"
+    },
+    {
+      "id": "MAT223H1-SKILL-D1",
+      "courseId": "MAT223H1",
+      "mode": "deductive",
+      "file": "math/mat223h1-linear-algebra-i/deductive.json"
+    },
+    {
+      "id": "MAT223H1-SKILL-S1",
+      "courseId": "MAT223H1",
+      "mode": "socratic",
+      "file": "math/mat223h1-linear-algebra-i/socratic.json"
+    },
+    {
+      "id": "MAT224H1-SKILL-S1",
+      "courseId": "MAT224H1",
+      "mode": "socratic",
+      "file": "math/mat224h1-linear-algebra-ii/socratic.json"
+    },
+    {
+      "id": "MAT224H1-SKILL-D1",
+      "courseId": "MAT224H1",
+      "mode": "deductive",
+      "file": "math/mat224h1-linear-algebra-ii/deductive.json"
+    },
+    {
+      "id": "MAT224H1-SKILL-C1",
+      "courseId": "MAT224H1",
+      "mode": "correction",
+      "file": "math/mat224h1-linear-algebra-ii/correction.json"
+    },
+    {
+      "id": "MAT237Y1-SKILL-S1",
+      "courseId": "MAT237Y1",
+      "mode": "socratic",
+      "file": "math/mat237y1-multivariable-calculus-with-proofs/socratic.json"
+    },
+    {
+      "id": "MAT237Y1-SKILL-D1",
+      "courseId": "MAT237Y1",
+      "mode": "deductive",
+      "file": "math/mat237y1-multivariable-calculus-with-proofs/deductive.json"
+    },
+    {
+      "id": "MAT237Y1-SKILL-C1",
+      "courseId": "MAT237Y1",
+      "mode": "correction",
+      "file": "math/mat237y1-multivariable-calculus-with-proofs/correction.json"
+    },
+    {
+      "id": "MAT240H1-SKILL-S1",
+      "courseId": "MAT240H1",
+      "mode": "socratic",
+      "file": "math/mat240h1-algebra-i/socratic.json"
+    },
+    {
+      "id": "MAT240H1-SKILL-D1",
+      "courseId": "MAT240H1",
+      "mode": "deductive",
+      "file": "math/mat240h1-algebra-i/deductive.json"
+    },
+    {
+      "id": "MAT240H1-SKILL-C1",
+      "courseId": "MAT240H1",
+      "mode": "correction",
+      "file": "math/mat240h1-algebra-i/correction.json"
+    },
+    {
+      "id": "MAT244H1-SKILL-S1",
+      "courseId": "MAT244H1",
+      "mode": "socratic",
+      "file": "math/mat244h1-introduction-to-ordinary-differential-equations/socratic.json"
+    },
+    {
+      "id": "MAT244H1-SKILL-D1",
+      "courseId": "MAT244H1",
+      "mode": "deductive",
+      "file": "math/mat244h1-introduction-to-ordinary-differential-equations/deductive.json"
+    },
+    {
+      "id": "MAT244H1-SKILL-C1",
+      "courseId": "MAT244H1",
+      "mode": "correction",
+      "file": "math/mat244h1-introduction-to-ordinary-differential-equations/correction.json"
+    },
+    {
+      "id": "MAT247H1-SKILL-S1",
+      "courseId": "MAT247H1",
+      "mode": "socratic",
+      "file": "math/mat247h1-algebra-ii/socratic.json"
+    },
+    {
+      "id": "MAT247H1-SKILL-D1",
+      "courseId": "MAT247H1",
+      "mode": "deductive",
+      "file": "math/mat247h1-algebra-ii/deductive.json"
+    },
+    {
+      "id": "MAT247H1-SKILL-C1",
+      "courseId": "MAT247H1",
+      "mode": "correction",
+      "file": "math/mat247h1-algebra-ii/correction.json"
+    },
+    {
+      "id": "MAT267H1-SKILL-S1",
+      "courseId": "MAT267H1",
+      "mode": "socratic",
+      "file": "math/mat267h1-advanced-ordinary-differential-equations/socratic.json"
+    },
+    {
+      "id": "MAT267H1-SKILL-D1",
+      "courseId": "MAT267H1",
+      "mode": "deductive",
+      "file": "math/mat267h1-advanced-ordinary-differential-equations/deductive.json"
+    },
+    {
+      "id": "MAT267H1-SKILL-C1",
+      "courseId": "MAT267H1",
+      "mode": "correction",
+      "file": "math/mat267h1-advanced-ordinary-differential-equations/correction.json"
+    },
+    {
+      "id": "MAT301H1-SKILL-S1",
+      "courseId": "MAT301H1",
+      "mode": "socratic",
+      "file": "math/mat301h1-groups-and-symmetries/socratic.json"
+    },
+    {
+      "id": "MAT301H1-SKILL-D1",
+      "courseId": "MAT301H1",
+      "mode": "deductive",
+      "file": "math/mat301h1-groups-and-symmetries/deductive.json"
+    },
+    {
+      "id": "MAT301H1-SKILL-C1",
+      "courseId": "MAT301H1",
+      "mode": "correction",
+      "file": "math/mat301h1-groups-and-symmetries/correction.json"
+    },
+    {
+      "id": "MAT309H1-SKILL-S1",
+      "courseId": "MAT309H1",
+      "mode": "socratic",
+      "file": "math/mat309h1-introduction-to-mathematical-logic/socratic.json"
+    },
+    {
+      "id": "MAT309H1-SKILL-D1",
+      "courseId": "MAT309H1",
+      "mode": "deductive",
+      "file": "math/mat309h1-introduction-to-mathematical-logic/deductive.json"
+    },
+    {
+      "id": "MAT309H1-SKILL-C1",
+      "courseId": "MAT309H1",
+      "mode": "correction",
+      "file": "math/mat309h1-introduction-to-mathematical-logic/correction.json"
+    },
+    {
+      "id": "MAT315H1-SKILL-S1",
+      "courseId": "MAT315H1",
+      "mode": "socratic",
+      "file": "math/mat315h1-introduction-to-number-theory/socratic.json"
+    },
+    {
+      "id": "MAT315H1-SKILL-D1",
+      "courseId": "MAT315H1",
+      "mode": "deductive",
+      "file": "math/mat315h1-introduction-to-number-theory/deductive.json"
+    },
+    {
+      "id": "MAT315H1-SKILL-C1",
+      "courseId": "MAT315H1",
+      "mode": "correction",
+      "file": "math/mat315h1-introduction-to-number-theory/correction.json"
+    },
+    {
+      "id": "MAT334H1-SKILL-S1",
+      "courseId": "MAT334H1",
+      "mode": "socratic",
+      "file": "math/mat334h1-complex-variables/socratic.json"
+    },
+    {
+      "id": "MAT334H1-SKILL-D1",
+      "courseId": "MAT334H1",
+      "mode": "deductive",
+      "file": "math/mat334h1-complex-variables/deductive.json"
+    },
+    {
+      "id": "MAT334H1-SKILL-C1",
+      "courseId": "MAT334H1",
+      "mode": "correction",
+      "file": "math/mat334h1-complex-variables/correction.json"
+    },
+    {
+      "id": "STA130H1-SKILL-S1",
+      "courseId": "STA130H1",
+      "mode": "socratic",
+      "file": "stats/sta130h1-intro-statistical-reasoning/socratic.json"
+    },
+    {
+      "id": "STA130H1-SKILL-D1",
+      "courseId": "STA130H1",
+      "mode": "deductive",
+      "file": "stats/sta130h1-intro-statistical-reasoning/deductive.json"
+    },
+    {
+      "id": "STA130H1-SKILL-C1",
+      "courseId": "STA130H1",
+      "mode": "correction",
+      "file": "stats/sta130h1-intro-statistical-reasoning/correction.json"
+    },
+    {
+      "id": "STA237H1-SKILL-S1",
+      "courseId": "STA237H1",
+      "mode": "socratic",
+      "file": "stats/sta237h1-probability-statistics-and-data-analysis-i/socratic.json"
+    },
+    {
+      "id": "STA237H1-SKILL-D1",
+      "courseId": "STA237H1",
+      "mode": "deductive",
+      "file": "stats/sta237h1-probability-statistics-and-data-analysis-i/deductive.json"
+    },
+    {
+      "id": "STA237H1-SKILL-C1",
+      "courseId": "STA237H1",
+      "mode": "correction",
+      "file": "stats/sta237h1-probability-statistics-and-data-analysis-i/correction.json"
+    },
+    {
+      "id": "STA238H1-SKILL-S1",
+      "courseId": "STA238H1",
+      "mode": "socratic",
+      "file": "stats/sta238h1-probability-statistics-and-data-analysis-ii/socratic.json"
+    },
+    {
+      "id": "STA238H1-SKILL-D1",
+      "courseId": "STA238H1",
+      "mode": "deductive",
+      "file": "stats/sta238h1-probability-statistics-and-data-analysis-ii/deductive.json"
+    },
+    {
+      "id": "STA238H1-SKILL-C1",
+      "courseId": "STA238H1",
+      "mode": "correction",
+      "file": "stats/sta238h1-probability-statistics-and-data-analysis-ii/correction.json"
+    },
+    {
+      "id": "STA257H1-SKILL-S1",
+      "courseId": "STA257H1",
+      "mode": "socratic",
+      "file": "stats/sta257h1-probability-and-statistics-i/socratic.json"
+    },
+    {
+      "id": "STA257H1-SKILL-D1",
+      "courseId": "STA257H1",
+      "mode": "deductive",
+      "file": "stats/sta257h1-probability-and-statistics-i/deductive.json"
+    },
+    {
+      "id": "STA257H1-SKILL-C1",
+      "courseId": "STA257H1",
+      "mode": "correction",
+      "file": "stats/sta257h1-probability-and-statistics-i/correction.json"
+    },
+    {
+      "id": "STA261H1-SKILL-S1",
+      "courseId": "STA261H1",
+      "mode": "socratic",
+      "file": "stats/sta261h1-probability-and-statistics-ii/socratic.json"
+    },
+    {
+      "id": "STA261H1-SKILL-D1",
+      "courseId": "STA261H1",
+      "mode": "deductive",
+      "file": "stats/sta261h1-probability-and-statistics-ii/deductive.json"
+    },
+    {
+      "id": "STA261H1-SKILL-C1",
+      "courseId": "STA261H1",
+      "mode": "correction",
+      "file": "stats/sta261h1-probability-and-statistics-ii/correction.json"
+    },
+    {
+      "id": "STA302H1-SKILL-S1",
+      "courseId": "STA302H1",
+      "mode": "socratic",
+      "file": "stats/sta302h1-methods-of-data-analysis-i/socratic.json"
+    },
+    {
+      "id": "STA302H1-SKILL-D1",
+      "courseId": "STA302H1",
+      "mode": "deductive",
+      "file": "stats/sta302h1-methods-of-data-analysis-i/deductive.json"
+    },
+    {
+      "id": "STA302H1-SKILL-C1",
+      "courseId": "STA302H1",
+      "mode": "correction",
+      "file": "stats/sta302h1-methods-of-data-analysis-i/correction.json"
+    },
+    {
+      "id": "STA303H1-SKILL-S1",
+      "courseId": "STA303H1",
+      "mode": "socratic",
+      "file": "stats/sta303h1-methods-of-data-analysis-ii/socratic.json"
+    },
+    {
+      "id": "STA303H1-SKILL-D1",
+      "courseId": "STA303H1",
+      "mode": "deductive",
+      "file": "stats/sta303h1-methods-of-data-analysis-ii/deductive.json"
+    },
+    {
+      "id": "STA303H1-SKILL-C1",
+      "courseId": "STA303H1",
+      "mode": "correction",
+      "file": "stats/sta303h1-methods-of-data-analysis-ii/correction.json"
+    },
+    {
+      "id": "STA304H1-SKILL-S1",
+      "courseId": "STA304H1",
+      "mode": "socratic",
+      "file": "stats/sta304h1-surveys-sampling-and-observational-data/socratic.json"
+    },
+    {
+      "id": "STA304H1-SKILL-D1",
+      "courseId": "STA304H1",
+      "mode": "deductive",
+      "file": "stats/sta304h1-surveys-sampling-and-observational-data/deductive.json"
+    },
+    {
+      "id": "STA304H1-SKILL-C1",
+      "courseId": "STA304H1",
+      "mode": "correction",
+      "file": "stats/sta304h1-surveys-sampling-and-observational-data/correction.json"
+    },
+    {
+      "id": "STA314H1-SKILL-S1",
+      "courseId": "STA314H1",
+      "mode": "socratic",
+      "file": "stats/sta314h1-statistical-methods-for-machine-learning-i/socratic.json"
+    },
+    {
+      "id": "STA314H1-SKILL-D1",
+      "courseId": "STA314H1",
+      "mode": "deductive",
+      "file": "stats/sta314h1-statistical-methods-for-machine-learning-i/deductive.json"
+    },
+    {
+      "id": "STA314H1-SKILL-C1",
+      "courseId": "STA314H1",
+      "mode": "correction",
+      "file": "stats/sta314h1-statistical-methods-for-machine-learning-i/correction.json"
+    },
+    {
+      "id": "STA347H1-SKILL-S1",
+      "courseId": "STA347H1",
+      "mode": "socratic",
+      "file": "stats/sta347h1-probability/socratic.json"
+    },
+    {
+      "id": "STA347H1-SKILL-D1",
+      "courseId": "STA347H1",
+      "mode": "deductive",
+      "file": "stats/sta347h1-probability/deductive.json"
+    },
+    {
+      "id": "STA347H1-SKILL-C1",
+      "courseId": "STA347H1",
+      "mode": "correction",
+      "file": "stats/sta347h1-probability/correction.json"
+    },
+    {
+      "id": "STA410H1-SKILL-S1",
+      "courseId": "STA410H1",
+      "mode": "socratic",
+      "file": "stats/sta410h1-statistical-computation/socratic.json"
+    },
+    {
+      "id": "STA410H1-SKILL-D1",
+      "courseId": "STA410H1",
+      "mode": "deductive",
+      "file": "stats/sta410h1-statistical-computation/deductive.json"
+    },
+    {
+      "id": "STA410H1-SKILL-C1",
+      "courseId": "STA410H1",
+      "mode": "correction",
+      "file": "stats/sta410h1-statistical-computation/correction.json"
+    },
+    {
+      "id": "STA414H1-SKILL-S1",
+      "courseId": "STA414H1",
+      "mode": "socratic",
+      "file": "stats/sta414h1-statistical-methods-for-machine-learning-ii/socratic.json"
+    },
+    {
+      "id": "STA414H1-SKILL-D1",
+      "courseId": "STA414H1",
+      "mode": "deductive",
+      "file": "stats/sta414h1-statistical-methods-for-machine-learning-ii/deductive.json"
+    },
+    {
+      "id": "STA414H1-SKILL-C1",
+      "courseId": "STA414H1",
+      "mode": "correction",
+      "file": "stats/sta414h1-statistical-methods-for-machine-learning-ii/correction.json"
+    }
+  ]
+}
